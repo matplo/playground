@@ -35,6 +35,7 @@ docker build -f Dockerfile .
 ```
 
 - to enter the image I check `docker images` and use `docker run -it XXXX` using the checksum for XXXX
+- for example `docker run -it 36d6601556be`
 
 ## ALICE software
 
