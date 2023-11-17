@@ -1,0 +1,16 @@
+# This is an example parameter file.
+# Let's write output to another file:
+# LOGFILE logs/example.log
+# HEPMCFILE eventfiles/example.hepmc
+# Let's change the generation phase space:
+PTMIN 60
+PTMAX -1.
+ETAMAX 0.9
+#
+NJOB 0
+NEVENT 10000
+LOGFILE logs/out_lhcvac_0.log
+HEPMCFILE eventfiles/out_lhcvac_0.hepmc
+SPLITINTFILE splitint-lhcvac.dat
+PDFFILE pdfs-lhcvac.dat
+XSECFILE xsec-lhcvac.dat

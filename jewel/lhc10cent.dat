@@ -1,0 +1,24 @@
+# This is an example parameter file.
+# Let's write output to another file:
+# LOGFILE logs/example.log
+# HEPMCFILE eventfiles/example.hepmc
+# Let's change the generation phase space:
+PTMIN 60
+PTMAX -1.
+ETAMAX 0.9
+# this is to include recoil effects
+KEEPRECOILS T
+# to write the output necessary for subtraction of the thermal momentum components
+WRITESCATCEN T
+# to write out dummy particles (needed for 4MomSub subtraction)
+WRITEDUMMIES T
+# And we also want to change the medium parameters:
+MEDIUMPARAMS medium_lhc10cent.dat
+#
+NJOB 0
+NEVENT 10000
+LOGFILE logs/out_lhc10cent_0.log
+HEPMCFILE eventfiles/out_lhc10cent_0.hepmc
+SPLITINTFILE splitint-lhc10cent.dat
+PDFFILE pdfs-lhc10cent.dat
+XSECFILE xsec-lhc10cent.dat

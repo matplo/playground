@@ -1,0 +1,60 @@
+# This is the parameter file for the medium model.
+# Let's change the initial temperature:
+# TI 0.55
+# # and the centrality
+# # CENTRMIN 60.
+# # CENTRMAX 80.
+# #
+# CENTRMIN 0.D0
+# # CENTRMAX 7.5D0
+# CENTRMAX 10.D0
+# TAUI 0.6D0
+# TI 0.24D0
+# TC 0.170D0
+# NF 3
+# WOODSSAXON .TRUE.
+# A 208
+# SIGMANN 4.2D0
+###################
+# from https://arxiv.org/pdf/1311.0048.pdf - page 16
+# TAUI (0.6): initial time τi [fm]
+# TI (0.36): (mean) initial temperature Ti [GeV]
+# TC (0.17): critical temperature Tc [GeV]
+# WOODSSAXON (T): switch between Woods-Saxon potential and hard sphere CENTRMIN (0.): lower end of centrality range to be simulated [%]
+# CENTRMAX (10.): upper end of centrality range to be simulated [%]
+# NF (3): number of quark flavours in the quark-gluon gas
+# A (208): mass number of colliding nuclei (this needs to be an integer)
+# N0(0.17): densityparameterofWoods-Saxonpotential[fm−3]
+# D (0.54): thickness parameter of Woods-Saxon potential [fm]
+# SIGMANN (6.2): nucleon-nucleon cross section [fm2]
+# MDFACTOR(0.45): minimumofinfra-redregulator[GeV](hastobelargerthanΛQCD) MDSCALEFAC (0.9): factor multiplying infra-red regulator, i.e. μD = 3T
+#
+TAUI 0.6
+# TI 0.36
+# note the change with version 2.3.0 - initial temp at 0x0x0 rather than the average
+TI 0.70
+TC 0.17
+WOODSSAXON T
+CENTRMIN 0.
+CENTRMAX 10.
+NF 3
+A 208
+N0 0.17
+D 0.54
+SIGMANN 6.2
+MDFACTOR 0.45
+#
+####
+# from https://arxiv.org/pdf/2304.07196.pdf
+# τi =0.4fm/c, Ti = 440 MeV, Tc = 170 MeV
+# TAUI 0.4D0
+# TI 0.440D0
+# TC 0.170D0
+#### repeat
+# this is to include recoil effects
+KEEPRECOILS T
+# to write the output necessary for subtraction of the thermal momentum components
+WRITESCATCEN T
+# to write out dummy particles (needed for 4MomSub subtraction)
+WRITEDUMMIES T
+# And we also want to change the medium parameters:
