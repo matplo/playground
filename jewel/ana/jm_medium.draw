@@ -1,0 +1,77 @@
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#legend pos=ur title=R=0.2 anti-k_{T} 40 < p_{T}^{jet} < 60 GeV/c
+#xrange 0,15
+#x m (GeV/c^{2})
+#y 1/N_{jet} dN/dm (GeV/c^{2})^{-1}
+
+jm_med_40_0.2.root 		:hm0 :hist +k9 +a50 +f1001 +l1: title=JEWEL medium (m_{#pi}),,
+jm_med_40_0.2.root 		:hm :hist +k32 +a50 +f1001 +l1: title=JEWEL medium (m_{PDG}),,
+
+jm_med_40_0.2.root 		:hm0 :p noleg +k9 +a50 +f1001 +l1: title=JEWEL medium (m_{#pi}),,
+jm_med_40_0.2.root 		:hm :p noleg +k32 +a50 +f1001 +l1: title=JEWEL medium (m_{PDG}),,
+
+alice_data_PbPb.root : hmain_mass_R0.2_40-60_trunc : p +k2 : title=ALICE Data,,
+alice_data_PbPb.root : hResult_mass_systotal_R0.2__n2_40-60 : p serror noleg -k: title=alice data syst error,,
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#legend pos=ur title=R=0.2 anti-k_{T} 60 < p_{T}^{jet} < 80 GeV/c
+#xrange 0,15
+#x m (GeV/c^{2})
+#y 1/N_{jet} dN/dm (GeV/c^{2})^{-1}
+
+jm_med_60_0.2.root 		:hm0 :hist +k9 +a50 +f1001 +l1: title=JEWEL medium (m_{#pi}),,
+jm_med_60_0.2.root 		:hm :hist +k32 +a50 +f1001 +l1: title=JEWEL medium (m_{PDG}),,
+
+jm_med_60_0.2.root 		:hm0 :p noleg +k9 +a50 +f1001 +l1: title=JEWEL medium (m_{#pi}),,
+jm_med_60_0.2.root 		:hm :p noleg +k32 +a50 +f1001 +l1: title=JEWEL medium (m_{PDG}),,
+
+alice_data_PbPb.root : hmain_mass_R0.2_60-80_trunc : p +k2 : title=ALICE Data,,
+alice_data_PbPb.root : hResult_mass_systotal_R0.2__n2_60-80 : p serror noleg -k: title=alice data syst error,,
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#legend pos=ur title=R=0.2 anti-k_{T} 80 < p_{T}^{jet} < 100 GeV/c
+#xrange 0,15
+#x m (GeV/c^{2})
+#y 1/N_{jet} dN/dm (GeV/c^{2})^{-1}
+
+jm_med_80_0.2.root 		:hm0 :hist +k9 +a50 +f1001 +l1: title=JEWEL medium (m_{#pi}),,
+jm_med_80_0.2.root 		:hm :hist +k32 +a50 +f1001 +l1: title=JEWEL medium (m_{PDG}),,
+
+jm_med_80_0.2.root 		:hm0 :p noleg +k9 +a50 +f1001 +l1: title=JEWEL medium (m_{#pi}),,
+jm_med_80_0.2.root 		:hm :p noleg +k32 +a50 +f1001 +l1: title=JEWEL medium (m_{PDG}),,
+
+alice_data_PbPb.root : hmain_mass_R0.2_80-100_trunc : p +k2 : title=ALICE Data,,
+alice_data_PbPb.root : hResult_mass_systotal_R0.2__n2_80-100 : p serror noleg -k: title=alice data syst error,,
+
+
+## #-----------------------
+## #figure
+## #geom 500x500
+## #date
+## #title: smart group
+## #legend pos=ur title=R=0.2 anti-k_{T} 100 < p_{T}^{jet} < 120 GeV/c
+## #xrange 0,15
+## #x m (GeV/c^{2})
+## #y 1/N_{jet} dN/dm (GeV/c^{2})^{-1}
+
+## jm_vac_100_0.2.root 		:hm0 :l hist +k9 +a50 +w1 +l2: title=JEWEL vacuum (m_{#pi}),,
+##jm_med_100_0.2.root 		:hm0 :hist +k9 +a50 +f1001 +l1: title=JEWEL medium (m_{#pi}),,
+## 
+## jm_vac_100_0.2.root 		:hm :l hist +k32 +w1 +a100 +l9: title=JEWEL vacuum (m_{PDG}),,
+##jm_med_100_0.2.root 		:hm :hist +k32 +a50 +f1001 +l1: title=JEWEL medium (m_{PDG}),,
+## 
+## alice_data_PbPb.root : hmain_mass_R0.2_100-120_trunc : p +k2 : title=ALICE Data,,
+## alice_data_PbPb.root : hResult_mass_systotal_R0.2__n2_100-120 : p serror noleg -k: title=alice data syst error,,
+
