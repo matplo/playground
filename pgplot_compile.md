@@ -26,7 +26,9 @@ ln -s /opt/homebrew/bin/gfortran /opt/homebrew/bin/g77
 
 ## also gcc to gcc-13 (from homebrew)
 
+```
 ln -s /opt/homebrew/bin/gcc-13 /opt/homebrew/bin/gcc
+```
 
 ## in drivers.list uncomment server
 
@@ -39,7 +41,11 @@ XWDRIV 1 /XWINDOW   Workstations running X Window System                C
 ## compile
 
 ```
+# if not done already
 cd pgplot
+```
+
+```
 ./makemake $PWD linux g77_gcc_aout
 make
 ```
