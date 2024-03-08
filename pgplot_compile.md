@@ -18,8 +18,6 @@ brew install gcc xquartz autoconf automake
 export PATH=/opt/homebrew/bin:$PATH
 ```
 
-cd pgplot
-./makemake $PWD linux g77_gcc_aout
 # then make sure g77 points to gfortran
 
 ```
@@ -40,5 +38,9 @@ XWDRIV 1 /XWINDOW   Workstations running X Window System                C
 
 # compile
 
+```
+cd pgplot
+./makemake $PWD linux g77_gcc_aout
 make
+```
 
