@@ -18,17 +18,17 @@ brew install gcc xquartz autoconf automake
 export PATH=/opt/homebrew/bin:$PATH
 ```
 
-# then make sure g77 points to gfortran
+## then make sure g77 points to gfortran
 
 ```
 ln -s /opt/homebrew/bin/gfortran /opt/homebrew/bin/g77
 ```
 
-# also gcc to gcc-13 (from homebrew)
+## also gcc to gcc-13 (from homebrew)
 
 ln -s /opt/homebrew/bin/gcc-13 /opt/homebrew/bin/gcc
 
-# in drivers.list uncomment server
+## in drivers.list uncomment server
 
 - for example:
 
@@ -36,7 +36,7 @@ ln -s /opt/homebrew/bin/gcc-13 /opt/homebrew/bin/gcc
 XWDRIV 1 /XWINDOW   Workstations running X Window System                C
 ```
 
-# compile
+## compile
 
 ```
 cd pgplot
