@@ -77,13 +77,15 @@ an environment variable named PGPLOT_DIR.
 export PGPLOT_DIR=/usr/local/src/pgplot
 ```
 
-- compile `example.f` in a single line
+## compile `example.f` in a single line
 
 ```
 gfortran -w -ffixed-line-length-0 -o example example.f -L$PGPLOT_DIR  -lpgplot -L/usr/X11R6/lib -lX11 `$PGPLOT_DIR/cpg/libgcc_path.sh` -lgcc -lm -lc
 ```
 
-- putting this in a makefile
+## putting this in a makefile
+
+- create a makefile with the following contents (remember the useful copy button to the right of the field):
 
 ```
 example:	example.f
