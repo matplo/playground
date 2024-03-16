@@ -1,0 +1,16 @@
+TARGET = example
+
+# note: you can set the PGPLOT_DIR environment variable to the location of the PGPLOT library
+# or you can set it here
+# PGPLOT_DIR = /usr/local/pgplot
+
+CC = gfortran
+CFLAGS = -w -ffixed-line-length-0
+LIBS = -L$(PGPLOT_DIR) -lpgplot -L/usr/X11R6/lib -lX11 `$(PGPLOT_DIR)/cpg/libgcc_path.sh` -lgcc -lm -lc
+SRC = $(TARGET).f
+
+$(TARGET):	$(SRC)
+	$(CC) $(CFLAGS) -o $@ $< $(LIBS)
+
+clean:
+	@rm -f $(TARGET)
