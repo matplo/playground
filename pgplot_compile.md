@@ -50,3 +50,45 @@ cd pgplot
 make
 ```
 
+### important note
+
+```
+*** Finished compilation of PGPLOT ***
+
+Note that if you plan to install PGPLOT in a different
+directory than the current one, the following files will be
+needed.
+
+      libpgplot.a
+      grfont.dat
+      rgb.txt
+      pgxwin_server
+
+Also note that subsequent usage of PGPLOT programs requires that
+the full path of the chosen installation directory be named in
+an environment variable named PGPLOT_DIR.
+```
+
+# example command to comile code that uses pgplot
+
+```
+gfortran -w -ffixed-line-length-0 -o example example.f -L$PGPLOT_DIR  -lpgplot -L/usr/X11R6/lib -lX11 `$PGPLOT_DIR/cpg/libgcc_path.sh` -lgcc -lm -lc
+```
+
+- putting this in a makefile
+
+```
+example:	example.f
+	gfortran -w -ffixed-line-length-0 -o example example.f -L$(PGPLOT_DIR)  -lpgplot -L/usr/X11R6/lib -lX11 `$(PGPLOT_DIR)/cpg/libgcc_path.sh` -lgcc -lm -lc
+
+clean:
+	rm -f example
+```
+
+- then run
+
+```
+make clean
+make
+```
+
