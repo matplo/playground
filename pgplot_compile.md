@@ -135,7 +135,7 @@ clean:
 	@rm -f $(TARGETS)
 ```
 
-### copmile ALL *.f files in the directory (!)
+### compile ALL *.f files in the directory (!)
 
 ```
 # note: you can set the PGPLOT_DIR environment variable to the location of the PGPLOT library
