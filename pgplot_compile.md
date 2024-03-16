@@ -71,6 +71,12 @@ an environment variable named PGPLOT_DIR.
 
 # example command to comile code that uses pgplot
 
+- the instructions below rely that PGPLOT_DIR is set - for example:
+
+```
+export PGPLOT_DIR=/usr/local/src/pgplot
+```
+
 ```
 gfortran -w -ffixed-line-length-0 -o example example.f -L$PGPLOT_DIR  -lpgplot -L/usr/X11R6/lib -lX11 `$PGPLOT_DIR/cpg/libgcc_path.sh` -lgcc -lm -lc
 ```
