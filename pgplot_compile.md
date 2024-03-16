@@ -89,6 +89,8 @@ gfortran -w -ffixed-line-length-0 -o example example.f -L$PGPLOT_DIR  -lpgplot -
 
 ### compile ONE target - named example - depends on example.f
 
+- see https://github.com/matplo/playground/tree/main/pgplot for all the example makefiles (get one and rename to `makefile` for make without argument to work or run `makefile -f <makefile>`)
+
 ```
 TARGET = example
 # note: you can set the PGPLOT_DIR environment variable to the location of the PGPLOT library
