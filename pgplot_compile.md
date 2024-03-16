@@ -87,12 +87,24 @@ gfortran -w -ffixed-line-length-0 -o example example.f -L$PGPLOT_DIR  -lpgplot -
 
 - create a makefile with the following contents (remember the useful copy button to the right of the field):
 
+### compile ONE target - named example - depends on example.f
+
 ```
-example:	example.f
-	gfortran -w -ffixed-line-length-0 -o example example.f -L$(PGPLOT_DIR)  -lpgplot -L/usr/X11R6/lib -lX11 `$(PGPLOT_DIR)/cpg/libgcc_path.sh` -lgcc -lm -lc
+TARGET = example
+# note: you can set the PGPLOT_DIR environment variable to the location of the PGPLOT library
+# or you can set it here
+# PGPLOT_DIR = /usr/local/pgplot
+
+CC = gfortran
+CFLAGS = -w -ffixed-line-length-0
+LIBS = -L$(PGPLOT_DIR) -lpgplot -L/usr/X11R6/lib -lX11 `$(PGPLOT_DIR)/cpg/libgcc_path.sh` -lgcc -lm -lc
+SRC = $(TARGET).f
+
+$(TARGET):      $(SRC)
+	$(CC) $(CFLAGS) -o $@ $< $(LIBS)
 
 clean:
-	rm -f example
+	@rm -f $(TARGET)
 ```
 
 - then run
@@ -102,3 +114,48 @@ make clean
 make
 ```
 
+### compile ONE target - named example1 and example2 - depends on example1.f and example2.f
+
+```
+TARGETS = example example2
+# note: you can set the PGPLOT_DIR environment variable to the location of the PGPLOT library
+# or you can set it here
+# PGPLOT_DIR = /usr/local/pgplot
+
+CC = gfortran
+CFLAGS = -w -ffixed-line-length-0
+LIBS = -L$(PGPLOT_DIR) -lpgplot -L/usr/X11R6/lib -lX11 `$(PGPLOT_DIR)/cpg/libgcc_path.sh` -lgcc -lm -lc
+
+all: $(TARGETS)
+
+$(TARGETS):
+	$(CC) $(CFLAGS) -o $@ $@.f $(LIBS)
+
+clean:
+	@rm -f $(TARGETS)
+```
+
+### copmile ALL *.f files in the directory (!)
+
+```
+# note: you can set the PGPLOT_DIR environment variable to the location of the PGPLOT library
+# or you can set it here
+# PGPLOT_DIR = /usr/local/pgplot
+
+CC = gfortran
+CFLAGS = -w -ffixed-line-length-0
+LIBS = -L$(PGPLOT_DIR) -lpgplot -L/usr/X11R6/lib -lX11 `$(PGPLOT_DIR)/cpg/libgcc_path.sh` -lgcc -lm -lc
+
+SRCS = $(wildcard *.f)
+TARGETS = $(SRCS:.f=)
+
+all: $(TARGETS)
+
+$(TARGETS): %: %.f
+	$(CC) $(CFLAGS) -o $@ $< $(LIBS)
+
+clean:
+	@rm -f $(TARGETS)
+```
+
+- note: you can select what files to use using the wildcard statement - for example to compile only the example-starting files use `SRCS = $(wildcard example*.f)`
