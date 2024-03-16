@@ -1,4 +1,8 @@
-SRCS = $(wildcard example*.f)
+SRCS = $(wildcard *.f)
+
+# to compile only some files use the following line
+# SRCS = $(wildcard example*.f)
+
 TARGETS = $(SRCS:.f=)
 
 # note: you can set the PGPLOT_DIR environment variable to the location of the PGPLOT library
