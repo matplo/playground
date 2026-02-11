@@ -125,7 +125,7 @@ The honest summary: **the sign change is supported but not yet definitively prov
 
 Want me to dig into the factorization-breaking aspects in hadronic collisions, or the connection between the Sivers function and quark OAM (Ji relation, Burkardt sum rule)?
 
-# q: Show me a visualization of inferred momentum space images of the proton
+# q4: Show me a visualization of inferred momentum space images of the proton
 
 I'll create a scientific visualization showing the transverse momentum distributions inside the proton, including the Sivers asymmetry effect.Here's what each panel shows:
 
