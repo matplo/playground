@@ -14,22 +14,69 @@ charged-particle-only variant.
 
 ## Environment
 
-- Package management is via [heppyyier](https://github.com/matplo/heppyyier) (Pythia8, FastJet exposed to
-  Python via cppyy). `heppyyier init` / `heppyyier install fastjet pythia8` are **one-time CLI setup steps
-  done at install time** — do not add "run this before starting the kernel" boilerplate to the notebook
-  itself. The notebook only needs:
-  ```python
-  import heppyyier
-  heppyyier.load('pythia8')
-  heppyyier.load('fastjet')
-  ```
-- To run notebook cells or scratch scripts from the shell in this environment, wrap commands as
-  `henv --run <command>` (not a bare venv activate) — this is what exposes the heppyyier-managed
-  Pythia8/FastJet install to the interpreter.
-- Full notebook execution: `henv --run jupyter nbconvert --to notebook --execute --inplace <nb>.ipynb
-  --ExecutePreprocessor.timeout=600`. A 9-bin x 2 track-type scan at 2000 events/bin takes ~130s — always
-  execute end-to-end and check for error outputs before calling a notebook change done; don't just eyeball
-  the diff.
+Two layered tools: [henv](https://github.com/matplo/henv) manages the Python virtualenv itself;
+[heppyyier](https://github.com/matplo/heppyyier) (installed *inside* that venv) builds and exposes Pythia8 /
+FastJet / HepMC3 / etc. to Python via cppyy. Both are one-time setup per machine/env — don't add "run this
+before starting the kernel" boilerplate to notebooks; they only need the `heppyyier.load(...)` calls below.
+
+### 1. Install henv (once per machine)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/matplo/henv/main/henv \
+  -o ~/.local/bin/henv && chmod +x ~/.local/bin/henv
+```
+
+(or the self-installing form: `curl -fsSL .../henv | bash -s -- --install`, which also checks `~/.local/bin`
+is on `PATH`).
+
+### 2. Create an env and install packages (once per project/env)
+
+```bash
+cd ~/myanalysis        # or wherever the notebook lives
+henv .                 # creates ./.venv, prompts to install heppyyier, drops into an activated subshell
+# → prompt becomes: (henv:myanalysis) ...
+
+heyy install fastjet pythia8      # inside the subshell; heyy/her/heppyyier are equivalent CLI names
+exit                               # back to the parent shell
+```
+
+`henv .` picks up an existing `./.venv` on subsequent calls (no reinstall, no prompts) — safe to call
+routinely at the start of a session. Other invocation forms: `henv` alone uses a single global env at
+`$HOME/.henvs/default`; `henv --name NAME` uses a named global env at `$HOME/.henvs/NAME` (handy for sharing
+one env across multiple analysis directories instead of a `.venv` per project).
+
+### 3. Run commands inside the env
+
+Prefer `henv <location> --run <command>` over manually activating — it performs the same initialization as
+the interactive subshell (venv activation, `HEPPYYIER_PACKAGES_DIR`, module-file regeneration) without
+spawning a subshell, which is what makes it composable from scripts/agents:
+
+```bash
+henv . --run python -c "import fastjet; print('ok')"
+henv . --run pip list
+henv . --run heyy list                              # see what heppyyier packages are installed
+```
+
+Full notebook execution:
+
+```bash
+henv . --run jupyter nbconvert --to notebook --execute --inplace <nb>.ipynb \
+  --ExecutePreprocessor.timeout=600
+```
+
+A 9-bin x 2 track-type scan at 2000 events/bin takes ~130s — always execute end-to-end and check for error
+outputs before calling a notebook change done; don't just eyeball the diff.
+
+### 4. Inside the notebook
+
+```python
+import heppyyier
+heppyyier.load('pythia8')
+heppyyier.load('fastjet')
+```
+
+`heppyyier.load()` is a no-op if the package was already loaded (e.g. via a heppyyier-aware Jupyter kernel
+or `module load`), so it's safe to always include.
 
 ## Event generation strategy
 
@@ -48,10 +95,12 @@ Why min-only, no window, works and is *better* than a bounded window: within one
 near that run's own threshold (falling cross section), so a run with `pTHatMin=50` naturally supplies most
 of its statistics to the `[50,60)` bin. But it also generates a non-trivial tail above 60, 70, 80... GeV —
 verified empirically:
+
 ```
 pTHatMin=50, no Max, 2000 events → counts per [10,20,...,100) bin:
 [0, 0, 0, 0, 2114, 874, 448, 230, 112]
 ```
+
 Sort every generated event into its target bin by its **actual** generated b-quark $p_T$ (not by which run
 produced it), and this overflow becomes bonus statistics for the bins above each run's own threshold — pure
 upside, no double-counting concern, since we never merge these runs into a single cross-section-normalized
@@ -60,6 +109,7 @@ only. Comparing the final per-(R, $p_T$-bin) matched-pair counts, min-only-no-ma
 statistics than the padded-window version it replaced.
 
 Expose the per-bin event count explicitly and early, as an editable dict keyed by that bin's `pTHatMin`:
+
 ```python
 n_events_per_bin = {lo: 2000 for lo in pt_edges[:-1]}   # override individual entries as needed
 ```
