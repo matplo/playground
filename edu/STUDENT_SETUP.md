@@ -36,11 +36,39 @@ or another student's environment.
 Do not copy an existing `.venv` between accounts or machines. Copy the source
 directory and run `./setup_student_env.sh` again in its new location.
 
+## Use an already-active henv
+
+If the student's henv already exists and is active, install into that exact
+environment instead of creating or selecting another one:
+
+```bash
+./setup_student_env.sh --current
+jupyter lab
+```
+
+`--active` is accepted as an alias. The script checks both henv's activation
+variables and the running Python prefix before installing anything. It exits
+with an error if the shell is not inside a valid henv, which protects the
+system Python from accidental installation.
+
+For example, an existing environment can be activated and prepared with:
+
+```bash
+eval "$(henv --print-activate /path/to/student/workspace)"
+cd /path/to/students/edu
+./setup_student_env.sh --current
+```
+
+The requirements, PyTorch backend selection, kernel registration, and smoke
+test are identical to the normal setup path. `QG_TORCH_BACKEND`,
+`QG_KERNEL_NAME`, and `QG_KERNEL_DISPLAY_NAME` can still be customized.
+
 ## What the setup script does
 
 `setup_student_env.sh`:
 
-1. creates or updates the selected `henv`;
+1. creates or updates the selected `henv`, or uses the active one with
+   `--current`;
 2. upgrades pip inside that environment;
 3. installs the scientific/Jupyter stack from `requirements.txt`;
 4. installs PyTorch separately from a CUDA or CPU wheel index;

@@ -15,8 +15,8 @@ henv . -x jupyter lab
 
 Select the **Quark/Gluon Constituent ML** kernel. See
 [STUDENT_SETUP.md](STUDENT_SETUP.md) for prerequisites, CPU/GPU selection,
-named environments, verification, scaling event statistics, and moving saved
-data or models.
+using an already-active henv, named environments, verification, scaling event
+statistics, and moving saved data or models.
 
 ## Suggested order
 
