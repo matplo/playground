@@ -91,11 +91,6 @@ run_in_env python -m pip install -r "$script_dir/requirements.txt"
 run_in_env python -m pip install "torch==2.5.1" \
     --index-url "https://download.pytorch.org/whl/$torch_backend"
 
-# --sys-prefix keeps the kernelspec with this henv rather than modifying an
-# unrelated system Python or a different student's user-wide kernel registry.
-run_in_env python -m ipykernel install --sys-prefix \
-    --name "$kernel_name" --display-name "$kernel_display"
-
 run_in_env python - <<'PY'
 import importlib
 packages = ['numpy', 'pandas', 'pyarrow', 'matplotlib', 'sklearn', 'torch', 'ipykernel']
@@ -115,6 +110,21 @@ if torch.cuda.is_available():
     print(f"GPU: {torch.cuda.get_device_name(0)}")
 PY
 
+if $use_current; then
+    # Refresh the existing HEP kernelspec after resolving Pythia8/FastJet so
+    # its PATH and library variables include every installed HEP package.
+    if ! run_in_env heyy kernel update; then
+        echo "ERROR: could not update the existing HEP kernel for this henv." >&2
+        echo "Create it with 'heyy kernel install', then rerun this script." >&2
+        exit 3
+    fi
+else
+    # A newly selected henv gets a course-specific kernelspec. --sys-prefix
+    # keeps it out of another student's user-wide kernel registry.
+    run_in_env python -m ipykernel install --sys-prefix \
+        --name "$kernel_name" --display-name "$kernel_display"
+fi
+
 echo
 echo "Environment ready. Start Jupyter with:"
 if $use_current; then
@@ -124,4 +134,8 @@ elif [[ -n "${QG_HENV_NAME:-}" ]]; then
 else
     echo "  henv $henv_location -x jupyter lab"
 fi
-echo "Select the '$kernel_display' kernel in each notebook."
+if $use_current; then
+    echo "Continue using the existing 'HEP' kernel for this henv."
+else
+    echo "Select the '$kernel_display' kernel in each notebook."
+fi

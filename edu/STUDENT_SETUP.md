@@ -46,6 +46,9 @@ environment instead of creating or selecting another one:
 jupyter lab
 ```
 
+Continue using the existing **HEP** kernel. This mode does not create the
+additional **Quark/Gluon Constituent ML** kernel.
+
 `--active` is accepted as an alias. The script checks both henv's activation
 variables and the running Python prefix before installing anything. It exits
 with an error if the shell is not inside a valid henv, which protects the
@@ -59,9 +62,17 @@ cd /path/to/students/edu
 ./setup_student_env.sh --current
 ```
 
-The requirements, PyTorch backend selection, kernel registration, and smoke
-test are identical to the normal setup path. `QG_TORCH_BACKEND`,
-`QG_KERNEL_NAME`, and `QG_KERNEL_DISPLAY_NAME` can still be customized.
+The requirements, PyTorch backend selection, and smoke test are identical to
+the normal setup path. After resolving the HEP packages, the script refreshes
+the existing HEP kernelspec with `heyy kernel update`. If that kernel has not
+yet been registered, create it from the active henv with:
+
+```bash
+heyy kernel install
+```
+
+`QG_TORCH_BACKEND` can still be customized. `QG_KERNEL_NAME` and
+`QG_KERNEL_DISPLAY_NAME` apply only when the script selects or creates an henv.
 
 ## What the setup script does
 
@@ -72,7 +83,8 @@ test are identical to the normal setup path. `QG_TORCH_BACKEND`,
 2. upgrades pip inside that environment;
 3. installs the scientific/Jupyter stack from `requirements.txt`;
 4. installs PyTorch separately from a CUDA or CPU wheel index;
-5. registers the course kernel inside the henv using `--sys-prefix`;
+5. registers the course kernel for a selected/new henv, or refreshes the
+   existing HEP kernel in `--current` mode;
 6. asks `heppyyier` to resolve Pythia8 and FastJet; and
 7. imports the main packages and reports Python, CUDA, and GPU status.
 
