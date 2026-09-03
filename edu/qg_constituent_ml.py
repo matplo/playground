@@ -248,7 +248,14 @@ def model_classes():
             self.pair = nn.Sequential(nn.Linear(1, 16), nn.ReLU(), nn.Linear(16, heads))
             self.norm2 = nn.LayerNorm(dim); self.ff = nn.Sequential(nn.Linear(dim, 2*dim), nn.GELU(), nn.Dropout(dropout), nn.Linear(2*dim, dim))
         def forward(self, x, coords, mask):
-            y = self.norm1(x); pair = torch.log(torch.cdist(coords, coords).clamp_min(1e-5)).unsqueeze(-1)
+            y = self.norm1(x)
+            # Compute distances from explicit coordinate differences.  torch.cdist
+            # may give a small, tensor-shape-dependent nonzero value on the
+            # diagonal; log(distance) amplifies that numerical error enough for
+            # extra masked padding to change a Transformer prediction.
+            delta = coords[:, :, None, :] - coords[:, None, :, :]
+            distance = torch.linalg.vector_norm(delta, dim=-1)
+            pair = torch.log(distance.clamp_min(1e-5)).unsqueeze(-1)
             bias = self.pair(pair).permute(0, 3, 1, 2).reshape(-1, x.size(1), x.size(1))
             # Fold padded keys into the additive pairwise attention bias. Passing one
             # floating-point mask avoids PyTorch's deprecated mixed attn/key-mask path.
