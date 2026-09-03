@@ -1,0 +1,11 @@
+# Constituent-level quark/gluon notebooks (PyTorch is installed separately).
+numpy>=1.26,<3
+pandas>=2.1,<3
+pyarrow>=14,<26
+matplotlib>=3.8,<4
+scikit-learn>=1.4,<2
+ipython>=8,<10
+ipykernel>=6,<8
+jupyterlab>=4,<5
+nbconvert>=7,<8
+nbformat>=5,<6

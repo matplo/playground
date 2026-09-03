@@ -1,0 +1,8 @@
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+data/
+artifacts/
+*.png
+codex_resume.txt
