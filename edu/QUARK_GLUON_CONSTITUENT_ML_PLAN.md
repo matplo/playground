@@ -38,10 +38,13 @@ outputs locally by running the cells.
 ## Workflow
 
 1. `demo_quark_gluon_samples.ipynb` generates the Parquet jet sample.
-2. `demo_quark_gluon_constituent_setup.ipynb` validates and prepares it.
-3. The PFN, Transformer, and ParticleNet notebooks train independent models.
-4. `demo_quark_gluon_model_evaluation.ipynb` reloads and compares them.
-5. `demo_quark_gluon_model_interpretation.ipynb` studies model reliance.
+2. `demo_quark_gluon_classification.ipynb` trains and saves the classical
+   and compact top-particle baselines.
+3. `demo_quark_gluon_constituent_setup.ipynb` validates and prepares it.
+4. The PFN, Transformer, and ParticleNet notebooks train independent models.
+5. `demo_quark_gluon_model_evaluation.ipynb` reloads all model families and
+   compares them on identical test jets.
+6. `demo_quark_gluon_model_interpretation.ipynb` studies neural-model reliance.
 
 The programmatic alternative is `qg_constituent_ml.py`. Prepared data and
 model bundles are namespaced by a SHA-256 fingerprint of the source Parquet
@@ -49,16 +52,16 @@ file, preventing accidental comparisons across different generated samples.
 
 ## Generation and scaling
 
-The generator accepts these environment overrides:
+The generator exposes ordinary Python variables in a visible notebook cell:
 
 | Variable | Default | Meaning |
 |---|---:|---|
-| `QG_N_EVENTS` | `20000` | Number of attempted Pythia events |
-| `QG_SEED` | `7` | Pythia random seed |
-| `QG_OUTPUT_DIR` | `data` | Output directory |
+| `N_EVENTS` | `20_000` | Number of attempted Pythia events |
+| `PYTHIA_SEED` | `7` | Pythia random seed |
+| `OUT_DIR` | `data` | Output directory |
 
-For example, a student can generate ten times the default statistics with
-`QG_N_EVENTS=200000`. A generation manifest records all run parameters,
+For example, a student can generate ten times the default statistics by
+changing `N_EVENTS` to `200_000` and running from the top. A generation manifest records all run parameters,
 counts, schema version, and the Parquet fingerprint. The current design uses
 one reproducible rerun rather than appendable shards. Sharded Parquet plus a
 glob-based source manifest is the natural extension beyond samples that fit
@@ -71,7 +74,10 @@ students without feedback or require Jupyter widget support.
 
 ## Constituent representation
 
-Every stored constituent is used; there is no top-N truncation. Continuous
+Every stored constituent is used by PFN, Transformer, and ParticleNet; there
+is no top-N truncation in those models. The compact scikit-learn MLP baseline
+uses the 20 highest-$p_T$ constituents through the visible
+`MAX_CONSTITUENTS` setting. Continuous
 inputs are `log(z)`, relative eta, wrapped relative phi, and `log(delta-R)`.
 PID is represented by six categories: photon, charged hadron, neutral hadron,
 electron, muon, and other. Absolute jet pt/eta and truth-matching fields are
@@ -90,7 +96,8 @@ padding occurs dynamically per batch.
   followed by class-attention pooling; no positional sequence encoding.
 - **ParticleNet-style:** masked k-nearest-neighbor graphs and EdgeConv blocks.
 
-Each notebook supports `QG_RUN_MODE=quick|full`. Quick mode is interactive;
+Each advanced notebook exposes `RUN_MODE = 'quick'` or `'full'` in a
+visible control cell. Quick mode is interactive;
 full mode uses all training jets and larger/longer configurations. Models
 automatically use CUDA and mixed precision when available, with conservative
 batch sizes for the node's 8 GB Quadro RTX 4000.
@@ -125,6 +132,12 @@ It also records the dataset/split fingerprints, input schema, normalization,
 PID map, PyTorch version, device, timing, and parameter count. Reloaded models
 must reproduce their saved predictions within floating-point tolerance.
 
+The baseline notebook saves fitted scikit-learn estimators with joblib plus
+JSON configuration, metrics, and predictions keyed by event and jet. All
+model families use the same stable event-hash split. The evaluation notebook
+checks both dataset and split fingerprints and exact test identifiers before
+placing baseline and constituent-network curves on the same plot.
+
 A model may score a new compatible Parquet sample using its stored
 preprocessing. Metrics from different dataset or split fingerprints are
 reported separately rather than placed in a misleading direct comparison.
@@ -155,6 +168,8 @@ and unphysical perturbations must be discussed when interpreting results.
 - Padding and permutation invariance checks for all architectures.
 - Quick-mode notebook execution with CUDA and CPU fallback.
 - Checkpoint save/reload and identical held-out predictions.
+- Common-test comparison of logistic regression, both BDTs, the top-20 MLP,
+  PFN, Transformer, and ParticleNet-style network.
 - Labeled and unlabeled inference on another compatible sample.
 - Finite metrics, ablations, and attributions without assuming a model rank.
 
@@ -168,6 +183,10 @@ and unphysical perturbations must be discussed when interpreting results.
 - Use progress bars for operations whose runtime scales materially with the
   event or jet count, including one stable bar during training.
 - Save model bundles and add dedicated evaluation and interpretation lessons.
+- Prefer visible Python controls in notebooks over environment variables for
+  the student workflow.
+- Merge padding into the Transformer's additive attention mask to avoid
+  PyTorch's deprecated mixed-mask-type path.
 
 ## Implementation record (2026-09-02)
 
@@ -175,7 +194,7 @@ The quick workflow was executed successfully on the Quadro RTX 4000 with
 PyTorch 2.5.1+cu121. For dataset fingerprint `1e09b49ecb4d`, held-out ROC
 AUCs were 0.807 (PFN), 0.806 (Transformer), and 0.798 (ParticleNet-style).
 All saved bundles reloaded with matching predictions. A temporary 30-event
-generation test confirmed `QG_N_EVENTS`, `QG_SEED`, the manifest, and
+generation test confirmed the event-count and seed controls, the manifest, and
 byte-identical Parquet output for the same seed.
 
 Student portability is provided by `setup_student_env.sh`, `requirements.txt`,
@@ -184,3 +203,13 @@ active henvs; selects a CUDA/CPU Torch wheel; registers a course kernel or
 refreshes the active henv's HEP kernel as appropriate; resolves
 Pythia8/FastJet through heppyyier; and runs a smoke test. The requirements
 file was verified with a networked pip dry-run.
+
+The unified comparison was also exercised on dataset fingerprint
+`150363c4422b`: all seven classifiers used the same 1,159 test jets, with
+matching event and jet identifiers. The observed ROC AUC values in that smoke
+test were 0.785 (Transformer), 0.777 (ParticleNet-style), 0.774 (PFN), 0.771
+(BDT with kinematics), 0.769 (logistic shapes), 0.768 (BDT shapes), and 0.727
+(top-20 constituent MLP). These values validate the workflow rather than
+establish a permanent ranking; they can change with generated statistics and
+training. A CUDA mixed-precision forward/backward test of the revised
+Transformer mask completed with finite outputs and no mask-type warnings.

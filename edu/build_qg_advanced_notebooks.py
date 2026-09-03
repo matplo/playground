@@ -23,6 +23,16 @@ META={"kernelspec":{"display_name":"Python 3 (ipykernel)","language":"python","n
                        "pygments_lexer":"ipython3","version":"3.10.12"}}
 
 
+SOURCE_SETTINGS = r'''
+# Student control: edit this value, then run the notebook from the top.
+SOURCE_PATH = 'data/inclusive_jets.parquet'
+'''
+
+TRAINING_SETTINGS = SOURCE_SETTINGS + r'''
+RUN_MODE = 'quick'  # 'quick' for a short lesson; 'full' uses all training jets
+'''
+
+
 BOOT = r'''
 import importlib.util
 required = ['numpy', 'pandas', 'pyarrow', 'matplotlib', 'sklearn', 'torch', 'tqdm']
@@ -34,7 +44,7 @@ if missing:
         "restart Jupyter from that henv, and select its registered kernel."
     )
 
-import json, os, time
+import json, time
 from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
@@ -43,11 +53,13 @@ from tqdm import tqdm
 import qg_constituent_ml as qg
 
 DEVICE = qg.choose_device()
-RUN_MODE = os.getenv('QG_RUN_MODE', 'quick')
-SOURCE = Path(os.getenv('QG_INPUT_PATH', 'data/inclusive_jets.parquet'))
+RUN_MODE_VALUE = globals().get('RUN_MODE')
+if RUN_MODE_VALUE is not None and RUN_MODE_VALUE not in {'quick', 'full'}:
+    raise ValueError("RUN_MODE must be 'quick' or 'full'")
+SOURCE = Path(SOURCE_PATH)
 print(f'PyTorch {torch.__version__}; built with CUDA {torch.version.cuda}')
 print(f'device={DEVICE}' + (f'; GPU={torch.cuda.get_device_name(0)}' if DEVICE.type == 'cuda' else ''))
-print(f'run mode={RUN_MODE}; source={SOURCE}')
+print((f'run mode={RUN_MODE_VALUE}; ' if RUN_MODE_VALUE else '') + f'source={SOURCE}')
 '''
 
 
@@ -71,8 +83,14 @@ the common preparation lesson and saves a self-describing model bundle.
 
 {description}
 
-Set `QG_RUN_MODE=full` before launching Jupyter for the larger configuration. Quick
-mode is the default. Both automatically use CUDA when it is available.'''),
+Set `RUN_MODE = 'full'` in the student-controls cell for the larger configuration.
+Quick mode is the default. Both automatically use CUDA when it is available.'''),
+      md('''## 0. Student controls
+
+These ordinary Python variables are the main controls for the lesson. Quick mode limits
+training statistics for a short interactive run; full mode uses every training jet. Changing
+the input file automatically creates a different fingerprinted prepared dataset.'''),
+      code(TRAINING_SETTINGS),
       md('''## 1. Environment and computing device
 
 Run `./setup_student_env.sh` once before this lesson. A **Jupyter kernel** is the Python
@@ -181,6 +199,12 @@ This lesson turns the list-valued Parquet columns into a scalable representation
 three advanced classifiers. It uses every constituent, prevents event leakage, and records
 the exact source-data fingerprint. Rerunning the generator with ten times more events is
 detected automatically.'''),
+ md('''## 0. Student controls
+
+Edit the source path directly here. In each later training notebook, a separate `RUN_MODE`
+variable controls the amount of training data and model size, not the number of particles
+per jet. The advanced models always use every constituent.'''),
+ code(SOURCE_SETTINGS),
  md('## 1. Environment'),code(BOOT),
  md('''## 2. From particles to numbers a neural network can use
 
@@ -236,8 +260,8 @@ assert batch['mask'].sum().item() == sum(len(ds[i]['features']) for i in range(m
 print({k:tuple(v.shape) for k,v in batch.items() if hasattr(v,'shape')})'''),
  md('''## 5. Scaling the statistics
 
-Change the visible generator setting or launch it with `QG_N_EVENTS=200000` for ten times
-the default event count. The resulting Parquet SHA-256 changes; this setup creates a new
+Change `N_EVENTS` in the generator notebook—for example, from 20,000 to 200,000 for ten
+times the default event count. The resulting Parquet SHA-256 changes; this setup creates a new
 memory-mappable prepared directory, while model checkpoints trained on older statistics
 remain separately identified.''')])
 
@@ -257,14 +281,22 @@ features from a particle and its nearest neighbors, then combines those local me
 treats the jet as a particle cloud and helps the model learn localized radiation patterns.'''))
 
 write('demo_quark_gluon_model_evaluation.ipynb',[
- md('''# Load, apply, and compare saved constituent models
+ md('''# Load, apply, and compare all saved classifiers
 
-This notebook reconstructs each architecture from its JSON configuration and weights-only
-checkpoint. A **checkpoint** stores learned parameter values so inference can be performed
-without training again. **Inference** means applying a trained model to obtain scores.
+This notebook compares the logistic regression, BDTs, compact top-particle MLP, PFN,
+Particle Transformer, and ParticleNet-style network on exactly the same held-out jets.
+It reconstructs each neural architecture from its JSON configuration and weights-only
+checkpoint and loads common-test predictions saved by the baseline notebook. A **checkpoint**
+stores learned parameter values so inference can be performed without training again.
+**Inference** means applying a trained model to obtain scores.
 
 Direct comparisons are allowed only on the same dataset and split fingerprint. Otherwise a
 score difference might come from easier test examples rather than a better architecture.'''),
+ md('''## 0. Student controls
+
+Use the same input sample as the training notebooks. Set `EVAL_PATH` to another compatible
+Parquet file only for the optional final application section.'''),
+ code(SOURCE_SETTINGS + "\n# Optional independent sample to score after the common comparison.\nEVAL_PATH = None"),
  md('## 1. Environment'),code(BOOT),
  code('''prepared=qg.prepare_dataset(SOURCE); manifest=qg.load_manifest(prepared)
 bundles=qg.discover_bundles(dataset_fingerprint=manifest['source_sha256'])
@@ -277,7 +309,7 @@ weights were all restored correctly. The table reports parameter count and class
 metrics. A fair comparison uses identical test jets and never selects a winner by repeatedly
 looking at the test set.'''),
  code('''from sklearn.metrics import roc_curve
-rows=[]; curves={}
+rows=[]; curves={}; reference=None
 for bundle in tqdm(bundles, desc='Evaluating saved models', unit='model'):
     model,config=qg.load_model_bundle(bundle,DEVICE)
     loaders=qg.make_loaders(prepared,config['architecture'],config['mode'])
@@ -286,27 +318,53 @@ for bundle in tqdm(bundles, desc='Evaluating saved models', unit='model'):
     assert np.array_equal(pred['event_ids'],saved['event_ids']) and np.array_equal(pred['jet_ids'],saved['jet_ids'])
     assert np.allclose(pred['scores'],saved['scores'],atol=2e-5)
     metrics=qg.binary_metrics(pred['labels'],pred['scores']); metrics['model']=f"{config['architecture']} ({config['mode']})"
+    metrics['family']='all-constituent neural network'
     metrics['parameters']=sum(p.numel() for p in model.parameters()); metrics['bundle']=str(bundle); rows.append(metrics)
     curves[metrics['model']]=(*roc_curve(pred['labels'],pred['scores'])[:2],metrics['roc_auc'])
+    current=(pred['event_ids'],pred['jet_ids'],pred['labels'])
+    if reference is None: reference=current
+    else:
+        assert all(np.array_equal(a,b) for a,b in zip(reference,current))
+
+baseline_bundle=Path('artifacts/qg_baselines')/manifest['source_sha256'][:12]
+baseline_predictions=baseline_bundle/'predictions.npz'
+if baseline_predictions.exists():
+    import joblib
+    baseline_config=json.loads((baseline_bundle/'config.json').read_text())
+    baseline_models=joblib.load(baseline_bundle/'models.joblib')
+    assert baseline_config['dataset_fingerprint']==manifest['source_sha256']
+    assert baseline_config['split_fingerprint']==manifest['split_fingerprint']
+    assert set(baseline_models['models'])==set(baseline_config['model_names'])
+    saved=np.load(baseline_predictions)
+    current=(saved['event_ids'],saved['jet_ids'],saved['labels'])
+    if reference is not None:
+        assert all(np.array_equal(a,b) for a,b in zip(reference,current)), 'Baseline and neural test jets differ'
+    for name,score in zip(saved['model_names'].astype(str),saved['scores']):
+        metrics=qg.binary_metrics(saved['labels'],score); metrics['model']=name
+        metrics['family']='classical / compact baseline'; metrics['parameters']=np.nan
+        metrics['bundle']=str(baseline_bundle); rows.append(metrics)
+        curves[name]=(*roc_curve(saved['labels'],score)[:2],metrics['roc_auc'])
+else:
+    print(f'Baseline bundle not found at {baseline_bundle}. Run the classification notebook to add logistic, BDT, and MLP results.')
+
 import pandas as pd
 results=pd.DataFrame(rows).sort_values('roc_auc',ascending=False); display(results)'''),
  code('''fig,ax=plt.subplots(figsize=(7,5))
 for name,(fpr,tpr,auc) in curves.items(): ax.plot(tpr,1/np.clip(fpr,1e-3,None),label=f'{name}: {auc:.3f}')
-ax.set(xlabel='quark efficiency',ylabel='gluon rejection',yscale='log',title='Common held-out comparison')
+ax.set(xlabel='quark efficiency',ylabel='gluon rejection',yscale='log',title='All models on the same held-out jets')
 ax.legend(); plt.tight_layout(); plt.show()'''),
  md('''## 3. Apply a model to another sample
 
-Set `QG_EVAL_PATH` before launching to evaluate a different compatible Parquet file. The
+Set `EVAL_PATH` in the student-controls cell to evaluate a different compatible Parquet file. The
 saved training normalization is reused; it must never be refitted on the evaluation sample.
 Refitting would allow the new sample to alter preprocessing and would make its scores
 inconsistent with the original model.'''),
- code('''EVAL_PATH=os.getenv('QG_EVAL_PATH')
-if EVAL_PATH:
+ code('''if EVAL_PATH:
     evaluation,config=qg.predict_parquet(bundles[0],EVAL_PATH,device=DEVICE)
     labeled=evaluation['labels'] >= 0
     print(f"Scored all {len(evaluation['scores']):,} jets from {EVAL_PATH}; {labeled.sum():,} have quark/gluon labels")
     if labeled.any(): print(json.dumps(qg.binary_metrics(evaluation['labels'][labeled],evaluation['scores'][labeled]),indent=2))
-else: print('QG_EVAL_PATH is unset; common-test comparison complete.')''')])
+else: print('EVAL_PATH is unset; common-test comparison complete.')''')])
 
 write('demo_quark_gluon_model_interpretation.ipynb',[
  md('''# What do the constituent models rely on?
@@ -315,6 +373,10 @@ This is not a search for causal or universal quark/gluon features. It measures h
 models respond to controlled input removal and which constituents locally influence a score.
 This distinction matters: an explanation of a trained model is not automatically a law of
 physics or a statement that one variable *causes* a jet to be a quark jet.'''),
+ md('''## 0. Student controls
+
+Use the same source path as the saved models you want to interpret.'''),
+ code(SOURCE_SETTINGS),
  md('## 1. Environment and compatible models'),code(BOOT),
  code('''prepared=qg.prepare_dataset(SOURCE); manifest=qg.load_manifest(prepared)
 bundles=qg.discover_bundles(dataset_fingerprint=manifest['source_sha256'])
@@ -411,12 +473,19 @@ for cell in nb['cells']:
                     "import os\nPYTHIA_SEED = int(os.getenv('QG_SEED', '7'))")
     src=src.replace("pythia.readString('Random:setSeed = on')\npythia.readString(f'Random:seed = {PYTHIA_SEED}')\npythia.readString('Random:setSeed = on')\npythia.readString(f'Random:seed = {PYTHIA_SEED}')",
                     "pythia.readString('Random:setSeed = on')\npythia.readString(f'Random:seed = {PYTHIA_SEED}')")
+    src=src.replace("PYTHIA_SEED = int(os.getenv('QG_SEED', '7'))",
+                    "PYTHIA_SEED = 7  # edit for another reproducible random sequence")
+    src=src.replace("N_EVENTS = int(os.getenv('QG_N_EVENTS', '20000'))",
+                    "N_EVENTS = 20_000  # edit this number to change the sample statistics")
+    src=src.replace("OUT_DIR = os.getenv('QG_OUTPUT_DIR', 'data')",
+                    "OUT_DIR = 'data'  # edit to write the generated files elsewhere")
     if "pythia = pythia8.Pythia()" in src and "PYTHIA_SEED" not in src:
-        src=src.replace("pythia = pythia8.Pythia()", "import os\nPYTHIA_SEED = int(os.getenv('QG_SEED', '7'))\npythia = pythia8.Pythia()")
+        src=src.replace("pythia = pythia8.Pythia()", "import os\nPYTHIA_SEED = 7  # edit for another reproducible random sequence\npythia = pythia8.Pythia()")
         src=src.replace("pythia.readString('Next:numberShowEvent = 0')", "pythia.readString('Random:setSeed = on')\npythia.readString(f'Random:seed = {PYTHIA_SEED}')\npythia.readString('Next:numberShowEvent = 0')")
-    if "N_EVENTS = 20000" in src:
-        src=src.replace("N_EVENTS = 20000", "N_EVENTS = int(os.getenv('QG_N_EVENTS', '20000'))")
-        src=src.replace("OUT_DIR = 'data'", "OUT_DIR = os.getenv('QG_OUTPUT_DIR', 'data')")
+    src=src.replace(
+        "N_EVENTS = 20_000  # edit this number to change the sample statistics     # bump for more statistics; runtime scales ~linearly",
+        "N_EVENTS = 20_000  # edit this number; runtime scales approximately linearly",
+    )
     if src.startswith('records = []') and 'n_generated = 0' not in src:
         src=src.replace('records = []','records = []\nn_generated = 0')
         src=src.replace('    cs, jets, part_pdgid = cluster_event()','    n_generated += 1\n    cs, jets, part_pdgid = cluster_event()')
@@ -450,6 +519,155 @@ for notebook_name in ('demo_pythia_fastjet.ipynb', 'demo_quark_gluon_classificat
                               "top_constituent_inputs(row) for row in tqdm(model_data.itertuples(index=False), total=len(model_data), desc='Building constituent inputs', unit='jet')")
         cell['source'] = src.splitlines(keepends=True)
     path.write_text(json.dumps(nb, indent=1) + "\n")
+
+
+# Keep the classical baselines on the identical event split used by the constituent
+# networks, retain 20 leading particles for the compact MLP, and save reusable artifacts.
+path = Path('demo_quark_gluon_classification.ipynb')
+nb = json.loads(path.read_text())
+for cell in nb['cells']:
+    src = ''.join(cell.get('source', []))
+    if cell.get('cell_type') == 'markdown':
+        if src.startswith('## D. Build leakage-safe ML samples'):
+            src = '''## D. Build leakage-safe ML samples
+
+The split is by `event_id`, not by individual jet: every jet from one generated event stays
+entirely in train, validation, or test. The training set is downsampled to equal quark/gluon
+counts so all models see a balanced fitting sample. The untouched validation and test sets
+retain their natural mixtures. The stable event-hash rule is identical to the one used by
+the advanced constituent models.
+
+The top-constituent representation sorts constituents by $p_T$, keeps the first 20, and stores
+$(z,\Delta\eta,\Delta\phi,\Delta R,\mathrm{mask})$. It is a compact, fixed-size proxy for a raw
+constituent model—not permutation invariant and not as expressive as a transformer.
+The later PFN, Transformer, and ParticleNet models do **not** use this truncation;
+their dynamically padded batches retain every constituent.
+'''
+        src = src.replace('keeps the first 12', 'keeps the first 20')
+        src = src.replace('Top-12 constituent MLP', 'Top-20 constituent MLP')
+    elif cell.get('cell_type') == 'code' and 'from sklearn.ensemble import GradientBoostingClassifier' in src:
+        if 'import hashlib' not in src:
+            src = src.replace('from pathlib import Path\n', 'from pathlib import Path\nimport hashlib\nimport json\n')
+        if 'import joblib' not in src:
+            src = src.replace('import pandas as pd\n', 'import pandas as pd\nimport joblib\n')
+        src = src.replace('from sklearn.model_selection import train_test_split\n', '')
+        if 'import qg_constituent_ml as qg' not in src:
+            src = src.replace('from IPython.display import display\n',
+                              'from IPython.display import display\n\nimport qg_constituent_ml as qg\n')
+        if 'MAX_CONSTITUENTS = 20' not in src:
+            src = src.replace(
+                "RANDOM_STATE = 7\n",
+                "RANDOM_STATE = 7\nMAX_CONSTITUENTS = 20  # compact MLP only; advanced models use every particle\n"
+                "BASELINE_ROOT = Path('artifacts/qg_baselines')\n",
+            )
+    elif cell.get('cell_type') == 'code' and 'shape_features = [' in src and (
+            'event_ids = model_data' in src or 'split_ids =' in src):
+        src = '''shape_features = [
+    'n_constituents', 'mass_over_pt', 'ptd', 'lead_pt_fraction',
+    'soft_pt_fraction', 'angularity_beta_0p5', 'girth', 'radial_width',
+    'core_pt_fraction_0p1', 'core_pt_fraction_0p2', 'eec_beta_1',
+]
+shape_plus_kinematics = shape_features + ['jet_pt', 'abs_jet_eta']
+
+model_data = jets_with_features[
+    jets_with_features['flavor'].isin(['quark', 'gluon'])
+].reset_index(drop=True)
+model_data['label'] = (model_data['flavor'] == 'quark').astype(int)
+
+# This is exactly the stable 70/15/15 event split used by qg_constituent_ml.py.
+split_ids = np.array([
+    qg.split_for_event(event_id, RANDOM_STATE)
+    for event_id in model_data['event_id']
+], dtype=np.uint8)
+train_mask = split_ids == 0
+validation_mask = split_ids == 1
+test_mask = split_ids == 2
+
+rng = np.random.default_rng(RANDOM_STATE)
+y_all = model_data['label'].to_numpy()
+train_by_class = [np.flatnonzero(train_mask & (y_all == label)) for label in (0, 1)]
+n_balanced = min(map(len, train_by_class))
+train_indices = np.concatenate([
+    rng.choice(indices, size=n_balanced, replace=False) for indices in train_by_class
+])
+rng.shuffle(train_indices)
+validation_indices = np.flatnonzero(validation_mask)
+test_indices = np.flatnonzero(test_mask)
+
+assert set(model_data.loc[train_indices, 'event_id']).isdisjoint(
+    set(model_data.loc[validation_indices, 'event_id'])
+)
+assert set(model_data.loc[train_indices, 'event_id']).isdisjoint(
+    set(model_data.loc[test_indices, 'event_id'])
+)
+assert set(model_data.loc[validation_indices, 'event_id']).isdisjoint(
+    set(model_data.loc[test_indices, 'event_id'])
+)
+dataset_fingerprint = qg.sha256_file(INPUT_PATH)
+split_fingerprint = hashlib.sha256(split_ids.tobytes()).hexdigest()
+
+print(f'Balanced training sample: {len(train_indices):,} jets '
+      f'({n_balanced:,} per class)')
+print(f'Validation sample: {len(validation_indices):,} jets')
+print(f'Natural test sample: {len(test_indices):,} jets')
+display(model_data.loc[test_indices, 'flavor'].value_counts().rename('test jets').to_frame())
+'''
+    elif cell.get('cell_type') == 'code' and 'def top_constituent_inputs' in src:
+        src = src.replace('MAX_CONSTITUENTS = 12\n\n\n', '')
+        src = src.replace("print('Top-constituent input shape:', X_constituents.shape)",
+                          "print(f'Top-{MAX_CONSTITUENTS} constituent input shape:', X_constituents.shape)")
+    elif cell.get('cell_type') == 'code' and 'model_specs = {' in src:
+        src = src.replace("'Top-12 constituent MLP':", "f'Top-{MAX_CONSTITUENTS} constituent MLP':")
+        if 'input_kinds =' not in src:
+            src = src.replace(
+                "fitted_models = {}\n",
+                "input_kinds = {\n"
+                "    'Logistic (shapes)': 'shapes',\n"
+                "    'BDT (shapes)': 'shapes',\n"
+                "    'BDT (shapes + kinematics)': 'shapes_plus_kinematics',\n"
+                "    f'Top-{MAX_CONSTITUENTS} constituent MLP': 'top_constituents',\n"
+                "}\n\n"
+                "fitted_models = {}\n",
+            )
+    elif cell.get('cell_type') == 'code' and 'metrics_df = pd.DataFrame' in src:
+        marker = '# Save a reusable baseline bundle for the common comparison notebook.'
+        if marker not in src:
+            src += f'''
+
+{marker}
+baseline_bundle = BASELINE_ROOT / dataset_fingerprint[:12]
+baseline_bundle.mkdir(parents=True, exist_ok=True)
+joblib.dump({{
+    'models': fitted_models,
+    'input_kinds': input_kinds,
+    'shape_features': shape_features,
+    'shape_plus_kinematics': shape_plus_kinematics,
+    'max_constituents': MAX_CONSTITUENTS,
+}}, baseline_bundle / 'models.joblib')
+
+baseline_config = {{
+    'dataset_fingerprint': dataset_fingerprint,
+    'split_fingerprint': split_fingerprint,
+    'split_seed': RANDOM_STATE,
+    'max_constituents': MAX_CONSTITUENTS,
+    'model_names': list(test_scores),
+    'positive_class': 'quark',
+}}
+with open(baseline_bundle / 'config.json', 'w') as stream:
+    json.dump(baseline_config, stream, indent=2, sort_keys=True)
+metrics_df.to_json(baseline_bundle / 'metrics.json', orient='records', indent=2)
+np.savez(
+    baseline_bundle / 'predictions.npz',
+    labels=y_test,
+    event_ids=model_data.loc[test_indices, 'event_id'].to_numpy(np.int64),
+    jet_ids=model_data.loc[test_indices, 'jet_id'].to_numpy(np.int32),
+    model_names=np.asarray(list(test_scores)),
+    scores=np.vstack([test_scores[name] for name in test_scores]),
+)
+print(f'Saved baseline models and common-test predictions: {{baseline_bundle}}')
+'''
+    cell['source'] = src.splitlines(keepends=True)
+path.write_text(json.dumps(nb, indent=1) + "\n")
 
 
 # Insert durable, high-school-level teaching notes in the hand-authored notebooks.

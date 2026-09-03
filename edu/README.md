@@ -29,10 +29,14 @@ statistics, and moving saved data or models.
 4. `demo_quark_gluon_classification.ipynb`
 5. `demo_quark_gluon_constituent_setup.ipynb`
 6. Train the PFN, Particle Transformer, and ParticleNet models in any order.
-7. `demo_quark_gluon_model_evaluation.ipynb`
+7. `demo_quark_gluon_model_evaluation.ipynb` (all seven classifiers on one test split)
 8. `demo_quark_gluon_model_interpretation.ipynb`
 
 Generated datasets, prepared arrays, plots, and trained model bundles are
 intentionally excluded from Git. The sample and training notebooks recreate
 them locally. The detailed implementation and tuning record is in
 [QUARK_GLUON_CONSTITUENT_ML_PLAN.md](QUARK_GLUON_CONSTITUENT_ML_PLAN.md).
+
+The main student controls—event count, seed, output path, top-particle count,
+input path, and quick/full training mode—are ordinary variables near the top
+of the relevant notebooks.

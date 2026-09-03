@@ -135,32 +135,30 @@ select the course kernel again.
 ## Notebook order
 
 1. `demo_quark_gluon_samples.ipynb`
-2. `demo_quark_gluon_constituent_setup.ipynb`
-3. the PFN, Particle Transformer, and ParticleNet notebooks in any order
-4. `demo_quark_gluon_model_evaluation.ipynb`
-5. `demo_quark_gluon_model_interpretation.ipynb`
+2. `demo_quark_gluon_classification.ipynb` (classical and compact baselines)
+3. `demo_quark_gluon_constituent_setup.ipynb`
+4. the PFN, Particle Transformer, and ParticleNet notebooks in any order
+5. `demo_quark_gluon_model_evaluation.ipynb`
+6. `demo_quark_gluon_model_interpretation.ipynb`
 
 Prepared arrays and trained models are automatically associated with the
 fingerprint of the generated Parquet sample.
 
 ## Generate more statistics
 
-For ten times the default event count:
+Open `demo_quark_gluon_samples.ipynb` and edit the visible controls:
 
-```bash
-QG_N_EVENTS=200000 henv . -x jupyter nbconvert \
-  --to notebook --execute --inplace demo_quark_gluon_samples.ipynb
+```python
+N_EVENTS = 200_000
+PYTHIA_SEED = 7
+OUT_DIR = 'data'
 ```
 
-For an interactive run:
-
-```bash
-export QG_N_EVENTS=200000
-henv . -x jupyter lab
-```
-
-Downstream notebooks detect the new Parquet fingerprint and build a new
-prepared dataset. Older models remain under their original fingerprint.
+Then run the notebook from the top. Downstream notebooks detect the new
+Parquet fingerprint and build a new prepared dataset. In advanced notebooks,
+set `RUN_MODE = 'full'` in the visible controls to use all training jets;
+`quick` deliberately caps training statistics for a shorter lesson. Older
+models remain under their original fingerprint.
 
 ## Moving data and models
 
@@ -169,6 +167,8 @@ prepared dataset. Older models remain under their original fingerprint.
 - `data/qg_prepared/` is derived and can be regenerated.
 - `artifacts/qg_models/` contains weights plus required JSON configuration;
   copy the whole directory when sharing trained models.
+- `artifacts/qg_baselines/` contains fitted logistic/BDT/compact-MLP models
+  and their common-test predictions.
 - `.venv/` is machine/account specific and must not be copied.
 
 If only notebooks and scripts are moved, run the setup script and then

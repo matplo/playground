@@ -250,8 +250,13 @@ def model_classes():
         def forward(self, x, coords, mask):
             y = self.norm1(x); pair = torch.log(torch.cdist(coords, coords).clamp_min(1e-5)).unsqueeze(-1)
             bias = self.pair(pair).permute(0, 3, 1, 2).reshape(-1, x.size(1), x.size(1))
-            key_mask = torch.zeros(mask.shape, device=x.device, dtype=x.dtype).masked_fill(~mask, float("-inf"))
-            y, _ = self.attn(y, y, y, attn_mask=bias, key_padding_mask=key_mask, need_weights=False)
+            # Fold padded keys into the additive pairwise attention bias. Passing one
+            # floating-point mask avoids PyTorch's deprecated mixed attn/key-mask path.
+            invalid_keys = (~mask)[:, None, None, :].expand(
+                -1, self.heads, x.size(1), -1
+            ).reshape_as(bias)
+            bias = bias.masked_fill(invalid_keys, float("-inf"))
+            y, _ = self.attn(y, y, y, attn_mask=bias, need_weights=False)
             x = (x + y) * mask.unsqueeze(-1); x = (x + self.ff(self.norm2(x))) * mask.unsqueeze(-1)
             return x
 
@@ -265,8 +270,9 @@ def model_classes():
             x = self.embed(features) * mask.unsqueeze(-1)
             for block in self.blocks: x = block(x, coords, mask)
             query = self.cls.expand(x.size(0), -1, -1)
-            key_mask = torch.zeros(mask.shape, device=x.device, dtype=x.dtype).masked_fill(~mask, float("-inf"))
-            embedding, _ = self.cls_attn(query, x, x, key_padding_mask=key_mask, need_weights=False)
+            embedding, _ = self.cls_attn(
+                query, x, x, key_padding_mask=~mask, need_weights=False
+            )
             embedding = embedding[:, 0]; logits = self.head(embedding).squeeze(-1)
             return (logits, embedding) if return_embedding else logits
 
