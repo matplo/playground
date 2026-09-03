@@ -60,15 +60,40 @@ def architecture_notebook(arch,title,description):
       md(f'''# {title}: quark/gluon classification
 
 This notebook trains a **{title}** on every constituent of each truth-matched jet.
-It follows the common preparation lesson and saves a self-describing model bundle.
+A **jet** is a narrow spray of particles produced when a high-energy quark or gluon
+turns into observable particles. Those particles are the jet's **constituents**.
+The classification task is to use their measured patterns to estimate whether the
+original particle was a quark or a gluon.
+
+This is **supervised machine learning**: each training example has inputs (constituent
+measurements) and a target answer (the simulation-derived quark/gluon label). It follows
+the common preparation lesson and saves a self-describing model bundle.
 
 {description}
 
 Set `QG_RUN_MODE=full` before launching Jupyter for the larger configuration. Quick
 mode is the default. Both automatically use CUDA when it is available.'''),
-      md('## 1. Environment and device\n\nRun `./setup_student_env.sh` once before this lesson. This check confirms that the selected Jupyter kernel is the student-owned henv; CPU remains a supported fallback.'),
+      md('''## 1. Environment and computing device
+
+Run `./setup_student_env.sh` once before this lesson. A **Jupyter kernel** is the Python
+process that actually executes notebook cells; selecting the henv kernel makes sure it
+can see the packages installed for this course.
+
+PyTorch can calculate on a CPU or on a GPU. A **GPU** performs many similar arithmetic
+operations at once, which is useful for neural-network training. **CUDA** is the software
+interface PyTorch uses to access an NVIDIA GPU. The code chooses CUDA automatically when
+available, but gives the same lesson on a CPU.'''),
       code(BOOT),
-      md('## 2. Current data and model\n\nPreparation is fingerprint-aware: changing the generated Parquet file creates a new prepared-data namespace automatically.'),
+      md('''## 2. Current data and model
+
+Preparation is fingerprint-aware: changing the generated Parquet file creates a new
+prepared-data namespace automatically. A **fingerprint** is a cryptographic summary
+(SHA-256 here) of a file's exact bytes. Even a tiny file change produces a different
+fingerprint, preventing us from silently pairing a model with the wrong dataset.
+
+The printed **parameter count** is the number of adjustable numerical values in the neural
+network. Training changes these values. More parameters can represent more complicated
+patterns, but also require more data and can make overfitting easier.'''),
       code(f'''prepared = qg.prepare_dataset(SOURCE)
 manifest = qg.load_manifest(prepared)
 MODEL_CONFIG = qg.default_config('{arch}', RUN_MODE)
@@ -76,11 +101,27 @@ model = qg.create_model('{arch}', config=MODEL_CONFIG)
 print(json.dumps({{k: manifest[k] for k in ('source_sha256','n_jets','n_constituents','split_counts','class_counts')}}, indent=2))
 print(model)
 print(f'parameters={{sum(p.numel() for p in model.parameters()):,}}; config={{MODEL_CONFIG}}')'''),
-      md('### Canonical implementation\n\nThe reusable class lives in `qg_constituent_ml.py` so saved models can be reconstructed later. Its source is displayed here to keep the architecture visible.'),
+      md('''### Canonical implementation
+
+A neural network is built from mathematical **layers**. Each layer transforms numbers into
+new numbers; during training, the network learns which transformations help predict the
+label. The final raw output is a **logit**. Applying the sigmoid function converts it to a
+score between 0 and 1, where larger values mean “more quark-like” in this project.
+
+The reusable class lives in `qg_constituent_ml.py` so saved models can be reconstructed
+later. Its source is displayed here to keep the architecture visible.'''),
       code(f'''import inspect
 from IPython.display import Code, display
 display(Code(inspect.getsource(qg.model_classes()['{arch}']), language='python'))'''),
-      md('## 3. Invariance checks\n\nPadding must not affect a prediction. Reordering constituents must not change an unordered-set classifier.'),
+      md('''## 3. Invariance checks
+
+Jets contain different numbers of particles. To place several jets in one rectangular
+tensor, shorter lists receive dummy entries called **padding**. A Boolean **mask** tells the
+model which entries are real. Adding more dummy entries must not change a prediction.
+
+The constituents form an unordered **set**, not a sentence: exchanging particle 2 and
+particle 7 should not change the jet. This property is called **permutation invariance**.
+The assertions below are unit tests for both physical requirements.'''),
       code(f'''loaders = qg.make_loaders(prepared, '{arch}', RUN_MODE)
 batch = next(iter(loaders[2]))
 model.eval()
@@ -95,7 +136,17 @@ with torch.no_grad():
 assert torch.allclose(base, permuted, atol=2e-5)
 assert torch.allclose(base, padded, atol=2e-5)
 print('Passed permutation and padding invariance checks.')'''),
-      md('## 4. Train and save\n\nTraining is balanced, validation/test mixtures are natural, and early stopping restores the best validation checkpoint.'),
+      md('''## 4. Train, validate, test, and save
+
+During **training**, the model predicts labels, a **loss function** measures its errors,
+and backpropagation computes how each parameter contributed to those errors. An optimizer
+then makes a small parameter update. One pass through the training sample is an **epoch**.
+
+The training batches are balanced so quarks and gluons contribute equally. A separate
+**validation set** chooses when to stop and is never used for parameter updates. **Early
+stopping** keeps the checkpoint from the epoch with the best validation result, limiting
+overfitting. The **test set** is touched only for the final measurement and keeps the
+naturally occurring class mixture.'''),
       code(f'''history, metrics, predictions = qg.train_model(model, loaders, '{arch}', RUN_MODE, DEVICE)
 bundle = qg.save_model_bundle(model, '{arch}', RUN_MODE, MODEL_CONFIG, prepared,
                               history, metrics, predictions)
@@ -109,7 +160,18 @@ fpr,tpr,_=roc_curve(predictions['labels'], predictions['scores'])
 axes[1].plot(tpr,1/np.clip(fpr,1e-3,None),label=f"AUC={metrics['roc_auc']:.3f}")
 axes[1].set(xlabel='quark efficiency',ylabel='gluon rejection',yscale='log',title='Held-out performance')
 axes[1].legend(); plt.tight_layout(); plt.show()'''),
-      md('## 5. What this result means\n\nCompare architectures only through the evaluation notebook, which enforces matching dataset and split fingerprints. A larger network on this small sample is not automatically a better physics model.')]
+      md('''## 5. Reading the plots and result
+
+**Binary cross-entropy (BCE)** is the training loss: smaller values mean that the predicted
+scores agree better with the known labels. The **ROC curve** scans every possible score
+threshold. Quark efficiency is the fraction of true quark jets retained; gluon rejection
+is the inverse of the fraction of gluon jets mistakenly retained. **AUC** summarizes the
+ROC curve: 0.5 is random ordering and 1.0 is perfect ordering on this sample.
+
+Compare architectures only through the evaluation notebook, which enforces matching dataset
+and split fingerprints. A larger network on a small sample is not automatically a better
+physics model: it may learn statistical fluctuations (**overfit**) instead of patterns that
+generalize to unseen jets.''')]
 
 
 write('demo_quark_gluon_constituent_setup.ipynb',[
@@ -120,12 +182,28 @@ three advanced classifiers. It uses every constituent, prevents event leakage, a
 the exact source-data fingerprint. Rerunning the generator with ten times more events is
 detected automatically.'''),
  md('## 1. Environment'),code(BOOT),
- md('''## 2. Representation
+ md('''## 2. From particles to numbers a neural network can use
 
-For particle $i$, use $z_i=p_{T,i}/\sum_jp_{T,j}$ and coordinates relative to the jet.
-Continuous inputs are `log(z)`, $\Delta\eta$, wrapped $\Delta\phi$, and `log(ΔR)`.
-Particle identity is categorical—not an ordinal PDG number. Stable event hashes create
-70/15/15 train/validation/test partitions, and normalization sees train particles only.'''),
+Each jet is described relative to its own axis. **Transverse momentum** $p_T$ is momentum
+perpendicular to the proton beams. **Pseudorapidity** $\eta$ describes direction along the
+beam, while the **azimuthal angle** $\phi$ describes direction around it. Angular separation
+is $\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2}$. Because $\phi$ wraps around at $2\pi$,
+$\Delta\phi$ is wrapped to the shortest signed angular distance.
+
+For particle $i$, $z_i=p_{T,i}/\sum_jp_{T,j}$ is its fraction of the jet's total constituent
+$p_T$. The continuous inputs are `log(z)`, $\Delta\eta$, wrapped $\Delta\phi$, and
+`log(ΔR)`. Logarithms compress quantities spanning many orders of magnitude, making
+optimization easier.
+
+The **PDG ID** names a particle species, such as a charged pion or photon. It is a category,
+not a measured amount: ID 211 is not “larger” than ID 22. We therefore map species to learned
+category embeddings instead of feeding the ID as an ordinary number.
+
+Stable hashes of `event_id` create 70/15/15 train/validation/test partitions. All jets from
+one collision event stay together, preventing **data leakage**—accidentally giving related
+information to both training and evaluation. **Normalization** subtracts a feature's training
+mean and divides by its training standard deviation. Only training particles determine these
+numbers, so information from validation or test data cannot leak backward.'''),
  code('''prepared = qg.prepare_dataset(SOURCE)
 manifest = qg.load_manifest(prepared)
 arrays = qg.load_arrays(prepared)
@@ -133,14 +211,22 @@ print(f'Prepared directory: {prepared}')
 print(json.dumps(manifest, indent=2))
 assert arrays['offsets'][-1] == manifest['n_constituents']
 assert len(arrays['labels']) == manifest['n_jets']'''),
- md('## 3. Inspect statistics and particle categories'),
+ md('''## 3. Inspect statistics and particle categories
+
+A jet is **variable-length** because it may contain a few particles or many. The histogram
+shows this multiplicity. During batching, each batch is padded only to its longest jet rather
+than to one global maximum; this reduces wasted memory when statistics grow.'''),
  code('''fig,axes=plt.subplots(1,2,figsize=(11,4))
 axes[0].hist(arrays['n_constituents'],bins=range(0,int(arrays['n_constituents'].max())+2),histtype='step')
 axes[0].set(xlabel='constituents per jet',ylabel='jets',title='Dynamic batch lengths')
 counts=np.asarray(manifest['normalization']['mean']); axes[1].bar(qg.CONTINUOUS_FEATURES,counts)
 axes[1].tick_params(axis='x',rotation=25); axes[1].set(title='Training-set raw means')
 plt.tight_layout(); plt.show()'''),
- md('## 4. Validate event isolation and dynamic padding'),
+ md('''## 4. Validate event isolation and dynamic padding
+
+An **assertion** is an executable statement of something that must be true. These checks
+verify that no event occurs in two data splits and that the mask counts exactly the real
+particles after padding. If either promise is broken, execution stops immediately.'''),
  code('''events=np.asarray(arrays['event_ids']); splits=np.asarray(arrays['splits'])
 sets=[set(events[splits==i]) for i in range(3)]
 assert sets[0].isdisjoint(sets[1]) and sets[0].isdisjoint(sets[2]) and sets[1].isdisjoint(sets[2])
@@ -156,23 +242,40 @@ memory-mappable prepared directory, while model checkpoints trained on older sta
 remain separately identified.''')])
 
 write('demo_quark_gluon_pfn.ipynb',architecture_notebook('pfn','Particle Flow Network',
- 'A shared network embeds each particle; summing those embeddings enforces permutation invariance before jet-level classification.'))
+ '''A **Particle Flow Network (PFN)** applies the same small neural network to every particle,
+turning it into a learned vector called an **embedding**. It sums all particle embeddings and
+uses a second network to classify the whole jet. A sum is unchanged when its terms are
+reordered, so this design builds permutation invariance into the architecture.'''))
 write('demo_quark_gluon_particle_transformer.ipynb',architecture_notebook('transformer','Compact Particle Transformer',
- 'Self-attention relates every pair of constituents. Pairwise angular biases inject geometry without imposing a sequence order.'))
+ '''A **Transformer** uses **self-attention** to let every constituent compare itself with every
+other constituent and learn which relationships matter. Pairwise angular biases supply each
+pair's geometric separation. There is no positional sequence encoding because a jet is an
+unordered particle set, not a sentence.'''))
 write('demo_quark_gluon_particlenet.ipynb',architecture_notebook('particlenet','ParticleNet-style graph network',
- 'EdgeConv learns from local constituent neighborhoods, treating a jet as a particle cloud rather than a fixed vector.'))
+ '''A **graph** represents constituents as nodes and nearby pairs as edges. **EdgeConv** builds
+features from a particle and its nearest neighbors, then combines those local messages. This
+treats the jet as a particle cloud and helps the model learn localized radiation patterns.'''))
 
 write('demo_quark_gluon_model_evaluation.ipynb',[
  md('''# Load, apply, and compare saved constituent models
 
 This notebook reconstructs each architecture from its JSON configuration and weights-only
-checkpoint. Direct comparisons are allowed only on the same dataset and split fingerprint.'''),
+checkpoint. A **checkpoint** stores learned parameter values so inference can be performed
+without training again. **Inference** means applying a trained model to obtain scores.
+
+Direct comparisons are allowed only on the same dataset and split fingerprint. Otherwise a
+score difference might come from easier test examples rather than a better architecture.'''),
  md('## 1. Environment'),code(BOOT),
  code('''prepared=qg.prepare_dataset(SOURCE); manifest=qg.load_manifest(prepared)
 bundles=qg.discover_bundles(dataset_fingerprint=manifest['source_sha256'])
 if not bundles: raise FileNotFoundError('Train at least one architecture notebook first.')
 print('\\n'.join(map(str,bundles)))'''),
- md('## 2. Reload checkpoints and reproduce their predictions'),
+ md('''## 2. Reload checkpoints and reproduce their predictions
+
+Reproducing the saved scores is a consistency test: the architecture, preprocessing, and
+weights were all restored correctly. The table reports parameter count and classification
+metrics. A fair comparison uses identical test jets and never selects a winner by repeatedly
+looking at the test set.'''),
  code('''from sklearn.metrics import roc_curve
 rows=[]; curves={}
 for bundle in tqdm(bundles, desc='Evaluating saved models', unit='model'):
@@ -194,7 +297,9 @@ ax.legend(); plt.tight_layout(); plt.show()'''),
  md('''## 3. Apply a model to another sample
 
 Set `QG_EVAL_PATH` before launching to evaluate a different compatible Parquet file. The
-saved training normalization is reused; it must never be refitted on the evaluation sample.'''),
+saved training normalization is reused; it must never be refitted on the evaluation sample.
+Refitting would allow the new sample to alter preprocessing and would make its scores
+inconsistent with the original model.'''),
  code('''EVAL_PATH=os.getenv('QG_EVAL_PATH')
 if EVAL_PATH:
     evaluation,config=qg.predict_parquet(bundles[0],EVAL_PATH,device=DEVICE)
@@ -207,16 +312,23 @@ write('demo_quark_gluon_model_interpretation.ipynb',[
  md('''# What do the constituent models rely on?
 
 This is not a search for causal or universal quark/gluon features. It measures how trained
-models respond to controlled input removal and which constituents locally influence a score.'''),
+models respond to controlled input removal and which constituents locally influence a score.
+This distinction matters: an explanation of a trained model is not automatically a law of
+physics or a statement that one variable *causes* a jet to be a quark jet.'''),
  md('## 1. Environment and compatible models'),code(BOOT),
  code('''prepared=qg.prepare_dataset(SOURCE); manifest=qg.load_manifest(prepared)
 bundles=qg.discover_bundles(dataset_fingerprint=manifest['source_sha256'])
 if not bundles: raise FileNotFoundError('Train at least one architecture notebook first.')'''),
  md('''## 2. Physics-aware group ablations
 
+An **ablation** deliberately removes one source of information and measures how performance
+changes. A large AUC drop says this trained model relied on that information. It does not say
+the input is independently responsible, because input features can be correlated.
+
 Zero in normalized space means replacing a continuous feature by its training mean. PID
-ablation removes category information. Constituent removals preserve the remaining particles
-but answer a model-reliance question—not a causal physics question.'''),
+ablation removes category information. “Soft,” “core,” and “wide” ablations remove selected
+constituents while preserving the others. These are model-reliance tests, not causal physics
+experiments.'''),
  code('''def predict_with_ablation(model,loader,kind):
     scores=[]; labels=[]; mean=np.array(manifest['normalization']['mean']); std=np.array(manifest['normalization']['std'])
     model.eval()
@@ -248,9 +360,16 @@ pivot.plot.bar(figsize=(10,4)); plt.axhline(0,color='black',lw=.8); plt.ylabel('
 plt.title('Performance reliance on input groups'); plt.tight_layout(); plt.show()'''),
  md('''## 3. Local integrated-gradient maps
 
+**Integrated gradients** compare one jet with a reference, or **baseline**, and accumulate
+how the score changes along many small interpolation steps. The resulting **attribution** is
+a local sensitivity measure: it highlights constituents that influenced this particular
+prediction, with both the model and baseline held fixed.
+
 For one jet, interpolate continuous inputs and angular coordinates from a mean/zero baseline.
 PID stays fixed and should instead be studied by categorical occlusion. Attribution magnitude
-is normalized within each model, so colors are not compared as absolute units across models.'''),
+is normalized within each model, so colors are not compared as absolute units across models.
+A bright point is influential for that displayed jet; it is not necessarily important for
+all jets.'''),
  code('''def integrated_gradient_map(model,batch,steps=24):
     full_f=batch['features'][:1].to(DEVICE); full_c=batch['coords'][:1].to(DEVICE); mask=batch['mask'][:1].to(DEVICE)
     base_f=full_f.clone(); base_f[:,:,:4]=0; base_c=torch.zeros_like(full_c); gf=torch.zeros_like(full_f); gc=torch.zeros_like(full_c)
@@ -271,9 +390,11 @@ plt.tight_layout(); plt.show()'''),
  md('''## 4. Interpretation limits
 
 Large ablation losses identify reliance, not a uniquely important physical variable. Inputs
-are correlated; removing them can create out-of-distribution jets. Generator truth labels are
+are correlated; removing them can create **out-of-distribution** jets—artificial inputs unlike
+anything seen during training. Generator truth labels are
 idealized and process dependent. Attention weights and graph edges describe internal routing,
-not causal explanations.''')])
+not causal explanations. Reliable scientific conclusions should be checked with several
+generators, detector conditions, kinematic regions, and interpretation methods.''')])
 
 
 # Patch the generator controls and manifest without rewriting its narrative structure.
@@ -328,4 +449,176 @@ for notebook_name in ('demo_pythia_fastjet.ipynb', 'demo_quark_gluon_classificat
             src = src.replace("top_constituent_inputs(row) for row in model_data.itertuples(index=False)",
                               "top_constituent_inputs(row) for row in tqdm(model_data.itertuples(index=False), total=len(model_data), desc='Building constituent inputs', unit='jet')")
         cell['source'] = src.splitlines(keepends=True)
+    path.write_text(json.dumps(nb, indent=1) + "\n")
+
+
+# Insert durable, high-school-level teaching notes in the hand-authored notebooks.
+# Markers make this idempotent and let future runs update rather than duplicate a note.
+def upsert_teaching_note(notebook, after_heading, marker, text):
+    path = Path(notebook)
+    nb = json.loads(path.read_text())
+    marker_text = f'<!-- teaching-note:{marker} -->'
+    note = md(f'{marker_text}\n\n{text}')
+    old_index = next(
+        (i for i, cell in enumerate(nb['cells'])
+         if marker_text in ''.join(cell.get('source', []))),
+        None,
+    )
+    if old_index is not None:
+        nb['cells'][old_index] = note
+    else:
+        heading_index = next(
+            i for i, cell in enumerate(nb['cells'])
+            if cell.get('cell_type') == 'markdown'
+            and ''.join(cell.get('source', [])).lstrip().startswith(after_heading)
+        )
+        nb['cells'].insert(heading_index + 1, note)
+    path.write_text(json.dumps(nb, indent=1) + "\n")
+
+
+SAMPLE_NOTES = [
+ ('# Quark/gluon jet samples', 'physics-vocabulary', '''## Vocabulary: from a collision to a jet
+
+Protons are made of **partons**—quarks and gluons. In a high-energy proton collision, one
+parton from each proton can undergo a short-distance **hard scattering**. Quarks and gluons
+carry color charge and cannot be observed alone. They radiate more quarks and gluons in a
+**parton shower**, then form color-neutral particles through **hadronization**. A jet
+algorithm gathers the resulting nearby particles into a jet.
+
+The “quark jet” or “gluon jet” label therefore refers to the simulated hard parton associated
+with a jet, not to a directly observed quark or gluon. Real detector data do not contain this
+truth label, which is one reason simulation assumptions must be stated clearly.'''),
+ ('## Configure Pythia8', 'monte-carlo', '''### What Pythia is simulating
+
+Pythia is a **Monte Carlo event generator**. Monte Carlo means that it uses random sampling
+from physics probability distributions to create possible collision events. One simulated
+event is not a prediction by itself; distributions over many events are the prediction.
+The random seed makes a run reproducible: the same seed and settings produce the same random
+sequence. The hard-QCD setting requests strong-interaction scattering processes.'''),
+ ('## Jet definition', 'coordinates-and-jets', '''### Coordinates, acceptance, and the jet radius
+
+The beam defines the longitudinal direction. Transverse momentum $p_T$ is perpendicular to
+that beam. Pseudorapidity $\eta$ is a direction coordinate: $\eta=0$ is perpendicular to the
+beam and large $|\eta|$ points closer to it. The requirement $|\eta|<2$ is an **acceptance
+cut** that keeps jets in a central region where a collider detector can usually measure them
+well.
+
+FastJet's anti-$k_t$ algorithm repeatedly combines particles according to a distance rule.
+Its radius parameter $R$ controls the typical angular reach of a jet. Angular distance is
+$\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2}$, where $\phi$ is the angle around the beam.
+Truth matching chooses a one-to-one jet–parton assignment with small $\Delta R$; it does not
+claim that every particle in the jet came only from that parton.'''),
+ ('## Sanity checks', 'quality-assurance', '''### Why sanity checks matter
+
+A **sanity check** tests simple consequences that should hold before any machine learning.
+Here we verify the acceptance, uniqueness of assignments, and agreement between inclusive
+and flavor-filtered tables. Passing these checks does not prove the simulation is physically
+perfect, but failing one reveals a definite bookkeeping or selection error.'''),
+ ('## Write to Parquet', 'parquet-format', '''### Why use Parquet?
+
+Parquet is a column-oriented binary data format. It stores column names and types, compresses
+repeated structure efficiently, and lets later code read selected columns. Each row here is
+one jet; the constituent columns contain lists because jets have different particle counts.
+The manifest records settings and a SHA-256 fingerprint so later stages can identify the
+exact sample they used.'''),
+]
+
+CLASSIFICATION_NOTES = [
+ ('# Quark/gluon jet features', 'ml-vocabulary', '''## Machine-learning vocabulary
+
+A **sample** is the collection of jets, and one jet is an **example**. A **feature** is a
+number supplied to a model; the **label** is the answer used during supervised training.
+A **classifier** learns a score that ranks jets from gluon-like to quark-like. The score is
+not automatically a calibrated physical probability.
+
+We fit model parameters using a training set and report performance on unseen examples.
+This tests **generalization**: whether the model learned a repeatable pattern rather than
+memorizing its training sample.'''),
+ ('## B. Engineer', 'feature-engineering', '''### What “feature engineering” means
+
+Feature engineering uses physics knowledge to summarize a variable-length particle list as
+a small table of meaningful numbers. Multiplicity describes how many particles there are;
+fragmentation observables describe how momentum is shared; angularities describe how widely
+energy is spread. Quarks and gluons have different color charges, so gluons tend, on average,
+to radiate more strongly. These are statistical tendencies, not rules for every individual
+jet.'''),
+ ('## D. Build', 'splits-and-preprocessing', '''### Why the split comes before model comparison
+
+Related jets from one simulated collision can share event conditions. If one enters training
+and another enters testing, performance can look better than it truly is; this is **data
+leakage**. Grouping by event prevents that. **Standardization** uses the training mean and
+standard deviation to put features on comparable numerical scales. Test information must not
+be used to choose features, tune settings, or standardize inputs.'''),
+ ('## E. Train', 'model-families', '''### The model families in this comparison
+
+**Logistic regression** learns a weighted sum of features followed by a sigmoid; it is a
+useful, nearly linear baseline. A **boosted decision tree (BDT)** adds many small if/then
+trees, with each new tree correcting earlier errors. A **multilayer perceptron (MLP)** is a
+neural network of learned linear transformations and nonlinear activation functions.
+
+A **hyperparameter**—such as tree depth, learning rate, or hidden-layer width—is chosen by
+the researcher rather than learned as an ordinary weight. Fair tuning uses validation data,
+not the final test sample.'''),
+ ('## F. Which classifier', 'metrics', '''### How to read classification performance
+
+Choosing a score threshold creates two competing rates. **Quark efficiency** is the fraction
+of real quark jets accepted. The **false-positive rate** is the fraction of gluon jets
+mistakenly accepted, and gluon rejection is its inverse. The ROC curve shows this tradeoff
+for every threshold. **ROC AUC** is the probability that a randomly selected quark jet gets
+a higher score than a randomly selected gluon jet: 0.5 is random ranking and 1.0 is perfect
+ranking on the evaluated sample.'''),
+]
+
+PYTHIA_NOTES = [
+ ('# Pythia8 + FastJet', 'simulation-overview', '''## What this demonstration represents
+
+Pythia generates possible proton–proton collisions by random sampling from physics models.
+FastJet then clusters the observable final-state particles into jets. A jet is a reconstructed
+spray, not a fundamental particle. Repeating many events lets us compare distributions such
+as jet momentum, mass, and particle multiplicity.'''),
+ ('## Event loop', 'statistics', '''### Why generate many events?
+
+Particle collisions are probabilistic. A histogram from a small sample fluctuates simply
+because of chance; this is **statistical uncertainty**. More independent events reduce those
+fluctuations, roughly in proportion to $1/\sqrt{N}$ for a count $N$, although systematic
+modeling uncertainties do not disappear by generating more events.'''),
+]
+
+DISPLAY_NOTES = [
+ ('# Dijet event display', 'display-vocabulary', '''## Reading a collider event display
+
+A **dijet event** contains two prominent jets, commonly produced by a hard two-parton
+scattering. An event display is a visualization of one collision, not an average prediction.
+It helps us build geometric intuition and debug reconstruction, but physics conclusions
+require distributions over many events.'''),
+ ('## $\\eta$-$\\phi$', 'eta-phi-map', '''### Why use the $\eta$–$\phi$ plane?
+
+Collider detectors are approximately cylindrical around the beam. The azimuth $\phi$ wraps
+around the cylinder, while pseudorapidity $\eta$ tracks direction toward either beam. Nearby
+particles in this plane have small $\Delta R$ and are likely to be clustered into the same
+jet. Marker size or height represents $p_T$, so hard particles stand out visually.'''),
+]
+
+for args in SAMPLE_NOTES:
+    upsert_teaching_note('demo_quark_gluon_samples.ipynb', *args)
+for args in CLASSIFICATION_NOTES:
+    upsert_teaching_note('demo_quark_gluon_classification.ipynb', *args)
+for args in PYTHIA_NOTES:
+    upsert_teaching_note('demo_pythia_fastjet.ipynb', *args)
+for args in DISPLAY_NOTES:
+    upsert_teaching_note('demo_dijet_event_display.ipynb', *args)
+
+
+# Repository notebooks are distributed as clean teaching sources, without machine-specific
+# output, warnings, timestamps, or execution counters.
+for path in Path('.').glob('*.ipynb'):
+    nb = json.loads(path.read_text())
+    nb['cells'] = [
+        cell for cell in nb.get('cells', [])
+        if ''.join(cell.get('source', [])).strip()
+    ]
+    for cell in nb.get('cells', []):
+        if cell.get('cell_type') == 'code':
+            cell['execution_count'] = None
+            cell['outputs'] = []
     path.write_text(json.dumps(nb, indent=1) + "\n")

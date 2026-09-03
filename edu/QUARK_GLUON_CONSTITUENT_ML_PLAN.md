@@ -14,7 +14,26 @@ changes to the implementation.
 - [x] Load and compare saved models on a common test sample.
 - [x] Interpret model reliance with physics-aware ablations and attributions.
 - [x] Report progress for long Python-level generation and ML loops.
+- [x] Define physics and ML terminology at a high-school-accessible level.
+- [x] Keep distributed notebooks free of stored outputs and execution state.
 - [x] Execute and validate the complete quick-mode workflow.
+
+## Teaching style
+
+Introduce each idea in plain language before giving its technical definition or
+equation. New physics terms include parton, hard scattering, shower,
+hadronization, jet, constituent, transverse momentum, pseudorapidity,
+azimuth, acceptance, and truth matching. New ML terms include feature, label,
+supervised learning, parameter, hyperparameter, normalization, leakage,
+epoch, loss, backpropagation, validation, overfitting, inference, ROC/AUC,
+ablation, and attribution.
+
+The explanations should remain technically accurate: quark/gluon truth labels
+are simulation-dependent associations, model scores are not automatically
+probabilities, and model interpretation measures reliance rather than physical
+causation. Equations and real nomenclature are retained, with definitions next
+to their first use. Repository notebooks remain clean; students generate
+outputs locally by running the cells.
 
 ## Workflow
 

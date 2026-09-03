@@ -3,6 +3,9 @@
 These notebooks progress from Pythia8 event generation and FastJet clustering
 to constituent-level quark/gluon classification with tabular baselines,
 Particle Flow Networks, Transformers, and graph neural networks.
+Physics and machine-learning terminology is introduced in plain language before
+the technical details, so the sequence can also serve advanced high-school
+students encountering collider physics or AI for the first time.
 
 ## Setup
 
