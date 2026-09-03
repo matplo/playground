@@ -178,7 +178,24 @@ fpr,tpr,_=roc_curve(predictions['labels'], predictions['scores'])
 axes[1].plot(tpr,1/np.clip(fpr,1e-3,None),label=f"AUC={metrics['roc_auc']:.3f}")
 axes[1].set(xlabel='quark efficiency',ylabel='gluon rejection',yscale='log',title='Held-out performance')
 axes[1].legend(); plt.tight_layout(); plt.show()'''),
-      md('''## 5. Reading the plots and result
+      md('''### How to read these figures
+
+**Left — training history.** The horizontal axis counts epochs, or complete passes through
+the training sample. The vertical axis is binary cross-entropy (BCE) loss; lower means the
+training predictions agree better with their labels. Look for a rapid early decrease followed
+by a slower change. A falling training loss alone does **not** prove that the model works on
+new jets—the held-out test result on the right is the important check. **Held out** means
+these test jets were set aside before training: their labels were not used to adjust weights,
+choose hyperparameters, or decide when to stop.
+
+**Right — classifier performance.** Each point corresponds to a different threshold on the
+model's quark-like score. Quark efficiency is the fraction of true quark jets kept. Gluon
+rejection is $1/(\text{fraction of gluon jets kept})$, so larger is better: rejection 10 means
+only one gluon jet in ten passes. The vertical axis is logarithmic, so equal vertical steps
+represent multiplication, not addition. A curve closer to the upper-right corner is better,
+but compare models at the quark efficiency needed for the physics question. AUC summarizes
+the whole ranking; 0.5 is random and 1.0 is perfect on this test sample.'''),
+      md('''## 5. Reading the result
 
 **Binary cross-entropy (BCE)** is the training loss: smaller values mean that the predicted
 scores agree better with the known labels. The **ROC curve** scans every possible score
@@ -246,6 +263,20 @@ axes[0].set(xlabel='constituents per jet',ylabel='jets',title='Dynamic batch len
 counts=np.asarray(manifest['normalization']['mean']); axes[1].bar(qg.CONTINUOUS_FEATURES,counts)
 axes[1].tick_params(axis='x',rotation=25); axes[1].set(title='Training-set raw means')
 plt.tight_layout(); plt.show()'''),
+ md('''### How to read these figures
+
+**Left — constituent multiplicity.** The horizontal axis is the number of reconstructed
+particles in one jet; the vertical axis counts jets. The width of this distribution explains
+why a fixed-size table is awkward: different jets contain different amounts of information.
+Notice both the typical multiplicity and the long tail. Dynamic padding lets a batch grow only
+to its longest jet, while the mask prevents padding entries from being treated as particles.
+
+**Right — raw feature means.** Each bar is the arithmetic mean, measured using training
+constituents only, before normalization. `log(z)` describes a particle's share of jet momentum;
+`deta` and `dphi` locate it relative to the jet axis; `log_dr` describes radial distance.
+Negative bars are normal for logarithms of fractions or small distances. The bars are on
+different physical scales, so their heights do not measure feature importance. These means
+are preprocessing constants that will be subtracted from the corresponding inputs.'''),
  md('''## 4. Validate event isolation and dynamic padding
 
 An **assertion** is an executable statement of something that must be true. These checks
@@ -353,6 +384,20 @@ results=pd.DataFrame(rows).sort_values('roc_auc',ascending=False); display(resul
 for name,(fpr,tpr,auc) in curves.items(): ax.plot(tpr,1/np.clip(fpr,1e-3,None),label=f'{name}: {auc:.3f}')
 ax.set(xlabel='quark efficiency',ylabel='gluon rejection',yscale='log',title='All models on the same held-out jets')
 ax.legend(); plt.tight_layout(); plt.show()'''),
+ md('''### How to read this figure
+
+Every curve uses the **same held-out test sample**: jets set aside before training whose
+labels did not adjust model weights, choose settings, or trigger early stopping. Therefore
+differences are attributable to the trained models rather than to easier or harder test
+examples. Moving right keeps more true quark jets
+(quark efficiency). Moving up rejects more gluon jets; rejection 20 means that only about
+$1/20=5\%$ of gluon jets pass. Because the vertical axis is logarithmic, a change from 5 to
+10 is as large multiplicatively as a change from 10 to 20.
+
+Look first at the efficiency region relevant to the intended analysis: curves can cross, so
+the model with the largest AUC need not be best at every operating point. The AUC in each
+legend entry summarizes the full curve (0.5 random, 1.0 perfect). Small separations should not
+be over-interpreted without statistical uncertainties or another independent test sample.'''),
  md('''## 3. Apply a model to another sample
 
 Set `EVAL_PATH` in the student-controls cell to evaluate a different compatible Parquet file. The
@@ -420,6 +465,18 @@ ablation=pd.DataFrame(rows); display(ablation.pivot(index='ablation',columns='mo
  code('''pivot=ablation.pivot(index='ablation',columns='model',values='delta_AUC')
 pivot.plot.bar(figsize=(10,4)); plt.axhline(0,color='black',lw=.8); plt.ylabel('AUC(ablation) - AUC(original)')
 plt.title('Performance reliance on input groups'); plt.tight_layout(); plt.show()'''),
+ md('''### How to read this figure
+
+Each color is one trained architecture, and each group on the horizontal axis is an input
+ablation. The vertical value is `AUC after removal − original AUC`. A bar below zero means
+performance became worse when that information was removed; a more negative bar therefore
+suggests stronger model reliance. A bar near zero means little measured change, while a
+positive bar can occur through statistical fluctuation or because the removal suppressed a
+pattern that did not generalize.
+
+Compare the *pattern* of bars between models. Do not read a bar as “this variable causes the
+jet to be a quark”: correlated inputs may replace one another, and an ablation may create
+unrealistic jets the model never saw during training.'''),
  md('''## 3. Local integrated-gradient maps
 
 **Integrated gradients** compare one jet with a reference, or **baseline**, and accumulate
@@ -449,6 +506,19 @@ for ax,bundle in zip(axes[0],bundles):
   sc=ax.scatter(coords[mask,0],coords[mask,1],c=values,s=30+100*values,cmap='viridis'); ax.set(title=config['architecture'],xlabel=r'$\Delta\eta$',ylabel=r'$\Delta\phi$')
   fig.colorbar(sc,ax=ax,label='normalized attribution')
 plt.tight_layout(); plt.show()'''),
+ md('''### How to read these figures
+
+Each panel shows the same selected jet as seen by one architecture. A point is a constituent;
+its horizontal and vertical coordinates are $\Delta\eta$ and wrapped $\Delta\phi$ relative
+to the jet axis, so the origin is the jet center. Larger, brighter points have larger
+integrated-gradient attribution for that model's score. The color is normalized separately
+inside each panel: compare *where* a model concentrates attention, not the absolute color
+value between panels.
+
+Ask whether influential constituents lie in the hard core, at wide angle, or in several
+clusters. This is one local example and the plot uses attribution magnitude, so it does not
+show whether a constituent pushed the score toward quark or toward gluon. A population-level
+claim requires repeating the study over many jets.'''),
  md('''## 4. Interpretation limits
 
 Large ablation losses identify reliance, not a uniquely important physical variable. Inputs
@@ -694,6 +764,28 @@ def upsert_teaching_note(notebook, after_heading, marker, text):
     path.write_text(json.dumps(nb, indent=1) + "\n")
 
 
+def upsert_figure_note(notebook, after_code, marker, text):
+    """Place a durable explanation immediately after the code that draws a figure."""
+    path = Path(notebook)
+    nb = json.loads(path.read_text())
+    marker_text = f'<!-- figure-guide:{marker} -->'
+    note = md(f'{marker_text}\n\n{text}')
+    old_index = next(
+        (i for i, cell in enumerate(nb['cells'])
+         if marker_text in ''.join(cell.get('source', []))),
+        None,
+    )
+    if old_index is not None:
+        nb['cells'].pop(old_index)
+    code_index = next(
+        i for i, cell in enumerate(nb['cells'])
+        if cell.get('cell_type') == 'code'
+        and after_code in ''.join(cell.get('source', []))
+    )
+    nb['cells'].insert(code_index + 1, note)
+    path.write_text(json.dumps(nb, indent=1) + "\n")
+
+
 SAMPLE_NOTES = [
  ('# Quark/gluon jet samples', 'physics-vocabulary', '''## Vocabulary: from a collision to a jet
 
@@ -766,7 +858,13 @@ Related jets from one simulated collision can share event conditions. If one ent
 and another enters testing, performance can look better than it truly is; this is **data
 leakage**. Grouping by event prevents that. **Standardization** uses the training mean and
 standard deviation to put features on comparable numerical scales. Test information must not
-be used to choose features, tune settings, or standardize inputs.'''),
+be used to choose features, tune settings, or standardize inputs.
+
+The **training sample** is used to fit model parameters. The **validation sample** is separate
+and is used for choices such as hyperparameters or early stopping. The **test sample** is
+**held out**—kept untouched until the final evaluation—to imitate genuinely unseen data.
+Repeatedly changing a model after looking at its test result leaks test information into the
+design process; a fresh test sample would then be needed for an unbiased final claim.'''),
  ('## E. Train', 'model-families', '''### The model families in this comparison
 
 **Logistic regression** learns a weighted sum of features followed by a sigmoid; it is a
@@ -825,6 +923,129 @@ for args in PYTHIA_NOTES:
     upsert_teaching_note('demo_pythia_fastjet.ipynb', *args)
 for args in DISPLAY_NOTES:
     upsert_teaching_note('demo_dijet_event_display.ipynb', *args)
+
+
+FIGURE_NOTES = [
+ ('demo_pythia_fastjet.ipynb', "plt.savefig('demo_pythia_fastjet.png'", 'inclusive-jet-summary',
+  '''### How to read these figures
+
+**Left — jet transverse momentum.** $p_T$ is momentum perpendicular to the beam. The
+leading jet has the largest $p_T$ in an event and the subleading jet has the second largest.
+The vertical axis is logarithmic: equal vertical steps represent multiplication, which lets
+rare high-$p_T$ jets remain visible. Look for the rapidly falling spectrum and for the leading
+curve to extend farther than the subleading curve.
+
+**Middle — jet pseudorapidity.** $\eta=0$ is perpendicular to the beam and larger $|\eta|$
+points more nearly along it. A roughly left-right-symmetric distribution is expected because
+the two proton beams are equivalent. This plot includes all accepted jets, not one entry per
+event.
+
+**Right — jet multiplicity.** The horizontal axis counts reconstructed jets in one collision;
+the vertical axis counts events. Two hard jets are common in this selected process, while
+extra jets can arise from additional radiation. Do not confuse jet multiplicity with the
+number of particles inside a jet.'''),
+ ('demo_quark_gluon_samples.ipynb', "plt.savefig('demo_quark_gluon_samples.png'", 'sample-sanity-plots',
+  '''### How to read these figures
+
+**Left — $p_T$ by truth label.** Each curve is normalized to unit area, so compare shapes,
+not the total number of jets. Ideally the quark and gluon $p_T$ shapes overlap closely:
+otherwise a classifier could use kinematics as a shortcut instead of learning internal jet
+structure. “Unmatched” means no accepted hard parton passed the one-to-one matching rule; it
+does not mean that the jet has no physical origin.
+
+**Right — constituent multiplicity.** A constituent is one final-state particle clustered
+into the jet. The horizontal axis counts those particles and the normalized vertical axis
+shows how common each count is within a flavor. Gluon jets often contain more constituents
+on average because gluons radiate more strongly. The distributions still overlap, so
+multiplicity is useful statistical evidence, not a perfect label for an individual jet.'''),
+ ('demo_quark_gluon_classification.ipynb', "title='Accepted pseudorapidity'", 'kinematic-shortcuts',
+  '''### How to read these figures
+
+Both panels compare **normalized densities**, so the area under each flavor curve is one.
+The left panel shows jet $p_T$; separation here is a warning that a classifier might learn a
+kinematic shortcut caused by sample selection. The right shows pseudorapidity $\eta$, where
+$\eta=0$ is transverse to the beam and the edges at $\pm2$ come from the acceptance cut.
+
+Look for overlap between the blue quark and red gluon curves. These plots diagnose whether
+the samples occupy similar kinematic regions; they are not yet measurements of classifier
+performance.'''),
+ ('demo_quark_gluon_classification.ipynb', "plt.savefig('demo_quark_gluon_feature_distributions.png'", 'engineered-features',
+  '''### How to read these figures
+
+Every panel overlays normalized quark and gluon distributions for one engineered observable.
+Where the curves separate, that observable may help classification; where they overlap, it
+has little power by itself. A model can still gain from combinations and correlations.
+
+`n_constituents` counts particles; jet mass measures invariant mass; $m/p_T$ removes much of
+the overall momentum scale. $p_T^D$ and the leading fraction describe whether momentum is
+concentrated in a few hard particles or shared among many. Les Houches angularity, girth, and
+radial width describe how broad the radiation is around the jet axis. The EEC-like moment
+summarizes momentum-weighted particle-pair separations. Gluons tend to be broader and more
+populated on average, but the overlap shows why no single variable decides every jet.'''),
+ ('demo_quark_gluon_classification.ipynb', "plt.savefig('demo_quark_gluon_classifier_comparison.png'", 'baseline-performance',
+  '''### How to read these figures
+
+**Left — operating-point tradeoff.** Moving right accepts a larger fraction of true quark
+jets. Moving up rejects more gluons; rejection 10 means one gluon in ten survives. The
+vertical axis is logarithmic. Curves may cross, so compare models at the quark efficiency
+needed by the analysis rather than declaring a winner from one isolated point. These curves
+use a **held-out test sample**: jets kept completely separate while the models learned and
+while settings were chosen, so they provide an honest test on unseen examples.
+
+**Right — ROC AUC.** AUC compresses the complete ranking into one number: 0.5 is random and
+1.0 is perfect on this test sample. Longer bars are better, but tiny differences may be
+statistical fluctuations. The two panels answer related but different questions: overall
+ranking quality versus performance at a chosen working point.'''),
+ ('demo_quark_gluon_classification.ipynb', "importance.plot.barh", 'bdt-feature-importance',
+  '''### How to read this figure
+
+Each bar is the BDT's impurity-based feature importance: how much splits using that variable
+reduced classification impurity across the fitted trees. Larger bars mean the trained BDT
+used that feature more often or more effectively. The importances are relative and sum to
+one; they do not have physical units.
+
+This is **model reliance**, not proof that a feature causes quark/gluon differences. Strongly
+correlated variables can share or exchange importance, and impurity importance can favor
+features offering many possible split points. Treat the ranking as a question to investigate,
+then compare it with permutation, ablation, or physics-motivated studies.'''),
+ ('demo_dijet_event_display.ipynb', 'fig.show()', 'eta-phi-event-map',
+  '''### How to read this figure
+
+Each point is a final-state particle placed at its pseudorapidity $\eta$ and azimuth $\phi$;
+larger markers have larger transverse momentum $p_T$. Colors identify particles assigned to
+different jets, gray marks particles outside those jets, an × marks each jet axis, and the
+dashed circle shows the radius parameter $R$ around that axis.
+
+Look for dense groups of hard particles around the two jet axes. Remember that $\phi$ wraps:
+points near $-\pi$ and $+\pi$ are actually neighbors. The circle illustrates a radius in this
+plane, but anti-$k_t$ clustering is defined by its distance algorithm rather than by simply
+drawing fixed cones.'''),
+ ('demo_dijet_event_display.ipynb', 'fig3d.show()', 'pt-lego-view',
+  '''### How to read this figure
+
+The horizontal floor is the same $\eta$–$\phi$ plane as above, while the height of each stem
+is particle $p_T$ in GeV. Tall stems therefore expose the hard cores of the jets and short
+stems show softer radiation. Rotate the interactive view and hover over a point to read its
+$p_T$.
+
+This “lego” height is a visualization choice, not a third spatial coordinate. Compare the
+amount of hard, concentrated radiation with the softer activity around and between the jet
+cores.'''),
+ ('demo_dijet_event_display.ipynb', 'fig_cyl.show()', 'momentum-cylinder-view',
+  '''### How to read this figure
+
+All rays begin at the collision point and point in the particles' three-dimensional momentum
+directions. The axes are labeled $p_x$, $p_y$, and $p_z$: $z$ follows the beam, while $x$ and
+$y$ are transverse. Similar-colored, nearby rays form a jet; the two main sprays give the
+event its “dijet” name.
+
+Ray length uses $\log(1+|p|)$, not the true momentum magnitude. This compression keeps soft
+particles visible beside hard ones, so compare directions and grouping directly but do not
+interpret displayed lengths as a linear momentum scale.'''),
+]
+
+for args in FIGURE_NOTES:
+    upsert_figure_note(*args)
 
 
 # Repository notebooks are distributed as clean teaching sources, without machine-specific

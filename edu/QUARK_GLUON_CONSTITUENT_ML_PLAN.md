@@ -15,6 +15,7 @@ changes to the implementation.
 - [x] Interpret model reliance with physics-aware ablations and attributions.
 - [x] Report progress for long Python-level generation and ML loops.
 - [x] Define physics and ML terminology at a high-school-accessible level.
+- [x] Follow every figure with plot-specific reading guidance.
 - [x] Keep distributed notebooks free of stored outputs and execution state.
 - [x] Execute and validate the complete quick-mode workflow.
 
@@ -34,6 +35,15 @@ probabilities, and model interpretation measures reliance rather than physical
 causation. Equations and real nomenclature are retained, with definitions next
 to their first use. Repository notebooks remain clean; students generate
 outputs locally by running the cells.
+
+Every figure-producing code cell is immediately followed by a Markdown guide.
+The guide defines its axes and variables, tells students which patterns to
+notice, translates specialized metrics into plain language, and warns against
+the most likely over-interpretation. Performance plots explicitly define a
+held-out test sample as examples excluded from weight fitting, hyperparameter
+choices, preprocessing fits, and early stopping. Training, validation, and
+test roles remain distinct; repeatedly choosing models from test performance
+would turn the test sample into part of the tuning process.
 
 ## Workflow
 
@@ -172,6 +182,8 @@ and unphysical perturbations must be discussed when interpreting results.
   PFN, Transformer, and ParticleNet-style network.
 - Labeled and unlabeled inference on another compatible sample.
 - Finite metrics, ablations, and attributions without assuming a model rank.
+- Every figure has an adjacent guide defining axes, variables, useful visual
+  comparisons, and interpretation limits.
 
 ## Decision log
 
