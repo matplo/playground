@@ -39,7 +39,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
-from tqdm.auto import tqdm
+from tqdm import tqdm
 import qg_constituent_ml as qg
 
 DEVICE = qg.choose_device()
@@ -280,10 +280,11 @@ not causal explanations.''')])
 path=Path('demo_quark_gluon_samples.ipynb'); nb=json.loads(path.read_text())
 for cell in nb['cells']:
     src=''.join(cell.get('source',[]))
-    if cell.get('cell_type') == 'code' and 'import pandas as pd' in src and 'from tqdm.auto import tqdm' not in src:
-        src=src.replace('import pandas as pd', 'import pandas as pd\nfrom tqdm.auto import tqdm')
+    src=src.replace('from tqdm.auto import tqdm', 'from tqdm import tqdm')
+    if cell.get('cell_type') == 'code' and 'import pandas as pd' in src and 'from tqdm import tqdm' not in src:
+        src=src.replace('import pandas as pd', 'import pandas as pd\nfrom tqdm import tqdm')
     elif cell.get('cell_type') != 'code':
-        src=src.replace('import pandas as pd\nfrom tqdm.auto import tqdm', 'import pandas as pd')
+        src=src.replace('import pandas as pd\nfrom tqdm import tqdm', 'import pandas as pd')
     # Normalize remnants from early, non-idempotent versions of this builder.
     src=src.replace("import os\nPYTHIA_SEED = int(os.getenv('QG_SEED', '7'))\nimport os\nPYTHIA_SEED = int(os.getenv('QG_SEED', '7'))",
                     "import os\nPYTHIA_SEED = int(os.getenv('QG_SEED', '7'))")
@@ -313,11 +314,12 @@ for notebook_name in ('demo_pythia_fastjet.ipynb', 'demo_quark_gluon_classificat
     path = Path(notebook_name); nb = json.loads(path.read_text())
     for cell in nb['cells']:
         src = ''.join(cell.get('source', []))
-        if cell.get('cell_type') == 'code' and 'import pandas as pd' in src and 'from tqdm.auto import tqdm' not in src:
-            src = src.replace('import pandas as pd', 'import pandas as pd\nfrom tqdm.auto import tqdm')
+        src=src.replace('from tqdm.auto import tqdm', 'from tqdm import tqdm')
+        if cell.get('cell_type') == 'code' and 'import pandas as pd' in src and 'from tqdm import tqdm' not in src:
+            src = src.replace('import pandas as pd', 'import pandas as pd\nfrom tqdm import tqdm')
         if notebook_name == 'demo_pythia_fastjet.ipynb':
-            if 'import pythia8' in src and 'from tqdm.auto import tqdm' not in src:
-                src = src.replace('import pythia8', 'import pythia8\nfrom tqdm.auto import tqdm')
+            if 'import pythia8' in src and 'from tqdm import tqdm' not in src:
+                src = src.replace('import pythia8', 'import pythia8\nfrom tqdm import tqdm')
             src = src.replace('for _ in range(n_events):',
                               "for _ in tqdm(range(n_events), desc='Generating events', unit='event'):")
         else:

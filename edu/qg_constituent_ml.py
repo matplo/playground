@@ -14,7 +14,7 @@ import time
 from pathlib import Path
 
 import numpy as np
-from tqdm.auto import tqdm
+from tqdm import tqdm
 
 CONTINUOUS_FEATURES = ["log_z", "delta_eta", "delta_phi", "log_delta_r"]
 PID_CATEGORIES = ["photon", "charged_hadron", "neutral_hadron", "electron", "muon", "other"]

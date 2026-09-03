@@ -45,9 +45,10 @@ one reproducible rerun rather than appendable shards. Sharded Parquet plus a
 glob-based source manifest is the natural extension beyond samples that fit
 comfortably in memory.
 
-Long-running event generation uses a `tqdm` notebook progress bar. The same
-approach is used for constituent preparation and baseline feature extraction,
-so increasing the sample size does not leave students without feedback.
+Long-running event generation uses a frontend-independent `tqdm` text
+progress bar. The same approach is used for constituent preparation and
+baseline feature extraction, so increasing the sample size does not leave
+students without feedback or require Jupyter widget support.
 
 ## Constituent representation
 
