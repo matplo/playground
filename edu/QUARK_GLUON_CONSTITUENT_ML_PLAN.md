@@ -82,6 +82,17 @@ progress bar. The same approach is used for constituent preparation and
 baseline feature extraction, so increasing the sample size does not leave
 students without feedback or require Jupyter widget support.
 
+  After generation, rerun the notebooks in order:
+
+  1. Classical/BDT classification
+  2. Constituent setup
+  3. PFN, Transformer, and ParticleNet with:
+
+     RUN_MODE = 'full'
+
+  4. Model evaluation
+  5. Model interpretation
+
 ## Constituent representation
 
 Every stored constituent is used by PFN, Transformer, and ParticleNet; there
