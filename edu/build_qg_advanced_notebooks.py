@@ -304,8 +304,11 @@ reordered, so this design builds permutation invariance into the architecture.''
 write('demo_quark_gluon_particle_transformer.ipynb',architecture_notebook('transformer','Compact Particle Transformer',
  '''A **Transformer** uses **self-attention** to let every constituent compare itself with every
 other constituent and learn which relationships matter. Pairwise angular biases supply each
-pair's geometric separation. There is no positional sequence encoding because a jet is an
-unordered particle set, not a sentence.'''))
+pair's geometric separation. Here that separation is calculated directly from each pair's
+$\\Delta\\eta$ and $\\Delta\\phi$. This keeps a particle's distance from itself exactly zero and
+prevents masked padding entries from changing the answer through floating-point round-off.
+There is no positional sequence encoding because a jet is an unordered particle set, not a
+sentence.'''))
 write('demo_quark_gluon_particlenet.ipynb',architecture_notebook('particlenet','ParticleNet-style graph network',
  '''A **graph** represents constituents as nodes and nearby pairs as edges. **EdgeConv** builds
 features from a particle and its nearest neighbors, then combines those local messages. This
