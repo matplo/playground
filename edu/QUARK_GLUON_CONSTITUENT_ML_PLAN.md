@@ -54,9 +54,11 @@ would turn the test sample into part of the tuning process.
 4. The PFN, Transformer, and ParticleNet notebooks train independent models.
 5. `demo_quark_gluon_model_evaluation.ipynb` reloads all model families and
    compares them on identical test jets.
-6. `demo_quark_gluon_architecture_visualization.ipynb` maps model blocks and compares
+6. `demo_quark_gluon_basic_model_visualization.ipynb` explains and opens the fitted
+   logistic-regression, boosted-tree, and compact-MLP structures.
+7. `demo_quark_gluon_architecture_visualization.ipynb` maps model blocks and compares
    exact initial and trained parameters and activations when those checkpoints exist.
-7. `demo_quark_gluon_model_interpretation.ipynb` studies neural-model reliance.
+8. `demo_quark_gluon_model_interpretation.ipynb` studies neural-model reliance.
 
 The programmatic alternative is `qg_constituent_ml.py`. Prepared data and
 model bundles are namespaced by a SHA-256 fingerprint of the source Parquet

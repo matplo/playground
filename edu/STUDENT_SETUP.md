@@ -136,11 +136,12 @@ select the course kernel again.
 
 1. `demo_quark_gluon_samples.ipynb`
 2. `demo_quark_gluon_classification.ipynb` (classical and compact baselines)
-3. `demo_quark_gluon_constituent_setup.ipynb`
-4. the PFN, Particle Transformer, and ParticleNet notebooks in any order
-5. `demo_quark_gluon_architecture_visualization.ipynb` (its untrained sections also work earlier)
-6. `demo_quark_gluon_model_evaluation.ipynb`
-7. `demo_quark_gluon_model_interpretation.ipynb`
+3. `demo_quark_gluon_basic_model_visualization.ipynb`
+4. `demo_quark_gluon_constituent_setup.ipynb`
+5. the PFN, Particle Transformer, and ParticleNet notebooks in any order
+6. `demo_quark_gluon_architecture_visualization.ipynb` (its untrained sections also work earlier)
+7. `demo_quark_gluon_model_evaluation.ipynb`
+8. `demo_quark_gluon_model_interpretation.ipynb`
 
 Prepared arrays and trained models are automatically associated with the
 fingerprint of the generated Parquet sample.

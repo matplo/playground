@@ -535,6 +535,252 @@ not causal explanations. Reliable scientific conclusions should be checked with 
 generators, detector conditions, kinematic regions, and interpretation methods.''')])
 
 
+write('demo_quark_gluon_basic_model_visualization.ipynb',[
+ md('''# Seeing how the basic quark/gluon classifiers work
+
+This notebook visualizes the four models trained in the basic classification lesson:
+logistic regression, two boosted decision trees (BDTs), and the top-20 constituent
+multilayer perceptron (MLP). The first half explains their structure without requiring
+trained files. The second half optionally opens the saved baseline bundle and looks inside
+the fitted models.
+
+These models do not all “learn weights” in the same way. Logistic regression learns one
+coefficient per input feature. A BDT grows a sequence of small decision trees. An MLP learns
+matrices of connections between layers. We therefore visualize each model using a
+representation that matches its mathematics.'''),
+ md('''## 0. Student controls
+
+Use the same Parquet sample as the basic classification notebook. TREE_TO_DRAW = 0 displays
+the first tree in each boosted ensemble; try a later number below 250 to see a correction
+learned later in training. MATRIX_SIDE limits large MLP matrices to a readable corner.'''),
+ code(SOURCE_SETTINGS + r'''
+TREE_TO_DRAW = 0
+MATRIX_SIDE = 40
+'''),
+ md('## 1. Environment'),
+ code(BOOT + r'''
+import joblib
+import pandas as pd
+from matplotlib.patches import FancyBboxPatch
+from sklearn.tree import plot_tree
+'''),
+ md('''## 2. Architecture maps before training
+
+An **architecture** specifies the form of a model before it has learned from examples.
+Engineered shape features are human-designed summaries such as multiplicity, width, and
+momentum sharing. Standardization subtracts each training mean and divides by its standard
+deviation, putting differently scaled variables on comparable numerical scales.
+
+The two BDTs have the same learning algorithm. One uses only jet-shape variables; the
+diagnostic version also receives jet $p_T$ and $|\eta|$. The MLP receives a flattened,
+$p_T$-ordered list of at most 20 constituents, including masks for missing positions.'''),
+ code('''def draw_pipeline(ax, title, labels, colors):
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis('off'); ax.set_title(title, weight='bold')
+    width = 0.16
+    xs = np.linspace(0.02, 0.98-width, len(labels))
+    for i, (x, label, color) in enumerate(zip(xs, labels, colors)):
+        box = FancyBboxPatch((x,.34),width,.32,boxstyle='round,pad=0.015',
+                             facecolor=color,edgecolor='#263238',linewidth=1.2)
+        ax.add_patch(box); ax.text(x+width/2,.50,label,ha='center',va='center',fontsize=9)
+        if i:
+            ax.annotate('',xy=(x-.006,.50),xytext=(xs[i-1]+width+.006,.50),
+                        arrowprops=dict(arrowstyle='->',lw=1.5,color='#455a64'))
+
+flows = {
+ 'Logistic regression': (
+   ['engineered\\nshapes','standardize','weighted\\nsum','sigmoid','quark-like\\nscore'],
+   ['#bbdefb','#fff59d','#a5d6a7','#ffccbc','#ffccbc']),
+ 'Boosted decision tree (two input choices)': (
+   ['engineered\\nfeatures','small decision\\ntree','add correcting\\ntrees','sum tree\\noutputs','quark-like\\nscore'],
+   ['#bbdefb','#80cbc4','#80cbc4','#a5d6a7','#ffccbc']),
+ 'Top-20 constituent MLP': (
+   ['sorted + padded\\nparticles','standardize','64-neuron\\nlayer','32-neuron\\nlayer','quark-like\\nscore'],
+   ['#bbdefb','#fff59d','#ce93d8','#ce93d8','#ffccbc'])}
+fig,axes=plt.subplots(3,1,figsize=(13,7))
+for ax,(title,(labels,colors)) in zip(axes,flows.items()): draw_pipeline(ax,title,labels,colors)
+plt.tight_layout(); plt.show()'''),
+ md('''### What to look for
+
+Logistic regression has only one learned step: a weighted sum. Its decision boundary is a
+flat surface in standardized feature space. A decision tree follows if/then branches, and
+boosting adds many trees so later trees correct errors left by earlier ones. The MLP alternates
+weighted sums with nonlinear activation functions, allowing curved decision boundaries.
+
+“Basic” does not mean useless. Simpler models can train well on smaller samples, run quickly,
+and be easier to diagnose. The BDT is often an especially strong baseline for engineered
+tabular features.'''),
+ md('''## 3. Load the trained baseline bundle, if available
+
+The filename is selected using the exact SHA-256 fingerprint of the source sample. This keeps
+us from silently inspecting a model trained on different jets. A **pipeline** packages
+preprocessing and the classifier together so the same standardization is applied at training
+and inference time.'''),
+ code('''baseline_bundle = None; baseline_models = {}; baseline_payload = None
+if SOURCE.exists():
+    fingerprint = qg.sha256_file(SOURCE)
+    candidate = Path('artifacts/qg_baselines')/fingerprint[:12]
+    if (candidate/'models.joblib').exists():
+        baseline_bundle = candidate
+        config = json.loads((candidate/'config.json').read_text())
+        assert config['dataset_fingerprint'] == fingerprint
+        baseline_payload = joblib.load(candidate/'models.joblib')
+        baseline_models = baseline_payload['models']
+        print(f'Loaded {len(baseline_models)} models from {candidate}')
+    else:
+        print(f'No baseline bundle at {candidate}. Run the basic classification notebook first.')
+else:
+    print(f'{SOURCE} does not exist. The architecture-map lesson above is still complete.')'''),
+ md('''## 4. Compare the size of the fitted models
+
+Model size has different meanings across families. Logistic regression and the MLP store
+numeric parameters. For a BDT, nodes are branch points or leaves across all trees. These
+counts describe complexity and memory, not performance; the common evaluation notebook is
+the correct place to compare classification quality.'''),
+ code('''summary_rows=[]
+for name,model in baseline_models.items():
+    if 'Logistic' in name:
+        estimator=model.named_steps['logisticregression']
+        summary_rows.append({'model':name,'learned objects':'coefficients',
+                             'count':estimator.coef_.size+estimator.intercept_.size,
+                             'structure':f'{estimator.coef_.shape[1]} inputs → 1 output'})
+    elif 'BDT' in name:
+        trees=[tree[0] for tree in model.estimators_]
+        summary_rows.append({'model':name,'learned objects':'tree nodes',
+                             'count':sum(tree.tree_.node_count for tree in trees),
+                             'structure':f'{len(trees)} trees; maximum depth {model.max_depth}'})
+    elif 'MLP' in name:
+        estimator=model.named_steps['mlpclassifier']
+        count=sum(w.size for w in estimator.coefs_)+sum(b.size for b in estimator.intercepts_)
+        layers=[estimator.coefs_[0].shape[0]]+list(estimator.hidden_layer_sizes)+[estimator.n_outputs_]
+        summary_rows.append({'model':name,'learned objects':'weights + biases',
+                             'count':count,'structure':' → '.join(map(str,layers))})
+if summary_rows: display(pd.DataFrame(summary_rows))
+else: print('No trained models to summarize.')'''),
+ md('''## 5. Logistic regression: one coefficient per shape variable
+
+Because inputs were standardized, coefficient magnitudes are reasonably comparable within
+this model. A positive coefficient pushes the logit toward the positive class—quark here—and
+a negative coefficient pushes toward gluon, while all other standardized inputs are held
+fixed. Correlated inputs can share or exchange influence, so this is a model description,
+not proof that a variable physically causes a jet's label.'''),
+ code('''logistic_name='Logistic (shapes)'
+if logistic_name in baseline_models:
+    pipeline=baseline_models[logistic_name]
+    estimator=pipeline.named_steps['logisticregression']
+    names=baseline_payload['shape_features']; coefficients=estimator.coef_[0]
+    order=np.argsort(np.abs(coefficients))
+    fig,ax=plt.subplots(figsize=(8,5))
+    ax.barh(np.asarray(names)[order],coefficients[order],
+            color=np.where(coefficients[order]>=0,'#ef6c00','#1976d2'))
+    ax.axvline(0,color='black',lw=.8)
+    ax.set(xlabel='coefficient in standardized feature space',
+           title='Learned logistic-regression coefficients')
+    plt.tight_layout(); plt.show()
+else: print('Trained logistic regression not available.')'''),
+ md('''### How to read this figure
+
+Longer bars change the model's logit more for a one-standard-deviation input change. Orange
+points toward the quark class and blue toward gluon under the model's convention. Do not
+compare these coefficient numbers directly with neural-network weights: a neural feature is
+repeatedly transformed, whereas each logistic coefficient acts directly on a named input.'''),
+ md('''## 6. BDTs: inspect one correcting tree
+
+Each displayed tree is only one member of a 250-tree ensemble. Start at the top node. If its
+condition is true, follow the left branch; otherwise follow the right. A leaf contains that
+tree's numerical correction to the ensemble score. Early trees usually capture broad
+patterns; later trees focus on remaining errors.'''),
+ code('''bdt_items=[(name,model) for name,model in baseline_models.items() if 'BDT' in name]
+if bdt_items:
+    fig,axes=plt.subplots(1,len(bdt_items),figsize=(9*len(bdt_items),5),squeeze=False)
+    for ax,(name,model) in zip(axes[0],bdt_items):
+        tree_index=min(max(int(TREE_TO_DRAW),0),len(model.estimators_)-1)
+        features=(baseline_payload['shape_plus_kinematics'] if 'kinematics' in name
+                  else baseline_payload['shape_features'])
+        plot_tree(model.estimators_[tree_index,0],feature_names=features,filled=True,
+                  rounded=True,precision=2,fontsize=8,ax=ax)
+        ax.set_title(f'{name}\\nboosting tree {tree_index}')
+    plt.tight_layout(); plt.show()
+else: print('Trained BDTs not available.')'''),
+ md('''### How to read these trees
+
+The top box is the root decision. The feature-and-threshold test divides the jets reaching
+that node. The color and value describe the correction learned there; they are not
+probabilities from the complete classifier. Follow one path to a bottom leaf to see a compact
+sequence of rules. The two BDTs may choose different splits because one can also use jet
+kinematics.
+
+Never interpret a single tree as the full decision. The final BDT score adds the initial
+prediction and the small corrections from all 250 trees.'''),
+ md('''## 7. How the boosted ensemble grows
+
+Unlike an MLP, a gradient-boosted tree model does not repeatedly update one fixed collection
+of connection matrices. Training appends trees. This plot shows the structural complexity of
+each successive correction. Tree depth was deliberately capped at two, limiting how many
+feature conditions can interact inside one tree.'''),
+ code('''if bdt_items:
+    fig,axes=plt.subplots(1,2,figsize=(11,4))
+    for name,model in bdt_items:
+        trees=[tree[0].tree_ for tree in model.estimators_]
+        axes[0].plot([tree.node_count for tree in trees],label=name,alpha=.8)
+        axes[1].plot([tree.n_leaves for tree in trees],label=name,alpha=.8)
+    axes[0].set(xlabel='boosting round',ylabel='nodes in added tree',title='Tree size through training')
+    axes[1].set(xlabel='boosting round',ylabel='leaves in added tree',title='Terminal regions through training')
+    for ax in axes: ax.legend()
+    plt.tight_layout(); plt.show()
+else: print('Trained BDTs not available.')'''),
+ md('''### How to read these figures
+
+One point is one newly added tree. More nodes and leaves mean that correction divides feature
+space into more regions, but not necessarily that it contributes more to final accuracy.
+Nearly constant values are expected because maximum depth two strongly restricts every tree.
+To see whether later rounds improved validation performance we would need staged predictions,
+not just structural counts.'''),
+ md('''## 8. MLP: learned connection matrices
+
+An MLP layer connects every input number to every neuron in the next layer. A matrix cell is
+one connection weight. The fitted top-20 model has an input-to-64 matrix, a 64-to-32 matrix,
+and a 32-to-output matrix. Only a readable corner of a large matrix is drawn; the full matrix
+is still used by the classifier.'''),
+ code('''mlp_names=[name for name in baseline_models if 'MLP' in name]
+if mlp_names:
+    pipeline=baseline_models[mlp_names[0]]; estimator=pipeline.named_steps['mlpclassifier']
+    matrices=estimator.coefs_
+    fig,axes=plt.subplots(1,len(matrices),figsize=(5*len(matrices),4),squeeze=False)
+    for i,(ax,weights) in enumerate(zip(axes[0],matrices)):
+        view=weights[:MATRIX_SIDE,:MATRIX_SIDE]
+        limit=max(abs(view).max(),1e-12)
+        image=ax.imshow(view,cmap='coolwarm',vmin=-limit,vmax=limit,aspect='auto')
+        ax.set(title=f'layer {i}: {weights.shape[0]} × {weights.shape[1]}',
+               xlabel='next-layer neuron',ylabel='previous-layer input')
+        fig.colorbar(image,ax=ax,fraction=.046)
+    plt.tight_layout(); plt.show()
+
+    magnitudes=pd.DataFrame([
+        {'connection':f'{w.shape[0]} → {w.shape[1]}','mean |weight|':np.mean(np.abs(w)),
+         'RMS weight':np.sqrt(np.mean(w**2))} for w in matrices])
+    display(magnitudes)
+else: print('Trained constituent MLP not available.')'''),
+ md('''### How to read these matrices
+
+Red and blue show opposite signs; pale cells are closer to zero. A strong individual
+connection is not automatically important because its source neuron may rarely activate,
+and later layers can cancel or amplify it. The first matrix's rows correspond to standardized
+flattened constituent inputs; hidden-layer rows and columns are learned coordinates without
+simple physics names.
+
+The current baseline bundle stores the fitted MLP but not its exact random initialization, so
+this notebook does not pretend that a newly randomized matrix is its true “before” state.
+Exact before/after tracking is provided for the PyTorch constituent networks in the companion
+architecture notebook.'''),
+ md('''## 9. What these pictures establish
+
+The visualizations answer structural questions: which inputs enter, how decisions are
+assembled, how large the fitted objects are, and what numerical patterns were learned. They
+do not determine which classifier performs best; use the common held-out evaluation notebook
+for that. They also do not turn correlations into causes. Feature importance should be checked
+with several methods, independent samples, and physics knowledge.''')])
+
+
 write('demo_quark_gluon_architecture_visualization.ipynb',[
  md('''# Seeing how the constituent networks are built—and how training changes them
 

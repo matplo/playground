@@ -27,11 +27,12 @@ statistics, and moving saved data or models.
 2. `demo_dijet_event_display.ipynb`
 3. `demo_quark_gluon_samples.ipynb`
 4. `demo_quark_gluon_classification.ipynb`
-5. `demo_quark_gluon_constituent_setup.ipynb`
-6. Train the PFN, Particle Transformer, and ParticleNet models in any order.
-7. `demo_quark_gluon_architecture_visualization.ipynb` (can also be opened before training)
-8. `demo_quark_gluon_model_evaluation.ipynb` (all seven classifiers on one test split)
-9. `demo_quark_gluon_model_interpretation.ipynb`
+5. `demo_quark_gluon_basic_model_visualization.ipynb`
+6. `demo_quark_gluon_constituent_setup.ipynb`
+7. Train the PFN, Particle Transformer, and ParticleNet models in any order.
+8. `demo_quark_gluon_architecture_visualization.ipynb` (can also be opened before training)
+9. `demo_quark_gluon_model_evaluation.ipynb` (all seven classifiers on one test split)
+10. `demo_quark_gluon_model_interpretation.ipynb`
 
 Generated datasets, prepared arrays, plots, and trained model bundles are
 intentionally excluded from Git. The sample and training notebooks recreate
