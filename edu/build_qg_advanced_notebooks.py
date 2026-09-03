@@ -6,27 +6,32 @@ from pathlib import Path
 
 def md(text):
     source=text.strip()+"\n"
-    return {"cell_type":"markdown","id":hashlib.sha1(("md"+source).encode()).hexdigest()[:8],"metadata":{},"source":source}
+    return {"cell_type":"markdown","id":hashlib.sha1(("md"+source).encode()).hexdigest()[:8],"metadata":{},"source":source.splitlines(keepends=True)}
 
 
 def code(text):
     source=text.strip()+"\n"
-    return {"cell_type":"code","id":hashlib.sha1(("code"+source).encode()).hexdigest()[:8],"execution_count":None,"metadata":{},"outputs":[],"source":source}
+    return {"cell_type":"code","execution_count":None,
+            "id":hashlib.sha1(("code"+source).encode()).hexdigest()[:8],
+            "metadata":{},"outputs":[],"source":source.splitlines(keepends=True)}
 
 
 META={"kernelspec":{"display_name":"Python 3 (ipykernel)","language":"python","name":"python3"},
-      "language_info":{"name":"python","version":"3.10.12"}}
+      "language_info":{"codemirror_mode":{"name":"ipython","version":3},
+                       "file_extension":".py","mimetype":"text/x-python",
+                       "name":"python","nbconvert_exporter":"python",
+                       "pygments_lexer":"ipython3","version":"3.10.12"}}
 
 
 BOOT = r'''
 import importlib.util
-required = ['numpy', 'pandas', 'pyarrow', 'matplotlib', 'sklearn', 'torch']
+required = ['numpy', 'pandas', 'pyarrow', 'matplotlib', 'sklearn', 'torch', 'tqdm']
 missing = [name for name in required if importlib.util.find_spec(name) is None]
 if missing:
     raise RuntimeError(
         f"Missing packages: {missing}. From a terminal in this directory run "
-        "./setup_student_env.sh, restart Jupyter with `henv . -x jupyter lab`, "
-        "and select the Quark/Gluon Constituent ML kernel."
+        "./setup_student_env.sh (or use --current inside an existing henv), "
+        "restart Jupyter from that henv, and select its registered kernel."
     )
 
 import json, os, time
@@ -34,6 +39,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
+from tqdm.auto import tqdm
 import qg_constituent_ml as qg
 
 DEVICE = qg.choose_device()
@@ -169,10 +175,11 @@ print('\\n'.join(map(str,bundles)))'''),
  md('## 2. Reload checkpoints and reproduce their predictions'),
  code('''from sklearn.metrics import roc_curve
 rows=[]; curves={}
-for bundle in bundles:
+for bundle in tqdm(bundles, desc='Evaluating saved models', unit='model'):
     model,config=qg.load_model_bundle(bundle,DEVICE)
     loaders=qg.make_loaders(prepared,config['architecture'],config['mode'])
-    pred=qg.predict(model,loaders[2],DEVICE); saved=np.load(bundle/'predictions.npz')
+    pred=qg.predict(model,loaders[2],DEVICE,progress=True,
+                    description=f"Evaluating {config['architecture']}"); saved=np.load(bundle/'predictions.npz')
     assert np.array_equal(pred['event_ids'],saved['event_ids']) and np.array_equal(pred['jet_ids'],saved['jet_ids'])
     assert np.allclose(pred['scores'],saved['scores'],atol=2e-5)
     metrics=qg.binary_metrics(pred['labels'],pred['scores']); metrics['model']=f"{config['architecture']} ({config['mode']})"
@@ -214,7 +221,7 @@ but answer a model-reliance question—not a causal physics question.'''),
     scores=[]; labels=[]; mean=np.array(manifest['normalization']['mean']); std=np.array(manifest['normalization']['std'])
     model.eval()
     with torch.no_grad():
-      for b in loader:
+      for b in tqdm(loader, desc=f'Ablation: {kind}', unit='batch', leave=False):
         f=b['features'].to(DEVICE).clone(); c=b['coords'].to(DEVICE).clone(); m=b['mask'].to(DEVICE).clone()
         if kind=='momentum': f[:,:,0]=0
         elif kind=='angular': f[:,:,1:4]=0; c.zero_()
@@ -228,7 +235,7 @@ but answer a model-reliance question—not a causal physics question.'''),
     return np.concatenate(labels).astype(int),np.concatenate(scores)
 
 rows=[]
-for bundle in bundles:
+for bundle in tqdm(bundles, desc='Interpreting models', unit='model'):
   model,config=qg.load_model_bundle(bundle,DEVICE); loader=qg.make_loaders(prepared,config['architecture'],config['mode'])[2]
   y,base=predict_with_ablation(model,loader,'none'); base_auc=qg.binary_metrics(y,base)['roc_auc']
   for kind in ('momentum','angular','pid','soft','core','wide'):
@@ -273,6 +280,15 @@ not causal explanations.''')])
 path=Path('demo_quark_gluon_samples.ipynb'); nb=json.loads(path.read_text())
 for cell in nb['cells']:
     src=''.join(cell.get('source',[]))
+    if cell.get('cell_type') == 'code' and 'import pandas as pd' in src and 'from tqdm.auto import tqdm' not in src:
+        src=src.replace('import pandas as pd', 'import pandas as pd\nfrom tqdm.auto import tqdm')
+    elif cell.get('cell_type') != 'code':
+        src=src.replace('import pandas as pd\nfrom tqdm.auto import tqdm', 'import pandas as pd')
+    # Normalize remnants from early, non-idempotent versions of this builder.
+    src=src.replace("import os\nPYTHIA_SEED = int(os.getenv('QG_SEED', '7'))\nimport os\nPYTHIA_SEED = int(os.getenv('QG_SEED', '7'))",
+                    "import os\nPYTHIA_SEED = int(os.getenv('QG_SEED', '7'))")
+    src=src.replace("pythia.readString('Random:setSeed = on')\npythia.readString(f'Random:seed = {PYTHIA_SEED}')\npythia.readString('Random:setSeed = on')\npythia.readString(f'Random:seed = {PYTHIA_SEED}')",
+                    "pythia.readString('Random:setSeed = on')\npythia.readString(f'Random:seed = {PYTHIA_SEED}')")
     if "pythia = pythia8.Pythia()" in src and "PYTHIA_SEED" not in src:
         src=src.replace("pythia = pythia8.Pythia()", "import os\nPYTHIA_SEED = int(os.getenv('QG_SEED', '7'))\npythia = pythia8.Pythia()")
         src=src.replace("pythia.readString('Next:numberShowEvent = 0')", "pythia.readString('Random:setSeed = on')\npythia.readString(f'Random:seed = {PYTHIA_SEED}')\npythia.readString('Next:numberShowEvent = 0')")
@@ -282,7 +298,32 @@ for cell in nb['cells']:
     if src.startswith('records = []') and 'n_generated = 0' not in src:
         src=src.replace('records = []','records = []\nn_generated = 0')
         src=src.replace('    cs, jets, part_pdgid = cluster_event()','    n_generated += 1\n    cs, jets, part_pdgid = cluster_event()')
+    if src.startswith('records = []'):
+        src=src.replace('for event_id in range(N_EVENTS):',
+                        "for event_id in tqdm(range(N_EVENTS), desc='Generating events', unit='event'):")
+        src=src.replace("\n    if (event_id + 1) % 5000 == 0:\n        print(f'... {event_id + 1}/{N_EVENTS} events, {len(records)} jets collected so far')\n", '\n')
     if "quark_df.to_parquet" in src and "generation_manifest" not in src:
         src += '''\n\nimport hashlib, json\ndef file_sha256(path):\n    digest = hashlib.sha256()\n    with open(path, 'rb') as stream:\n        for chunk in iter(lambda: stream.read(1 << 20), b''):\n            digest.update(chunk)\n    return digest.hexdigest()\n\nmanifest = {\n    'schema_version': 1, 'n_events_requested': N_EVENTS,\n    'n_events_generated': n_generated, 'pythia_seed': PYTHIA_SEED,\n    'sqrt_s_gev': 13000.0, 'pt_min_gev': pt_min, 'eta_max': ETA_MAX,\n    'jet_R': R, 'match_R': MATCH_R,\n    'jet_counts': {str(k): int(v) for k, v in inclusive_df['flavor'].value_counts().items()},\n    'inclusive_sha256': file_sha256(paths['inclusive']),\n}\nmanifest_path = os.path.join(OUT_DIR, 'quark_gluon_generation_manifest.json')\nwith open(manifest_path, 'w') as stream:\n    json.dump(manifest, stream, indent=2, sort_keys=True)\nprint(f'Wrote generation manifest: {manifest_path}')\n'''
-    cell['source']=src
+    cell['source']=src.splitlines(keepends=True)
 path.write_text(json.dumps(nb,indent=1)+"\n")
+
+
+# Add progress reporting to the other long, Python-level teaching loops.
+for notebook_name in ('demo_pythia_fastjet.ipynb', 'demo_quark_gluon_classification.ipynb'):
+    path = Path(notebook_name); nb = json.loads(path.read_text())
+    for cell in nb['cells']:
+        src = ''.join(cell.get('source', []))
+        if cell.get('cell_type') == 'code' and 'import pandas as pd' in src and 'from tqdm.auto import tqdm' not in src:
+            src = src.replace('import pandas as pd', 'import pandas as pd\nfrom tqdm.auto import tqdm')
+        if notebook_name == 'demo_pythia_fastjet.ipynb':
+            if 'import pythia8' in src and 'from tqdm.auto import tqdm' not in src:
+                src = src.replace('import pythia8', 'import pythia8\nfrom tqdm.auto import tqdm')
+            src = src.replace('for _ in range(n_events):',
+                              "for _ in tqdm(range(n_events), desc='Generating events', unit='event'):")
+        else:
+            src = src.replace('[compute_jet_features(row) for row in jets.itertuples(index=False)]',
+                              "[compute_jet_features(row) for row in tqdm(jets.itertuples(index=False), total=len(jets), desc='Computing jet features', unit='jet')]")
+            src = src.replace("top_constituent_inputs(row) for row in model_data.itertuples(index=False)",
+                              "top_constituent_inputs(row) for row in tqdm(model_data.itertuples(index=False), total=len(model_data), desc='Building constituent inputs', unit='jet')")
+        cell['source'] = src.splitlines(keepends=True)
+    path.write_text(json.dumps(nb, indent=1) + "\n")

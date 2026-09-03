@@ -13,6 +13,7 @@ changes to the implementation.
 - [x] Train and save a compact ParticleNet-style graph network.
 - [x] Load and compare saved models on a common test sample.
 - [x] Interpret model reliance with physics-aware ablations and attributions.
+- [x] Report progress for long Python-level generation and ML loops.
 - [x] Execute and validate the complete quick-mode workflow.
 
 ## Workflow
@@ -44,6 +45,10 @@ one reproducible rerun rather than appendable shards. Sharded Parquet plus a
 glob-based source manifest is the natural extension beyond samples that fit
 comfortably in memory.
 
+Long-running event generation uses a `tqdm` notebook progress bar. The same
+approach is used for constituent preparation and baseline feature extraction,
+so increasing the sample size does not leave students without feedback.
+
 ## Constituent representation
 
 Every stored constituent is used; there is no top-N truncation. Continuous
@@ -70,6 +75,11 @@ full mode uses all training jets and larger/longer configurations. Models
 automatically use CUDA and mixed precision when available, with conservative
 batch sizes for the node's 8 GB Quadro RTX 4000.
 
+Training uses one continuously updated batch-level progress bar with the
+current epoch, loss, validation AUC, and early-stopping counter. Evaluation
+and interpretation show separate operation-level bars; short vectorized and
+plot-formatting loops intentionally remain unwrapped.
+
 ## Environment
 
 Run the visible bootstrap script once. The intended GPU build is:
@@ -79,11 +89,13 @@ henv -x python -m pip install torch==2.5.1 \
   --index-url https://download.pytorch.org/whl/cu121
 ```
 
-`requirements.txt` holds the non-Torch stack. `setup_student_env.sh` creates
-or updates a student-owned henv, selects a CUDA or CPU Torch wheel, registers
-its kernel with `--sys-prefix`, and runs import/device smoke tests. Notebooks
-only validate dependencies and point back to this setup, avoiding hidden
-environment mutation. CPU remains a supported fallback.
+`requirements.txt` holds the non-Torch stack, including `tqdm`.
+`setup_student_env.sh` creates or updates a student-owned henv, selects a CUDA
+or CPU Torch wheel, and runs import/device smoke tests. It registers the
+course kernel for a newly selected environment; `--current` instead refreshes
+and reuses that henv's existing HEP kernel. Notebooks only validate
+dependencies and point back to this setup, avoiding hidden environment
+mutation. CPU remains a supported fallback.
 
 ## Saved-model contract
 
@@ -133,6 +145,8 @@ and unphysical perturbations must be discussed when interpreting results.
 - Use broad physics PID categories rather than ordinal PDG IDs.
 - Provide PFN, Transformer, and ParticleNet as separate lessons.
 - Use an explicit setup script plus requirements file; notebooks validate the selected kernel.
+- Use progress bars for operations whose runtime scales materially with the
+  event or jet count, including one stable bar during training.
 - Save model bundles and add dedicated evaluation and interpretation lessons.
 
 ## Implementation record (2026-09-02)
@@ -145,7 +159,8 @@ generation test confirmed `QG_N_EVENTS`, `QG_SEED`, the manifest, and
 byte-identical Parquet output for the same seed.
 
 Student portability is provided by `setup_student_env.sh`, `requirements.txt`,
-and `STUDENT_SETUP.md`. The script supports project-local or named henvs,
-selects a CUDA/CPU Torch wheel, registers a kernelspec inside the henv with
-`--sys-prefix`, resolves Pythia8/FastJet through heppyyier, and runs a smoke
-test. The requirements file was verified with a networked pip dry-run.
+and `STUDENT_SETUP.md`. The script supports project-local, named, or already
+active henvs; selects a CUDA/CPU Torch wheel; registers a course kernel or
+refreshes the active henv's HEP kernel as appropriate; resolves
+Pythia8/FastJet through heppyyier; and runs a smoke test. The requirements
+file was verified with a networked pip dry-run.

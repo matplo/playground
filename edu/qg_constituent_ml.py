@@ -14,6 +14,7 @@ import time
 from pathlib import Path
 
 import numpy as np
+from tqdm.auto import tqdm
 
 CONTINUOUS_FEATURES = ["log_z", "delta_eta", "delta_phi", "log_delta_r"]
 PID_CATEGORIES = ["photon", "charged_hadron", "neutral_hadron", "electron", "muon", "other"]
@@ -95,7 +96,8 @@ def prepare_dataset(source_path="data/inclusive_jets.parquet", prepared_root="da
     offsets = np.zeros(len(jets) + 1, dtype=np.int64)
     offsets[1:] = np.cumsum(jets.n_constituents.to_numpy(np.int64))
     continuous, categories, coords = [], [], []
-    for row in jets.itertuples(index=False):
+    for row in tqdm(jets.itertuples(index=False), total=len(jets),
+                    desc="Preparing jet constituents", unit="jet"):
         pt = np.asarray(row.const_pt, dtype=np.float64)
         eta = np.asarray(row.const_eta, dtype=np.float64)
         phi = np.asarray(row.const_phi, dtype=np.float64)
@@ -331,11 +333,12 @@ def make_loaders(prepared_dir, architecture, mode="quick", seed=7):
             torch.utils.data.DataLoader(test_ds, shuffle=False, **common))
 
 
-def predict(model, loader, device=None):
+def predict(model, loader, device=None, progress=False, description="Evaluating"):
     torch = require_torch(); device = choose_device() if device is None else torch.device(device); model.eval()
     scores=[]; labels=[]; events=[]; jets=[]; indices=[]
+    batches = tqdm(loader, desc=description, unit="batch", leave=False) if progress else loader
     with torch.no_grad():
-        for batch in loader:
+        for batch in batches:
             f=batch["features"].to(device); c=batch["coords"].to(device); m=batch["mask"].to(device)
             logits=model(f,c,m); scores.append(torch.sigmoid(logits).cpu().numpy()); labels.append(batch["labels"].numpy())
             events.append(batch["event_ids"]); jets.append(batch["jet_ids"]); indices.append(batch["indices"])
@@ -360,19 +363,24 @@ def train_model(model, loaders, architecture, mode="quick", device=None, seed=7)
     optimizer=torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4); loss_fn=torch.nn.BCEWithLogitsLoss()
     epochs, patience = ((20, 4) if mode == "quick" else (80, 10)); amp = device.type == "cuda"
     scaler=torch.amp.GradScaler("cuda", enabled=amp); history=[]; best_auc=-1.; best=None; stale=0; start=time.perf_counter()
-    for epoch in range(epochs):
-        model.train(); losses=[]
-        for batch in loaders[0]:
-            f=batch["features"].to(device); c=batch["coords"].to(device); m=batch["mask"].to(device); y=batch["labels"].to(device)
-            optimizer.zero_grad(set_to_none=True)
-            with torch.amp.autocast("cuda", enabled=amp): logits=model(f,c,m); loss=loss_fn(logits,y)
-            scaler.scale(loss).backward(); scaler.step(optimizer); scaler.update(); losses.append(loss.item())
-        val=predict(model,loaders[1],device); auc=binary_metrics(val["labels"],val["scores"])["roc_auc"]
-        history.append({"epoch": epoch+1, "train_loss": float(np.mean(losses)), "validation_auc": auc})
-        if auc > best_auc + 1e-4: best_auc=auc; best=copy.deepcopy(model.state_dict()); stale=0
-        else: stale += 1
-        if stale >= patience: break
-    model.load_state_dict(best); test=predict(model,loaders[2],device); metrics=binary_metrics(test["labels"],test["scores"])
+    with tqdm(total=epochs * len(loaders[0]), desc=f"Training {architecture}", unit="batch") as training_progress:
+        for epoch in range(epochs):
+            model.train(); losses=[]
+            for batch in loaders[0]:
+                f=batch["features"].to(device); c=batch["coords"].to(device); m=batch["mask"].to(device); y=batch["labels"].to(device)
+                optimizer.zero_grad(set_to_none=True)
+                with torch.amp.autocast("cuda", enabled=amp): logits=model(f,c,m); loss=loss_fn(logits,y)
+                scaler.scale(loss).backward(); scaler.step(optimizer); scaler.update(); losses.append(loss.item())
+                training_progress.update()
+                training_progress.set_postfix(epoch=f"{epoch + 1}/{epochs}", loss=f"{loss.item():.4f}", refresh=False)
+            val=predict(model,loaders[1],device); auc=binary_metrics(val["labels"],val["scores"])["roc_auc"]
+            history.append({"epoch": epoch+1, "train_loss": float(np.mean(losses)), "validation_auc": auc})
+            if auc > best_auc + 1e-4: best_auc=auc; best=copy.deepcopy(model.state_dict()); stale=0
+            else: stale += 1
+            training_progress.set_postfix(epoch=f"{epoch + 1}/{epochs}", loss=f"{np.mean(losses):.4f}",
+                                          val_auc=f"{auc:.4f}", stale=stale)
+            if stale >= patience: break
+    model.load_state_dict(best); test=predict(model,loaders[2],device,progress=True,description="Testing"); metrics=binary_metrics(test["labels"],test["scores"])
     metrics.update({"best_validation_auc": best_auc, "epochs": len(history), "training_seconds": time.perf_counter()-start,
                     "parameters": sum(p.numel() for p in model.parameters()), "device": str(device),
                     "peak_gpu_memory_mb": torch.cuda.max_memory_allocated()/1024**2 if device.type=="cuda" else 0.0})
@@ -417,7 +425,7 @@ def predict_parquet(bundle_dir, source_path, prepared_root="data/qg_eval_prepare
     batch = {"pfn": 256, "transformer": 96, "particlenet": 96}[config["architecture"]]
     loader = torch.utils.data.DataLoader(dataset, batch_size=batch, shuffle=False,
                                          num_workers=0, collate_fn=collate_jets)
-    result = predict(model, loader, device)
+    result = predict(model, loader, device, progress=True, description="Scoring jets")
     result["prepared_dir"] = str(prepared)
     return result, config
 
