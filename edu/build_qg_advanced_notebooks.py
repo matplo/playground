@@ -165,9 +165,12 @@ The training batches are balanced so quarks and gluons contribute equally. A sep
 stopping** keeps the checkpoint from the epoch with the best validation result, limiting
 overfitting. The **test set** is touched only for the final measurement and keeps the
 naturally occurring class mixture.'''),
-      code(f'''history, metrics, predictions = qg.train_model(model, loaders, '{arch}', RUN_MODE, DEVICE)
+      code(f'''# Preserve the exact starting point so the architecture-visualization lesson
+# can measure what training changed. This roughly doubles checkpoint weight storage.
+INITIAL_STATE = {{name: value.detach().cpu().clone() for name, value in model.state_dict().items()}}
+history, metrics, predictions = qg.train_model(model, loaders, '{arch}', RUN_MODE, DEVICE)
 bundle = qg.save_model_bundle(model, '{arch}', RUN_MODE, MODEL_CONFIG, prepared,
-                              history, metrics, predictions)
+                              history, metrics, predictions, initial_state=INITIAL_STATE)
 print(json.dumps(metrics, indent=2))
 print(f'Saved model bundle: {{bundle}}')'''),
       code('''from sklearn.metrics import roc_curve
@@ -530,6 +533,263 @@ anything seen during training. Generator truth labels are
 idealized and process dependent. Attention weights and graph edges describe internal routing,
 not causal explanations. Reliable scientific conclusions should be checked with several
 generators, detector conditions, kinematic regions, and interpretation methods.''')])
+
+
+write('demo_quark_gluon_architecture_visualization.ipynb',[
+ md('''# Seeing how the constituent networks are built—and how training changes them
+
+This notebook turns the PFN, Particle Transformer, and ParticleNet-style network into
+visual maps. The first half needs no trained model: it shows the route information takes
+from jet constituents to one quark-like score. The second half optionally loads saved
+checkpoints and compares their parameters and internal activations with their starting
+points.
+
+A **parameter** (often called a weight) is an adjustable number inside a neural network.
+A **block** is a named group of layers that performs one stage of the calculation. An
+**activation** is the intermediate array of numbers produced by a layer for a particular
+input. Architecture tells us which calculations are possible; training chooses parameter
+values that make those calculations useful.'''),
+ md('''## 0. Student controls
+
+Choose the same sample and quick/full mode used to train the checkpoints you want to inspect.
+The conceptual diagrams and untrained models work even if the Parquet file or checkpoints do
+not exist. The trained sections skip missing models instead of failing.'''),
+ code(SOURCE_SETTINGS + "\nMODEL_MODE = 'quick'  # inspect saved 'quick' or 'full' checkpoints"),
+ md('## 1. Environment'), code(BOOT + "\nimport pandas as pd\nfrom matplotlib.patches import FancyBboxPatch"),
+ md('''## 2. Three information-flow maps
+
+The arrows show the main direction of computation, not every tensor operation. A shared
+layer applies the **same learned rule** to every constituent. **Pooling** combines a
+variable-size particle set into a fixed-size jet summary. **Self-attention** lets particles
+exchange information with all other particles. A **nearest-neighbor graph** instead connects
+each particle to a small local neighborhood.
+
+All three networks end in a single **logit**. The sigmoid function turns that unrestricted
+number into a score between 0 and 1. These are conceptual maps; the executable PyTorch models
+remain the authoritative definitions.'''),
+ code('''def draw_pipeline(ax, title, labels, colors):
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis('off'); ax.set_title(title, weight='bold')
+    width = 0.145 if len(labels) >= 6 else 0.17
+    xs = np.linspace(0.02, 0.98 - width, len(labels))
+    for i, (x, label, color) in enumerate(zip(xs, labels, colors)):
+        box = FancyBboxPatch((x, .35), width, .30, boxstyle='round,pad=0.015',
+                             facecolor=color, edgecolor='#263238', linewidth=1.2)
+        ax.add_patch(box); ax.text(x + width/2, .50, label, ha='center', va='center', fontsize=9)
+        if i:
+            ax.annotate('', xy=(x-.006, .50), xytext=(xs[i-1]+width+.006, .50),
+                        arrowprops=dict(arrowstyle='->', lw=1.5, color='#455a64'))
+
+flows = {
+ 'PFN': (['particle\\nfeatures', 'shared Φ\\nnetwork', 'masked\\nsum', 'ρ\\nnetwork', 'jet\\nlogit'],
+         ['#bbdefb','#90caf9','#fff59d','#a5d6a7','#ffccbc']),
+ 'Particle Transformer': (['particle\\nfeatures', 'embedding', 'self-attention\\nblocks', 'class-query\\nattention', 'output\\nhead', 'jet\\nlogit'],
+         ['#bbdefb','#90caf9','#ce93d8','#ffe082','#a5d6a7','#ffccbc']),
+ 'ParticleNet style': (['particle\\ncloud', 'nearest-\\nneighbor graph', 'EdgeConv\\nblocks', 'mean + max\\npooling', 'output\\nhead', 'jet\\nlogit'],
+         ['#bbdefb','#80cbc4','#80cbc4','#fff59d','#a5d6a7','#ffccbc'])}
+fig, axes = plt.subplots(3, 1, figsize=(13, 7))
+for ax, (title, (labels, colors)) in zip(axes, flows.items()): draw_pipeline(ax, title, labels, colors)
+plt.tight_layout(); plt.show()'''),
+ md('''### What to look for
+
+The PFN communicates between constituents only when their learned vectors are summed. It is
+the simplest and cheapest of the three designs. The Transformer performs all-to-all
+comparisons, so it can learn relationships between distant constituents but its work grows
+rapidly with multiplicity. ParticleNet builds changing local neighborhoods and learns from
+nearby pairs. The yellow pooling stages are information bottlenecks: after them, a
+variable-length jet has become one fixed-length vector.
+
+The diagram does not rank the models. A more elaborate route can represent more patterns,
+but can also need more data, memory, and regularization.'''),
+ md('''## 3. Count parameters inside each untrained block
+
+Here **untrained** means PyTorch has assigned random initial parameter values but no jet label
+has adjusted them. Parameter count measures capacity and storage, not intelligence. A block
+with more parameters has more adjustable numbers, but parameter-free operations such as a
+sum or nearest-neighbor lookup can still be essential.'''),
+ code('''if MODEL_MODE not in {'quick', 'full'}: raise ValueError("MODEL_MODE must be 'quick' or 'full'")
+architectures = ('pfn', 'transformer', 'particlenet')
+fresh_models = {name: qg.create_model(name, config=qg.default_config(name, MODEL_MODE))
+                for name in architectures}
+parameter_rows = []
+for architecture, model in fresh_models.items():
+    children = dict(model.named_children())
+    for block, module in children.items():
+        parameter_rows.append({'architecture': architecture, 'block': block,
+                               'parameters': sum(p.numel() for p in module.parameters())})
+    direct = sum(p.numel() for p in model.parameters(recurse=False))
+    if direct: parameter_rows.append({'architecture': architecture, 'block': 'direct parameter', 'parameters': direct})
+parameter_table = pd.DataFrame(parameter_rows)
+display(parameter_table)
+display(parameter_table.groupby('architecture', as_index=False)['parameters'].sum())
+
+pivot = parameter_table.pivot(index='architecture', columns='block', values='parameters').fillna(0)
+pivot.plot.bar(stacked=True, figsize=(10, 5), colormap='tab20')
+plt.ylabel('trainable parameters'); plt.title(f'Where the {MODEL_MODE}-mode parameters live')
+plt.xticks(rotation=0); plt.tight_layout(); plt.show()'''),
+ md('''### How to read this figure
+
+Each full bar is one architecture; its height is the total number of trainable values. Colored
+segments locate those values in named blocks. The scales can differ greatly, so compare both
+total height and composition. A zero-parameter operation will not appear even when it is
+structurally important. Also remember that a parameter is reused every time its layer is
+applied—for example, PFN's $\\Phi$ parameters process every particle.'''),
+ md('''## 4. Find compatible trained checkpoints
+
+A **checkpoint** is a saved set of parameter values. The sample fingerprint ensures that this
+notebook does not silently compare models trained on different generated data. New training
+runs also save `initial_weights.pt`, the exact state immediately before optimization. Older
+bundles remain usable, but for them we can compare only against a newly randomized reference,
+not claim an exact before/after measurement.'''),
+ code('''prepared = None; trained_bundles = {}
+if SOURCE.exists():
+    prepared = qg.prepare_dataset(SOURCE); manifest = qg.load_manifest(prepared)
+    for bundle in qg.discover_bundles(dataset_fingerprint=manifest['source_sha256']):
+        config = json.loads((bundle/'config.json').read_text())
+        if config['mode'] == MODEL_MODE: trained_bundles[config['architecture']] = bundle
+else:
+    print(f'{SOURCE} does not exist; the untrained architecture lesson is still complete.')
+
+if trained_bundles:
+    display(pd.DataFrame([{'architecture': name, 'bundle': str(bundle),
+                           'exact_initial_state': (bundle/'initial_weights.pt').exists()}
+                          for name, bundle in trained_bundles.items()]))
+else:
+    print(f'No compatible {MODEL_MODE!r} checkpoints found. Train an architecture notebook, then rerun from here.')'''),
+ md('''## 5. How much did each block move?
+
+For every block we compute
+
+$$\\text{relative change}=\\frac{\\|W_{trained}-W_{reference}\\|_2}{\\|W_{reference}\\|_2}.$$
+
+The $L_2$ norm combines all numbers in a block into one geometric length. A value near zero
+means little movement relative to the starting scale; a value near one means the update has a
+similar overall size to the reference. This is **not feature importance** and does not say
+whether a block improved the classifier. Optimizers can rescale connected layers while
+preserving similar predictions.'''),
+ code('''def reference_state(bundle, config):
+    initial_path = bundle/'initial_weights.pt'
+    if initial_path.exists():
+        return torch.load(initial_path, map_location='cpu', weights_only=True), 'exact initialization'
+    # A useful visual baseline for old bundles, but not their actual starting point.
+    torch.manual_seed(12345)
+    reference = qg.create_model(config['architecture'], config['input_dim'], config['model_config'])
+    return reference.state_dict(), 'fresh random reference'
+
+change_rows = []; states = {}
+for architecture, bundle in trained_bundles.items():
+    config = json.loads((bundle/'config.json').read_text())
+    trained = torch.load(bundle/'weights.pt', map_location='cpu', weights_only=True)
+    reference, basis = reference_state(bundle, config); states[architecture] = (reference, trained, basis, config)
+    parameter_names = {name for name, _ in qg.create_model(
+        architecture, config['input_dim'], config['model_config']).named_parameters()}
+    groups = {}
+    for name in parameter_names:
+        group = name.split('.')[0]
+        before = reference[name].float(); after = trained[name].float()
+        sums = groups.setdefault(group, [0.0, 0.0, 0])
+        sums[0] += torch.sum((after-before)**2).item()
+        sums[1] += torch.sum(before**2).item(); sums[2] += before.numel()
+    for group, (delta2, reference2, count) in groups.items():
+        change_rows.append({'architecture': architecture, 'block': group, 'basis': basis,
+                            'relative_L2_difference': np.sqrt(delta2/max(reference2, 1e-24)),
+                            'parameters': count})
+
+if change_rows:
+    changes = pd.DataFrame(change_rows); display(changes)
+    labels = changes['architecture'] + ': ' + changes['block']
+    color_map = {'pfn':'#1976d2', 'transformer':'#7b1fa2', 'particlenet':'#00796b'}
+    fig, ax = plt.subplots(figsize=(10, max(4, .42*len(changes))))
+    ax.barh(labels, changes['relative_L2_difference'], color=[color_map[x] for x in changes['architecture']])
+    ax.set_xscale('log'); ax.set_xlabel('relative L2 difference (log scale)'); ax.invert_yaxis()
+    ax.set_title('Block-level parameter movement'); plt.tight_layout(); plt.show()
+else: print('No trained checkpoints to compare.')'''),
+ md('''### How to read this figure
+
+Read the table's `basis` column first. “Exact initialization” supports a true statement about
+what changed during that run. “Fresh random reference” only shows how the trained checkpoint
+differs from a typical untrained model. The logarithmic horizontal scale makes both small and
+large differences visible. Compare blocks within a model cautiously; LayerNorm parameters,
+biases, and large matrices begin on different scales.'''),
+ md('''## 6. Look inside one weight matrix
+
+For checkpoints with an exact saved initialization, the next figure shows a small window from
+the first matrix-shaped parameter. Each colored square is one number. The difference panel
+uses its own color scale because training updates are often much smaller than initialized
+weights. Rows and columns are learned coordinates, not named physics variables, so patterns
+here are diagnostic—not a direct explanation of quark/gluon physics.'''),
+ code('''exact = [(name, values) for name, values in states.items() if values[2] == 'exact initialization']
+if exact:
+    fig, axes = plt.subplots(len(exact), 3, figsize=(12, 3.4*len(exact)), squeeze=False)
+    for row, (architecture, (reference, trained, basis, config)) in enumerate(exact):
+        key = next(k for k, value in trained.items() if value.ndim == 2 and value.is_floating_point())
+        before = reference[key].float().numpy()[:32,:32]; after = trained[key].float().numpy()[:32,:32]
+        scale = max(abs(before).max(), abs(after).max(), 1e-12)
+        for ax, array, title, limit in zip(axes[row], (before, after, after-before),
+                                          ('initial', 'trained', 'difference'),
+                                          (scale, scale, max(abs(after-before).max(),1e-12))):
+            image = ax.imshow(array, cmap='coolwarm', vmin=-limit, vmax=limit, aspect='auto')
+            ax.set_title(f'{architecture}: {key} — {title}'); ax.set(xlabel='input index', ylabel='output index')
+            fig.colorbar(image, ax=ax, fraction=.046)
+    plt.tight_layout(); plt.show()
+else: print('No exact initialization files yet. Retrain a model with the updated training notebook to enable this figure.')'''),
+ md('''## 7. Compare internal activations on held-out jets
+
+Parameters describe the model, while activations describe what it computes for actual inputs.
+Hooks record outputs of the main blocks without changing the forward calculation. We use one
+batch from the held-out test split: these jets never updated the weights or controlled early
+stopping. RMS (root-mean-square) summarizes activation size; it is not accuracy or importance.'''),
+ code('''def logical_blocks(model, architecture):
+    if architecture == 'pfn': return [('phi', model.phi), ('rho', model.rho)]
+    if architecture == 'transformer':
+        return [('embed', model.embed)] + [(f'attention block {i+1}', block) for i, block in enumerate(model.blocks)] + [('class attention', model.cls_attn), ('head', model.head)]
+    return [('EdgeConv 1', model.edge1), ('EdgeConv 2', model.edge2), ('head', model.head)]
+
+def activation_rms(model, architecture, batch):
+    found = {}; handles = []
+    def make_hook(label):
+        def hook(module, inputs, output):
+            value = output[0] if isinstance(output, tuple) else output
+            found[label] = float(value.detach().float().square().mean().sqrt().cpu())
+        return hook
+    for label, module in logical_blocks(model, architecture): handles.append(module.register_forward_hook(make_hook(label)))
+    model.eval()
+    with torch.no_grad(): model(batch['features'].to(DEVICE), batch['coords'].to(DEVICE), batch['mask'].to(DEVICE))
+    for handle in handles: handle.remove()
+    return found
+
+activation_rows = []
+if prepared is not None:
+  for architecture, (reference, trained, basis, config) in states.items():
+    batch = next(iter(qg.make_loaders(prepared, architecture, config['mode'])[2]))
+    for stage, state in [('reference', reference), ('trained', trained)]:
+        model = qg.create_model(architecture, config['input_dim'], config['model_config'])
+        model.load_state_dict(state); model.to(DEVICE)
+        for block, rms in activation_rms(model, architecture, batch).items():
+            activation_rows.append({'architecture':architecture, 'block':block, 'stage':stage,
+                                    'activation_RMS':rms, 'basis':basis})
+
+if activation_rows:
+    activations = pd.DataFrame(activation_rows)
+    names = list(activations['architecture'].unique())
+    fig, axes = plt.subplots(1, len(names), figsize=(5*len(names), 4), squeeze=False)
+    for ax, architecture in zip(axes[0], names):
+        view = activations[activations.architecture == architecture].pivot(index='block', columns='stage', values='activation_RMS')
+        view.plot.bar(ax=ax, color=['#90caf9','#ef6c00']); ax.set_title(architecture)
+        ax.set_ylabel('activation RMS'); ax.tick_params(axis='x', rotation=35)
+    plt.tight_layout(); plt.show()
+else: print('Train a compatible model and provide its source Parquet file to compare activations.')'''),
+ md('''### How to read these figures—and what they cannot prove
+
+Within one panel, compare the paired reference and trained bars at each block. A change means
+training altered the numerical representation of this held-out batch. Different blocks have
+different widths and nonlinearities, so their RMS heights should not be ranked as importance.
+An unchanged scale can also hide a major rotation or rearrangement of the representation.
+
+Weight and activation views are excellent checks that learning occurred and useful clues when
+debugging vanishing or exploding values. They do **not** by themselves reveal which physical
+features drive performance. Use the separate interpretation notebook's ablations and local
+attributions for that question, and still treat those as model-reliance evidence rather than
+causal laws of nature.''')])
 
 
 # Patch the generator controls and manifest without rewriting its narrative structure.

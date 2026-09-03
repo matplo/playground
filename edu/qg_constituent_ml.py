@@ -401,9 +401,13 @@ def train_model(model, loaders, architecture, mode="quick", device=None, seed=7)
 
 
 def save_model_bundle(model, architecture, mode, model_config, prepared_dir, history, metrics, predictions,
-                      bundle_root="artifacts/qg_models"):
+                      bundle_root="artifacts/qg_models", initial_state=None):
     torch=require_torch(); manifest=load_manifest(prepared_dir); out=Path(bundle_root)/manifest["source_sha256"][:12]/architecture/mode
     out.mkdir(parents=True,exist_ok=True); torch.save(model.state_dict(),out/"weights.pt")
+    if initial_state is not None:
+        # Keeping the exact initialization makes layer-by-layer training changes
+        # measurable. Older bundles without this optional file remain loadable.
+        torch.save(initial_state,out/"initial_weights.pt")
     config={"architecture":architecture,"mode":mode,"model_config":model_config,"input_dim":len(FEATURE_NAMES),
             "dataset_fingerprint":manifest["source_sha256"],"split_fingerprint":manifest["split_fingerprint"],
             "prepared_manifest":manifest,"torch_version":torch.__version__}
@@ -447,7 +451,10 @@ def train_architecture(architecture, source="data/inclusive_jets.parquet", mode=
                        prepared_root="data/qg_prepared", bundle_root="artifacts/qg_models"):
     mode=mode or os.getenv("QG_RUN_MODE","quick"); prepared=prepare_dataset(source,prepared_root)
     config=default_config(architecture,mode); model=create_model(architecture,config=config); loaders=make_loaders(prepared,architecture,mode)
-    history,metrics,predictions=train_model(model,loaders,architecture,mode); bundle=save_model_bundle(model,architecture,mode,config,prepared,history,metrics,predictions,bundle_root)
+    initial_state={name:value.detach().cpu().clone() for name,value in model.state_dict().items()}
+    history,metrics,predictions=train_model(model,loaders,architecture,mode); bundle=save_model_bundle(
+        model,architecture,mode,config,prepared,history,metrics,predictions,
+        bundle_root=bundle_root,initial_state=initial_state)
     return model,metrics,predictions,bundle,prepared
 
 

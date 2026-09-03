@@ -138,8 +138,9 @@ select the course kernel again.
 2. `demo_quark_gluon_classification.ipynb` (classical and compact baselines)
 3. `demo_quark_gluon_constituent_setup.ipynb`
 4. the PFN, Particle Transformer, and ParticleNet notebooks in any order
-5. `demo_quark_gluon_model_evaluation.ipynb`
-6. `demo_quark_gluon_model_interpretation.ipynb`
+5. `demo_quark_gluon_architecture_visualization.ipynb` (its untrained sections also work earlier)
+6. `demo_quark_gluon_model_evaluation.ipynb`
+7. `demo_quark_gluon_model_interpretation.ipynb`
 
 Prepared arrays and trained models are automatically associated with the
 fingerprint of the generated Parquet sample.
@@ -165,7 +166,8 @@ models remain under their original fingerprint.
 - `data/*.parquet` contains generated samples and may be copied to give
   students common events.
 - `data/qg_prepared/` is derived and can be regenerated.
-- `artifacts/qg_models/` contains weights plus required JSON configuration;
+- `artifacts/qg_models/` contains trained weights, optional exact initial weights,
+  and required JSON configuration;
   copy the whole directory when sharing trained models.
 - `artifacts/qg_baselines/` contains fitted logistic/BDT/compact-MLP models
   and their common-test predictions.
