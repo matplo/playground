@@ -31,3 +31,10 @@ A flowchart summarizing ALICE bulk quark-gluon-plasma observables.
 ![ALICE QGP bulk flowchart](alice-qgp-bulk/alice-qgp-bulk.svg.png)
 
 [View the vector version (SVG) →](alice-qgp-bulk/alice-qgp-bulk.svg)
+
+## All the above was produced with a codex session
+
+- session transcript sanitized below
+
+<iframe src="2026-09-08-use-scipaperlib-for-a-one-paragraph.html" style="width:100%; height:800px; border:1px solid #ccc; border-radius:6px;" title="codex session"></iframe>
+
