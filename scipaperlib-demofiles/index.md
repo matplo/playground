@@ -7,6 +7,8 @@ title: SciPaperlib demos
 Demo bundles built from a SciPaperlib library, put together to show what an
 automated literature-to-data pipeline can produce.
 
+See [scipaperlib on PYPI](https://pypi.org/project/scipaperlib/)
+
 ## ALICE R<sub>AA</sub> summary explorer
 
 An interactive nuclear-modification-factor explorer built from 65 HEPData
