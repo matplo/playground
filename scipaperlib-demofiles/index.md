@@ -1,0 +1,33 @@
+---
+title: SciPaperlib demos
+---
+
+# SciPaperlib demo bundles
+
+Demo bundles built from a SciPaperlib library, put together to show what an
+automated literature-to-data pipeline can produce.
+
+## ALICE R<sub>AA</sub> summary explorer
+
+An interactive nuclear-modification-factor explorer built from 65 HEPData
+measurement curves (1,315 numeric points), covering light hadrons,
+resonances, charm/beauty probes, charged/full/tagged jets and isolated
+photons. Select presets or individual curves, filter by system/energy/object,
+change the momentum range, toggle systematic errors, and export SVG/CSV/JSON.
+Entirely self-contained — no installation, server or network needed.
+
+<iframe src="alice-raa-summary/alice_raa_explorer.html" style="width:100%; height:800px; border:1px solid #ccc; border-radius:6px;" title="ALICE RAA explorer"></iframe>
+
+[Open the explorer in its own tab →](alice-raa-summary/alice_raa_explorer.html)
+
+See the [full write-up](alice-raa-summary/README.md) and
+[source catalogue](alice-raa-summary/SOURCES.md) for provenance, uncertainty
+and axis policy, and validation notes.
+
+## ALICE QGP bulk observables
+
+A flowchart summarizing ALICE bulk quark-gluon-plasma observables.
+
+![ALICE QGP bulk flowchart](alice-qgp-bulk/alice-qgp-bulk.svg.png)
+
+[View the vector version (SVG) →](alice-qgp-bulk/alice-qgp-bulk.svg)
