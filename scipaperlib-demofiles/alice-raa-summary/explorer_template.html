@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALICE | Nuclear modification explorer</title>
+<style>
+:root{font-family:system-ui,-apple-system,sans-serif;color:#182c43;background:#f2f5f8;font-size:14px}*{box-sizing:border-box}body{margin:0}header{background:#172d45;color:white;padding:25px 32px}h1{font-size:27px;margin:0 0 8px;letter-spacing:-.7px}header p{color:#ced9e5;margin:0;max-width:1100px;line-height:1.6}.shell{display:grid;grid-template-columns:330px minmax(0,1fr);gap:20px;padding:20px}aside,.card{background:white;border:1px solid #dbe3eb;border-radius:10px;padding:18px}aside{align-self:start;position:sticky;top:15px;max-height:95vh;overflow:auto}h2{font-size:18px;margin:0 0 14px}h3{font-size:15px;margin:18px 0 8px}label{display:block}input,select,button{font:inherit}input[type=search],select{width:100%;padding:9px;border:1px solid #bdcbd8;border-radius:5px;margin:6px 0}button{background:#f4f7fa;border:1px solid #c7d3de;border-radius:5px;padding:8px 11px;color:#18334c;cursor:pointer}button:hover{background:#e2edf5}button.primary{background:#126c98;color:white;border-color:#126c98}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row label{display:flex;gap:5px;align-items:center}.row input[type=number]{width:80px;padding:7px;border:1px solid #c7d3de;border-radius:4px}.muted{color:#5f7080;font-size:12px;line-height:1.55}.curve{padding:9px 4px;border-bottom:1px solid #edf1f5;display:flex;gap:8px;cursor:pointer;align-items:flex-start}.curve input{margin-top:4px}.curve strong{font-size:13px;font-weight:550}.curve small{display:block;color:#647589;margin-top:3px;font-size:11px}.card{margin-bottom:18px}.plot svg{display:block;width:100%;height:auto}.plot{overflow:auto}.banner{padding:10px 13px;background:#edf5fa;border-left:3px solid #3295bc;line-height:1.5;margin:12px 0;font-size:12px}.warn{background:#fff5df;border-color:#d9a234}a{color:#086a9e}details{border-bottom:1px solid #dde5ec;padding:12px 0}summary{cursor:pointer;font-weight:550;line-height:1.5}details p{line-height:1.6;font-size:13px}pre{background:#f4f7fa;padding:12px;border-radius:6px;white-space:pre-wrap;overflow-wrap:anywhere;max-height:380px;overflow:auto;font-size:11px}.tooltip{display:none;position:fixed;pointer-events:none;max-width:380px;background:#172d45;color:white;border-radius:7px;padding:12px;font-size:12px;z-index:99;box-shadow:0 5px 20px #0003;line-height:1.6}#count{font-weight:600;color:#08749e;margin:10px 0}.badge{font-size:10px;border-radius:3px;background:#e9f0f5;padding:3px 5px;margin-right:5px}.toolbar{justify-content:space-between}.empty{padding:70px;text-align:center;color:#61768a}@media(max-width:900px){.shell{grid-template-columns:1fr;padding:10px}aside{position:static;max-height:450px}.plot svg{min-width:750px}header{padding:20px}}
+</style></head><body>
+<header><h1>ALICE · Nuclear modification explorer</h1><p>Measured hadrons, heavy flavour, quarkonia, jets and isolated photons. Curated from the <b>default SciPaperlib</b> library. Published centrality bins, collision energies and object definitions remain distinct.</p></header>
+<div class="shell"><aside>
+<h2>Choose measurements</h2><label>Start with a comparison<select id="preset"></select></label>
+<label>Search<input id="search" type="search" placeholder="D⁰, jets, photons, Pb-going…"></label>
+<div class="row"><label style="flex:1">System<select id="system"><option value="">All systems</option></select></label><label style="flex:1">Energy<select id="energy"><option value="">All energies</option></select></label></div>
+<label>Physics objects<select id="family"><option value="">All objects</option></select></label>
+<div class="row"><button id="selectVisible">Select filtered</button><button id="clear">Clear selection</button></div>
+<div id="count"></div><div id="choices"></div></aside>
+<main><section class="card"><div class="row toolbar"><h2 style="margin:0">Selected measurements</h2><div class="row"><button id="svgDownload">Save SVG</button><button id="csvDownload">Save CSV</button><button id="jsonDownload">Save JSON + sources</button></div></div>
+<div class="row" style="margin-top:15px"><label><input type="checkbox" id="logx" checked> Log pT</label><label><input type="checkbox" id="syst" checked> Systematic boxes</label><label>pT min <input id="xmin" type="number" min="0" step="any" placeholder="Auto"></label><label>max <input id="xmax" type="number" min="0" step="any" placeholder="Auto"></label><button id="resetRange">Reset range</button></div>
+<p class="muted">Bars: statistical. Boxes: point-dependent systematic; separate global scale errors are not drawn. Hover over points for exact values. SVG and CSV exports use your current selection; JSON also preserves original strings and all uncertainty components.</p>
+<div class="banner">Central A–A RAA, centrality-selected p–Pb QpPb, and minimum-bias RpA are drawn in separate panels. Each point uses the momentum of its measured object; this is not a common parent-parton energy.</div>
+<div id="warning"></div><div id="plots" class="plot"></div></section>
+<section class="card"><h2>Sources and measurement definitions</h2><p class="muted">Expand a measurement for its acceptance, DOI, qualifiers, error components and local-file checksum. No fitted lines, rebinning or interpolation. These are independently published measurements, not a statistical combination.</p><div id="sources"></div></section>
+<section class="card"><h2>About this compilation</h2><p class="muted" id="about"></p><p class="muted">“Most central” means the lowest available percentile interval in each selected pT table: commonly 0–5% or 0–10% in Pb–Pb, and 0–5%, 0–20% or 2–10% in p–Pb. The oxygen curves and the RpPb references are minimum-bias / NSD measurements. NSD means non-single-diffractive. Charge-conjugate states follow each source definition even when the legend uses one charge.</p><p class="muted">p–Pb event-activity selection and nuclear scaling require special care: see <a href="https://arxiv.org/abs/1412.6828" target="_blank" rel="noopener">ALICE centrality-method paper</a>. Original HEPData error labels are retained. Where only separate point-dependent components are supplied, their quadrature is used for display; this does not establish a covariance model. For centre-only tables, the horizontal width of a systematic box is decorative. Global terms mentioned only in paper text or table descriptions have not been reconstructed.</p></section>
+</main></div><div id="tooltip" class="tooltip"></div>
+<script id="dataset" type="application/json">__DATA__</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('dataset').textContent);
+const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+const colors=['#0072B2','#D55E00','#009E73','#CC79A7','#6A51A3','#B58A00','#333333','#56B4E9','#A63603','#E377C2'];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let selected=new Set(Object.values(DATA.presets)[0]),visible=[],currentSVG=null;
+for(const name of Object.keys(DATA.presets)){const o=document.createElement('option');o.textContent=name;$('preset').append(o)}
+for(const [id,key] of [['system','system'],['energy','energy_TeV'],['family','family']])for(const v of [...new Set(DATA.curves.map(c=>c[key]))].sort()){
+ const o=document.createElement('option');o.value=v;o.textContent=id==='energy'?v+' TeV':v;$(id).append(o);
+}
+function choices(){
+ const q=$('search').value.toLowerCase();visible=DATA.curves.filter(c=>(!$('system').value||c.system===$('system').value)&&(!$('energy').value||c.energy_TeV===Number($('energy').value))&&(!$('family').value||c.family===$('family').value)&&`${c.label} ${c.family} ${c.key}`.toLowerCase().includes(q));
+ $('choices').replaceChildren();
+ for(const c of visible){const l=document.createElement('label');l.className='curve';const cb=document.createElement('input');cb.type='checkbox';cb.checked=selected.has(c.key);cb.dataset.key=c.key;cb.onchange=()=>{cb.checked?selected.add(c.key):selected.delete(c.key);render()};const text=document.createElement('span');text.innerHTML=`<strong>${esc(c.name)}</strong><small>${esc(c.system)} · ${c.energy_TeV} TeV · ${esc(c.centrality)} · ${c.observable}</small>`;l.append(cb,text);$('choices').append(l)}
+ $('count').textContent=`${selected.size} selected · ${visible.length} matching of ${DATA.curves.length}`;
+}
+function node(tag,attrs={},text){const n=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;return n}
+function fmt(n){return Number(n).toPrecision(5).replace(/\.?0+$/,'')}
+function draw(curves){
+ const groups=new Map();for(const c of curves){if(!groups.has(c.observable))groups.set(c.observable,[]);groups.get(c.observable).push(c)}
+ const W=1180,L=85,R=1135,PH=360,TOP=70;let H=45;
+ for(const cs of groups.values())H+=TOP+PH+80+cs.length*22+40;
+ const svg=node('svg',{xmlns:NS,viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'ALICE nuclear modification measurements',style:'font-family:Arial,sans-serif;background:white;color:#1b2f43'});
+ svg.append(node('rect',{width:W,height:H,fill:'white'}));
+ svg.append(node('text',{x:L,y:30,'font-size':19,'font-weight':700},'ALICE · Selected nuclear modification measurements'));
+ let offset=35;
+ for(const [obs,cs] of groups){
+  const ps=cs.flatMap(c=>c.points),log=$('logx').checked;
+  let x0=Math.min(...ps.map(p=>p.xlow!==null&&p.xlow>0?p.xlow:p.x))*.9,x1=Math.max(...ps.map(p=>p.xhigh??p.x))*1.1;
+  if($('xmin').value!=='')x0=Number($('xmin').value);if($('xmax').value!=='')x1=Number($('xmax').value);
+  if(!Number.isFinite(x0)||!Number.isFinite(x1)||x0>=x1||(log&&x0<=0))throw Error('Choose a valid pT range; logarithmic pT requires a positive minimum.');
+  const inrange=ps.filter(p=>p.x>=x0&&p.x<=x1);
+  let y1=Math.max(1.1,...inrange.map(p=>p.y+Math.max(p.stat_plus,$('syst').checked?p.sys_plus:0)))*1.12;
+  let y0=Math.min(0,...inrange.map(p=>p.y-Math.max(p.stat_minus,$('syst').checked?p.sys_minus:0)))*1.1;
+  const tx=v=>L+(log?Math.log(v/x0)/Math.log(x1/x0):(v-x0)/(x1-x0))*(R-L),ty=v=>offset+TOP+PH-(v-y0)/(y1-y0)*PH;
+  const bottom=offset+TOP+PH;
+  svg.append(node('text',{x:L,y:offset+36,'font-size':19,'font-weight':650},obs+' · '+[...new Set(cs.map(c=>`${c.system} ${c.energy_TeV} TeV`))].join(' / ')));
+  const ticks=[];if(log){for(let k=Math.floor(Math.log10(x0));k<=Math.ceil(Math.log10(x1));k++)for(const a of [1,2,5]){let v=a*10**k;if(v>=x0&&v<=x1)ticks.push(v)}}else{for(let i=0;i<=6;i++)ticks.push(x0+(x1-x0)*i/6)}
+  for(const v of ticks){svg.append(node('line',{x1:tx(v),x2:tx(v),y1:bottom,y2:bottom+5,stroke:'#4d6072'}));svg.append(node('text',{x:tx(v),y:bottom+24,'text-anchor':'middle','font-size':13},Number(v.toPrecision(3))))}
+  for(let i=0;i<=5;i++){let v=y0+(y1-y0)*i/5;svg.append(node('line',{x1:L,x2:R,y1:ty(v),y2:ty(v),stroke:'#e3e9ee'}));svg.append(node('text',{x:L-12,y:ty(v)+4,'text-anchor':'end','font-size':13},v.toFixed(2)))}
+  svg.append(node('line',{x1:L,x2:R,y1:ty(1),y2:ty(1),stroke:'#61778b','stroke-dasharray':'5 5'}));
+  svg.append(node('path',{d:`M ${L} ${offset+TOP} V ${bottom} H ${R}`,fill:'none',stroke:'#40566a'}));
+  svg.append(node('text',{x:(L+R)/2,y:bottom+53,'text-anchor':'middle','font-size':15},'pT of the measured object (GeV/c)'));
+  svg.append(node('text',{transform:`translate(24,${offset+TOP+PH/2}) rotate(-90)`,'text-anchor':'middle','font-size':16},obs));
+  const clipid='clip'+obs;const defs=node('defs'),clip=node('clipPath',{id:clipid});clip.append(node('rect',{x:L,y:offset+TOP,width:R-L,height:PH}));defs.append(clip);svg.append(defs);
+  const g=node('g',{'clip-path':`url(#${clipid})`});svg.append(g);
+  cs.forEach((c,i)=>{const color=colors[i%colors.length];for(const p of c.points){if(p.x<x0||p.x>x1)continue;
+   const x=tx(p.x),y=ty(p.y);
+   if($('syst').checked){let lo=p.xlow??p.x*.975,hi=p.xhigh??p.x*1.025;lo=Math.max(lo,x0);hi=Math.min(hi,x1);g.append(node('rect',{x:tx(lo),y:ty(p.y+p.sys_plus),width:Math.max(1,tx(hi)-tx(lo)),height:ty(p.y-p.sys_minus)-ty(p.y+p.sys_plus),fill:color,'fill-opacity':.13,stroke:color,'stroke-opacity':.3,'stroke-width':.6}))}
+   g.append(node('path',{d:`M ${x} ${ty(p.y-p.stat_minus)} V ${ty(p.y+p.stat_plus)} M ${x-3} ${ty(p.y-p.stat_minus)} H ${x+3} M ${x-3} ${ty(p.y+p.stat_plus)} H ${x+3}`,stroke:color,'stroke-width':1,fill:'none'}));
+   const mark=node(i%3===1?'rect':'circle',i%3===1?{x:x-3,y:y-3,width:6,height:6,fill:i%2?'white':color,stroke:color}:{cx:x,cy:y,r:3.4,fill:i%2?'white':color,stroke:color});g.append(mark);
+   const target=node('circle',{cx:x,cy:y,r:8,fill:'transparent',tabindex:0,'aria-label':`${c.label}, pT=${p.x}, ${obs}=${p.y}`});g.append(target);
+   target.addEventListener('pointermove',e=>{const t=$('tooltip');t.innerHTML=`<b>${esc(c.label)}</b><br>pT = ${p.x} GeV/c${p.xlow!==null?` [${p.xlow}, ${p.xhigh}]`:''}<br>${obs} = ${p.y}<br>stat −${p.stat_minus.toPrecision(3)} / +${p.stat_plus.toPrecision(3)}<br>point sys −${p.sys_minus.toPrecision(3)} / +${p.sys_plus.toPrecision(3)}<br><span style="color:#bbd8ed">${esc(c.acceptance)}<br>${esc(c.table_doi)}</span>`;t.style.display='block';t.style.left=Math.min(e.clientX+14,window.innerWidth-395)+'px';t.style.top=Math.max(8,Math.min(e.clientY+14,window.innerHeight-t.offsetHeight-10))+'px'});
+   target.addEventListener('pointerleave',()=>$('tooltip').style.display='none');
+  }
+  let ly=bottom+80+i*22;svg.append(node('circle',{cx:L+4,cy:ly-4,r:4,fill:color}));svg.append(node('text',{x:L+17,y:ly,'font-size':12.5},`${c.label}  [${c.table_doi}]`));
+  });
+  offset+=TOP+PH+80+cs.length*22+40;
+ }
+ svg.append(node('text',{x:L,y:H-10,'font-size':11,fill:'#5b6f80'},'Statistical bars; pointwise systematic boxes. Separate global scale errors not drawn. Default SciPaperlib · 2026-09-07.'));
+ return svg;
+}
+function render(){
+ choices();const cs=DATA.curves.filter(c=>selected.has(c.key));$('sources').replaceChildren();$('plots').replaceChildren();$('warning').replaceChildren();
+ if(cs.some(c=>c.key==='pb_djet'))$('warning').innerHTML='<div class="banner warn">† D⁰-tagged jets: deposited statistical errors appear unusually small. They are retained verbatim; use the source details before making quantitative comparisons.</div>';
+ if(!cs.length){$('plots').innerHTML='<div class="empty">Select measurements on the left to begin.</div>';currentSVG=null;return}
+ try{currentSVG=draw(cs);$('plots').append(currentSVG)}catch(e){$('plots').textContent=e.message;currentSVG=null}
+ for(const c of cs){const d=document.createElement('details');let err=c.points[0].errors.map(e=>`${e.label}: ${JSON.stringify(e.original)} → ${e.kind==='global'?'separate scale component, not drawn':e.kind}`).join('\n');d.innerHTML=`<summary><span class="badge">${c.observable}</span>${esc(c.label)}</summary><p>${esc(c.acceptance)}</p>${c.notes?`<div class="banner ${c.key==='pb_djet'?'warn':''}">${esc(c.notes)}</div>`:''}<p><a target="_blank" rel="noopener" href="${c.source_url}">${esc(c.table_doi)}</a> · ${esc(c.source.table)} · column ${c.source.column} (zero-based)<br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/${c.source.arxiv_id.replace('arXiv:','')}">${esc(c.source.arxiv_id)}</a> — ${esc(c.source.title)}<br>${c.points.length} points; original YAML: ${esc(c.raw_file)}</p><p class="muted">Uncertainty labels (first valid row; JSON export contains every row):</p><pre>${esc(err)}</pre><p class="muted">Deposited qualifiers and description:</p><pre>${esc(JSON.stringify(c.qualifiers,null,2))}\n${esc(c.source.description)}\n\nOriginal x header: ${esc(JSON.stringify(c.xheader_original))}\nSHA256: ${esc(c.sha256)}</pre>`;$('sources').append(d)}
+}
+function download(name,content,type){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+$('svgDownload').onclick=()=>{if(currentSVG)download('alice_selected.svg',new XMLSerializer().serializeToString(currentSVG),'image/svg+xml')};
+$('jsonDownload').onclick=()=>download('alice_selected.json',JSON.stringify({...DATA,curves:DATA.curves.filter(c=>selected.has(c.key))},null,2),'application/json');
+$('csvDownload').onclick=()=>{const fields=['key','name','system','energy_TeV','centrality','observable','x','xlow','xhigh','y','stat_minus','stat_plus','sys_minus','sys_plus','table_doi'];const lines=[fields];for(const c of DATA.curves.filter(c=>selected.has(c.key)))for(const p of c.points)lines.push(fields.map(f=>p[f]??c[f]??''));download('alice_selected.csv',lines.map(row=>row.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n'),'text/csv')};
+$('preset').onchange=()=>{selected=new Set(DATA.presets[$('preset').value]);for(const id of ['system','energy','family','search','xmin','xmax'])$(id).value='';render()};
+for(const id of ['search','system','energy','family'])$(id).addEventListener('input',choices);
+for(const id of ['logx','syst','xmin','xmax'])$(id).addEventListener('change',render);
+$('selectVisible').onclick=()=>{visible.forEach(c=>selected.add(c.key));render()};$('clear').onclick=()=>{selected.clear();render()};$('resetRange').onclick=()=>{$('xmin').value='';$('xmax').value='';render()};
+$('about').textContent=`${DATA.curves.length} curves, ${DATA.curves.reduce((n,c)=>n+c.points.length,0)} numeric data points, ${new Set(DATA.curves.map(c=>c.record)).size} HEPData records. ${DATA.omitted_rows.length} nonnumeric placeholder rows are recorded in the audit and not plotted. All selected source YAML files passed SHA256 verification against library metadata. This is a curated subset of the default library, not an exhaustive ALICE results catalogue. No server or internet connection is needed to use this page.`;
+render();
+</script></body></html>

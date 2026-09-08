@@ -1,0 +1,132 @@
+dependent_variables:
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 0-10}
+  - {name: RE (PBPB), value: 'PB PB --> PHI X'}
+  - {name: RE (PP), value: 'P P --> PHI X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.0166169}
+    - {label: syst., symerror: 0.0190755}
+    value: 0.154225
+  - errors:
+    - {label: stat., symerror: 0.0079685}
+    - {label: syst., symerror: 0.02114}
+    value: 0.205358
+  - errors:
+    - {label: stat., symerror: 0.00692752}
+    - {label: syst., symerror: 0.0248967}
+    value: 0.274631
+  - errors:
+    - {label: stat., symerror: 0.00800782}
+    - {label: syst., symerror: 0.0274435}
+    value: 0.335528
+  - errors:
+    - {label: stat., symerror: 0.010856}
+    - {label: syst., symerror: 0.0405595}
+    value: 0.444142
+  - errors:
+    - {label: stat., symerror: 0.014596}
+    - {label: syst., symerror: 0.0467505}
+    value: 0.502231
+  - errors:
+    - {label: stat., symerror: 0.0181566}
+    - {label: syst., symerror: 0.0533176}
+    value: 0.535651
+  - errors:
+    - {label: stat., symerror: 0.0197863}
+    - {label: syst., symerror: 0.0616938}
+    value: 0.564046
+  - errors:
+    - {label: stat., symerror: 0.0198998}
+    - {label: syst., symerror: 0.0613528}
+    value: 0.630171
+  - errors:
+    - {label: stat., symerror: 0.0210103}
+    - {label: syst., symerror: 0.0642388}
+    value: 0.607753
+  - errors:
+    - {label: stat., symerror: 0.0211092}
+    - {label: syst., symerror: 0.0577189}
+    value: 0.564973
+  - errors:
+    - {label: stat., symerror: 0.0205412}
+    - {label: syst., symerror: 0.0494741}
+    value: 0.530054
+  - errors:
+    - {label: stat., symerror: 0.019582}
+    - {label: syst., symerror: 0.0458565}
+    value: 0.449792
+  - errors:
+    - {label: stat., symerror: 0.0140949}
+    - {label: syst., symerror: 0.0444161}
+    value: 0.472672
+  - errors:
+    - {label: stat., symerror: 0.0143774}
+    - {label: syst., symerror: 0.0366341}
+    value: 0.380521
+  - errors:
+    - {label: stat., symerror: 0.0157403}
+    - {label: syst., symerror: 0.0333398}
+    value: 0.314223
+  - errors:
+    - {label: stat., symerror: 0.0149393}
+    - {label: syst., symerror: 0.0261278}
+    value: 0.235015
+  - errors:
+    - {label: stat., symerror: 0.0113179}
+    - {label: syst., symerror: 0.0225087}
+    value: 0.195785
+  - errors:
+    - {label: stat., symerror: 0.00984125}
+    - {label: syst., symerror: 0.0188105}
+    value: 0.158614
+  - errors:
+    - {label: stat., symerror: 0.00908572}
+    - {label: syst., symerror: 0.0145389}
+    value: 0.141477
+  - errors:
+    - {label: stat., symerror: 0.00741528}
+    - {label: syst., symerror: 0.0133954}
+    value: 0.147723
+  - errors:
+    - {label: stat., symerror: 0.0133365}
+    - {label: syst., symerror: 0.0181511}
+    value: 0.183724
+  - errors:
+    - {label: stat., symerror: 0.0394607}
+    - {label: syst., symerror: 0.0278134}
+    value: 0.267059
+  - errors:
+    - {label: stat., symerror: 0.116887}
+    - {label: syst., symerror: 0.0372886}
+    value: 0.32812
+independent_variables:
+- header: {name: '$p_{T}$', units: $GeV/c$}
+  values:
+  - {low: 0.4, high: 0.6}
+  - {low: 0.6, high: 0.8}
+  - {low: 0.8, high: 1}
+  - {low: 1, high: 1.2}
+  - {low: 1.2, high: 1.4}
+  - {low: 1.4, high: 1.6}
+  - {low: 1.6, high: 1.8}
+  - {low: 1.8, high: 2}
+  - {low: 2, high: 2.2}
+  - {low: 2.2, high: 2.4}
+  - {low: 2.4, high: 2.6}
+  - {low: 2.6, high: 2.8}
+  - {low: 2.8, high: 3}
+  - {low: 3, high: 3.5}
+  - {low: 3.5, high: 4}
+  - {low: 4, high: 4.5}
+  - {low: 4.5, high: 5}
+  - {low: 5, high: 6}
+  - {low: 6, high: 7}
+  - {low: 7, high: 8}
+  - {low: 8, high: 10}
+  - {low: 10, high: 13}
+  - {low: 13, high: 16}
+  - {low: 16, high: 20}

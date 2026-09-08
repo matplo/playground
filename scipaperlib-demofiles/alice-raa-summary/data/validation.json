@@ -1,0 +1,1407 @@
+{
+  "curves": 65,
+  "points": 1315,
+  "unique_files": 59,
+  "checks": "All input checksums, bin boundaries, numeric values, error labels and row lengths passed.",
+  "audit": [
+    {
+      "key": "pb_h",
+      "table": "86210:Table 8:0",
+      "points": 39,
+      "sha256": "f844f5ba1c31add2bae8dce4d7cc8747b5cc2852734965e6bcbe0c9eec7ace6b",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb_pi",
+      "table": "104923:Table 15:0",
+      "points": 58,
+      "sha256": "074cf4c47e935c8f54097904d44df30dea4538c91b8f35b1fc6c45dc8be51d0c",
+      "error_labels": [
+        "stat.",
+        "syst."
+      ]
+    },
+    {
+      "key": "pb_k",
+      "table": "104923:Table 16:0",
+      "points": 53,
+      "sha256": "037f7c4766c183cf36f42d88661707801df73406a03f20c0a32c0d3683de9201",
+      "error_labels": [
+        "stat.",
+        "syst."
+      ]
+    },
+    {
+      "key": "pb_p",
+      "table": "104923:Table 17:0",
+      "points": 44,
+      "sha256": "804dba85ab032980640d715af138f9b3dfcbc8b6c8e9c2f02b872132236790cf",
+      "error_labels": [
+        "stat.",
+        "syst."
+      ]
+    },
+    {
+      "key": "pb_kstar",
+      "table": "140098:Table 1:0",
+      "points": 15,
+      "sha256": "169e2e1d8d65143a4f62cda6c6488168ba56d6e890e0a6abf17d38eb9a4a331b",
+      "error_labels": [
+        "stat.",
+        "syst."
+      ]
+    },
+    {
+      "key": "pb_phi",
+      "table": "140098:Table 12:0",
+      "points": 24,
+      "sha256": "e98b1018fa51771f620450175997bdb16b9c49d95a109e2888ea1f150d81e978",
+      "error_labels": [
+        "stat.",
+        "syst."
+      ]
+    },
+    {
+      "key": "pb_kstarpm",
+      "table": "150017:Table 9:0",
+      "points": 14,
+      "sha256": "4114fab21a2a13ad13d6ea867a89925a61b9ef11e6b3ef9e3e3559a9fe4e0807",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb_d0",
+      "table": "127979:Table 11:0",
+      "points": 22,
+      "sha256": "66766efb062f5b77d191b845c9aa31f269e495e7e9d3e27eb1717860ccaaa735",
+      "error_labels": [
+        "stat.",
+        "syst.",
+        "syst. global normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pb_dplus",
+      "table": "127979:Table 12:0",
+      "points": 19,
+      "sha256": "1e179aa05a4f0e78bf43c607eb851e445b303f0ca9a5521c91edeece76e9cc81",
+      "error_labels": [
+        "stat.",
+        "syst.",
+        "syst. global normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pb_dstar",
+      "table": "127979:Table 13:0",
+      "points": 17,
+      "sha256": "bbe7707c9052fa1d310af9222f8a2e7a6765f71f27da399d0abdc6c033f33ee1",
+      "error_labels": [
+        "stat.",
+        "syst.",
+        "syst. global normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pb_davg",
+      "table": "127979:Table 17:0",
+      "points": 22,
+      "sha256": "0e10ca56fb320a7ef70c980ad6146854f600d89040e5427228d6299bb8c58860",
+      "error_labels": [
+        "stat.",
+        "syst.",
+        "syst. global normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pb_ds",
+      "table": "127980:Table 3:0",
+      "points": 10,
+      "sha256": "53351ca8f6d1a8c4061ea8acbf02ef531e8ad88e4ba8d023767b9ee6ecd1ac14",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys, global norm. unc."
+      ]
+    },
+    {
+      "key": "pb_lc",
+      "table": "138404:Table 2:0",
+      "points": 6,
+      "sha256": "e10b364dbca5497b61e4454b12eaa56d71d6afabd54adc06c24824aa3960ab88",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys, global norm. unc."
+      ]
+    },
+    {
+      "key": "pb_b_d0",
+      "table": "135987:Table 1b:0",
+      "points": 12,
+      "sha256": "2dece3d80365ed2cf948f9b9522f39ae97dd256c47536565590ed4afd70d209a",
+      "error_labels": [
+        "stat",
+        "sys",
+        "syst. global normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pb_b_e",
+      "table": "144336:Table 3:0",
+      "points": 13,
+      "sha256": "60b1cd14c40ffdd536c8372fd03b0e244de40e6322c0c53bed427f05b03afa61",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb_prompt_jpsi",
+      "table": "146723:Table 7:0",
+      "points": 4,
+      "sha256": "10878fd62de30b51a66b3b0f0567628c0357e0ccfc5d091f59503fa5a33daebb",
+      "error_labels": [
+        "stat",
+        "syst"
+      ]
+    },
+    {
+      "key": "pb_b_jpsi",
+      "table": "146723:Table 11:0",
+      "points": 4,
+      "sha256": "aa81847694bbc324134082547be0e07a4f3e81b04c4167be576c05cf214f8d85",
+      "error_labels": [
+        "stat",
+        "syst"
+      ]
+    },
+    {
+      "key": "pb_jpsi",
+      "table": "146644:Figure6-Panel1_midy_0-10:0",
+      "points": 8,
+      "sha256": "11a5073681b159f115234d52cf8118368ec1a17672e6f552811a8828c8ef7993",
+      "error_labels": [
+        "stat. uncertainty",
+        "syst. uncertainty"
+      ]
+    },
+    {
+      "key": "pb_jpsi_fwd",
+      "table": "146644:Figure6-Panel2_fwdy_0-20:0",
+      "points": 14,
+      "sha256": "047b817162c7b51b1e5b4eb2497c8403f54a6ca6347e82b70485fdba97ddbe0d",
+      "error_labels": [
+        "stat. uncertainty",
+        "syst. uncertainty"
+      ]
+    },
+    {
+      "key": "pb_chjet2",
+      "table": "146027:Figure 4a top ML:0",
+      "points": 9,
+      "sha256": "adb5f0ecc543d301e84d8a33d0c5c80977a1be251053d74bba28d412eebedea0",
+      "error_labels": [
+        "Raa, R = 0.2, Central, ML, statistical uncertainty",
+        "Raa, R = 0.2, Central, ML, systematic uncertainty"
+      ]
+    },
+    {
+      "key": "pb_chjet4",
+      "table": "146027:Figure 4b top ML:0",
+      "points": 8,
+      "sha256": "d2119db21bbc66ffa14752f4e8393850ae909c3fcf7077873fae010c606f51b6",
+      "error_labels": [
+        "Raa, R = 0.4, Central, ML, statistical uncertainty",
+        "Raa, R = 0.4, Central, ML, systematic uncertainty"
+      ]
+    },
+    {
+      "key": "pb_chjet6",
+      "table": "146027:Figure 4c top ML:0",
+      "points": 7,
+      "sha256": "23ca6a6540eee4d380e39ac5cc0e4dd814594cae918e5bc5bd74eb0b891f6340",
+      "error_labels": [
+        "Raa, R = 0.6, Central, ML, statistical uncertainty",
+        "Raa, R = 0.6, Central, ML, systematic uncertainty"
+      ]
+    },
+    {
+      "key": "pb_fulljet2",
+      "table": "93739:Table 30:0",
+      "points": 7,
+      "sha256": "29ff2f16c90ec7f482c05b12704fafb985c24f5bcea776bd6bf9b038990f6b11",
+      "error_labels": [
+        "stat",
+        "sys,correlated",
+        "sys,lumi+TAA",
+        "sys,shape"
+      ]
+    },
+    {
+      "key": "pb_fulljet4",
+      "table": "93739:Table 31:0",
+      "points": 5,
+      "sha256": "30321d4e3547d91d06bc669fd252f0845c8623936755f07b50b08f74771fae93",
+      "error_labels": [
+        "stat",
+        "sys,correlated",
+        "sys,lumi+TAA",
+        "sys,shape"
+      ]
+    },
+    {
+      "key": "pb_djet",
+      "table": "168854:$\\mathrm{D^{0}}$-jet $R_{\\mathrm{AA}}$:0",
+      "points": 7,
+      "sha256": "c0be4e35519b2eed1de862b1ae821f147866507f7143f64facb8c52bd42544e8",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb_gamma2",
+      "table": "157542:table_6:0",
+      "points": 10,
+      "sha256": "93a1eff7bd1b5b02805884f6cac06331b4169a4993e8d8b4f26b908c77024066",
+      "error_labels": [
+        "stat",
+        "syst"
+      ]
+    },
+    {
+      "key": "pb_gamma4",
+      "table": "157542:table_7:0",
+      "points": 10,
+      "sha256": "e750c2b85157a2c022552686eab85c823809cd5c85c6d86069e519035f0f83cc",
+      "error_labels": [
+        "stat",
+        "syst"
+      ]
+    },
+    {
+      "key": "xe_h",
+      "table": "85727:Table 3:0",
+      "points": 39,
+      "sha256": "9fabfe61abf2334b57f5fda39436eaaa2ac4a3470ecd552eb4c069f3da8a0925",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb276_h",
+      "table": "86210:Table 7:0",
+      "points": 39,
+      "sha256": "882c2c12f793041628d234360df89368e29bbf7fa84279e3be66a9f15b0ae526",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb276_pi",
+      "table": "71310:Table 7:0",
+      "points": 63,
+      "sha256": "003742d0f602169b5718810cc9655c15cc89c6021edf688b9ffe4ef9d83132a3",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb276_k",
+      "table": "71310:Table 7:1",
+      "points": 58,
+      "sha256": "003742d0f602169b5718810cc9655c15cc89c6021edf688b9ffe4ef9d83132a3",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb276_p",
+      "table": "71310:Table 7:2",
+      "points": 49,
+      "sha256": "003742d0f602169b5718810cc9655c15cc89c6021edf688b9ffe4ef9d83132a3",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb276_pi0",
+      "table": "83964:Table 5:0",
+      "points": 19,
+      "sha256": "5169c53eb5021223deabac730e85433d855230d00ccf5d15bbb66bc733a50c88",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb276_eta",
+      "table": "83964:Table 7:0",
+      "points": 11,
+      "sha256": "4c6f142a6e118e8b01a6187a11e5eb0af7dc0a5e39ae44fd4c8bd1c578ba5f64",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pb276_b_e",
+      "table": "77904:Table 4:0",
+      "points": 8,
+      "sha256": "927d03c7b2cb9271a55d5b3fabf5408de97f07d3207003321d311275093ff478",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,global normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pb276_fulljet",
+      "table": "68483:Table 6:0",
+      "points": 5,
+      "sha256": "0429815378caf2195cdeba1e666abe8ecc9f64fb8c333042063219e0d77479a5",
+      "error_labels": [
+        "stat",
+        "sys,$T_{\\mathrm{AA}}$ uncertainty",
+        "sys,corr",
+        "sys,shape"
+      ]
+    },
+    {
+      "key": "q_h",
+      "table": "68361:Table 9:0",
+      "points": 58,
+      "sha256": "d231241e41f8209d8176215c34771bb0f4d2355eb7e0d3072fe8508b909df66e",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,Common syst. unc. on Normalization",
+        "sys,Common syst. unc. on TpA"
+      ]
+    },
+    {
+      "key": "q_chjet2",
+      "table": "72903:Table 13:0",
+      "points": 8,
+      "sha256": "ec87a04b3e08ecb5b84eb9b794f36df3131c55d7babdcface195fb09129d601c",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,Normalization uncertainty"
+      ]
+    },
+    {
+      "key": "q_chjet4",
+      "table": "72903:Table 18:0",
+      "points": 8,
+      "sha256": "36fcd2ac54ee8166340c2d069d9afa59c77a700f523b32d92af2b6d90adfaf30",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,Normalization uncertainty"
+      ]
+    },
+    {
+      "key": "q_jpsi_Pb-going",
+      "table": "69212:Table 10:0",
+      "points": 7,
+      "sha256": "302025964e054a18b1db1a09649c241128f134921f5baa11c233bfb0c3be4917",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,corr"
+      ]
+    },
+    {
+      "key": "q_jpsi_p-going",
+      "table": "69212:Table 11:0",
+      "points": 7,
+      "sha256": "b2e7b3d63e8d218f1eca6529a793063ff784bb685b2ac4f7f9e27484e1a8564d",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,corr"
+      ]
+    },
+    {
+      "key": "q_jpsi_Pb-going816",
+      "table": "100166:Table 6:0",
+      "points": 9,
+      "sha256": "be48b04488d56f98f72caa358eb6bb935c0e72525be482bf7d1990f8f51722de",
+      "error_labels": [
+        "stat",
+        "sys, common correl",
+        "sys, correl",
+        "sys, uncorrel"
+      ]
+    },
+    {
+      "key": "q_jpsi_p-going816",
+      "table": "100166:Table 7:0",
+      "points": 9,
+      "sha256": "ae746cd958be8dcf1e896c5653b95e820d45798faecdf934d86718d58556cbc9",
+      "error_labels": [
+        "stat",
+        "sys, common correl",
+        "sys, correl",
+        "sys, uncorrel"
+      ]
+    },
+    {
+      "key": "pa_h",
+      "table": "86210:Table 9:0",
+      "points": 39,
+      "sha256": "ca31defe97fb034b98cf161803d3b264e7abcadededc0c61b590f9fc7f60307a",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pa_pi",
+      "table": "73749:Table 10:0",
+      "points": 58,
+      "sha256": "4e9d5c26a02ad88beea9f89cccda75a37cf41936c23de89e0d8b7cf5f3c5b7b2",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,Normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pa_k",
+      "table": "73749:Table 10:1",
+      "points": 58,
+      "sha256": "4e9d5c26a02ad88beea9f89cccda75a37cf41936c23de89e0d8b7cf5f3c5b7b2",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,Normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pa_p",
+      "table": "73749:Table 10:2",
+      "points": 49,
+      "sha256": "4e9d5c26a02ad88beea9f89cccda75a37cf41936c23de89e0d8b7cf5f3c5b7b2",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,Normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pa_d0",
+      "table": "73941:Table 20:0",
+      "points": 11,
+      "sha256": "b6cb12ca5fcf1ee286b33d8a21a877ffb4b647b50e37bd705f9ee64f5f5f2610",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,global normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pa_b_e",
+      "table": "77904:Table 3:0",
+      "points": 10,
+      "sha256": "f8921760e0e6187cc97674e5783160c946b23359e2127fb22f2e62765e6d2384",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,global normalization uncertainty"
+      ]
+    },
+    {
+      "key": "pa_chjet2",
+      "table": "150694:Table 4.1:0",
+      "points": 10,
+      "sha256": "7d28a7adeb6a79caffe7ad600cb78e547143ebfe2e8c6f709acce04cd533434a",
+      "error_labels": [
+        "stat",
+        "sys corr",
+        "sys norm",
+        "sys shape"
+      ]
+    },
+    {
+      "key": "pa_chjet3",
+      "table": "150694:Table 4.1:1",
+      "points": 10,
+      "sha256": "7d28a7adeb6a79caffe7ad600cb78e547143ebfe2e8c6f709acce04cd533434a",
+      "error_labels": [
+        "stat",
+        "sys corr",
+        "sys norm",
+        "sys shape"
+      ]
+    },
+    {
+      "key": "pa_chjet4",
+      "table": "150694:Table 4.1:2",
+      "points": 10,
+      "sha256": "7d28a7adeb6a79caffe7ad600cb78e547143ebfe2e8c6f709acce04cd533434a",
+      "error_labels": [
+        "stat",
+        "sys corr",
+        "sys norm",
+        "sys shape"
+      ]
+    },
+    {
+      "key": "pa_bjet",
+      "table": "128018:Table 11:0",
+      "points": 8,
+      "sha256": "4557cfaf5ab75b318cebb88db7247d224d22a12f05ca1ba846de1d93a862e602",
+      "error_labels": [
+        "full syst.",
+        "stat"
+      ]
+    },
+    {
+      "key": "pa_pi0",
+      "table": "83700:Table 5:0",
+      "points": 31,
+      "sha256": "37abba124cdd9b07bc4175eb4923537960b601b7cb7f8c200007017174bb012d",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pa_eta",
+      "table": "83700:Table 6:0",
+      "points": 16,
+      "sha256": "24474ba003c7fbbcedb10a17f9fde88dd8ca53fbe30fd966e59acac51610d1a5",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pa_pi0816",
+      "table": "128138:Table 7:0",
+      "points": 30,
+      "sha256": "f00538ebb7dc07a97b453df4231bb93784ce4d23b86c754374c28de3849191d7",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pa_eta816",
+      "table": "128138:Table 8:0",
+      "points": 14,
+      "sha256": "68a69c844ab32e80d961a79bb43c3d662bdffab9debc52be58cfa3a046fc276f",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pa_gamma",
+      "table": "165479:RpPb 5.02 TeV:0",
+      "points": 8,
+      "sha256": "b2868bfd3eef7f176d4b0276b6300f36aa299100436aacc1518ebc00abd73779",
+      "error_labels": [
+        "norm",
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pa_gamma816",
+      "table": "165479:RpA 8.16 TeV:0",
+      "points": 9,
+      "sha256": "d05b9b3bfb8e358a52d08e7e4ab6b925748cfbeadd7a2a613b1db85573a7a2e0",
+      "error_labels": [
+        "norm",
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pa_hfe816",
+      "table": "142624:Table 3:0",
+      "points": 14,
+      "sha256": "4e4d70c41e4b964b21b9dba6e926919b6859c5d1ff9c7946a5d8bc088608d60b",
+      "error_labels": [
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "pa_jpsi816",
+      "table": "138403:Figure 5b:0",
+      "points": 8,
+      "sha256": "9a148b56f5377e7147889ccad91bb4a14d4a98906a4634f2647d8d08f8a6e16b",
+      "error_labels": [
+        "stat",
+        "sys, correlated",
+        "sys, uncorrelated",
+        "sys,normalization/luminosity/B.R. uncertainty"
+      ]
+    },
+    {
+      "key": "pa_prompt_jpsi816",
+      "table": "138403:Figure 9a:0",
+      "points": 5,
+      "sha256": "2b91de117df417406ffada9e32a1be7e05d726406a415d5e4d81692a3e08cf9b",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,normalization/luminosity/B.R. uncertainty"
+      ]
+    },
+    {
+      "key": "pa_b_jpsi816",
+      "table": "138403:Figure 9b:0",
+      "points": 5,
+      "sha256": "00729014383c5f4b9a266d8564f23be56ec947750e3ccd86877357d8c8a55501",
+      "error_labels": [
+        "stat",
+        "sys",
+        "sys,normalization/luminosity/B.R. uncertainty"
+      ]
+    },
+    {
+      "key": "oo_pi0",
+      "table": "182535:$\\pi^{0}$ $R_{\\rm OO}$ at 5.36 TeV:0",
+      "points": 27,
+      "sha256": "1f85caa2245f4a8a40a313f943813cb2960cfba82994a2e7ce798744cd61a528",
+      "error_labels": [
+        "norm",
+        "stat",
+        "sys"
+      ]
+    },
+    {
+      "key": "po_pi0",
+      "table": "182535:$\\pi^{0}$ $R_{\\rm pO}$ at 9.62 TeV:0",
+      "points": 27,
+      "sha256": "f28eb360710b079e6114b9e7c2dfa173ff99ff5158dbb25bc025705d8a711ca2",
+      "error_labels": [
+        "norm",
+        "stat",
+        "sys"
+      ]
+    }
+  ],
+  "omitted_rows": [
+    {
+      "key": "pb276_pi",
+      "row": 51,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_pi",
+      "row": 55,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_pi",
+      "row": 58,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_pi",
+      "row": 61,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_pi",
+      "row": 65,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 0,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 1,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 2,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 3,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 4,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 51,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 55,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 58,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 61,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_k",
+      "row": 65,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 0,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 1,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 2,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 3,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 4,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 5,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 6,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 50,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 52,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 54,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 56,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 57,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 59,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 60,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 62,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 63,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 64,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 66,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pb276_p",
+      "row": 67,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 31,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 32,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 34,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 35,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 37,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 38,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 40,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 41,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 43,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 44,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 57,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 61,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 64,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 68,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_pi",
+      "row": 72,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 0,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 1,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 2,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 3,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 4,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 33,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 36,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 39,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 42,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 45,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 57,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 61,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 64,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 68,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_k",
+      "row": 72,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 0,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 1,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 2,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 3,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 4,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 5,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 6,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 33,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 36,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 39,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 42,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 45,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 55,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 56,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 59,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 60,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 62,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 63,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 65,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 66,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 67,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 69,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 70,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    },
+    {
+      "key": "pa_p",
+      "row": 71,
+      "reason": "Non-numeric deposited value",
+      "original": {
+        "value": "-"
+      }
+    }
+  ]
+}

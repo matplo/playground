@@ -1,0 +1,263 @@
+dependent_variables:
+- header: {name: Q_pA}
+  qualifiers:
+  - {name: CENTRALITY PERCENTILES, value: 2-10%}
+  - {name: RE, value: P PB --> J/PSI < MU+ MU- > X}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP(RF=CM), value: -4.46 - -2.96}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.05}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.1}
+    value: 0.94
+  - errors:
+    - {label: stat, symerror: 0.04}
+    - {label: sys, symerror: 0.12}
+    - {label: 'sys,corr', symerror: 0.12}
+    value: 1.19
+  - errors:
+    - {label: stat, symerror: 0.04}
+    - {label: sys, symerror: 0.12}
+    - {label: 'sys,corr', symerror: 0.12}
+    value: 1.21
+  - errors:
+    - {label: stat, symerror: 0.05}
+    - {label: sys, symerror: 0.12}
+    - {label: 'sys,corr', symerror: 0.13}
+    value: 1.25
+  - errors:
+    - {label: stat, symerror: 0.08}
+    - {label: sys, symerror: 0.14}
+    - {label: 'sys,corr', symerror: 0.15}
+    value: 1.45
+  - errors:
+    - {label: stat, symerror: 0.08}
+    - {label: sys, symerror: 0.15}
+    - {label: 'sys,corr', symerror: 0.15}
+    value: 1.4
+  - errors:
+    - {label: stat, symerror: 0.09}
+    - {label: sys, symerror: 0.18}
+    - {label: 'sys,corr', symerror: 0.14}
+    value: 1.33
+- header: {name: Q_pA}
+  qualifiers:
+  - {name: CENTRALITY PERCENTILES, value: 10-20%}
+  - {name: RE, value: P PB --> J/PSI < MU+ MU- > X}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP(RF=CM), value: -4.46 - -2.96}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.05}
+    - {label: sys, symerror: 0.09}
+    - {label: 'sys,corr', symerror: 0.07}
+    value: 0.93
+  - errors:
+    - {label: stat, symerror: 0.04}
+    - {label: sys, symerror: 0.11}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 1.16
+  - errors:
+    - {label: stat, symerror: 0.04}
+    - {label: sys, symerror: 0.12}
+    - {label: 'sys,corr', symerror: 0.1}
+    value: 1.23
+  - errors:
+    - {label: stat, symerror: 0.05}
+    - {label: sys, symerror: 0.12}
+    - {label: 'sys,corr', symerror: 0.1}
+    value: 1.25
+  - errors:
+    - {label: stat, symerror: 0.06}
+    - {label: sys, symerror: 0.13}
+    - {label: 'sys,corr', symerror: 0.11}
+    value: 1.36
+  - errors:
+    - {label: stat, symerror: 0.09}
+    - {label: sys, symerror: 0.12}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 1.2
+  - errors:
+    - {label: stat, symerror: 0.09}
+    - {label: sys, symerror: 0.19}
+    - {label: 'sys,corr', symerror: 0.12}
+    value: 1.47
+- header: {name: Q_pA}
+  qualifiers:
+  - {name: CENTRALITY PERCENTILES, value: 20-40%}
+  - {name: RE, value: P PB --> J/PSI < MU+ MU- > X}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP(RF=CM), value: -4.46 - -2.96}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.04}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.07}
+    value: 0.98
+  - errors:
+    - {label: stat, symerror: 0.03}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.07}
+    value: 1.02
+  - errors:
+    - {label: stat, symerror: 0.03}
+    - {label: sys, symerror: 0.11}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 1.13
+  - errors:
+    - {label: stat, symerror: 0.03}
+    - {label: sys, symerror: 0.11}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 1.19
+  - errors:
+    - {label: stat, symerror: 0.05}
+    - {label: sys, symerror: 0.12}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 1.23
+  - errors:
+    - {label: stat, symerror: 0.06}
+    - {label: sys, symerror: 0.12}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 1.16
+  - errors:
+    - {label: stat, symerror: 0.07}
+    - {label: sys, symerror: 0.18}
+    - {label: 'sys,corr', symerror: 0.1}
+    value: 1.37
+- header: {name: Q_pA}
+  qualifiers:
+  - {name: CENTRALITY PERCENTILES, value: 40-60%}
+  - {name: RE, value: P PB --> J/PSI < MU+ MU- > X}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP(RF=CM), value: -4.46 - -2.96}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.04}
+    - {label: sys, symerror: 0.09}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 0.92
+  - errors:
+    - {label: stat, symerror: 0.03}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 1.02
+  - errors:
+    - {label: stat, symerror: 0.03}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 1.03
+  - errors:
+    - {label: stat, symerror: 0.04}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 1.07
+  - errors:
+    - {label: stat, symerror: 0.05}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 1.1
+  - errors:
+    - {label: stat, symerror: 0.07}
+    - {label: sys, symerror: 0.11}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 1.08
+  - errors:
+    - {label: stat, symerror: 0.07}
+    - {label: sys, symerror: 0.16}
+    - {label: 'sys,corr', symerror: 0.1}
+    value: 1.17
+- header: {name: Q_pA}
+  qualifiers:
+  - {name: CENTRALITY PERCENTILES, value: 60-80%}
+  - {name: RE, value: P PB --> J/PSI < MU+ MU- > X}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP(RF=CM), value: -4.46 - -2.96}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.04}
+    - {label: sys, symerror: 0.09}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 0.86
+  - errors:
+    - {label: stat, symerror: 0.03}
+    - {label: sys, symerror: 0.09}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 0.93
+  - errors:
+    - {label: stat, symerror: 0.03}
+    - {label: sys, symerror: 0.08}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 0.86
+  - errors:
+    - {label: stat, symerror: 0.04}
+    - {label: sys, symerror: 0.09}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 0.94
+  - errors:
+    - {label: stat, symerror: 0.06}
+    - {label: sys, symerror: 0.08}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 0.87
+  - errors:
+    - {label: stat, symerror: 0.07}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.09}
+    value: 0.97
+  - errors:
+    - {label: stat, symerror: 0.08}
+    - {label: sys, symerror: 0.14}
+    - {label: 'sys,corr', symerror: 0.1}
+    value: 1.04
+- header: {name: Q_pA}
+  qualifiers:
+  - {name: CENTRALITY PERCENTILES, value: 80-100%}
+  - {name: RE, value: P PB --> J/PSI < MU+ MU- > X}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP(RF=CM), value: -4.46 - -2.96}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.06}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 1.01
+  - errors:
+    - {label: stat, symerror: 0.05}
+    - {label: sys, symerror: 0.1}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 1.0
+  - errors:
+    - {label: stat, symerror: 0.05}
+    - {label: sys, symerror: 0.09}
+    - {label: 'sys,corr', symerror: 0.07}
+    value: 0.96
+  - errors:
+    - {label: stat, symerror: 0.06}
+    - {label: sys, symerror: 0.09}
+    - {label: 'sys,corr', symerror: 0.07}
+    value: 0.89
+  - errors:
+    - {label: stat, symerror: 0.09}
+    - {label: sys, symerror: 0.09}
+    - {label: 'sys,corr', symerror: 0.08}
+    value: 0.98
+  - errors:
+    - {label: stat, symerror: 0.1}
+    - {label: sys, symerror: 0.09}
+    - {label: 'sys,corr', symerror: 0.06}
+    value: 0.85
+  - errors:
+    - {label: stat, symerror: 0.11}
+    - {label: sys, symerror: 0.12}
+    - {label: 'sys,corr', symerror: 0.07}
+    value: 0.85
+independent_variables:
+- header: {name: pT range}
+  values:
+  - {high: 1.0, low: 0.0}
+  - {high: 2.0, low: 1.0}
+  - {high: 3.0, low: 2.0}
+  - {high: 4.0, low: 3.0}
+  - {high: 5.0, low: 4.0}
+  - {high: 6.0, low: 5.0}
+  - {high: 8.0, low: 6.0}

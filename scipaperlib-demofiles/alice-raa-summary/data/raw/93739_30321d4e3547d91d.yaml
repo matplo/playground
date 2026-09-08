@@ -1,0 +1,51 @@
+dependent_variables:
+- header: {name: '$R_{AA}$'}
+  qualifiers:
+  - {name: RE, value: Pb Pb --> jet + X}
+  - {name: RE, value: p p --> jet + X}
+  - {name: SQRT(S), units: GEV, value: 5020}
+  - {name: YRAP, value: -0.3 TO 0.3}
+  - {name: CENTRALITY, value: 0 TO 10}
+  - {name: jet radius, value: 0.4}
+  - {name: jet method, value: 'Anti-$k_{T}$'}
+  - {name: '$p_{T,pp}^{lead,track}$', units: GeV/$c$, value: '> 7'}
+  - {name: '$p_{T,PbPb}^{lead,track}$', units: GeV/$c$, value: '> 7'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.01885391}
+    - {label: 'sys,correlated', symerror: 0.09705637}
+    - {label: 'sys,shape', symerror: 0.08245984}
+    - {label: 'sys,lumi+TAA', symerror: 2.8%}
+    value: 0.4183269
+  - errors:
+    - {label: stat, symerror: 0.02508726}
+    - {label: 'sys,correlated', symerror: 0.1207732}
+    - {label: 'sys,shape', symerror: 0.0898729}
+    - {label: 'sys,lumi+TAA', symerror: 2.8%}
+    value: 0.4775488
+  - errors:
+    - {label: stat, symerror: 0.03235676}
+    - {label: 'sys,correlated', symerror: 0.1159164}
+    - {label: 'sys,shape', symerror: 0.07715878}
+    - {label: 'sys,lumi+TAA', symerror: 2.8%}
+    value: 0.4824482
+  - errors:
+    - {label: stat, symerror: 0.04213805}
+    - {label: 'sys,correlated', symerror: 0.09692672}
+    - {label: 'sys,shape', symerror: 0.06087708}
+    - {label: 'sys,lumi+TAA', symerror: 2.8%}
+    value: 0.4889208
+  - errors:
+    - {label: stat, symerror: 0.05419777}
+    - {label: 'sys,correlated', symerror: 0.1084721}
+    - {label: 'sys,shape', symerror: 0.06062608}
+    - {label: 'sys,lumi+TAA', symerror: 2.8%}
+    value: 0.5085028
+independent_variables:
+- header: {name: R=0.4}
+  values:
+  - {high: 70, low: 60}
+  - {high: 80, low: 70}
+  - {high: 100, low: 80}
+  - {high: 120, low: 100}
+  - {high: 140, low: 120}

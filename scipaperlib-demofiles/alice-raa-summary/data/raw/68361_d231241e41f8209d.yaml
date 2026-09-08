@@ -1,0 +1,2526 @@
+dependent_variables:
+- header: {name: (0-5%)}
+  qualifiers:
+  - {name: '$p_{T}$ (GeV/c)', value: '$Q_{pPb}$'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0396}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4459
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0324}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4385
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0327}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4401
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0348}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4465
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.037}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4563
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0397}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4688
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0407}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4843
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0414}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5022
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.042}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5206
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0421}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5391
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0435}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5582
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0449}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5783
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0463}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5983
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0476}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6171
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0486}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6335
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0497}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6495
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.0508}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6663
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.053}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.694
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.056}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7287
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.0614}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7618
+  - errors:
+    - {label: stat, symerror: 0.0009}
+    - {label: sys, symerror: 0.0639}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7936
+  - errors:
+    - {label: stat, symerror: 0.001}
+    - {label: sys, symerror: 0.0631}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8247
+  - errors:
+    - {label: stat, symerror: 0.0012}
+    - {label: sys, symerror: 0.0649}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8513
+  - errors:
+    - {label: stat, symerror: 0.0013}
+    - {label: sys, symerror: 0.0677}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.873
+  - errors:
+    - {label: stat, symerror: 0.0015}
+    - {label: sys, symerror: 0.0696}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9026
+  - errors:
+    - {label: stat, symerror: 0.0017}
+    - {label: sys, symerror: 0.0706}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9281
+  - errors:
+    - {label: stat, symerror: 0.0019}
+    - {label: sys, symerror: 0.0721}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.956
+  - errors:
+    - {label: stat, symerror: 0.0016}
+    - {label: sys, symerror: 0.0739}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9805
+  - errors:
+    - {label: stat, symerror: 0.0019}
+    - {label: sys, symerror: 0.0767}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0162
+  - errors:
+    - {label: stat, symerror: 0.0024}
+    - {label: sys, symerror: 0.0789}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0485
+  - errors:
+    - {label: stat, symerror: 0.0027}
+    - {label: sys, symerror: 0.0803}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0704
+  - errors:
+    - {label: stat, symerror: 0.0035}
+    - {label: sys, symerror: 0.0813}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0823
+  - errors:
+    - {label: stat, symerror: 0.0036}
+    - {label: sys, symerror: 0.0821}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.094
+  - errors:
+    - {label: stat, symerror: 0.0041}
+    - {label: sys, symerror: 0.0823}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0963
+  - errors:
+    - {label: stat, symerror: 0.0046}
+    - {label: sys, symerror: 0.0815}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0872
+  - errors:
+    - {label: stat, symerror: 0.0051}
+    - {label: sys, symerror: 0.0815}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0896
+  - errors:
+    - {label: stat, symerror: 0.0058}
+    - {label: sys, symerror: 0.0828}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1052
+  - errors:
+    - {label: stat, symerror: 0.0049}
+    - {label: sys, symerror: 0.083}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1064
+  - errors:
+    - {label: stat, symerror: 0.006}
+    - {label: sys, symerror: 0.0813}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.086
+  - errors:
+    - {label: stat, symerror: 0.0072}
+    - {label: sys, symerror: 0.0853}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0714
+  - errors:
+    - {label: stat, symerror: 0.009}
+    - {label: sys, symerror: 0.0835}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0627
+  - errors:
+    - {label: stat, symerror: 0.0111}
+    - {label: sys, symerror: 0.0826}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0604
+  - errors:
+    - {label: stat, symerror: 0.0131}
+    - {label: sys, symerror: 0.0788}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0196
+  - errors:
+    - {label: stat, symerror: 0.0119}
+    - {label: sys, symerror: 0.0776}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0102
+  - errors:
+    - {label: stat, symerror: 0.0161}
+    - {label: sys, symerror: 0.076}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9862
+  - errors:
+    - {label: stat, symerror: 0.0209}
+    - {label: sys, symerror: 0.0734}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9567
+  - errors:
+    - {label: stat, symerror: 0.0256}
+    - {label: sys, symerror: 0.0731}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9509
+  - errors:
+    - {label: stat, symerror: 0.0324}
+    - {label: sys, symerror: 0.0767}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9902
+  - errors:
+    - {label: stat, symerror: 0.0385}
+    - {label: sys, symerror: 0.0694}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9145
+  - errors:
+    - {label: stat, symerror: 0.0482}
+    - {label: sys, symerror: 0.0745}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9779
+  - errors:
+    - {label: stat, symerror: 0.0558}
+    - {label: sys, symerror: 0.0705}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9081
+  - errors:
+    - {label: stat, symerror: 0.0645}
+    - {label: sys, symerror: 0.0689}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8769
+  - errors:
+    - {label: stat, symerror: 0.0591}
+    - {label: sys, symerror: 0.0735}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9249
+  - errors:
+    - {label: stat, symerror: 0.0803}
+    - {label: sys, symerror: 0.0751}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9287
+  - errors:
+    - {label: stat, symerror: 0.1012}
+    - {label: sys, symerror: 0.0758}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9279
+  - errors:
+    - {label: stat, symerror: 0.1287}
+    - {label: sys, symerror: 0.0786}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.971
+  - errors:
+    - {label: stat, symerror: 0.0977}
+    - {label: sys, symerror: 0.0733}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6051
+  - errors:
+    - {label: stat, symerror: 0.1879}
+    - {label: sys, symerror: 0.121}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0348
+- header: {name: (5-10%)}
+  qualifiers:
+  - {name: '$p_{T}$ (GeV/c)', value: '$Q_{pPb}$'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0418}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4613
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0342}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4535
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0345}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4554
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0367}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4619
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.039}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4714
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0418}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4842
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0428}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4998
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0435}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5174
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0441}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5362
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0442}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5548
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0456}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.574
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0471}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5946
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0485}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6143
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0498}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6334
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0509}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.65
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0519}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6654
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.053}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6821
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0553}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7104
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0585}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7468
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.0639}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7775
+  - errors:
+    - {label: stat, symerror: 0.0009}
+    - {label: sys, symerror: 0.0666}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8122
+  - errors:
+    - {label: stat, symerror: 0.0011}
+    - {label: sys, symerror: 0.0656}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8403
+  - errors:
+    - {label: stat, symerror: 0.0012}
+    - {label: sys, symerror: 0.0676}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8684
+  - errors:
+    - {label: stat, symerror: 0.0014}
+    - {label: sys, symerror: 0.0706}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.893
+  - errors:
+    - {label: stat, symerror: 0.0016}
+    - {label: sys, symerror: 0.0725}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9225
+  - errors:
+    - {label: stat, symerror: 0.0018}
+    - {label: sys, symerror: 0.0734}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9465
+  - errors:
+    - {label: stat, symerror: 0.002}
+    - {label: sys, symerror: 0.0751}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9774
+  - errors:
+    - {label: stat, symerror: 0.0017}
+    - {label: sys, symerror: 0.0769}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.002
+  - errors:
+    - {label: stat, symerror: 0.002}
+    - {label: sys, symerror: 0.0796}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0336
+  - errors:
+    - {label: stat, symerror: 0.0024}
+    - {label: sys, symerror: 0.0821}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0695
+  - errors:
+    - {label: stat, symerror: 0.0028}
+    - {label: sys, symerror: 0.0834}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0895
+  - errors:
+    - {label: stat, symerror: 0.0036}
+    - {label: sys, symerror: 0.0838}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0961
+  - errors:
+    - {label: stat, symerror: 0.0037}
+    - {label: sys, symerror: 0.0852}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1139
+  - errors:
+    - {label: stat, symerror: 0.0042}
+    - {label: sys, symerror: 0.0853}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1144
+  - errors:
+    - {label: stat, symerror: 0.0047}
+    - {label: sys, symerror: 0.0848}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1093
+  - errors:
+    - {label: stat, symerror: 0.0053}
+    - {label: sys, symerror: 0.0851}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1129
+  - errors:
+    - {label: stat, symerror: 0.0061}
+    - {label: sys, symerror: 0.0861}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1246
+  - errors:
+    - {label: stat, symerror: 0.005}
+    - {label: sys, symerror: 0.0862}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1286
+  - errors:
+    - {label: stat, symerror: 0.0062}
+    - {label: sys, symerror: 0.0844}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1073
+  - errors:
+    - {label: stat, symerror: 0.0076}
+    - {label: sys, symerror: 0.0899}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1115
+  - errors:
+    - {label: stat, symerror: 0.0094}
+    - {label: sys, symerror: 0.0864}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.079
+  - errors:
+    - {label: stat, symerror: 0.0115}
+    - {label: sys, symerror: 0.0853}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0734
+  - errors:
+    - {label: stat, symerror: 0.0136}
+    - {label: sys, symerror: 0.0821}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0404
+  - errors:
+    - {label: stat, symerror: 0.0123}
+    - {label: sys, symerror: 0.0798}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0182
+  - errors:
+    - {label: stat, symerror: 0.017}
+    - {label: sys, symerror: 0.0806}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.02
+  - errors:
+    - {label: stat, symerror: 0.022}
+    - {label: sys, symerror: 0.0779}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9914
+  - errors:
+    - {label: stat, symerror: 0.027}
+    - {label: sys, symerror: 0.077}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9863
+  - errors:
+    - {label: stat, symerror: 0.0329}
+    - {label: sys, symerror: 0.0753}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9569
+  - errors:
+    - {label: stat, symerror: 0.0417}
+    - {label: sys, symerror: 0.0772}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9889
+  - errors:
+    - {label: stat, symerror: 0.0506}
+    - {label: sys, symerror: 0.0786}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9994
+  - errors:
+    - {label: stat, symerror: 0.0622}
+    - {label: sys, symerror: 0.0814}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0298
+  - errors:
+    - {label: stat, symerror: 0.0728}
+    - {label: sys, symerror: 0.0795}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0205
+  - errors:
+    - {label: stat, symerror: 0.0643}
+    - {label: sys, symerror: 0.0816}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0089
+  - errors:
+    - {label: stat, symerror: 0.0879}
+    - {label: sys, symerror: 0.0855}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0225
+  - errors:
+    - {label: stat, symerror: 0.0998}
+    - {label: sys, symerror: 0.0692}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8411
+  - errors:
+    - {label: stat, symerror: 0.136}
+    - {label: sys, symerror: 0.0834}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0008
+  - errors:
+    - {label: stat, symerror: 0.1289}
+    - {label: sys, symerror: 0.119}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9531
+  - errors:
+    - {label: stat, symerror: 0.1972}
+    - {label: sys, symerror: 0.1275}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0532
+- header: {name: (10-20%)}
+  qualifiers:
+  - {name: '$p_{T}$ (GeV/c)', value: '$Q_{pPb}$'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0437}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4736
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.0358}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4659
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.036}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4676
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.0383}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4737
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.0406}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4829
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0435}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4952
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0446}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.511
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0452}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5291
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0458}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5471
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0459}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.566
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0473}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5854
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0487}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.605
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0502}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6248
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0515}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6443
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0526}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6604
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0536}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6763
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0547}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6928
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0569}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7195
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0602}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7553
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0658}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7874
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.0683}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.819
+  - errors:
+    - {label: stat, symerror: 0.0009}
+    - {label: sys, symerror: 0.0673}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8482
+  - errors:
+    - {label: stat, symerror: 0.001}
+    - {label: sys, symerror: 0.0693}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8765
+  - errors:
+    - {label: stat, symerror: 0.0012}
+    - {label: sys, symerror: 0.0723}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8998
+  - errors:
+    - {label: stat, symerror: 0.0013}
+    - {label: sys, symerror: 0.0741}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9278
+  - errors:
+    - {label: stat, symerror: 0.0015}
+    - {label: sys, symerror: 0.0753}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9543
+  - errors:
+    - {label: stat, symerror: 0.0017}
+    - {label: sys, symerror: 0.0766}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9799
+  - errors:
+    - {label: stat, symerror: 0.0014}
+    - {label: sys, symerror: 0.0784}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0041
+  - errors:
+    - {label: stat, symerror: 0.0017}
+    - {label: sys, symerror: 0.0813}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0396
+  - errors:
+    - {label: stat, symerror: 0.0021}
+    - {label: sys, symerror: 0.0836}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0729
+  - errors:
+    - {label: stat, symerror: 0.0024}
+    - {label: sys, symerror: 0.085}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0915
+  - errors:
+    - {label: stat, symerror: 0.0033}
+    - {label: sys, symerror: 0.0858}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1029
+  - errors:
+    - {label: stat, symerror: 0.0032}
+    - {label: sys, symerror: 0.0867}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1158
+  - errors:
+    - {label: stat, symerror: 0.0036}
+    - {label: sys, symerror: 0.087}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1218
+  - errors:
+    - {label: stat, symerror: 0.004}
+    - {label: sys, symerror: 0.087}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1185
+  - errors:
+    - {label: stat, symerror: 0.0045}
+    - {label: sys, symerror: 0.0864}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1147
+  - errors:
+    - {label: stat, symerror: 0.0051}
+    - {label: sys, symerror: 0.0876}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1308
+  - errors:
+    - {label: stat, symerror: 0.0043}
+    - {label: sys, symerror: 0.0878}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1305
+  - errors:
+    - {label: stat, symerror: 0.0053}
+    - {label: sys, symerror: 0.0868}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1169
+  - errors:
+    - {label: stat, symerror: 0.0063}
+    - {label: sys, symerror: 0.0909}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1075
+  - errors:
+    - {label: stat, symerror: 0.0078}
+    - {label: sys, symerror: 0.0898}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1054
+  - errors:
+    - {label: stat, symerror: 0.0095}
+    - {label: sys, symerror: 0.0874}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.085
+  - errors:
+    - {label: stat, symerror: 0.0112}
+    - {label: sys, symerror: 0.0833}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0434
+  - errors:
+    - {label: stat, symerror: 0.0102}
+    - {label: sys, symerror: 0.083}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0386
+  - errors:
+    - {label: stat, symerror: 0.0141}
+    - {label: sys, symerror: 0.0828}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0413
+  - errors:
+    - {label: stat, symerror: 0.018}
+    - {label: sys, symerror: 0.0801}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0004
+  - errors:
+    - {label: stat, symerror: 0.0215}
+    - {label: sys, symerror: 0.0807}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0009
+  - errors:
+    - {label: stat, symerror: 0.0263}
+    - {label: sys, symerror: 0.079}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9856
+  - errors:
+    - {label: stat, symerror: 0.0328}
+    - {label: sys, symerror: 0.0795}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9993
+  - errors:
+    - {label: stat, symerror: 0.0386}
+    - {label: sys, symerror: 0.0773}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9683
+  - errors:
+    - {label: stat, symerror: 0.0463}
+    - {label: sys, symerror: 0.0795}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9586
+  - errors:
+    - {label: stat, symerror: 0.0562}
+    - {label: sys, symerror: 0.0816}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0118
+  - errors:
+    - {label: stat, symerror: 0.05}
+    - {label: sys, symerror: 0.083}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0117
+  - errors:
+    - {label: stat, symerror: 0.0675}
+    - {label: sys, symerror: 0.084}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0062
+  - errors:
+    - {label: stat, symerror: 0.0868}
+    - {label: sys, symerror: 0.0899}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.066
+  - errors:
+    - {label: stat, symerror: 0.0893}
+    - {label: sys, symerror: 0.065}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7753
+  - errors:
+    - {label: stat, symerror: 0.0971}
+    - {label: sys, symerror: 0.1155}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.94
+  - errors:
+    - {label: stat, symerror: 0.1557}
+    - {label: sys, symerror: 0.1392}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1392
+- header: {name: (20-40%)}
+  qualifiers:
+  - {name: '$p_{T}$ (GeV/c)', value: '$Q_{pPb}$'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0469}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5035
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.0384}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.495
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.0386}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.4959
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.041}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5017
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.0434}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5103
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.0463}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5222
+  - errors:
+    - {label: stat, symerror: 0.0002}
+    - {label: sys, symerror: 0.0473}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5374
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.048}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5553
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0484}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5732
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0484}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5912
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0498}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6105
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0512}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6296
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0525}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6484
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0539}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6682
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0549}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6841
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0559}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6989
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0569}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7136
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0591}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7405
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0623}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7748
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0678}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8047
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0703}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8352
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.0689}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8619
+  - errors:
+    - {label: stat, symerror: 0.0009}
+    - {label: sys, symerror: 0.0709}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8891
+  - errors:
+    - {label: stat, symerror: 0.0011}
+    - {label: sys, symerror: 0.0737}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9102
+  - errors:
+    - {label: stat, symerror: 0.0012}
+    - {label: sys, symerror: 0.0756}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9388
+  - errors:
+    - {label: stat, symerror: 0.0014}
+    - {label: sys, symerror: 0.0764}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.961
+  - errors:
+    - {label: stat, symerror: 0.0015}
+    - {label: sys, symerror: 0.0778}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9875
+  - errors:
+    - {label: stat, symerror: 0.0013}
+    - {label: sys, symerror: 0.0794}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0098
+  - errors:
+    - {label: stat, symerror: 0.0015}
+    - {label: sys, symerror: 0.082}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0407
+  - errors:
+    - {label: stat, symerror: 0.0019}
+    - {label: sys, symerror: 0.0842}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0709
+  - errors:
+    - {label: stat, symerror: 0.0022}
+    - {label: sys, symerror: 0.0852}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0875
+  - errors:
+    - {label: stat, symerror: 0.003}
+    - {label: sys, symerror: 0.0863}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1013
+  - errors:
+    - {label: stat, symerror: 0.0029}
+    - {label: sys, symerror: 0.0869}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1083
+  - errors:
+    - {label: stat, symerror: 0.0032}
+    - {label: sys, symerror: 0.0872}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1143
+  - errors:
+    - {label: stat, symerror: 0.0036}
+    - {label: sys, symerror: 0.0869}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1108
+  - errors:
+    - {label: stat, symerror: 0.004}
+    - {label: sys, symerror: 0.087}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1134
+  - errors:
+    - {label: stat, symerror: 0.0045}
+    - {label: sys, symerror: 0.0877}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1211
+  - errors:
+    - {label: stat, symerror: 0.0039}
+    - {label: sys, symerror: 0.0879}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1255
+  - errors:
+    - {label: stat, symerror: 0.0047}
+    - {label: sys, symerror: 0.0865}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1073
+  - errors:
+    - {label: stat, symerror: 0.0055}
+    - {label: sys, symerror: 0.0921}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1106
+  - errors:
+    - {label: stat, symerror: 0.0068}
+    - {label: sys, symerror: 0.0899}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0976
+  - errors:
+    - {label: stat, symerror: 0.0083}
+    - {label: sys, symerror: 0.0887}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0906
+  - errors:
+    - {label: stat, symerror: 0.0098}
+    - {label: sys, symerror: 0.0849}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0494
+  - errors:
+    - {label: stat, symerror: 0.0089}
+    - {label: sys, symerror: 0.0837}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0404
+  - errors:
+    - {label: stat, symerror: 0.0122}
+    - {label: sys, symerror: 0.0843}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0485
+  - errors:
+    - {label: stat, symerror: 0.0157}
+    - {label: sys, symerror: 0.0809}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0112
+  - errors:
+    - {label: stat, symerror: 0.0183}
+    - {label: sys, symerror: 0.082}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.026
+  - errors:
+    - {label: stat, symerror: 0.022}
+    - {label: sys, symerror: 0.081}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0055
+  - errors:
+    - {label: stat, symerror: 0.0279}
+    - {label: sys, symerror: 0.082}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0523
+  - errors:
+    - {label: stat, symerror: 0.0319}
+    - {label: sys, symerror: 0.078}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9812
+  - errors:
+    - {label: stat, symerror: 0.0395}
+    - {label: sys, symerror: 0.0832}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0291
+  - errors:
+    - {label: stat, symerror: 0.0448}
+    - {label: sys, symerror: 0.0792}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.977
+  - errors:
+    - {label: stat, symerror: 0.0409}
+    - {label: sys, symerror: 0.0835}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0161
+  - errors:
+    - {label: stat, symerror: 0.0515}
+    - {label: sys, symerror: 0.0785}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9098
+  - errors:
+    - {label: stat, symerror: 0.0638}
+    - {label: sys, symerror: 0.0781}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9218
+  - errors:
+    - {label: stat, symerror: 0.0787}
+    - {label: sys, symerror: 0.0883}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9744
+  - errors:
+    - {label: stat, symerror: 0.0831}
+    - {label: sys, symerror: 0.1313}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0724
+  - errors:
+    - {label: stat, symerror: 0.1091}
+    - {label: sys, symerror: 0.114}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9191
+- header: {name: (40-60%)}
+  qualifiers:
+  - {name: '$p_{T}$ (GeV/c)', value: '$Q_{pPb}$'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.055}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5652
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0451}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.556
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0453}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5565
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0479}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.561
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0504}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5677
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0536}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.5781
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0545}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.592
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.055}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.609
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0552}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6252
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0549}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6417
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0561}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6588
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0575}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6771
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0587}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6939
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.06}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7116
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0608}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7249
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0617}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7384
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0625}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.751
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0646}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7751
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0675}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8038
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.073}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8294
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.0752}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8567
+  - errors:
+    - {label: stat, symerror: 0.0009}
+    - {label: sys, symerror: 0.0733}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8793
+  - errors:
+    - {label: stat, symerror: 0.001}
+    - {label: sys, symerror: 0.0749}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9011
+  - errors:
+    - {label: stat, symerror: 0.0012}
+    - {label: sys, symerror: 0.0777}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9193
+  - errors:
+    - {label: stat, symerror: 0.0013}
+    - {label: sys, symerror: 0.0791}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9428
+  - errors:
+    - {label: stat, symerror: 0.0015}
+    - {label: sys, symerror: 0.0798}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9632
+  - errors:
+    - {label: stat, symerror: 0.0016}
+    - {label: sys, symerror: 0.081}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9857
+  - errors:
+    - {label: stat, symerror: 0.0014}
+    - {label: sys, symerror: 0.0823}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0028
+  - errors:
+    - {label: stat, symerror: 0.0016}
+    - {label: sys, symerror: 0.0843}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0255
+  - errors:
+    - {label: stat, symerror: 0.002}
+    - {label: sys, symerror: 0.0862}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0519
+  - errors:
+    - {label: stat, symerror: 0.0023}
+    - {label: sys, symerror: 0.0873}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0678
+  - errors:
+    - {label: stat, symerror: 0.0031}
+    - {label: sys, symerror: 0.0879}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0763
+  - errors:
+    - {label: stat, symerror: 0.003}
+    - {label: sys, symerror: 0.0885}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0841
+  - errors:
+    - {label: stat, symerror: 0.0034}
+    - {label: sys, symerror: 0.0883}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.081
+  - errors:
+    - {label: stat, symerror: 0.0038}
+    - {label: sys, symerror: 0.088}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0806
+  - errors:
+    - {label: stat, symerror: 0.0042}
+    - {label: sys, symerror: 0.0876}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0764
+  - errors:
+    - {label: stat, symerror: 0.0047}
+    - {label: sys, symerror: 0.0885}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0866
+  - errors:
+    - {label: stat, symerror: 0.0041}
+    - {label: sys, symerror: 0.0897}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0985
+  - errors:
+    - {label: stat, symerror: 0.005}
+    - {label: sys, symerror: 0.0885}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.088
+  - errors:
+    - {label: stat, symerror: 0.0059}
+    - {label: sys, symerror: 0.0935}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0829
+  - errors:
+    - {label: stat, symerror: 0.0073}
+    - {label: sys, symerror: 0.0914}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0677
+  - errors:
+    - {label: stat, symerror: 0.009}
+    - {label: sys, symerror: 0.0902}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0658
+  - errors:
+    - {label: stat, symerror: 0.0108}
+    - {label: sys, symerror: 0.0888}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0581
+  - errors:
+    - {label: stat, symerror: 0.0098}
+    - {label: sys, symerror: 0.0872}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0406
+  - errors:
+    - {label: stat, symerror: 0.0134}
+    - {label: sys, symerror: 0.0874}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0436
+  - errors:
+    - {label: stat, symerror: 0.0173}
+    - {label: sys, symerror: 0.0852}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0184
+  - errors:
+    - {label: stat, symerror: 0.0203}
+    - {label: sys, symerror: 0.085}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.005
+  - errors:
+    - {label: stat, symerror: 0.0251}
+    - {label: sys, symerror: 0.0864}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0162
+  - errors:
+    - {label: stat, symerror: 0.0312}
+    - {label: sys, symerror: 0.0841}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0284
+  - errors:
+    - {label: stat, symerror: 0.0363}
+    - {label: sys, symerror: 0.082}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9781
+  - errors:
+    - {label: stat, symerror: 0.0445}
+    - {label: sys, symerror: 0.0842}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0058
+  - errors:
+    - {label: stat, symerror: 0.0522}
+    - {label: sys, symerror: 0.0856}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0004
+  - errors:
+    - {label: stat, symerror: 0.0465}
+    - {label: sys, symerror: 0.0856}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0032
+  - errors:
+    - {label: stat, symerror: 0.0629}
+    - {label: sys, symerror: 0.0902}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0045
+  - errors:
+    - {label: stat, symerror: 0.0812}
+    - {label: sys, symerror: 0.0976}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.078
+  - errors:
+    - {label: stat, symerror: 0.1064}
+    - {label: sys, symerror: 0.1151}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.2513
+  - errors:
+    - {label: stat, symerror: 0.0931}
+    - {label: sys, symerror: 0.1256}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9985
+  - errors:
+    - {label: stat, symerror: 0.112}
+    - {label: sys, symerror: 0.0927}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7163
+- header: {name: (60-80%)}
+  qualifiers:
+  - {name: '$p_{T}$ (GeV/c)', value: '$Q_{pPb}$'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0791}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6606
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0651}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6524
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0653}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.652
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0687}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6539
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.0719}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6579
+  - errors:
+    - {label: stat, symerror: 0.0003}
+    - {label: sys, symerror: 0.076}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6656
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0768}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6771
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0767}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.6903
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.0765}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7031
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0754}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7165
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0766}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7303
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.0779}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7445
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.079}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7577
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.08}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7711
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0807}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.781
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.0813}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.79
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.0817}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7972
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.0838}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8172
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.0867}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.839
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.0928}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8559
+  - errors:
+    - {label: stat, symerror: 0.0009}
+    - {label: sys, symerror: 0.0946}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8752
+  - errors:
+    - {label: stat, symerror: 0.001}
+    - {label: sys, symerror: 0.0917}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.892
+  - errors:
+    - {label: stat, symerror: 0.0012}
+    - {label: sys, symerror: 0.093}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9074
+  - errors:
+    - {label: stat, symerror: 0.0013}
+    - {label: sys, symerror: 0.0955}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9169
+  - errors:
+    - {label: stat, symerror: 0.0015}
+    - {label: sys, symerror: 0.0971}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9386
+  - errors:
+    - {label: stat, symerror: 0.0017}
+    - {label: sys, symerror: 0.0972}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.952
+  - errors:
+    - {label: stat, symerror: 0.0018}
+    - {label: sys, symerror: 0.098}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9685
+  - errors:
+    - {label: stat, symerror: 0.0015}
+    - {label: sys, symerror: 0.0992}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9816
+  - errors:
+    - {label: stat, symerror: 0.0018}
+    - {label: sys, symerror: 0.1009}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9959
+  - errors:
+    - {label: stat, symerror: 0.0022}
+    - {label: sys, symerror: 0.1026}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0165
+  - errors:
+    - {label: stat, symerror: 0.0025}
+    - {label: sys, symerror: 0.1032}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0252
+  - errors:
+    - {label: stat, symerror: 0.0033}
+    - {label: sys, symerror: 0.1038}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0313
+  - errors:
+    - {label: stat, symerror: 0.0033}
+    - {label: sys, symerror: 0.1037}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0298
+  - errors:
+    - {label: stat, symerror: 0.0037}
+    - {label: sys, symerror: 0.1045}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0378
+  - errors:
+    - {label: stat, symerror: 0.0042}
+    - {label: sys, symerror: 0.1034}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0273
+  - errors:
+    - {label: stat, symerror: 0.0047}
+    - {label: sys, symerror: 0.1038}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.032
+  - errors:
+    - {label: stat, symerror: 0.0053}
+    - {label: sys, symerror: 0.1048}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0424
+  - errors:
+    - {label: stat, symerror: 0.0045}
+    - {label: sys, symerror: 0.1055}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0501
+  - errors:
+    - {label: stat, symerror: 0.0055}
+    - {label: sys, symerror: 0.104}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0357
+  - errors:
+    - {label: stat, symerror: 0.0067}
+    - {label: sys, symerror: 0.1114}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0474
+  - errors:
+    - {label: stat, symerror: 0.0083}
+    - {label: sys, symerror: 0.1082}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.03
+  - errors:
+    - {label: stat, symerror: 0.0102}
+    - {label: sys, symerror: 0.1079}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0278
+  - errors:
+    - {label: stat, symerror: 0.0123}
+    - {label: sys, symerror: 0.1047}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0125
+  - errors:
+    - {label: stat, symerror: 0.0113}
+    - {label: sys, symerror: 0.105}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0182
+  - errors:
+    - {label: stat, symerror: 0.0156}
+    - {label: sys, symerror: 0.1056}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0246
+  - errors:
+    - {label: stat, symerror: 0.02}
+    - {label: sys, symerror: 0.1015}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9865
+  - errors:
+    - {label: stat, symerror: 0.025}
+    - {label: sys, symerror: 0.1059}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0282
+  - errors:
+    - {label: stat, symerror: 0.0307}
+    - {label: sys, symerror: 0.1061}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0163
+  - errors:
+    - {label: stat, symerror: 0.0368}
+    - {label: sys, symerror: 0.0976}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.958
+  - errors:
+    - {label: stat, symerror: 0.0454}
+    - {label: sys, symerror: 0.102}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9973
+  - errors:
+    - {label: stat, symerror: 0.0574}
+    - {label: sys, symerror: 0.1125}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0818
+  - errors:
+    - {label: stat, symerror: 0.0656}
+    - {label: sys, symerror: 0.1042}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0277
+  - errors:
+    - {label: stat, symerror: 0.0556}
+    - {label: sys, symerror: 0.1016}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9468
+  - errors:
+    - {label: stat, symerror: 0.0831}
+    - {label: sys, symerror: 0.1254}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1214
+  - errors:
+    - {label: stat, symerror: 0.0963}
+    - {label: sys, symerror: 0.1098}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9746
+  - errors:
+    - {label: stat, symerror: 0.1291}
+    - {label: sys, symerror: 0.1249}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1409
+  - errors:
+    - {label: stat, symerror: 0.1127}
+    - {label: sys, symerror: 0.1464}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9216
+  - errors:
+    - {label: stat, symerror: 0.1455}
+    - {label: sys, symerror: 0.1181}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7387
+- header: {name: (80-100%)}
+  qualifiers:
+  - {name: '$p_{T}$ (GeV/c)', value: '$Q_{pPb}$'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.1219}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7967
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.1011}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7922
+  - errors:
+    - {label: stat, symerror: 0.0004}
+    - {label: sys, symerror: 0.1016}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.794
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.1066}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7938
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.1109}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7937
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.116}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7947
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.116}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.801
+  - errors:
+    - {label: stat, symerror: 0.0005}
+    - {label: sys, symerror: 0.1148}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8082
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.1133}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8151
+  - errors:
+    - {label: stat, symerror: 0.0006}
+    - {label: sys, symerror: 0.1108}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8224
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.1111}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.828
+  - errors:
+    - {label: stat, symerror: 0.0007}
+    - {label: sys, symerror: 0.1119}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8357
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.1125}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8432
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.1127}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8483
+  - errors:
+    - {label: stat, symerror: 0.0009}
+    - {label: sys, symerror: 0.1127}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8525
+  - errors:
+    - {label: stat, symerror: 0.001}
+    - {label: sys, symerror: 0.1123}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8531
+  - errors:
+    - {label: stat, symerror: 0.0011}
+    - {label: sys, symerror: 0.1122}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8548
+  - errors:
+    - {label: stat, symerror: 0.0008}
+    - {label: sys, symerror: 0.1134}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8648
+  - errors:
+    - {label: stat, symerror: 0.0009}
+    - {label: sys, symerror: 0.1157}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8756
+  - errors:
+    - {label: stat, symerror: 0.001}
+    - {label: sys, symerror: 0.1222}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8816
+  - errors:
+    - {label: stat, symerror: 0.0011}
+    - {label: sys, symerror: 0.1236}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.8935
+  - errors:
+    - {label: stat, symerror: 0.0013}
+    - {label: sys, symerror: 0.1185}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9013
+  - errors:
+    - {label: stat, symerror: 0.0014}
+    - {label: sys, symerror: 0.1189}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9061
+  - errors:
+    - {label: stat, symerror: 0.0016}
+    - {label: sys, symerror: 0.1213}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9104
+  - errors:
+    - {label: stat, symerror: 0.0018}
+    - {label: sys, symerror: 0.1222}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9226
+  - errors:
+    - {label: stat, symerror: 0.002}
+    - {label: sys, symerror: 0.1216}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9298
+  - errors:
+    - {label: stat, symerror: 0.0022}
+    - {label: sys, symerror: 0.1217}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.939
+  - errors:
+    - {label: stat, symerror: 0.0018}
+    - {label: sys, symerror: 0.1226}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9472
+  - errors:
+    - {label: stat, symerror: 0.0021}
+    - {label: sys, symerror: 0.1242}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9575
+  - errors:
+    - {label: stat, symerror: 0.0026}
+    - {label: sys, symerror: 0.1252}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9687
+  - errors:
+    - {label: stat, symerror: 0.003}
+    - {label: sys, symerror: 0.1255}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.972
+  - errors:
+    - {label: stat, symerror: 0.0038}
+    - {label: sys, symerror: 0.1261}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9786
+  - errors:
+    - {label: stat, symerror: 0.004}
+    - {label: sys, symerror: 0.1269}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9843
+  - errors:
+    - {label: stat, symerror: 0.0045}
+    - {label: sys, symerror: 0.1265}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9817
+  - errors:
+    - {label: stat, symerror: 0.005}
+    - {label: sys, symerror: 0.125}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9711
+  - errors:
+    - {label: stat, symerror: 0.0057}
+    - {label: sys, symerror: 0.1249}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9725
+  - errors:
+    - {label: stat, symerror: 0.0065}
+    - {label: sys, symerror: 0.1253}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9745
+  - errors:
+    - {label: stat, symerror: 0.0053}
+    - {label: sys, symerror: 0.1279}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9922
+  - errors:
+    - {label: stat, symerror: 0.0067}
+    - {label: sys, symerror: 0.1267}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9848
+  - errors:
+    - {label: stat, symerror: 0.0084}
+    - {label: sys, symerror: 0.1356}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9958
+  - errors:
+    - {label: stat, symerror: 0.0105}
+    - {label: sys, symerror: 0.1345}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9961
+  - errors:
+    - {label: stat, symerror: 0.013}
+    - {label: sys, symerror: 0.134}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0021
+  - errors:
+    - {label: stat, symerror: 0.0156}
+    - {label: sys, symerror: 0.132}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9931
+  - errors:
+    - {label: stat, symerror: 0.0145}
+    - {label: sys, symerror: 0.1332}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0093
+  - errors:
+    - {label: stat, symerror: 0.0196}
+    - {label: sys, symerror: 0.1303}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9862
+  - errors:
+    - {label: stat, symerror: 0.026}
+    - {label: sys, symerror: 0.1309}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9883
+  - errors:
+    - {label: stat, symerror: 0.0328}
+    - {label: sys, symerror: 0.1329}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0029
+  - errors:
+    - {label: stat, symerror: 0.0395}
+    - {label: sys, symerror: 0.1258}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.947
+  - errors:
+    - {label: stat, symerror: 0.0492}
+    - {label: sys, symerror: 0.1233}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9442
+  - errors:
+    - {label: stat, symerror: 0.0617}
+    - {label: sys, symerror: 0.1313}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0134
+  - errors:
+    - {label: stat, symerror: 0.0748}
+    - {label: sys, symerror: 0.1373}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0197
+  - errors:
+    - {label: stat, symerror: 0.0879}
+    - {label: sys, symerror: 0.1353}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0131
+  - errors:
+    - {label: stat, symerror: 0.0792}
+    - {label: sys, symerror: 0.1413}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0382
+  - errors:
+    - {label: stat, symerror: 0.1071}
+    - {label: sys, symerror: 0.1432}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.0296
+  - errors:
+    - {label: stat, symerror: 0.116}
+    - {label: sys, symerror: 0.1085}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.7626
+  - errors:
+    - {label: stat, symerror: 0.1814}
+    - {label: sys, symerror: 0.1652}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1739
+  - errors:
+    - {label: stat, symerror: 0.1728}
+    - {label: sys, symerror: 0.2322}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 1.1327
+  - errors:
+    - {label: stat, symerror: 0.232}
+    - {label: sys, symerror: 0.2193}
+    - {label: 'sys,Common syst. unc. on TpA', symerror: 0.034}
+    - {label: 'sys,Common syst. unc. on Normalization', symerror: 0.048}
+    value: 0.9691
+independent_variables:
+- header: {name: '$p_{T}$ (GeV/c)'}
+  values:
+  - {high: 0.2, low: 0.15}
+  - {high: 0.25, low: 0.2}
+  - {high: 0.3, low: 0.25}
+  - {high: 0.35, low: 0.3}
+  - {high: 0.4, low: 0.35}
+  - {high: 0.45, low: 0.4}
+  - {high: 0.5, low: 0.45}
+  - {high: 0.55, low: 0.5}
+  - {high: 0.6, low: 0.55}
+  - {high: 0.65, low: 0.6}
+  - {high: 0.7, low: 0.65}
+  - {high: 0.75, low: 0.7}
+  - {high: 0.8, low: 0.75}
+  - {high: 0.85, low: 0.8}
+  - {high: 0.9, low: 0.85}
+  - {high: 0.95, low: 0.9}
+  - {high: 1.0, low: 0.95}
+  - {high: 1.1, low: 1.0}
+  - {high: 1.2, low: 1.1}
+  - {high: 1.3, low: 1.2}
+  - {high: 1.4, low: 1.3}
+  - {high: 1.5, low: 1.4}
+  - {high: 1.6, low: 1.5}
+  - {high: 1.7, low: 1.6}
+  - {high: 1.8, low: 1.7}
+  - {high: 1.9, low: 1.8}
+  - {high: 2.0, low: 1.9}
+  - {high: 2.2, low: 2.0}
+  - {high: 2.4, low: 2.2}
+  - {high: 2.6, low: 2.4}
+  - {high: 2.8, low: 2.6}
+  - {high: 3.0, low: 2.8}
+  - {high: 3.2, low: 3.0}
+  - {high: 3.4, low: 3.2}
+  - {high: 3.6, low: 3.4}
+  - {high: 3.8, low: 3.6}
+  - {high: 4.0, low: 3.8}
+  - {high: 4.5, low: 4.0}
+  - {high: 5.0, low: 4.5}
+  - {high: 5.5, low: 5.0}
+  - {high: 6.0, low: 5.5}
+  - {high: 6.5, low: 6.0}
+  - {high: 7.0, low: 6.5}
+  - {high: 8.0, low: 7.0}
+  - {high: 9.0, low: 8.0}
+  - {high: 10.0, low: 9.0}
+  - {high: 11.0, low: 10.0}
+  - {high: 12.0, low: 11.0}
+  - {high: 13.0, low: 12.0}
+  - {high: 14.0, low: 13.0}
+  - {high: 15.0, low: 14.0}
+  - {high: 16.0, low: 15.0}
+  - {high: 18.0, low: 16.0}
+  - {high: 20.0, low: 18.0}
+  - {high: 22.0, low: 20.0}
+  - {high: 24.0, low: 22.0}
+  - {high: 28.0, low: 24.0}
+  - {high: 32.0, low: 28.0}

@@ -1,0 +1,89 @@
+dependent_variables:
+- header: {name: RPPB}
+  qualifiers:
+  - {name: SQRT(S)/NUCLEON, units: TEV, value: '5.02'}
+  - {name: YRAP(C=CM), value: -1.265 TO 0.335}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.185}
+    - {label: sys, symerror: 0.198}
+    value: 0.797
+  - errors:
+    - {label: stat, symerror: 0.137}
+    - {label: sys, symerror: 0.138}
+    value: 0.711
+  - errors:
+    - {label: stat, symerror: 0.0958}
+    - {label: sys, symerror: 0.1017}
+    value: 0.7565
+  - errors:
+    - {label: stat, symerror: 0.0783}
+    - {label: sys, symerror: 0.085}
+    value: 0.8116
+  - errors:
+    - {label: stat, symerror: 0.0666}
+    - {label: sys, symerror: 0.0834}
+    value: 0.871
+  - errors:
+    - {label: stat, symerror: 0.066}
+    - {label: sys, symerror: 0.093}
+    value: 1.0523
+  - errors:
+    - {label: stat, symerror: 0.0658}
+    - {label: sys, symerror: 0.0812}
+    value: 0.9922
+  - errors:
+    - {label: stat, symerror: 0.0683}
+    - {label: sys, symerror: 0.0753}
+    value: 0.9523
+  - errors:
+    - {label: stat, symerror: 0.071}
+    - {label: sys, symerror: 0.0886}
+    value: 1.0317
+  - errors:
+    - {label: stat, symerror: 0.0727}
+    - {label: sys, symerror: 0.0893}
+    value: 1.0364
+  - errors:
+    - {label: stat, symerror: 0.0725}
+    - {label: sys, symerror: 0.1033}
+    value: 0.9902
+  - errors:
+    - {label: stat, symerror: 0.0683}
+    - {label: sys, symerror: 0.1291}
+    value: 0.9567
+  - errors:
+    - {label: stat, symerror: 0.112}
+    - {label: sys, symerror: 0.134}
+    value: 0.93
+  - errors:
+    - {label: stat, symerror: 0.157}
+    - {label: sys, symerror: 0.142}
+    value: 0.68
+  - errors:
+    - {label: stat, symerror: 0.158}
+    - {label: sys, symerror: 0.158}
+    value: 0.697
+  - errors:
+    - {label: stat, symerror: 0.358}
+    - {label: sys, symerror: 0.25}
+    value: 1.053
+independent_variables:
+- header: {name: PT, units: GEV/c}
+  values:
+  - {high: 0.9, low: 0.7, value: 0.8}
+  - {high: 1.1, low: 0.9, value: 1.0}
+  - {high: 1.4, low: 1.1, value: 1.25}
+  - {high: 1.8, low: 1.4, value: 1.6}
+  - {high: 2.2, low: 1.8, value: 2.0}
+  - {high: 2.6, low: 2.2, value: 2.4}
+  - {high: 3.0, low: 2.6, value: 2.8}
+  - {high: 3.5, low: 3.0, value: 3.25}
+  - {high: 4.0, low: 3.5, value: 3.75}
+  - {high: 5.0, low: 4.0, value: 4.5}
+  - {high: 6.0, low: 5.0, value: 5.5}
+  - {high: 8.0, low: 6.0, value: 7.0}
+  - {high: 10.0, low: 8.0, value: 9.0}
+  - {high: 12.0, low: 10.0, value: 11.0}
+  - {high: 16.0, low: 12.0, value: 14.0}
+  - {high: 20.0, low: 16.0, value: 18.0}

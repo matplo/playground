@@ -1,0 +1,454 @@
+104923:Table 15:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=0-5; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:1 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=5-10; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:2 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=10-20; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:3 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-40; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:4 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-60; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:5 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-80; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:6 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-30; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:7 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=30-40; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:8 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-50; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:9 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=50-60; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:10 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-70; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 15:11 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=70-80; RE (PBPB)=PB PB --> PI+ X, PB PB --> PI- X; RE (PP)=P P --> PI+ X, P P --> PI- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=58
+104923:Table 16:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=0-5; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:1 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=5-10; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:2 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=10-20; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:3 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-40; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:4 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-60; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:5 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-80; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:6 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-30; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:7 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=30-40; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:8 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-50; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:9 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=50-60; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:10 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-70; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 16:11 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=70-80; RE (PBPB)=PB PB --> K+ X, PB PB --> K- X; RE (PP)=P P --> K+ X, P P --> K- X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=53
+104923:Table 17:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=0-5; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:1 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=5-10; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:2 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=10-20; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:3 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-40; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:4 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-60; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:5 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-80; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:6 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-30; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:7 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=30-40; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:8 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-50; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:9 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=50-60; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:10 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-70; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+104923:Table 17:11 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=70-80; RE (PBPB)=PB PB --> P X, PB PB --> PBAR X; RE (PP)=P P --> P X, P P --> PBAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=44
+127979:Table 11:0 RAA [{'name': '$p_\\mathrm{T}$', 'units': 'GeV/$c$'}] CENTRALITY=0-10%; SQRT(S)=5020.0 GeV n=22
+127979:Table 12:0 RAA [{'name': '$p_\\mathrm{T}$', 'units': 'GeV/$c$'}] CENTRALITY=0-10%; SQRT(S)=5020.0 GeV n=19
+127979:Table 13:0 RAA [{'name': '$p_\\mathrm{T}$', 'units': 'GeV/$c$'}] CENTRALITY=0-10%; SQRT(S)=5020.0 GeV n=17
+127979:Table 14:0 RAA [{'name': '$p_\\mathrm{T}$', 'units': 'GeV/$c$'}] CENTRALITY=30-50%; SQRT(S)=5020.0 GeV n=22
+127979:Table 15:0 RAA [{'name': '$p_\\mathrm{T}$', 'units': 'GeV/$c$'}] CENTRALITY=30-50%; SQRT(S)=5020.0 GeV n=19
+127979:Table 16:0 RAA [{'name': '$p_\\mathrm{T}$', 'units': 'GeV/$c$'}] CENTRALITY=30-50%; SQRT(S)=5020.0 GeV n=18
+127979:Table 17:0 RAA [{'name': '$p_\\mathrm{T}$', 'units': 'GeV/$c$'}] CENTRALITY=0-10%; SQRT(S)=5020.0 GeV n=22
+127979:Table 18:0 RAA [{'name': '$p_\\mathrm{T}$', 'units': 'GeV/$c$'}] CENTRALITY=30-50%; SQRT(S)=5020.0 GeV n=22
+127979:Table 19:0 integrated RAA [{'name': 'centrality', 'units': 'pct'}] CENTRALITY=0-10% 30-50%; SQRT(S)=5020.0 GeV n=2
+127980:Table 3:0 $R_\mathrm{AA}$ [{'name': '$p_\\mathrm{T}$', 'units': '$\\mathrm{GeV}/c$'}] CENTRALITY=0.0-10.0 pct; REACTION=PBPB --> Ds + X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 TO 0.5 n=10
+127980:Table 4:0 $R_\mathrm{AA}$ [{'name': '$p_\\mathrm{T}$', 'units': '$\\mathrm{GeV}/c$'}] CENTRALITY=30.0-50.0 pct; REACTION=PBPB --> Ds + X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 TO 0.5 n=9
+135987:Table 1b:0 $R_\mathrm{AA}$ [{'name': '$p_\\mathrm{T}$', 'units': '$\\mathrm{GeV}/c$'}] CENTRALITY=0.0-10.0 pct; REACTION=PBPB --> $\rm D^0$ + X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 TO 0.5 n=12
+135987:Table 1b:1 $R_\mathrm{AA}$ [{'name': '$p_\\mathrm{T}$', 'units': '$\\mathrm{GeV}/c$'}] CENTRALITY=30.0-50.0 pct; REACTION=PBPB --> $\rm D^0$ + X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 TO 0.5 n=12
+135987:Table 2:0 non-prompt/prompt $R_\mathrm{AA}$ ratio [{'name': '$p_\\mathrm{T}$', 'units': '$\\mathrm{GeV}/c$'}] CENTRALITY=0.0-10.0 pct; REACTION=PBPB --> $\rm D^0$ + X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 TO 0.5 n=11
+138404:Table 2:0 $R_\mathrm{AA}$ [{'name': '$p_\\mathrm{T}$', 'units': '$\\mathrm{GeV}/c$'}] CENTRALITY=0.0-10.0 pct; REACTION=PBPB --> $\mathrm{\Lambda_c^+}$ + X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 TO 0.5 n=6
+138404:Table 2:1 $R_\mathrm{AA}$ [{'name': '$p_\\mathrm{T}$', 'units': '$\\mathrm{GeV}/c$'}] CENTRALITY=30.0-50.0 pct; REACTION=PBPB --> $\mathrm{\Lambda_c^+}$ + X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 TO 0.5 n=6
+146723:Table 7:0 prompt J/$\psi$ R_AA [{'name': '$p_{T}$ (GeV/c)'}] RE=PB PB --> J/$\psi$ <E+E-> + X; SQRT(S)/NUCLEON=5020.0; YRAP(CM)=[-0.9, 0.9]; CENTRALITY=0 TO 10% n=4
+146723:Table 8:0 prompt J/$\psi$ R_AA [{'name': '$p_{T}$ (GeV/c)'}] RE=PB PB --> J/$\psi$ <E+E-> + X; SQRT(S)/NUCLEON=5020.0; YRAP(CM)=[-0.9, 0.9]; CENTRALITY=10 TO 30% n=3
+146723:Table 9:0 prompt J/$\psi$ R_AA [{'name': '$p_{T}$ (GeV/c)'}] RE=PB PB --> J/$\psi$ <E+E-> + X; SQRT(S)/NUCLEON=5020.0; YRAP(CM)=[-0.9, 0.9]; CENTRALITY=30 TO 50% n=3
+146723:Table 10:0 prompt J/$\psi$ R_AA [{'name': '<N_PART>'}] RE=PB PB --> J/$\psi$ <E+E-> + X; SQRT(S)/NUCLEON=5020.0; YRAP(CM)=[-0.9, 0.9]; P_T=[1.5 TO 10.0 GEV/C] n=4
+146723:Table 11:0 non-prompt J/$\psi$ R_AA [{'name': '$p_{T}$ (GeV/c)'}] RE=PB PB --> J/$\psi$ <E+E-> + X; SQRT(S)/NUCLEON=5020.0; YRAP(CM)=[-0.9, 0.9]; CENTRALITY=0 TO 10% n=4
+146723:Table 12:0 non-prompt J/$\psi$ R_AA [{'name': '$p_{T}$ (GeV/c)'}] RE=PB PB --> J/$\psi$ <E+E-> + X; SQRT(S)/NUCLEON=5020.0; YRAP(CM)=[-0.9, 0.9]; CENTRALITY=10 TO 30% n=3
+146723:Table 13:0 non-prompt J/$\psi$ R_AA [{'name': '$p_{T}$ (GeV/c)'}] RE=PB PB --> J/$\psi$ <E+E-> + X; SQRT(S)/NUCLEON=5020.0; YRAP(CM)=[-0.9, 0.9]; CENTRALITY=30 TO 50% n=3
+146723:Table 14:0 non-prompt J/$\psi$ R_AA [{'name': '<N_PART>'}] RE=PB PB --> J/$\psi$ <E+E-> + X; SQRT(S)/NUCLEON=5020.0; YRAP(CM)=[-0.9, 0.9]; P_T=[1.5 TO 10.0 GEV/C] n=4
+146644:Figure5:0 RAA [{'name': 'N_${part}$'}] SQRT(S)=5020.0; Particle=J/$\psi$; System=Pb--Pb n=8
+146644:Figure6-Panel1_midy_0-10:0 RAA [{'name': '$p_{T}$', 'units': 'GeV/$c$'}] SQRT(S)=5020.0; Particle=J/$\psi$; System=Pb--Pb; centrality=0--10% n=8
+146644:Figure6-Panel1_midy_30-50:0 RAA [{'name': '$p_{T}$', 'units': 'GeV/$c$'}] SQRT(S)=5020.0; Particle=J/$\psi$; System=Pb--Pb; centrality=30--50% n=6
+146644:Figure6-Panel2_fwdy_0-20:0 RAA [{'name': '$p_{T}$', 'units': 'GeV/$c$'}] SQRT(S)=5020.0; Particle=J/$\psi$; System=Pb--Pb; centrality=0--20% n=14
+146644:Figure6-Panel2_fwdy_20-40:0 RAA [{'name': '$p_{T}$', 'units': 'GeV/$c$'}] SQRT(S)=5020.0; Particle=J/$\psi$; System=Pb--Pb; centrality=20--40% n=14
+146644:Figure6-Panel2_fwdy_40-90:0 RAA [{'name': '$p_{T}$', 'units': 'GeV/$c$'}] SQRT(S)=5020.0; Particle=J/$\psi$; System=Pb--Pb; centrality=40--90% n=14
+146644:Figure11-Panel2:0 $rAA$ [{'name': 'Npart'}] SQRT(S)=5020.0; Particle=J/$\psi$; System=Pb--Pb n=8
+114190:Table 4:0 $R_{\mathrm{AA}}$ [{'name': '$\\langle N_{\\mathrm{part}} \\rangle$'}, {'name': 'Centrality interval', 'units': '%'}] Reaction=Pb + Pb --> Upsilon(1S) (--> Mu+ Mu-) + X; $\sqrt{s_{\mathrm{NN}}}$=5.02; Rapidity interval=2.5–4.0; Global uncertainty=6.9% n=9
+114190:Table 5:0 $R_{\mathrm{AA}}$ [{'name': '$\\langle N_{\\mathrm{part}} \\rangle$'}, {'name': 'Centrality interval', 'units': '%'}] Reaction=Pb + Pb --> Upsilon(2S) (--> Mu+ Mu-) + X; $\sqrt{s_{\mathrm{NN}}}$=5.02; Rapidity interval=2.5–4.0; Global uncertainty=8.7% n=2
+114190:Table 7:0 $R_{\mathrm{AA}}(\Upsilon(2\mathrm{S})/\Upsilon(1\mathrm{S}))$ [{'name': '$\\langle N_{\\mathrm{part}} \\rangle$'}, {'name': 'Centrality interval', 'units': '%'}] Reaction=Pb + Pb --> Upsilon(1S) (--> Mu+ Mu-) + X; Reaction=Pb + Pb --> Upsilon(2S) (--> Mu+ Mu-) + X; $\sqrt{s_{\mathrm{NN}}}$=5.02; Rapidity interval=2.5–4.0; Global uncertainty=2.5% n=2
+114190:Table 8:0 $R_{\mathrm{AA}}$ [{'name': '$p_{\\mathrm{T}}$ interval', 'units': 'GeV/$c$'}] Reaction=Pb + Pb --> Upsilon(1S) (--> Mu+ Mu-) + X; $\sqrt{s_{\mathrm{NN}}}$=5.02; Centrality interval=0–90%; Rapidity interval=2.5–4.0; Global uncertainty=1.5% n=5
+114190:Table 9:0 $R_{\mathrm{AA}}$ [{'name': 'Rapidity interval'}] Reaction=Pb + Pb --> Upsilon(1S) (--> Mu+ Mu-) + X; $\sqrt{s_{\mathrm{NN}}}$=5.02; Centrality interval=0–90%; Global uncertainty=1.5% n=5
+114190:Table 10:0 $R_{\mathrm{AA}}$ [{'name': 'Rapidity interval'}] Reaction=Pb + Pb --> Upsilon(2S) (--> Mu+ Mu-) + X; $\sqrt{s_{\mathrm{NN}}}$=5.02; Centrality interval=0–90%; Global uncertainty=1.5% n=2
+114190:Table 12:0 $\frac{\mathrm{d}^{2} \sigma^{\mathrm{pp}}_{\Upsilon(1\mathrm{S}) \rightarrow \mu^{+} \mu^{-}}}{\mathrm{d}y \mathrm{d}p_{\mathrm{T}}}$ [{'name': '$p_{\\mathrm{T}}$ interval', 'units': 'GeV/$c$'}] Reaction=p + p --> Upsilon(1S) (--> Mu+ Mu-) + X; $\sqrt{s}$=5.02; Rapidity interval=2.5–4.0 n=5
+114190:Table 13:0 $\frac{\mathrm{d} \sigma^{\mathrm{pp}}_{\Upsilon(1\mathrm{S}) \rightarrow \mu^{+} \mu^{-}}}{\mathrm{d}y}$ [{'name': 'Rapidity interval'}] Reaction=p + p --> Upsilon(1S) (--> Mu+ Mu-) + X; $\sqrt{s}$=5.02; $p_{\mathrm{T}}$ range=$p_{\mathrm{T}} <$ 15 GeV/$c$ n=5
+114190:Table 14:0 $\frac{\mathrm{d} \sigma^{\mathrm{pp}}_{\Upsilon(2\mathrm{S}) \rightarrow \mu^{+} \mu^{-}}}{\mathrm{d}y}$ [{'name': 'Rapidity interval'}] Reaction=p + p --> Upsilon(2S) (--> Mu+ Mu-) + X; $\sqrt{s}$=5.02; $p_{\mathrm{T}}$ range=$p_{\mathrm{T}} <$ 15 GeV/$c$ n=2
+146027:Figure 2a:0 Raa toy [{'name': 'Jet pT', 'units': 'GeV/#it{c}'}]  n=10
+146027:Figure 2a:1 Raa toy out of cone [{'name': 'Jet pT', 'units': 'GeV/#it{c}'}]  n=10
+146027:Figure 2a:2 Raa toy medium [{'name': 'Jet pT', 'units': 'GeV/#it{c}'}]  n=10
+146027:Figure 4a top ML:0 Nuclear Modification Factor, R = 0.2, Central, ML [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=9
+146027:Figure 4a top AB:0 Nuclear Modification Factor, R = 0.2, Central, AB [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=6
+146027:Figure 4b top AB:0 Nuclear Modification Factor, R = 0.4, Central, AB [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=5
+146027:Figure 4b top ML:0 Nuclear Modification Factor, R = 0.4, Central, ML [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=8
+146027:Figure 4c top ML:0 Nuclear Modification Factor, R = 0.6, Central, ML [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=7
+146027:Figure 4a middle ML:0 Nuclear Modification Factor, R = 0.2, SemiCentral, ML [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=8
+146027:Figure 4a middle AB:0 Nuclear Modification Factor, R = 0.2, SemiCentral, AB [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=6
+146027:Figure 4b middle ML:0 Nuclear Modification Factor, R = 0.4, SemiCentral, ML [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=7
+146027:Figure 4b middle AB:0 Nuclear Modification Factor, R = 0.4, SemiCentral, AB [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=5
+146027:Figure 4c middle AB:0 Nuclear Modification Factor, R = 0.6, SemiCentral, AB [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=4
+146027:Figure 4a bottom AB:0 Nuclear Modification Factor, R = 0.2, Peripheral, AB [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=3
+146027:Figure 4b bottom AB:0 Nuclear Modification Factor, R = 0.4, Peripheral, AB [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=3
+146027:Figure 4c bottom AB:0 Nuclear Modification Factor, R = 0.6, Peripheral, AB [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=3
+146027:Figure 8 top left:0 Raa Ratio, R = 0.4/0.2, pp [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=8
+146027:Figure 8 top right:0 Raa Ratio, R = 0.6/0.2, central [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=7
+146027:Figure 8 bottom left:0 Raa Ratio, R = 0.4/0.2, semicentral [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=8
+146027:Figure 8 bottom right:0 Raa Ratio, R = 0.6/0.2, semicentral [{'name': 'pT', 'units': 'GeV/#it{c}'}]  n=8
+168854:$\mathrm{D^{0}}$-jet $R_{\mathrm{AA}}$:0 $R_{\mathrm{AA}}$ [{'name': '$p_{\\mathrm{T,ch\\ jet}}$', 'units': 'GeV/$c$'}] System=Pb$-$Pb at 5.02; Clustering algorithm=anti-$k_{\mathrm{T}}$; Recombination scheme=$p_{\mathrm{T}}$; $R$=0.3; $|\eta_{\mathrm{ch\ jet}}|$=$<0.6$; $p_{\mathrm{T,D^0}}$=$3-36$ n=7
+157542:table_6:0 $R_{\mathrm{AA}}^{0-10}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.2; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=0$-$10 n=10
+157542:table_6:1 $R_{\mathrm{AA}}^{10-30}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.2; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=10$-$30 n=10
+157542:table_6:2 $R_{\mathrm{AA}}^{30-50}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.2; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=30$-$50 n=10
+157542:table_6:3 $R_{\mathrm{AA}}^{50-90}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.2; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=50$-$90 n=10
+157542:table_6:4 $R_{\mathrm{AA}}^{50-70}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.2; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=50$-$70 n=10
+157542:table_6:5 $R_{\mathrm{AA}}^{70-90}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.2; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=70$-$90 n=10
+157542:table_6:6 $R_{\mathrm{AA}}^{\mathrm{NLO~pQCD}}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.2; $p_{\mathrm{T}}^{\mathrm{iso}}$=2; CENTRALITY=0$-$100 n=10
+157542:table_7:0 $R_{\mathrm{AA}}^{0-10}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.4; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=0$-$10 n=10
+157542:table_7:1 $R_{\mathrm{AA}}^{10-30}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.4; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=10$-$30 n=10
+157542:table_7:2 $R_{\mathrm{AA}}^{30-50}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.4; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=30$-$50 n=10
+157542:table_7:3 $R_{\mathrm{AA}}^{50-90}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.4; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=50$-$90 n=10
+157542:table_7:4 $R_{\mathrm{AA}}^{50-70}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.4; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=50$-$70 n=10
+157542:table_7:5 $R_{\mathrm{AA}}^{70-90}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.4; $p_{\mathrm{T}}^{\mathrm{iso}}$=1.5; CENTRALITY=70$-$90 n=10
+157542:table_7:6 $R_{\mathrm{AA}}^{\mathrm{NLO~pQCD}}$ [{'name': 'PT', 'units': 'GEV/c'}] $\sqrt{s_{\mathrm{NN}}}$=5020; $|\eta^{\gamma}|$=$<$ 0.67; $R$=0.4; $p_{\mathrm{T}}^{\mathrm{iso}}$=2; CENTRALITY=0$-$100 n=10
+86210:Table 1:0 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=0-5 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=61
+86210:Table 1:1 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=5-10 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=61
+86210:Table 1:2 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=10-20 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=61
+86210:Table 1:3 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=20-30 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=61
+86210:Table 1:4 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=30-40 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=61
+86210:Table 1:5 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=40-50 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=61
+86210:Table 1:6 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=50-60 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=61
+86210:Table 1:7 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=60-70 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=61
+86210:Table 1:8 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=70-80 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=61
+86210:Table 2:0 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=0-5 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 2:1 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=5-10 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 2:2 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=10-20 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 2:3 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=20-30 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 2:4 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=30-40 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 2:5 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=40-50 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 2:6 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=50-60 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 2:7 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=60-70 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 2:8 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] CENT=70-80 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 3:0 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.3 - 1.3; RE=P PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=61
+86210:Table 4:0 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; SQRT(S)=5020.0 GeV n=39
+86210:Table 4:1 (1/(Nevt))*D2(N)/DETARAP/DPT [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; SQRT(S)=2760.0 GeV n=39
+86210:Table 5:0 DATA / MC [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RATIO=DATA/EPOS; RE=P P --> CHARGED X; SQRT(S)=5020.0 GeV n=39
+86210:Table 5:1 DATA / MC [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RATIO=DATA/PYTHIA; RE=P P --> CHARGED X; SQRT(S)=5020.0 GeV n=39
+86210:Table 5:2 DATA / MC [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RATIO=DATA/EPOS; RE=P P --> CHARGED X; SQRT(S)=2760.0 GeV n=39
+86210:Table 5:3 DATA / MC [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RATIO=DATA/PYTHIA; RE=P P --> CHARGED X; SQRT(S)=2760.0 GeV n=39
+86210:Table 6:0 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=-; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X n=39
+86210:Table 6:1 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=0-5 pct; ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X n=39
+86210:Table 6:2 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=5-10 pct; ETARAP=-0.8 - 0.8; RE= n=39
+86210:Table 6:3 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=10-20 pct; ETARAP=-0.8 - 0.8; RE= n=39
+86210:Table 6:4 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=20-30 pct; ETARAP=-0.8 - 0.8; RE= n=39
+86210:Table 6:5 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=30-40 pct; ETARAP=-0.8 - 0.8; RE= n=39
+86210:Table 6:6 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=40-50 pct; ETARAP=-0.8 - 0.8; RE= n=39
+86210:Table 6:7 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=50-60 pct; ETARAP=-0.8 - 0.8; RE= n=39
+86210:Table 6:8 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=60-70 pct; ETARAP=-0.8 - 0.8; RE= n=39
+86210:Table 6:9 RATIO OF SPECTRA (5020 GEV / 2760 GEV) [{'name': 'PT', 'units': 'GEV'}] CENT=70-80 pct; ETARAP=-0.8 - 0.8; RE= n=39
+86210:Table 7:0 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=0-5 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=39
+86210:Table 7:1 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=5-10 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=39
+86210:Table 7:2 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=10-20 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=39
+86210:Table 7:3 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=20-30 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=39
+86210:Table 7:4 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=30-40 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=39
+86210:Table 7:5 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=40-50 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=39
+86210:Table 7:6 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=50-60 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=39
+86210:Table 7:7 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=60-70 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=39
+86210:Table 7:8 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=70-80 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2760.0 GeV n=39
+86210:Table 8:0 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=0-5 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=39
+86210:Table 8:1 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=5-10 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=39
+86210:Table 8:2 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=10-20 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=39
+86210:Table 8:3 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=20-30 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=39
+86210:Table 8:4 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=30-40 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=39
+86210:Table 8:5 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=40-50 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=39
+86210:Table 8:6 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=50-60 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=39
+86210:Table 8:7 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=60-70 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=39
+86210:Table 8:8 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=70-80 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5020.0 GeV n=39
+86210:Table 9:0 RPPB [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.3 - 1.3; RE=P PB --> CHARGED X; SQRT(S)/NUCLEON=5.02 TeV n=39
+85727:Table 3:0 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=0-5 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=39
+85727:Table 3:1 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=5-10 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=39
+85727:Table 3:2 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=10-20 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=39
+85727:Table 3:3 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=20-30 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=39
+85727:Table 3:4 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=30-40 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=39
+85727:Table 3:5 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=40-50 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=39
+85727:Table 3:6 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=50-60 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=39
+85727:Table 3:7 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=60-70 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=39
+85727:Table 3:8 RAA [{'name': 'PT', 'units': 'GEV'}] CENT=70-80 pct; ETARAP=-0.8 - 0.8; RE=P P --> CHARGED X; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=39
+85727:Table 5:0 RAA (pT = 1-4 GeV/c) [{'name': '< dNch/dEta >', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2.76 TeV n=9
+85727:Table 5:1 RAA (pT = 5-8 GeV/c) [{'name': '< dNch/dEta >', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2.76 TeV n=9
+85727:Table 5:2 RAA (pT = 10-20 GeV/c) [{'name': '< dNch/dEta >', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=2.76 TeV n=9
+85727:Table 6:0 RAA (pT = 1-4 GeV/c) [{'name': '< dNch/dEta >', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5.02 TeV n=9
+85727:Table 6:1 RAA (pT = 5-8 GeV/c) [{'name': '< dNch/dEta >', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5.02 TeV n=9
+85727:Table 6:2 RAA (pT = 10-20 GeV/c) [{'name': '< dNch/dEta >', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=PB PB --> CHARGED X; SQRT(S)/NUCLEON=5.02 TeV n=9
+85727:Table 7:0 RAA (pT = 1-4 GeV/c) [{'name': '< dNch/dEta >', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=9
+85727:Table 7:1 RAA (pT = 5-8 GeV/c) [{'name': '< dNch/dEta >', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=9
+85727:Table 7:2 RAA (pT = 10-20 GeV/c) [{'name': '< dNch/dEta >', 'units': 'GEV'}] ETARAP=-0.8 - 0.8; RE=XE XE --> CHARGED X; SQRT(S)/NUCLEON=5.44 TeV n=9
+182535:$\pi^{0}$ $R_{\rm OO}$ at 5.36 TeV:0 ROO=SIG(PI0,OO,5.36TeV)/SIG(PI0,PP,5.36TeV)/256 [{'name': 'PT', 'units': 'GEV/c'}] REACTION=O O --> PI0 X; YRAP(C=CM)=-0.8 < y < 0.8; SQRT(S)=5360 n=27
+182535:$\pi^{0}$ $R_{\rm pO}$ at 9.62 TeV:0 RPO=SIG(PI0,PO,9.62TeV)/SIG(PI0,PP,9.62TeV)/16 [{'name': 'PT', 'units': 'GEV/c'}] REACTION=P O --> PI0 X; YRAP(C=CM)=-1.15 < y < 0.45; SQRT(S)=9620 n=27
+182535:$\pi^{0}$ $R_{\rm OO}/R_{\rm pO}^{2}$ at 5.36 TeV/9.62 TeV:0 ROO/RPO**2=SIG(PI0,OO,5.36TeV)/SIG(PI0,PP,5.36TeV)/[SIG(PI0,PO,9.62TeV)/SIG(PI0,PP,9.62TeV)]**2 [{'name': 'PT', 'units': 'GEV/c'}] REACTION=O O --> PI0 X / P O --> PI0 X; YRAP(C=CM)=-0.8 < y < 0.8 / -1.15 < y < 0.45 n=27
+72903:Table 13:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=0.0-20.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.2; SQRT(SNN)=5023.0 n=8
+72903:Table 14:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=20.0-40.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.2; SQRT(SNN)=5023.0 n=7
+72903:Table 15:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=40.0-60.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.2; SQRT(SNN)=5023.0 n=6
+72903:Table 16:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=60.0-80.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.2; SQRT(SNN)=5023.0 n=6
+72903:Table 17:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=80.0-100.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.2; SQRT(SNN)=5023.0 n=5
+72903:Table 18:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=0.0-20.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.4; SQRT(SNN)=5023.0 n=8
+72903:Table 19:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=20.0-40.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.4; SQRT(SNN)=5023.0 n=7
+72903:Table 20:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=40.0-60.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.4; SQRT(SNN)=5023.0 n=6
+72903:Table 21:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=60.0-80.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.4; SQRT(SNN)=5023.0 n=6
+72903:Table 22:0 $Q_{\rm pPb}$ [{'name': '$p_{\\rm {T, ch. jet}} $(GeV/$c$)'}] ALGO-JET=anti-$k_{\rm T}$; CENTRALITY=80.0-100.0; ETARAP-JET=-0.5-0.5; ETARAP-PARTICLE=-0.9-0.9; PT-PARTICLE=> 0.15 GeV/c; RADIUS-JET=0.4; SQRT(SNN)=5023.0 n=5
+73749:Table 10:0 RPPB [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.8-0.8; RE=P P --> (PI+ + PI-) X; RE=P PB --> (PI+ + PI-) X; SQRT(S)/NUCLEON=5.02; YRAP(C=CM)=-0.5-0.0; class=NSD n=73
+73749:Table 10:1 RPPB [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.8-0.8; RE=P P --> (K+ + K-) X; RE=P PB --> (K+ + K-) X; SQRT(S)/NUCLEON=5.02; YRAP(C=CM)=-0.5-0.0; class=NSD n=73
+73749:Table 10:2 RPPB [{'name': 'PT', 'units': 'GEV'}] ETARAP=-0.8-0.8; RE=P P --> (P + PBAR) X; RE=P PB --> (P + PBAR) X; SQRT(S)/NUCLEON=5.02; YRAP(C=CM)=-0.5-0.0; class=NSD n=73
+69212:Table 5:0 Q_pA [{'name': 'NCOLL^MULT'}] RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-4.46 - -2.96 n=6
+69212:Table 5:1 Q_pA [{'name': 'NCOLL^MULT'}] RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=2.03 - 3.53 n=6
+69212:Table 6:0 Q_pA [{'name': 'NCOLL^MULT'}] RE=P PB --> J/PSI < E+ E- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-1.37 - 0.43 n=4
+69212:Table 10:0 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-4.46 - -2.96 n=7
+69212:Table 10:1 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=10-20%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-4.46 - -2.96 n=7
+69212:Table 10:2 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=20-40%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-4.46 - -2.96 n=7
+69212:Table 10:3 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=40-60%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-4.46 - -2.96 n=7
+69212:Table 10:4 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=60-80%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-4.46 - -2.96 n=7
+69212:Table 10:5 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=80-100%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-4.46 - -2.96 n=7
+69212:Table 11:0 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=2.03 - 3.53 n=7
+69212:Table 11:1 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=10-20%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=2.03 - 3.53 n=7
+69212:Table 11:2 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=20-40%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=2.03 - 3.53 n=7
+69212:Table 11:3 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=40-60%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=2.03 - 3.53 n=7
+69212:Table 11:4 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=60-80%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=2.03 - 3.53 n=7
+69212:Table 11:5 Q_pA [{'name': 'pT range'}] CENTRALITY PERCENTILES=80-100%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=2.03 - 3.53 n=7
+100166:Table 5:0 Q_pPb [{'name': 'NCOLL'}] RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 5:1 Q_pPb [{'name': 'NCOLL'}] RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 6:0 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 6:1 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=10-20%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 6:2 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=20-40%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 6:3 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=40-60%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 6:4 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=60-80%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 6:5 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=80-90%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 7:0 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 7:1 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=10-20%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 7:2 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=20-40%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 7:3 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=40-60%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 7:4 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=60-80%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 7:5 Q_pPb [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=80-90%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 8:0 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=10-20%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 8:1 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=20-40%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 8:2 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=40-60%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 8:3 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=60-80%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 8:4 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=80-90%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=-4.46 - -2.96 n=9
+100166:Table 9:0 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=10-20%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 9:1 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=20-40%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 9:2 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=40-60%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 9:3 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=60-80%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 9:4 Q_PC [{'name': 'pT range, GeV/c'}] CENTRALITY PERCENTILES=80-90%/2-10%; RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; YRAP(RF=CM)=2.03 - 3.53 n=9
+100166:Table 14:0 QPA [{'name': 'NCOLL'}] RE=PB P --> PSI(2S) < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; PT=0.00 TO 20.00; YRAP(RF=CM)=-4.46 - -2.96 n=6
+100166:Table 14:1 QPA [{'name': 'NCOLL'}] RE=PB P --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; PT=0.00 TO 20.00; YRAP(RF=CM)=-4.46 - -2.96 n=6
+100166:Table 15:0 QPA [{'name': 'NCOLL'}] RE=P PB --> PSI(2S) < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; PT=0.00 TO 20.00; YRAP(RF=CM)=2.03 - 3.53 n=6
+100166:Table 15:1 QPA [{'name': 'NCOLL'}] RE=P PB --> J/PSI < MU+ MU- > X; SQRT(S)/NUCLEON=8160.0; PT=0.00 TO 20.00; YRAP(RF=CM)=2.03 - 3.53 n=6
+73941:Table 1:0 D(SIG)/DPT [{'name': 'PT', 'units': 'GEV'}] RE=P P --> D0 (Q=INCLUSIVE) X; SQRT(S)/NUCLEON=7000.0; YRAP=-0.5-0.5 n=8
+73941:Table 2:0 D(SIG)/DPT [{'name': 'PT', 'units': 'GEV'}] RE=P P --> D0 (Q=PROMPT) X; SQRT(S)/NUCLEON=7000.0; YRAP=-0.5-0.5 n=10
+73941:Table 3:0 D(SIG)/DY [{'name': 'RE'}] RE=P P --> CHARM CHARMBAR X; RE=P P --> D0 X; SQRT(S)/NUCLEON=7000.0; YRAP(RF=CM)=-0.5 - 0.5 n=3
+73941:Table 3:1 SIG [{'name': 'RE'}] RE=P P --> CHARM CHARMBAR X; RE=P P --> D0 X; SQRT(S)/NUCLEON=7000.0; YRAP(RF=CM)=-0.5 - 0.5 n=3
+73941:Table 3:2 <PT> [{'name': 'RE'}] RE=P P --> CHARM CHARMBAR X; RE=P P --> D0 X; SQRT(S)/NUCLEON=7000.0; YRAP(RF=CM)=-0.5 - 0.5 n=3
+73941:Table 4:0 D(SIG)/DPT [{'name': 'PT', 'units': 'GEV'}] RE=P PB --> D0 (Q=INCLUSIVE) X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.96-0.04 n=8
+73941:Table 5:0 D(SIG)/DPT [{'name': 'PT', 'units': 'GEV'}] RE=P PB --> D0 (Q=PROMPT) X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.96-0.04 n=11
+73941:Table 6:0 D(SIG)/DY [{'name': 'RE'}] RE=P PB --> CHARM CHARMBAR X; RE=P PB --> D0 X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-0.96 - 0.04 n=3
+73941:Table 6:1 <PT> [{'name': 'RE'}] RE=P PB --> CHARM CHARMBAR X; RE=P PB --> D0 X; SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-0.96 - 0.04 n=3
+73941:Table 7:0 N(D+)/N(D0) [{'name': 'PT', 'units': 'GEV'}] RE=P PB --> D+ X; RE=P PB --> D0 X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.96-0.04 n=10
+73941:Table 8:0 N(D*+)/N(D0) [{'name': 'PT', 'units': 'GEV'}] RE=P PB --> D*+ X; RE=P PB --> D0 X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.96-0.04 n=10
+73941:Table 9:0 N(D/S+)/N(D0) [{'name': 'PT', 'units': 'GEV'}] RE=P PB --> D/S+ X; RE=P PB --> D0 X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.96-0.04 n=4
+73941:Table 10:0 N(D/S+)/N(D+) [{'name': 'PT', 'units': 'GEV'}] RE=P PB --> D+ X; RE=P PB --> D/S+ X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.96-0.04 n=4
+73941:Table 11:0 D2(SIG)/DPT/DYRAP [{'name': 'YRAP'}] PT=2.0 TO 5.0 GEV; RE=P PB --> D0 X; SQRT(S)/NUCLEON=5020.0 n=5
+73941:Table 12:0 D2(SIG)/DPT/DYRAP [{'name': 'YRAP'}] PT=5.0 TO 8.0 GEV; RE=P PB --> D0 X; SQRT(S)/NUCLEON=5020.0 n=5
+73941:Table 13:0 D2(SIG)/DPT/DYRAP [{'name': 'YRAP'}] PT=8.0 TO 16.0 GEV; RE=P PB --> D0 X; SQRT(S)/NUCLEON=5020.0 n=5
+73941:Table 14:0 D2(SIG)/DPT/DYRAP [{'name': 'YRAP'}] PT=2.0 TO 5.0 GEV; RE=P PB --> D+ X; SQRT(S)/NUCLEON=5020.0 n=5
+73941:Table 15:0 D2(SIG)/DPT/DYRAP [{'name': 'YRAP'}] PT=5.0 TO 8.0 GEV; RE=P PB --> D+ X; SQRT(S)/NUCLEON=5020.0 n=5
+73941:Table 16:0 D2(SIG)/DPT/DYRAP [{'name': 'YRAP'}] PT=8.0 TO 16.0 GEV; RE=P PB --> D+ X; SQRT(S)/NUCLEON=5020.0 n=5
+73941:Table 17:0 D2(SIG)/DPT/DYRAP [{'name': 'YRAP'}] PT=2.0 TO 5.0 GEV; RE=P PB --> D*+ X; SQRT(S)/NUCLEON=5020.0 n=5
+73941:Table 18:0 D2(SIG)/DPT/DYRAP [{'name': 'YRAP'}] PT=5.0 TO 8.0 GEV; RE=P PB --> D*+ X; SQRT(S)/NUCLEON=5020.0 n=5
+73941:Table 19:0 D2(SIG)/DPT/DYRAP [{'name': 'YRAP'}] PT=8.0 TO 16.0 GEV; RE=P PB --> D*+ X; SQRT(S)/NUCLEON=5020.0 n=5
+73941:Table 20:0 R(pPb) [{'name': 'PT', 'units': 'GEV'}] RE=P P --> D0 X; RE=P PB --> D0 X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.96-0.04 n=11
+73941:Table 21:0 RPA [{'name': 'PT (GEV/C)'}] SQRT(S)/NUCLEON=5020.0; YRAP(RF=CM)=-0.96 - 0.04 n=1
+128018:Table 9:0 $R_{\mathrm{pPb}}$ [{'name': '$p_\\mathrm{T,ch jet}$', 'units': 'GeV/$c$'}] RE=P Pb --> JET $X$; p-Pb $\sqrt{s_{\mathrm{NN}}}$=5.02; jet method=Anti-$k_{T}$; $p_\mathrm{T}^{track}$=> 0.15; $|\eta^{track}|$=< 0.9; $|\eta^{jet}|$=< 0.5; $R$=0.4; Method=SV n=8
+128018:Table 10:0 $R_{\mathrm{pPb}}$ [{'name': '$p_\\mathrm{T,ch jet}$', 'units': 'GeV/$c$'}] RE=P Pb --> JET $X$; p-Pb $\sqrt{s_{\mathrm{NN}}}$=5.02; jet method=Anti-$k_{T}$; $p_\mathrm{T}^{track}$=> 0.15; $|\eta^{track}|$=< 0.9; $|\eta^{jet}|$=< 0.5; $R$=0.4; Method=IP n=7
+128018:Table 11:0 $R_{\mathrm{pPb}}$ [{'name': '$p_\\mathrm{T,ch jet}$', 'units': 'GeV/$c$'}] RE=P Pb --> JET $X$; p-Pb $\sqrt{s_{\mathrm{NN}}}$=5.02; jet method=Anti-$k_{T}$; $p_\mathrm{T}^{track}$=> 0.15; $|\eta^{track}|$=< 0.9; $|\eta^{jet}|$=< 0.5; $R$=0.4 n=8
+150694:Table 1.1:0 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$ n=10
+150694:Table 1.1:1 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$ n=10
+150694:Table 1.1:2 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$ n=10
+150694:Table 1.2:0 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, CT14nlo) n=130
+150694:Table 1.2:1 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$; MODEL NAME=JETSCAPE PP19 (Colorless Had.) n=130
+150694:Table 1.2:2 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$; MODEL NAME=JETSCAPE PP19 (Colored Had.) n=130
+150694:Table 1.2:3 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, CT14nlo) n=130
+150694:Table 1.2:4 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$; MODEL NAME=JETSCAPE PP19 (Colorless Had.) n=130
+150694:Table 1.2:5 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$; MODEL NAME=JETSCAPE PP19 (Colored Had.) n=130
+150694:Table 1.2:6 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, CT14nlo) n=130
+150694:Table 1.2:7 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$; MODEL NAME=JETSCAPE PP19 (Colorless Had.) n=130
+150694:Table 1.2:8 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$; MODEL NAME=JETSCAPE PP19 (Colored Had.) n=130
+150694:Table 2.1:0 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P Pb --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$ n=11
+150694:Table 2.1:1 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P Pb --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$ n=11
+150694:Table 2.1:2 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P Pb --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$ n=11
+150694:Table 2.2:0 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, EPPS16) n=150
+150694:Table 2.2:1 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, EPPS16) n=150
+150694:Table 2.2:2 ${\rm d}^{2}\sigma/{\rm d}p_{\rm T}{\rm d}\eta$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, EPPS16) n=150
+150694:Table 3.1:0 Jet cross section ratio: $R = 0.2$ / $R = X$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$ / $R = 0.3$ n=10
+150694:Table 3.1:1 Jet cross section ratio: $R = 0.2$ / $R = X$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$ / $R = 0.4$ n=10
+150694:Table 3.2:0 Jet cross section ratio: $R = 0.2$ / $R = X$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P Pb --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$ / $R = 0.3$ n=11
+150694:Table 3.2:1 Jet cross section ratio: $R = 0.2$ / $R = X$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P Pb --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$ / $R = 0.4$ n=11
+150694:Table 4.1:0 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$ n=10
+150694:Table 4.1:1 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$ n=10
+150694:Table 4.1:2 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$ n=10
+150694:Table 4.2:0 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, nTUJU21) n=10
+150694:Table 4.2:1 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, nNNPDF3.0) n=10
+150694:Table 4.2:2 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, nCTEQ15WZSIH) n=10
+150694:Table 4.2:3 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.2$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, EPPS16) n=10
+150694:Table 4.2:4 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, nTUJU21) n=10
+150694:Table 4.2:5 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, nNNPDF3.0) n=10
+150694:Table 4.2:6 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, nCTEQ15WZSIH) n=10
+150694:Table 4.2:7 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.3$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, EPPS16) n=10
+150694:Table 4.2:8 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, nTUJU21) n=10
+150694:Table 4.2:9 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, nNNPDF3.0) n=10
+150694:Table 4.2:10 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, nCTEQ15WZSIH) n=10
+150694:Table 4.2:11 $R_{\rm pPB}^{\rm ch~jet}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JET X, P P --> JET X; SQRT(S)=5020; YRAP=$-0.5 < \eta_{\rm lab} < 0.5$; JET METHOD=anti-$k_{\rm T}$, $p_{\rm T}$-scheme; JET RADIUS=$R = 0.4$; MODEL NAME=POWHEG$+$PYTHIA8 (Dijet, EPPS16) n=10
+83700:Table 3:0 SIG(Q=ETA)/SIG(Q=PI0) [{'name': 'PT', 'units': 'GEV/c'}] RE(Q=ETA)=P PB --> ETA X; RE(Q=PI0)=P PB --> PI0 X; SQRT(S)/NUCLEON=5.02; YRAP(C=CM)=-1.265 TO 0.335 n=16
+83700:Table 5:0 RPPB [{'name': 'PT', 'units': 'GEV/c'}] SQRT(S)/NUCLEON=5.02; YRAP(C=CM)=-1.265 TO 0.335 n=31
+83700:Table 6:0 RPPB [{'name': 'PT', 'units': 'GEV/c'}] SQRT(S)/NUCLEON=5.02; YRAP(C=CM)=-1.265 TO 0.335 n=16
+128138:Table 5:0 SIG(Q=ETA)/SIG(Q=PI0) [{'name': 'PT', 'units': 'GEV'}] RE(Q=ETA)=P PB --> ETA X; RE(Q=PI0)=P PB --> PI0 X; SQRT(S)/NUCLEON=8160; YRAP=-1.265 TO 0.335 n=16
+128138:Table 6:0 SIG(Q=ETA)/SIG(Q=PI0) [{'name': 'PT', 'units': 'GEV'}] RE(Q=ETA)=P P --> ETA X; RE(Q=PI0)=P P --> PI0 X; SQRT(S)/NUCLEON=8000; YRAP=-0.8 TO 0.8 n=25
+128138:Table 7:0 RPPB [{'name': 'PT', 'units': 'GEV'}] SQRT(S)/NUCLEON=8160; YRAP=-1.265 TO 0.335 n=30
+128138:Table 8:0 RPPB [{'name': 'PT', 'units': 'GEV'}] SQRT(S)/NUCLEON=8160; YRAP=-1.265 TO 0.335 n=14
+165479:RpPb 5.02 TeV:0 RpPb [{'name': 'PT', 'units': 'GEV/c'}] REACTION=P Pb --> ISO GAMMA X; ABS(YRAP)=<0.7; SQRT(S)=5020.0; Isolation cut=R = 0.4, $p_{\mathrm{T}}^{iso,ch}$ < 1.5 GeV/$\mathrm{c}$, charged particle only n=8
+165479:RpA 8.16 TeV:0 RpPb [{'name': 'PT', 'units': 'GEV/c'}] REACTION=P Pb --> ISO GAMMA X; ABS(YRAP)=<0.7; SQRT(S)=8160.0; Isolation cut=R = 0.4, $p_{\mathrm{T}}^{iso,ch}$ < 1.5 GeV/$\mathrm{c}$, charged particle only n=9
+140098:Table 1:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=0-10; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=15
+140098:Table 2:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=10-20; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=15
+140098:Table 3:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-30; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=15
+140098:Table 4:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=30-40; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=15
+140098:Table 5:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-50; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=15
+140098:Table 6:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=50-60; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=15
+140098:Table 7:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-70; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=14
+140098:Table 8:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=70-80; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=13
+140098:Table 9:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-40; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=15
+140098:Table 10:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-60; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=15
+140098:Table 11:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-80; RE (PBPB)=PB PB --> KSTAR X, PB PB --> KSTAR_BAR X; RE (PP)=P P --> KSTAR X, P P --> KSTAR_BAR X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=13
+140098:Table 12:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=0-10; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=24
+140098:Table 13:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=10-20; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=24
+140098:Table 14:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-30; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=24
+140098:Table 15:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=30-40; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=24
+140098:Table 16:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-50; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=23
+140098:Table 17:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=50-60; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=21
+140098:Table 18:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-70; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=21
+140098:Table 19:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=70-80; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=20
+140098:Table 20:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=20-40; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=24
+140098:Table 21:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=40-60; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=21
+140098:Table 22:0 RAA [{'name': '$p_{T}$', 'units': '$GeV/c$'}] CENTRALITY=60-80; RE (PBPB)=PB PB --> PHI X; RE (PP)=P P --> PHI X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5-0.5 n=20
+150017:Table 9:0 RAA [{'name': '$p_{ \\rm {T}}$', 'units': 'GeV/$\\it{c}$'}] CENTRALITY=0-10; RE=Pb Pb $\rightarrow$ K$^{*\pm}$ X, Pb Pb $\rightarrow$ {K}$^{*\mp}$ X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 - 0.5 n=14
+150017:Table 10:0 RAA [{'name': '$p_{ \\rm {T}}$', 'units': 'GeV/$\\it{c}$'}] CENTRALITY=10-20; RE=Pb Pb $\rightarrow$ K$^{*\pm}$ X, Pb Pb $\rightarrow$ {K}$^{*\mp}$ X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 - 0.5 n=14
+150017:Table 11:0 RAA [{'name': '$p_{ \\rm {T}}$', 'units': 'GeV/$\\it{c}$'}] CENTRALITY=20-40; RE=Pb Pb $\rightarrow$ K$^{*\pm}$ X, Pb Pb $\rightarrow$ {K}$^{*\mp}$ X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 - 0.5 n=14
+150017:Table 12:0 RAA [{'name': '$p_{ \\rm {T}}$', 'units': 'GeV/$\\it{c}$'}] CENTRALITY=40-60; RE=Pb Pb $\rightarrow$ K$^{*\pm}$ X, Pb Pb $\rightarrow$ {K}$^{*\mp}$ X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 - 0.5 n=14
+150017:Table 13:0 RAA [{'name': '$p_{ \\rm {T}}$', 'units': 'GeV/$\\it{c}$'}] CENTRALITY=60-80; RE=Pb Pb $\rightarrow$ K$^{*\pm}$ X, Pb Pb $\rightarrow$ {K}$^{*\mp}$ X; SQRT(S)/NUCLEON=5020.0; YRAP=-0.5 - 0.5 n=14
+71310:Table 7:0 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=0.0-5.0; ETARAP=-0.8-0.8; RE=P P --> (PI+ + PI-) X; RE=PB PB --> (PI+ + PI-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 7:1 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=0.0-5.0; ETARAP=-0.8-0.8; RE=P P --> (K+ + K-) X; RE=PB PB --> (K+ + K-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 7:2 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=0.0-5.0; ETARAP=-0.8-0.8; RE=P P --> (P + PBAR) X; RE=PB PB --> (P + PBAR) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 8:0 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=5.0 TO 10.0 pct; ETARAP=-0.8-0.8; RE=P P --> (PI+ + PI-) X; RE=PB PB --> (PI+ + PI-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 8:1 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=5.0 TO 10.0 pct; ETARAP=-0.8-0.8; RE=P P --> (K+ + K-) X; RE=PB PB --> (K+ + K-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 8:2 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=5.0 TO 10.0 pct; ETARAP=-0.8-0.8; RE=P P --> (P + PBAR) X; RE=PB PB --> (P + PBAR) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 9:0 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=10.0 TO 20.0 pct; ETARAP=-0.8-0.8; RE=P P --> (PI+ + PI-) X; RE=PB PB --> (PI+ + PI-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 9:1 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=10.0 TO 20.0 pct; ETARAP=-0.8-0.8; RE=P P --> (K+ + K-) X; RE=PB PB --> (K+ + K-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 9:2 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=10.0 TO 20.0 pct; ETARAP=-0.8-0.8; RE=P P --> (P + PBAR) X; RE=PB PB --> (P + PBAR) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 10:0 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=20.0 TO 40.0 pct; ETARAP=-0.8-0.8; RE=P P --> (PI+ + PI-) X; RE=PB PB --> (PI+ + PI-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 10:1 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=20.0 TO 40.0 pct; ETARAP=-0.8-0.8; RE=P P --> (K+ + K-) X; RE=PB PB --> (K+ + K-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 10:2 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=20.0 TO 40.0 pct; ETARAP=-0.8-0.8; RE=P P --> (P + PBAR) X; RE=PB PB --> (P + PBAR) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 11:0 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=40.0 TO 60.0 pct; ETARAP=-0.8-0.8; RE=P P --> (PI+ + PI-) X; RE=PB PB --> (PI+ + PI-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 11:1 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=40.0 TO 60.0 pct; ETARAP=-0.8-0.8; RE=P P --> (K+ + K-) X; RE=PB PB --> (K+ + K-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 11:2 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=40.0 TO 60.0 pct; ETARAP=-0.8-0.8; RE=P P --> (P + PBAR) X; RE=PB PB --> (P + PBAR) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 12:0 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=60.0 TO 80.0 pct; ETARAP=-0.8-0.8; RE=P P --> (PI+ + PI-) X; RE=PB PB --> (PI+ + PI-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 12:1 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=60.0 TO 80.0 pct; ETARAP=-0.8-0.8; RE=P P --> (K+ + K-) X; RE=PB PB --> (K+ + K-) X; SQRT(S)/NUCLEON=2.76 n=68
+71310:Table 12:2 RAA [{'name': 'PT', 'units': 'GEV'}] CENTRALITY=60.0 TO 80.0 pct; ETARAP=-0.8-0.8; RE=P P --> (P + PBAR) X; RE=PB PB --> (P + PBAR) X; SQRT(S)/NUCLEON=2.76 n=68
+83964:Table 5:0 RAA [{'name': 'PT', 'units': 'GEV/c'}] RE=PB PB --> PI0 X; CENTRALITY=0.0 TO 10.0; SQRT(S)/NUCLEON=2760.0; YRAP=0.0 n=19
+83964:Table 6:0 RAA [{'name': 'PT', 'units': 'GEV/c'}] RE=PB PB --> PI0 X; CENTRALITY=20.0 TO 50.0; SQRT(S)/NUCLEON=2760.0; YRAP=0.0 n=19
+83964:Table 7:0 RAA [{'name': 'PT', 'units': 'GEV/c'}] RE=PB PB --> ETA X; CENTRALITY=0.0 TO 10.0; SQRT(S)/NUCLEON=2760.0; YRAP=0.0 n=11
+83964:Table 8:0 RAA [{'name': 'PT', 'units': 'GEV/c'}] RE=PB PB --> ETA X; CENTRALITY=20.0 TO 50.0; SQRT(S)/NUCLEON=2760.0; YRAP=0.0 n=11
+77904:Table 3:0 $R_{\text{pA}}$ [{'name': '$p_{\\text{T}}$', 'units': 'GEV/C'}] RE=P PB --> (E+ + E-)/2 X; SQRT(S)=5020.0; YRAP(RF=CM)=-1.06-0.14 n=10
+77904:Table 4:0 $R_{\text{AA}}$ [{'name': '$p_{\\text{T}}$', 'units': 'GEV/C'}] CENTRALITY=0.0-20.0; RE=PB PB --> (E+ + E-)/2 X; SQRT(S)=2760.0; YRAP(RF=CM)=-0.8-0.8 n=8
+144336:Table 3:0 RAA [{'name': '$p_{T}$', 'units': 'GeV/c'}] RE=Pb Pb -> b(->c)->e + X; SQRT(S)/NUCLEON=5020.0; CENTRALITY=0-10%; YRAP ($p_{T}$ < 8 GeV/c)=-0.8 to 0.8; YRAP ($p_{T}$ > 8 GeV/c)=-0.6 to 0.6; Normalization uncertainity=2.2% n=13
+142624:Table 3:0 $R_{pPb}$ [{'name': '$p_{{T}}$', 'units': 'GeV/$c$'}] RE=p Pb --> HFE + X; $\sqrt{s_{\rm NN}}$=8160.0 n=14
+138403:Figure 5b:0 $R_{pPb}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JPSI (Q=INCLUSIVE) X; SQRT(S)/NUCLEON=8160.0; YRAP=-1.37 TO 0.43 n=8
+138403:Figure 6:0 $R_{pPb}$ [{'name': 'YRAP'}] RE=P PB --> JPSI (Q=INCLUSIVE) X; SQRT(S)/NUCLEON=8160; PT=>0.0 n=1
+138403:Figure 9a:0 $R_{pPb}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JPSI (Q=PROMPT) X; SQRT(S)/NUCLEON=8160.0; YRAP=-1.37 TO 0.43 n=5
+138403:Figure 9b:0 $R_{pPb}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JPSI (Q=NON-PROMPT) X; SQRT(S)/NUCLEON=8160.0; YRAP=-1.37 TO 0.43 n=5
+130237:Figure 7a:0 $R_{pPb}$ [{'name': 'YRAP'}] RE=P PB --> JPSI (Q=PROMPT) X; SQRT(S)/NUCLEON=5020.0; PT=>0.0 n=1
+130237:Figure 7b:0 $R_{pPb}^{prompt}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JPSI (Q=PROMPT) X; SQRT(S)/NUCLEON=5020.0; YRAP=-1.37 TO 0.43 n=10
+130237:Figure 7b:1 $R_{pPb}^{inclusive}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JPSI (Q=INCLUSIVE) X; SQRT(S)/NUCLEON=5020.0; YRAP=-1.37 TO 0.43 n=10
+130237:Figure 8a:0 $R_{pPb}$ [{'name': 'YRAP'}] RE=P PB --> JPSI (Q=NON-PROMPT) X; SQRT(S)/NUCLEON=5020.0; PT=>0.0 n=1
+130237:Figure 8b:0 $R_{pPb}$ [{'name': '$p_{\\rm T}$', 'units': 'GeV/$c$'}] RE=P PB --> JPSI (Q=NON-PROMPT) X; SQRT(S)/NUCLEON=5020.0; YRAP=-1.37 TO 0.43 n=5
+93739:Table 30:0 $R_{AA}$ [{'name': 'PTjet', 'units': 'GEV'}] RE=Pb Pb --> jet + X; RE=p p --> jet + X; SQRT(S)=5020; YRAP=-0.5 TO 0.5; CENTRALITY=0 TO 10; jet radius=0.2; jet method=Anti-$k_{T}$; $p_{T,pp}^{lead,track}$=> 5; $p_{T,PbPb}^{lead,track}$=> 5 n=7
+93739:Table 31:0 $R_{AA}$ [{'name': 'R=0.4'}] RE=Pb Pb --> jet + X; RE=p p --> jet + X; SQRT(S)=5020; YRAP=-0.3 TO 0.3; CENTRALITY=0 TO 10; jet radius=0.4; jet method=Anti-$k_{T}$; $p_{T,pp}^{lead,track}$=> 7; $p_{T,PbPb}^{lead,track}$=> 7 n=5
+93739:Table 32:0 $R_{AA}$ [{'name': 'PTjet', 'units': 'GEV'}] RE=Pb Pb --> jet + X; RE=p p --> jet + X; SQRT(S)=5020; YRAP=-0.5 TO 0.5; CENTRALITY=0 TO 10; jet radius=0.2; jet method=Anti-$k_{T}$; $p_{T,pp}^{lead,track}$=> 0; $p_{T,PbPb}^{lead,track}$=> 5 n=7
+93739:Table 33:0 $R_{AA}$ [{'name': 'PTjet', 'units': 'GEV'}] RE=Pb Pb --> jet + X; RE=p p --> jet + X; SQRT(S)=5020; YRAP=-0.3 TO 0.3; CENTRALITY=0 TO 10; jet radius=0.4; jet method=Anti-$k_{T}$; $p_{T,pp}^{lead,track}$=> 0; $p_{T,PbPb}^{lead,track}$=> 7 n=5
+68483:Table 6:0 RAA [{'name': 'PT', 'units': 'GEV/C'}] ABS(ETA)=0.0-0.5; CENTRALITY=0.0-10.0; R=0.2; RE=PB PB --> JET(S) X; SQRT(S)/NUCLEON=2760.0 n=5
+68483:Table 7:0 RAA [{'name': 'PT', 'units': 'GEV/C'}] ABS(ETA)=0.0-0.5; CENTRALITY=10.0-30.0; R=0.2; RE=PB PB --> JET(S) X; SQRT(S)/NUCLEON=2760.0 n=5
+68361:Table 1:0 (0-5%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 1:1 (5-10%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 1:2 (10-20%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 1:3 (20-40%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 1:4 (40-60%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 1:5 (60-80%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 1:6 (80-100%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 2:0 (0-5%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 2:1 (5-10%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 2:2 (10-20%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 2:3 (20-40%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 2:4 (40-60%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 2:5 (60-80%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 2:6 (80-100%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 3:0 (0-5%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 3:1 (5-10%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 3:2 (10-20%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 3:3 (20-40%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 3:4 (40-60%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 3:5 (60-80%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 3:6 (80-100%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 4:0 (0-5%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 4:1 (5-10%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 4:2 (10-20%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 4:3 (20-40%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 4:4 (40-60%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 4:5 (60-80%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 4:6 (80-100%) [{'name': '$\\eta_{lab}$'}] $\eta_{lab}$=$dN_{ch}/d\eta_{lab}$ n=40
+68361:Table 5:0 (0-5%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 5:1 (5-10%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 5:2 (10-20%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 5:3 (20-40%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 5:4 (40-60%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 5:5 (60-80%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 5:6 (80-100%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 6:0 (0-5%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 6:1 (5-10%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 6:2 (10-20%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 6:3 (20-40%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 6:4 (40-60%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 6:5 (60-80%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 6:6 (80-100%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 7:0 (0-5%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 7:1 (5-10%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 7:2 (10-20%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 7:3 (20-40%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 7:4 (40-60%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 7:5 (60-80%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 7:6 (80-100%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 8:0 (0-5%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 8:1 (5-10%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 8:2 (10-20%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 8:3 (20-40%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 8:4 (40-60%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 8:5 (60-80%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 8:6 (80-100%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 9:0 (0-5%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 9:1 (5-10%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 9:2 (10-20%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 9:3 (20-40%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 9:4 (40-60%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 9:5 (60-80%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 9:6 (80-100%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 10:0 (0-5%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 10:1 (5-10%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 10:2 (10-20%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 10:3 (20-40%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 10:4 (40-60%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 10:5 (60-80%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+68361:Table 10:6 (80-100%) [{'name': '$p_{T}$ (GeV/c)'}] $p_{T}$ (GeV/c)=$Q_{pPb}$ n=58
+CATALOG: 453 columns; ISSUES: 0

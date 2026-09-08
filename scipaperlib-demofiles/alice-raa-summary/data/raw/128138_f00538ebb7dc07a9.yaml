@@ -1,0 +1,159 @@
+dependent_variables:
+- header: {name: RPPB}
+  qualifiers:
+  - {name: SQRT(S)/NUCLEON, units: GEV, value: '8160'}
+  - {name: YRAP, value: -1.265 TO 0.335}
+  values:
+  - errors:
+    - {label: stat, symerror: '3.54e-02'}
+    - {label: sys, symerror: '5.86e-02'}
+    value: '4.635e-01'
+  - errors:
+    - {label: stat, symerror: '2.59e-02'}
+    - {label: sys, symerror: '6.80e-02'}
+    value: '6.392e-01'
+  - errors:
+    - {label: stat, symerror: '2.29e-02'}
+    - {label: sys, symerror: '5.80e-02'}
+    value: '6.579e-01'
+  - errors:
+    - {label: stat, symerror: '2.10e-02'}
+    - {label: sys, symerror: '3.11e-02'}
+    value: '7.713e-01'
+  - errors:
+    - {label: stat, symerror: '1.40e-02'}
+    - {label: sys, symerror: '2.16e-02'}
+    value: '7.950e-01'
+  - errors:
+    - {label: stat, symerror: '1.21e-02'}
+    - {label: sys, symerror: '2.15e-02'}
+    value: '8.384e-01'
+  - errors:
+    - {label: stat, symerror: '1.33e-02'}
+    - {label: sys, symerror: '1.89e-02'}
+    value: '8.806e-01'
+  - errors:
+    - {label: stat, symerror: '1.48e-02'}
+    - {label: sys, symerror: '1.87e-02'}
+    value: '8.964e-01'
+  - errors:
+    - {label: stat, symerror: '1.71e-02'}
+    - {label: sys, symerror: '1.98e-02'}
+    value: '9.284e-01'
+  - errors:
+    - {label: stat, symerror: '1.78e-02'}
+    - {label: sys, symerror: '2.12e-02'}
+    value: '9.388e-01'
+  - errors:
+    - {label: stat, symerror: '1.97e-02'}
+    - {label: sys, symerror: '2.20e-02'}
+    value: '9.178e-01'
+  - errors:
+    - {label: stat, symerror: '2.41e-02'}
+    - {label: sys, symerror: '2.64e-02'}
+    value: '8.984e-01'
+  - errors:
+    - {label: stat, symerror: '2.34e-02'}
+    - {label: sys, symerror: '2.82e-02'}
+    value: '8.812e-01'
+  - errors:
+    - {label: stat, symerror: '1.73e-02'}
+    - {label: sys, symerror: '3.08e-02'}
+    value: '9.059e-01'
+  - errors:
+    - {label: stat, symerror: '2.19e-02'}
+    - {label: sys, symerror: '4.20e-02'}
+    value: '9.604e-01'
+  - errors:
+    - {label: stat, symerror: '3.28e-02'}
+    - {label: sys, symerror: '4.63e-02'}
+    value: '9.428e-01'
+  - errors:
+    - {label: stat, symerror: '5.61e-02'}
+    - {label: sys, symerror: '6.36e-02'}
+    value: '9.512e-01'
+  - errors:
+    - {label: stat, symerror: '2.11e-02'}
+    - {label: sys, symerror: '3.07e-02'}
+    value: '9.826e-01'
+  - errors:
+    - {label: stat, symerror: '2.33e-02'}
+    - {label: sys, symerror: '3.43e-02'}
+    value: '9.921e-01'
+  - errors:
+    - {label: stat, symerror: '1.64e-02'}
+    - {label: sys, symerror: '4.06e-02'}
+    value: '9.930e-01'
+  - errors:
+    - {label: stat, symerror: '1.76e-02'}
+    - {label: sys, symerror: '4.30e-02'}
+    value: '9.784e-01'
+  - errors:
+    - {label: stat, symerror: '2.03e-02'}
+    - {label: sys, symerror: '4.71e-02'}
+    value: '1.0008e+00'
+  - errors:
+    - {label: stat, symerror: '2.71e-02'}
+    - {label: sys, symerror: '5.08e-02'}
+    value: '1.0525e+00'
+  - errors:
+    - {label: stat, symerror: '2.49e-02'}
+    - {label: sys, symerror: '4.85e-02'}
+    value: '9.904e-01'
+  - errors:
+    - {label: stat, symerror: '4.41e-02'}
+    - {label: sys, symerror: '5.56e-02'}
+    value: '1.1134e+00'
+  - errors:
+    - {label: stat, symerror: '4.80e-02'}
+    - {label: sys, symerror: '5.43e-02'}
+    value: '1.0627e+00'
+  - errors:
+    - {label: stat, symerror: '7.77e-02'}
+    - {label: sys, symerror: '5.23e-02'}
+    value: '9.992e-01'
+  - errors:
+    - {label: stat, symerror: '1.17e-01'}
+    - {label: sys, symerror: '5.77e-02'}
+    value: '1.078e+00'
+  - errors:
+    - {label: stat, symerror: '1.87e-01'}
+    - {label: sys, symerror: '5.97e-02'}
+    value: '1.079e+00'
+  - errors:
+    - {label: stat, symerror: '2.73e-01'}
+    - {label: sys, symerror: '6.67e-02'}
+    value: '1.111e+00'
+independent_variables:
+- header: {name: PT, units: GEV}
+  values:
+  - {high: 0.6, low: 0.4, value: 0.5}
+  - {high: 0.8, low: 0.6, value: 0.7}
+  - {high: 1.0, low: 0.8, value: 0.9}
+  - {high: 1.4, low: 1.0, value: 1.2}
+  - {high: 1.8, low: 1.4, value: 1.6}
+  - {high: 2.2, low: 1.8, value: 2.0}
+  - {high: 2.6, low: 2.2, value: 2.4}
+  - {high: 3.0, low: 2.6, value: 2.8}
+  - {high: 3.4, low: 3.0, value: 3.2}
+  - {high: 4.0, low: 3.4, value: 3.7}
+  - {high: 5.0, low: 4.0, value: 4.5}
+  - {high: 6.0, low: 5.0, value: 5.5}
+  - {high: 8.0, low: 6.0, value: 7.0}
+  - {high: 10.0, low: 8.0, value: 9.0}
+  - {high: 12.0, low: 10.0, value: 11.0}
+  - {high: 14.0, low: 12.0, value: 13.0}
+  - {high: 16.0, low: 14.0, value: 15.0}
+  - {high: 18.0, low: 16.0, value: 17.0}
+  - {high: 20.0, low: 18.0, value: 19.0}
+  - {high: 25.0, low: 20.0, value: 22.5}
+  - {high: 30.0, low: 25.0, value: 27.5}
+  - {high: 35.0, low: 30.0, value: 32.5}
+  - {high: 40.0, low: 35.0, value: 37.5}
+  - {high: 50.0, low: 40.0, value: 45.0}
+  - {high: 60.0, low: 50.0, value: 55.0}
+  - {high: 80.0, low: 60.0, value: 70.0}
+  - {high: 100.0, low: 80.0, value: 90.0}
+  - {high: 130.0, low: 100.0, value: 115.0}
+  - {high: 160.0, low: 130.0, value: 145.0}
+  - {high: 200.0, low: 160.0, value: 180.0}

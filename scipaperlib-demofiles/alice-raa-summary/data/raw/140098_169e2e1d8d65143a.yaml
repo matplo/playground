@@ -1,0 +1,87 @@
+dependent_variables:
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 0-10}
+  - {name: RE (PBPB), value: 'PB PB --> KSTAR X, PB PB --> KSTAR_BAR X'}
+  - {name: RE (PP), value: 'P P --> KSTAR X, P P --> KSTAR_BAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.0285782}
+    - {label: syst., symerror: 0.00975543}
+    value: 0.0768747
+  - errors:
+    - {label: stat., symerror: 0.0181284}
+    - {label: syst., symerror: 0.0157479}
+    value: 0.116825
+  - errors:
+    - {label: stat., symerror: 0.0245022}
+    - {label: syst., symerror: 0.0256471}
+    value: 0.189744
+  - errors:
+    - {label: stat., symerror: 0.0275173}
+    - {label: syst., symerror: 0.0448599}
+    value: 0.30302
+  - errors:
+    - {label: stat., symerror: 0.0234684}
+    - {label: syst., symerror: 0.0612873}
+    value: 0.391118
+  - errors:
+    - {label: stat., symerror: 0.0281835}
+    - {label: syst., symerror: 0.0555246}
+    value: 0.373611
+  - errors:
+    - {label: stat., symerror: 0.0295227}
+    - {label: syst., symerror: 0.0462732}
+    value: 0.357447
+  - errors:
+    - {label: stat., symerror: 0.0337134}
+    - {label: syst., symerror: 0.0391363}
+    value: 0.285326
+  - errors:
+    - {label: stat., symerror: 0.0256956}
+    - {label: syst., symerror: 0.0309185}
+    value: 0.205875
+  - errors:
+    - {label: stat., symerror: 0.0240457}
+    - {label: syst., symerror: 0.017433}
+    value: 0.116855
+  - errors:
+    - {label: stat., symerror: 0.0199901}
+    - {label: syst., symerror: 0.0195149}
+    value: 0.136157
+  - errors:
+    - {label: stat., symerror: 0.0334163}
+    - {label: syst., symerror: 0.016395}
+    value: 0.128211
+  - errors:
+    - {label: stat., symerror: 0.0480323}
+    - {label: syst., symerror: 0.0218109}
+    value: 0.172036
+  - errors:
+    - {label: stat., symerror: 0.0544462}
+    - {label: syst., symerror: 0.0239987}
+    value: 0.165733
+  - errors:
+    - {label: stat., symerror: 0.105824}
+    - {label: syst., symerror: 0.0420565}
+    value: 0.261037
+independent_variables:
+- header: {name: '$p_{T}$', units: $GeV/c$}
+  values:
+  - {low: 0.4, high: 0.8}
+  - {low: 0.8, high: 1.2}
+  - {low: 1.2, high: 1.6}
+  - {low: 1.6, high: 2}
+  - {low: 2, high: 2.5}
+  - {low: 2.5, high: 3}
+  - {low: 3, high: 3.5}
+  - {low: 3.5, high: 4}
+  - {low: 4, high: 5}
+  - {low: 5, high: 6}
+  - {low: 6, high: 8}
+  - {low: 8, high: 10}
+  - {low: 10, high: 12}
+  - {low: 12, high: 16}
+  - {low: 16, high: 20}

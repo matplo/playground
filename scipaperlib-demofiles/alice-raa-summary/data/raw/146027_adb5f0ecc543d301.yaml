@@ -1,0 +1,90 @@
+dependent_variables:
+- header:
+    name: Nuclear Modification Factor, R = 0.2, Central, ML
+  values:
+  - errors:
+    - label: Raa, R = 0.2, Central, ML, statistical uncertainty
+      symerror: 0.0021244
+    - asymerror:
+        minus: -0.09508
+        plus: 0.11121
+      label: Raa, R = 0.2, Central, ML, systematic uncertainty
+    value: 0.23167
+  - errors:
+    - label: Raa, R = 0.2, Central, ML, statistical uncertainty
+      symerror: 0.0041938
+    - asymerror:
+        minus: -0.11445
+        plus: 0.15551
+      label: Raa, R = 0.2, Central, ML, systematic uncertainty
+    value: 0.28395
+  - errors:
+    - label: Raa, R = 0.2, Central, ML, statistical uncertainty
+      symerror: 0.0065916
+    - asymerror:
+        minus: -0.080349
+        plus: 0.15273
+      label: Raa, R = 0.2, Central, ML, systematic uncertainty
+    value: 0.29776
+  - errors:
+    - label: Raa, R = 0.2, Central, ML, statistical uncertainty
+      symerror: 0.010573
+    - asymerror:
+        minus: -0.085572
+        plus: 0.13713
+      label: Raa, R = 0.2, Central, ML, systematic uncertainty
+    value: 0.35786
+  - errors:
+    - label: Raa, R = 0.2, Central, ML, statistical uncertainty
+      symerror: 0.015595
+    - asymerror:
+        minus: -0.066748
+        plus: 0.13114
+      label: Raa, R = 0.2, Central, ML, systematic uncertainty
+    value: 0.35926
+  - errors:
+    - label: Raa, R = 0.2, Central, ML, statistical uncertainty
+      symerror: 0.021533
+    - asymerror:
+        minus: -0.070693
+        plus: 0.12301
+      label: Raa, R = 0.2, Central, ML, systematic uncertainty
+    value: 0.46222
+  - errors:
+    - label: Raa, R = 0.2, Central, ML, statistical uncertainty
+      symerror: 0.034019
+    - asymerror:
+        minus: -0.1064
+        plus: 0.1268
+      label: Raa, R = 0.2, Central, ML, systematic uncertainty
+    value: 0.43578
+  - errors:
+    - label: Raa, R = 0.2, Central, ML, statistical uncertainty
+      symerror: 0.046536
+    - asymerror:
+        minus: -0.12232
+        plus: 0.10992
+      label: Raa, R = 0.2, Central, ML, systematic uncertainty
+    value: 0.50014
+  - errors:
+    - label: Raa, R = 0.2, Central, ML, statistical uncertainty
+      symerror: 0.060623
+    - asymerror:
+        minus: -0.13612
+        plus: 0.20707
+      label: Raa, R = 0.2, Central, ML, systematic uncertainty
+    value: 0.46293
+independent_variables:
+- header:
+    name: pT
+    units: GeV/#it{c}
+  values:
+  - value: 25.0
+  - value: 35.0
+  - value: 45.0
+  - value: 55.0
+  - value: 65.0
+  - value: 77.5
+  - value: 92.5
+  - value: 110.0
+  - value: 130.0

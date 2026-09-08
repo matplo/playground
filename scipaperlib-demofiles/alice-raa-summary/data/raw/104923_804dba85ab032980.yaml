@@ -1,0 +1,2256 @@
+dependent_variables:
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 0-5}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.00092008}
+    - {label: syst., symerror: 0.0068548}
+    value: 0.05825
+  - errors:
+    - {label: stat., symerror: 0.0007884}
+    - {label: syst., symerror: 0.0064737}
+    value: 0.062038
+  - errors:
+    - {label: stat., symerror: 0.00074169}
+    - {label: syst., symerror: 0.0063346}
+    value: 0.067887
+  - errors:
+    - {label: stat., symerror: 0.00037975}
+    - {label: syst., symerror: 0.0051694}
+    value: 0.070001
+  - errors:
+    - {label: stat., symerror: 0.00077967}
+    - {label: syst., symerror: 0.0049935}
+    value: 0.076547
+  - errors:
+    - {label: stat., symerror: 0.00081613}
+    - {label: syst., symerror: 0.0051148}
+    value: 0.085814
+  - errors:
+    - {label: stat., symerror: 0.00089995}
+    - {label: syst., symerror: 0.0075144}
+    value: 0.089227
+  - errors:
+    - {label: stat., symerror: 0.00048456}
+    - {label: syst., symerror: 0.010637}
+    value: 0.095075
+  - errors:
+    - {label: stat., symerror: 0.00056693}
+    - {label: syst., symerror: 0.01488}
+    value: 0.1096
+  - errors:
+    - {label: stat., symerror: 0.00065258}
+    - {label: syst., symerror: 0.021334}
+    value: 0.12066
+  - errors:
+    - {label: stat., symerror: 0.00060683}
+    - {label: syst., symerror: 0.0070437}
+    value: 0.12111
+  - errors:
+    - {label: stat., symerror: 0.00067425}
+    - {label: syst., symerror: 0.0072002}
+    value: 0.13224
+  - errors:
+    - {label: stat., symerror: 0.00078584}
+    - {label: syst., symerror: 0.0080946}
+    value: 0.15188
+  - errors:
+    - {label: stat., symerror: 0.00087404}
+    - {label: syst., symerror: 0.0087356}
+    value: 0.16079
+  - errors:
+    - {label: stat., symerror: 0.00073495}
+    - {label: syst., symerror: 0.0093464}
+    value: 0.1829
+  - errors:
+    - {label: stat., symerror: 0.00094105}
+    - {label: syst., symerror: 0.011455}
+    value: 0.2205
+  - errors:
+    - {label: stat., symerror: 0.0012279}
+    - {label: syst., symerror: 0.013938}
+    value: 0.26584
+  - errors:
+    - {label: stat., symerror: 0.0015737}
+    - {label: syst., symerror: 0.017378}
+    value: 0.31707
+  - errors:
+    - {label: stat., symerror: 0.001907}
+    - {label: syst., symerror: 0.019184}
+    value: 0.36108
+  - errors:
+    - {label: stat., symerror: 0.00261}
+    - {label: syst., symerror: 0.02019}
+    value: 0.40615
+  - errors:
+    - {label: stat., symerror: 0.0030893}
+    - {label: syst., symerror: 0.022594}
+    value: 0.46353
+  - errors:
+    - {label: stat., symerror: 0.00356}
+    - {label: syst., symerror: 0.024178}
+    value: 0.50899
+  - errors:
+    - {label: stat., symerror: 0.0041162}
+    - {label: syst., symerror: 0.026599}
+    value: 0.55643
+  - errors:
+    - {label: stat., symerror: 0.0046168}
+    - {label: syst., symerror: 0.028283}
+    value: 0.59282
+  - errors:
+    - {label: stat., symerror: 0.0045588}
+    - {label: syst., symerror: 0.032588}
+    value: 0.65759
+  - errors:
+    - {label: stat., symerror: 0.0052765}
+    - {label: syst., symerror: 0.035554}
+    value: 0.71921
+  - errors:
+    - {label: stat., symerror: 0.0066336}
+    - {label: syst., symerror: 0.034818}
+    value: 0.74127
+  - errors:
+    - {label: stat., symerror: 0.0076499}
+    - {label: syst., symerror: 0.035303}
+    value: 0.75955
+  - errors:
+    - {label: stat., symerror: 0.008506}
+    - {label: syst., symerror: 0.035586}
+    value: 0.75246
+  - errors:
+    - {label: stat., symerror: 0.0098448}
+    - {label: syst., symerror: 0.034652}
+    value: 0.72153
+  - errors:
+    - {label: stat., symerror: 0.012045}
+    - {label: syst., symerror: 0.034616}
+    value: 0.66581
+  - errors:
+    - {label: stat., symerror: 0.015542}
+    - {label: syst., symerror: 0.037111}
+    value: 0.62251
+  - errors:
+    - {label: stat., symerror: 0.01647}
+    - {label: syst., symerror: 0.038861}
+    value: 0.57329
+  - errors:
+    - {label: stat., symerror: 0.016835}
+    - {label: syst., symerror: 0.037617}
+    value: 0.56287
+  - errors:
+    - {label: stat., symerror: 0.019712}
+    - {label: syst., symerror: 0.036108}
+    value: 0.48671
+  - errors:
+    - {label: stat., symerror: 0.021547}
+    - {label: syst., symerror: 0.036132}
+    value: 0.403
+  - errors:
+    - {label: stat., symerror: 0.019045}
+    - {label: syst., symerror: 0.031135}
+    value: 0.32364
+  - errors:
+    - {label: stat., symerror: 0.01853}
+    - {label: syst., symerror: 0.027029}
+    value: 0.26701
+  - errors:
+    - {label: stat., symerror: 0.0054651}
+    - {label: syst., symerror: 0.022061}
+    value: 0.21235
+  - errors:
+    - {label: stat., symerror: 0.0069944}
+    - {label: syst., symerror: 0.024338}
+    value: 0.1689
+  - errors:
+    - {label: stat., symerror: 0.0074353}
+    - {label: syst., symerror: 0.017613}
+    value: 0.1583
+  - errors:
+    - {label: stat., symerror: 0.011334}
+    - {label: syst., symerror: 0.015714}
+    value: 0.1415
+  - errors:
+    - {label: stat., symerror: 0.02651}
+    - {label: syst., symerror: 0.019566}
+    value: 0.21338
+  - errors:
+    - {label: stat., symerror: 0.0303}
+    - {label: syst., symerror: 0.016155}
+    value: 0.1763
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 5-10}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.0013316}
+    - {label: syst., symerror: 0.0069882}
+    value: 0.058902
+  - errors:
+    - {label: stat., symerror: 0.0012493}
+    - {label: syst., symerror: 0.0072065}
+    value: 0.068299
+  - errors:
+    - {label: stat., symerror: 0.0010899}
+    - {label: syst., symerror: 0.0068042}
+    value: 0.071906
+  - errors:
+    - {label: stat., symerror: 0.00039569}
+    - {label: syst., symerror: 0.0046381}
+    value: 0.07588
+  - errors:
+    - {label: stat., symerror: 0.00084764}
+    - {label: syst., symerror: 0.0046331}
+    value: 0.082289
+  - errors:
+    - {label: stat., symerror: 0.00089414}
+    - {label: syst., symerror: 0.0048525}
+    value: 0.091113
+  - errors:
+    - {label: stat., symerror: 0.00098287}
+    - {label: syst., symerror: 0.0064277}
+    value: 0.095412
+  - errors:
+    - {label: stat., symerror: 0.00055996}
+    - {label: syst., symerror: 0.0098547}
+    value: 0.10126
+  - errors:
+    - {label: stat., symerror: 0.00065158}
+    - {label: syst., symerror: 0.014486}
+    value: 0.11592
+  - errors:
+    - {label: stat., symerror: 0.00074364}
+    - {label: syst., symerror: 0.021846}
+    value: 0.12649
+  - errors:
+    - {label: stat., symerror: 0.00078475}
+    - {label: syst., symerror: 0.0074399}
+    value: 0.12746
+  - errors:
+    - {label: stat., symerror: 0.00090057}
+    - {label: syst., symerror: 0.0077694}
+    value: 0.14373
+  - errors:
+    - {label: stat., symerror: 0.0010389}
+    - {label: syst., symerror: 0.0086185}
+    value: 0.16231
+  - errors:
+    - {label: stat., symerror: 0.0011747}
+    - {label: syst., symerror: 0.0093978}
+    value: 0.17355
+  - errors:
+    - {label: stat., symerror: 0.0009879}
+    - {label: syst., symerror: 0.0099966}
+    value: 0.19636
+  - errors:
+    - {label: stat., symerror: 0.0012836}
+    - {label: syst., symerror: 0.012256}
+    value: 0.23692
+  - errors:
+    - {label: stat., symerror: 0.0016461}
+    - {label: syst., symerror: 0.014691}
+    value: 0.28126
+  - errors:
+    - {label: stat., symerror: 0.0021183}
+    - {label: syst., symerror: 0.018268}
+    value: 0.33469
+  - errors:
+    - {label: stat., symerror: 0.002597}
+    - {label: syst., symerror: 0.020212}
+    value: 0.38219
+  - errors:
+    - {label: stat., symerror: 0.0033003}
+    - {label: syst., symerror: 0.021102}
+    value: 0.42928
+  - errors:
+    - {label: stat., symerror: 0.0038583}
+    - {label: syst., symerror: 0.023402}
+    value: 0.48206
+  - errors:
+    - {label: stat., symerror: 0.0044292}
+    - {label: syst., symerror: 0.025029}
+    value: 0.52904
+  - errors:
+    - {label: stat., symerror: 0.0050512}
+    - {label: syst., symerror: 0.027043}
+    value: 0.5715
+  - errors:
+    - {label: stat., symerror: 0.0057716}
+    - {label: syst., symerror: 0.029473}
+    value: 0.61882
+  - errors:
+    - {label: stat., symerror: 0.005312}
+    - {label: syst., symerror: 0.033131}
+    value: 0.67144
+  - errors:
+    - {label: stat., symerror: 0.0062771}
+    - {label: syst., symerror: 0.036169}
+    value: 0.73157
+  - errors:
+    - {label: stat., symerror: 0.0077267}
+    - {label: syst., symerror: 0.035708}
+    value: 0.76
+  - errors:
+    - {label: stat., symerror: 0.0087046}
+    - {label: syst., symerror: 0.035524}
+    value: 0.76551
+  - errors:
+    - {label: stat., symerror: 0.0097869}
+    - {label: syst., symerror: 0.036}
+    value: 0.75668
+  - errors:
+    - {label: stat., symerror: 0.011136}
+    - {label: syst., symerror: 0.034984}
+    value: 0.72836
+  - errors:
+    - {label: stat., symerror: 0.013542}
+    - {label: syst., symerror: 0.035225}
+    value: 0.68826
+  - errors:
+    - {label: stat., symerror: 0.016755}
+    - {label: syst., symerror: 0.037577}
+    value: 0.63629
+  - errors:
+    - {label: stat., symerror: 0.018391}
+    - {label: syst., symerror: 0.041354}
+    value: 0.60969
+  - errors:
+    - {label: stat., symerror: 0.017861}
+    - {label: syst., symerror: 0.03824}
+    value: 0.56915
+  - errors:
+    - {label: stat., symerror: 0.02047}
+    - {label: syst., symerror: 0.036997}
+    value: 0.49583
+  - errors:
+    - {label: stat., symerror: 0.02247}
+    - {label: syst., symerror: 0.037718}
+    value: 0.41297
+  - errors:
+    - {label: stat., symerror: 0.019834}
+    - {label: syst., symerror: 0.032212}
+    value: 0.3293
+  - errors:
+    - {label: stat., symerror: 0.020623}
+    - {label: syst., symerror: 0.029773}
+    value: 0.29044
+  - errors:
+    - {label: stat., symerror: 0.0059906}
+    - {label: syst., symerror: 0.023988}
+    value: 0.23008
+  - errors:
+    - {label: stat., symerror: 0.0075383}
+    - {label: syst., symerror: 0.025852}
+    value: 0.17978
+  - errors:
+    - {label: stat., symerror: 0.0077975}
+    - {label: syst., symerror: 0.018333}
+    value: 0.16397
+  - errors:
+    - {label: stat., symerror: 0.011036}
+    - {label: syst., symerror: 0.015018}
+    value: 0.13505
+  - errors:
+    - {label: stat., symerror: 0.025061}
+    - {label: syst., symerror: 0.018216}
+    value: 0.19864
+  - errors:
+    - {label: stat., symerror: 0.030145}
+    - {label: syst., symerror: 0.015915}
+    value: 0.17216
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 10-20}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.0012453}
+    - {label: syst., symerror: 0.0081869}
+    value: 0.06995
+  - errors:
+    - {label: stat., symerror: 0.0011011}
+    - {label: syst., symerror: 0.0077716}
+    value: 0.075063
+  - errors:
+    - {label: stat., symerror: 0.0010264}
+    - {label: syst., symerror: 0.0075781}
+    value: 0.081951
+  - errors:
+    - {label: stat., symerror: 0.00039044}
+    - {label: syst., symerror: 0.0050902}
+    value: 0.083408
+  - errors:
+    - {label: stat., symerror: 0.00090357}
+    - {label: syst., symerror: 0.0049511}
+    value: 0.091279
+  - errors:
+    - {label: stat., symerror: 0.00092521}
+    - {label: syst., symerror: 0.0049229}
+    value: 0.10156
+  - errors:
+    - {label: stat., symerror: 0.0010867}
+    - {label: syst., symerror: 0.0059968}
+    value: 0.10674
+  - errors:
+    - {label: stat., symerror: 0.00059551}
+    - {label: syst., symerror: 0.0098839}
+    value: 0.11264
+  - errors:
+    - {label: stat., symerror: 0.00069847}
+    - {label: syst., symerror: 0.014519}
+    value: 0.13003
+  - errors:
+    - {label: stat., symerror: 0.00077974}
+    - {label: syst., symerror: 0.024541}
+    value: 0.13898
+  - errors:
+    - {label: stat., symerror: 0.00073773}
+    - {label: syst., symerror: 0.008433}
+    value: 0.14496
+  - errors:
+    - {label: stat., symerror: 0.00083333}
+    - {label: syst., symerror: 0.0086664}
+    value: 0.16132
+  - errors:
+    - {label: stat., symerror: 0.00097822}
+    - {label: syst., symerror: 0.0097116}
+    value: 0.18416
+  - errors:
+    - {label: stat., symerror: 0.0011019}
+    - {label: syst., symerror: 0.010535}
+    value: 0.19527
+  - errors:
+    - {label: stat., symerror: 0.00092866}
+    - {label: syst., symerror: 0.011141}
+    value: 0.21957
+  - errors:
+    - {label: stat., symerror: 0.001211}
+    - {label: syst., symerror: 0.01364}
+    value: 0.26499
+  - errors:
+    - {label: stat., symerror: 0.0015353}
+    - {label: syst., symerror: 0.016106}
+    value: 0.3101
+  - errors:
+    - {label: stat., symerror: 0.0019824}
+    - {label: syst., symerror: 0.020009}
+    value: 0.36885
+  - errors:
+    - {label: stat., symerror: 0.0024025}
+    - {label: syst., symerror: 0.022}
+    value: 0.41619
+  - errors:
+    - {label: stat., symerror: 0.0031339}
+    - {label: syst., symerror: 0.022692}
+    value: 0.46297
+  - errors:
+    - {label: stat., symerror: 0.0036558}
+    - {label: syst., symerror: 0.02494}
+    value: 0.51958
+  - errors:
+    - {label: stat., symerror: 0.0042361}
+    - {label: syst., symerror: 0.026978}
+    value: 0.57299
+  - errors:
+    - {label: stat., symerror: 0.0047955}
+    - {label: syst., symerror: 0.028986}
+    value: 0.61344
+  - errors:
+    - {label: stat., symerror: 0.0053949}
+    - {label: syst., symerror: 0.030873}
+    value: 0.65388
+  - errors:
+    - {label: stat., symerror: 0.0051674}
+    - {label: syst., symerror: 0.03511}
+    value: 0.71648
+  - errors:
+    - {label: stat., symerror: 0.0058762}
+    - {label: syst., symerror: 0.037219}
+    value: 0.76153
+  - errors:
+    - {label: stat., symerror: 0.0073696}
+    - {label: syst., symerror: 0.036598}
+    value: 0.79304
+  - errors:
+    - {label: stat., symerror: 0.0081829}
+    - {label: syst., symerror: 0.036277}
+    value: 0.78455
+  - errors:
+    - {label: stat., symerror: 0.0092399}
+    - {label: syst., symerror: 0.036934}
+    value: 0.78567
+  - errors:
+    - {label: stat., symerror: 0.010758}
+    - {label: syst., symerror: 0.036757}
+    value: 0.76191
+  - errors:
+    - {label: stat., symerror: 0.013495}
+    - {label: syst., symerror: 0.037712}
+    value: 0.72391
+  - errors:
+    - {label: stat., symerror: 0.016711}
+    - {label: syst., symerror: 0.039285}
+    value: 0.66091
+  - errors:
+    - {label: stat., symerror: 0.018081}
+    - {label: syst., symerror: 0.042397}
+    value: 0.62113
+  - errors:
+    - {label: stat., symerror: 0.018549}
+    - {label: syst., symerror: 0.041288}
+    value: 0.61208
+  - errors:
+    - {label: stat., symerror: 0.022418}
+    - {label: syst., symerror: 0.041316}
+    value: 0.55166
+  - errors:
+    - {label: stat., symerror: 0.024757}
+    - {label: syst., symerror: 0.042629}
+    value: 0.46144
+  - errors:
+    - {label: stat., symerror: 0.022255}
+    - {label: syst., symerror: 0.037185}
+    value: 0.37687
+  - errors:
+    - {label: stat., symerror: 0.022639}
+    - {label: syst., symerror: 0.033691}
+    value: 0.32548
+  - errors:
+    - {label: stat., symerror: 0.0067594}
+    - {label: syst., symerror: 0.027495}
+    value: 0.26315
+  - errors:
+    - {label: stat., symerror: 0.0086507}
+    - {label: syst., symerror: 0.030357}
+    value: 0.21027
+  - errors:
+    - {label: stat., symerror: 0.0088542}
+    - {label: syst., symerror: 0.021261}
+    value: 0.19046
+  - errors:
+    - {label: stat., symerror: 0.013071}
+    - {label: syst., symerror: 0.018449}
+    value: 0.16524
+  - errors:
+    - {label: stat., symerror: 0.028256}
+    - {label: syst., symerror: 0.021191}
+    value: 0.22906
+  - errors:
+    - {label: stat., symerror: 0.03182}
+    - {label: syst., symerror: 0.01723}
+    value: 0.18687
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 20-40}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.0014987}
+    - {label: syst., symerror: 0.0090336}
+    value: 0.093587
+  - errors:
+    - {label: stat., symerror: 0.0013172}
+    - {label: syst., symerror: 0.0085522}
+    value: 0.10173
+  - errors:
+    - {label: stat., symerror: 0.0012147}
+    - {label: syst., symerror: 0.008245}
+    value: 0.10954
+  - errors:
+    - {label: stat., symerror: 0.00050136}
+    - {label: syst., symerror: 0.0062328}
+    value: 0.11447
+  - errors:
+    - {label: stat., symerror: 0.0012054}
+    - {label: syst., symerror: 0.0059445}
+    value: 0.12326
+  - errors:
+    - {label: stat., symerror: 0.0012026}
+    - {label: syst., symerror: 0.0056402}
+    value: 0.13442
+  - errors:
+    - {label: stat., symerror: 0.0014286}
+    - {label: syst., symerror: 0.0063697}
+    value: 0.1407
+  - errors:
+    - {label: stat., symerror: 0.00077051}
+    - {label: syst., symerror: 0.0099532}
+    value: 0.1473
+  - errors:
+    - {label: stat., symerror: 0.00089096}
+    - {label: syst., symerror: 0.013249}
+    value: 0.16766
+  - errors:
+    - {label: stat., symerror: 0.0010001}
+    - {label: syst., symerror: 0.018943}
+    value: 0.18034
+  - errors:
+    - {label: stat., symerror: 0.00090372}
+    - {label: syst., symerror: 0.0097629}
+    value: 0.19294
+  - errors:
+    - {label: stat., symerror: 0.0010108}
+    - {label: syst., symerror: 0.0098527}
+    value: 0.20894
+  - errors:
+    - {label: stat., symerror: 0.0011639}
+    - {label: syst., symerror: 0.010951}
+    value: 0.23777
+  - errors:
+    - {label: stat., symerror: 0.0013328}
+    - {label: syst., symerror: 0.011882}
+    value: 0.2523
+  - errors:
+    - {label: stat., symerror: 0.0011149}
+    - {label: syst., symerror: 0.012516}
+    value: 0.28052
+  - errors:
+    - {label: stat., symerror: 0.0014367}
+    - {label: syst., symerror: 0.015069}
+    value: 0.33344
+  - errors:
+    - {label: stat., symerror: 0.0018205}
+    - {label: syst., symerror: 0.017467}
+    value: 0.38776
+  - errors:
+    - {label: stat., symerror: 0.0022753}
+    - {label: syst., symerror: 0.020978}
+    value: 0.44528
+  - errors:
+    - {label: stat., symerror: 0.0027526}
+    - {label: syst., symerror: 0.02272}
+    value: 0.49968
+  - errors:
+    - {label: stat., symerror: 0.0035562}
+    - {label: syst., symerror: 0.022687}
+    value: 0.54525
+  - errors:
+    - {label: stat., symerror: 0.0041016}
+    - {label: syst., symerror: 0.02465}
+    value: 0.60324
+  - errors:
+    - {label: stat., symerror: 0.0046063}
+    - {label: syst., symerror: 0.025713}
+    value: 0.64589
+  - errors:
+    - {label: stat., symerror: 0.0052907}
+    - {label: syst., symerror: 0.02784}
+    value: 0.69623
+  - errors:
+    - {label: stat., symerror: 0.0058519}
+    - {label: syst., symerror: 0.029059}
+    value: 0.73107
+  - errors:
+    - {label: stat., symerror: 0.0055194}
+    - {label: syst., symerror: 0.032999}
+    value: 0.78203
+  - errors:
+    - {label: stat., symerror: 0.0062075}
+    - {label: syst., symerror: 0.035131}
+    value: 0.82489
+  - errors:
+    - {label: stat., symerror: 0.0076885}
+    - {label: syst., symerror: 0.034285}
+    value: 0.84301
+  - errors:
+    - {label: stat., symerror: 0.0087561}
+    - {label: syst., symerror: 0.034396}
+    value: 0.85163
+  - errors:
+    - {label: stat., symerror: 0.0096786}
+    - {label: syst., symerror: 0.03484}
+    value: 0.83734
+  - errors:
+    - {label: stat., symerror: 0.01128}
+    - {label: syst., symerror: 0.034859}
+    value: 0.81033
+  - errors:
+    - {label: stat., symerror: 0.014071}
+    - {label: syst., symerror: 0.036627}
+    value: 0.76383
+  - errors:
+    - {label: stat., symerror: 0.017929}
+    - {label: syst., symerror: 0.040331}
+    value: 0.71293
+  - errors:
+    - {label: stat., symerror: 0.019496}
+    - {label: syst., symerror: 0.042289}
+    value: 0.67441
+  - errors:
+    - {label: stat., symerror: 0.020282}
+    - {label: syst., symerror: 0.041405}
+    value: 0.67389
+  - errors:
+    - {label: stat., symerror: 0.024669}
+    - {label: syst., symerror: 0.042064}
+    value: 0.6087
+  - errors:
+    - {label: stat., symerror: 0.028586}
+    - {label: syst., symerror: 0.045413}
+    value: 0.53461
+  - errors:
+    - {label: stat., symerror: 0.026105}
+    - {label: syst., symerror: 0.040552}
+    value: 0.44358
+  - errors:
+    - {label: stat., symerror: 0.026697}
+    - {label: syst., symerror: 0.036792}
+    value: 0.38409
+  - errors:
+    - {label: stat., symerror: 0.0082735}
+    - {label: syst., symerror: 0.030095}
+    value: 0.31826
+  - errors:
+    - {label: stat., symerror: 0.010912}
+    - {label: syst., symerror: 0.034492}
+    value: 0.26377
+  - errors:
+    - {label: stat., symerror: 0.011712}
+    - {label: syst., symerror: 0.025846}
+    value: 0.25296
+  - errors:
+    - {label: stat., symerror: 0.017096}
+    - {label: syst., symerror: 0.022356}
+    value: 0.21821
+  - errors:
+    - {label: stat., symerror: 0.036954}
+    - {label: syst., symerror: 0.025458}
+    value: 0.30224
+  - errors:
+    - {label: stat., symerror: 0.042446}
+    - {label: syst., symerror: 0.021517}
+    value: 0.25338
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 40-60}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.0040102}
+    - {label: syst., symerror: 0.016154}
+    value: 0.1681
+  - errors:
+    - {label: stat., symerror: 0.0034108}
+    - {label: syst., symerror: 0.015026}
+    value: 0.17975
+  - errors:
+    - {label: stat., symerror: 0.0029857}
+    - {label: syst., symerror: 0.013696}
+    value: 0.18435
+  - errors:
+    - {label: stat., symerror: 0.0012116}
+    - {label: syst., symerror: 0.011086}
+    value: 0.19965
+  - errors:
+    - {label: stat., symerror: 0.0022299}
+    - {label: syst., symerror: 0.010272}
+    value: 0.21239
+  - errors:
+    - {label: stat., symerror: 0.0022184}
+    - {label: syst., symerror: 0.0095168}
+    value: 0.22906
+  - errors:
+    - {label: stat., symerror: 0.0024767}
+    - {label: syst., symerror: 0.010412}
+    value: 0.23644
+  - errors:
+    - {label: stat., symerror: 0.001429}
+    - {label: syst., symerror: 0.015884}
+    value: 0.24396
+  - errors:
+    - {label: stat., symerror: 0.0016393}
+    - {label: syst., symerror: 0.018957}
+    value: 0.27448
+  - errors:
+    - {label: stat., symerror: 0.0018013}
+    - {label: syst., symerror: 0.026248}
+    value: 0.28822
+  - errors:
+    - {label: stat., symerror: 0.002027}
+    - {label: syst., symerror: 0.016032}
+    value: 0.31361
+  - errors:
+    - {label: stat., symerror: 0.0022544}
+    - {label: syst., symerror: 0.016029}
+    value: 0.33416
+  - errors:
+    - {label: stat., symerror: 0.0025816}
+    - {label: syst., symerror: 0.01743}
+    value: 0.37267
+  - errors:
+    - {label: stat., symerror: 0.002895}
+    - {label: syst., symerror: 0.018669}
+    value: 0.38966
+  - errors:
+    - {label: stat., symerror: 0.0023307}
+    - {label: syst., symerror: 0.018843}
+    value: 0.41538
+  - errors:
+    - {label: stat., symerror: 0.003014}
+    - {label: syst., symerror: 0.022564}
+    value: 0.48901
+  - errors:
+    - {label: stat., symerror: 0.0036625}
+    - {label: syst., symerror: 0.024783}
+    value: 0.5402
+  - errors:
+    - {label: stat., symerror: 0.004432}
+    - {label: syst., symerror: 0.028751}
+    value: 0.59945
+  - errors:
+    - {label: stat., symerror: 0.005077}
+    - {label: syst., symerror: 0.029623}
+    value: 0.63944
+  - errors:
+    - {label: stat., symerror: 0.005895}
+    - {label: syst., symerror: 0.028919}
+    value: 0.68234
+  - errors:
+    - {label: stat., symerror: 0.0065386}
+    - {label: syst., symerror: 0.030005}
+    value: 0.72713
+  - errors:
+    - {label: stat., symerror: 0.0071525}
+    - {label: syst., symerror: 0.030628}
+    value: 0.75497
+  - errors:
+    - {label: stat., symerror: 0.0079576}
+    - {label: syst., symerror: 0.03209}
+    value: 0.79411
+  - errors:
+    - {label: stat., symerror: 0.0087193}
+    - {label: syst., symerror: 0.033288}
+    value: 0.82104
+  - errors:
+    - {label: stat., symerror: 0.0076523}
+    - {label: syst., symerror: 0.036486}
+    value: 0.8582
+  - errors:
+    - {label: stat., symerror: 0.0089505}
+    - {label: syst., symerror: 0.039082}
+    value: 0.90283
+  - errors:
+    - {label: stat., symerror: 0.010359}
+    - {label: syst., symerror: 0.037141}
+    value: 0.89704
+  - errors:
+    - {label: stat., symerror: 0.011404}
+    - {label: syst., symerror: 0.036166}
+    value: 0.87735
+  - errors:
+    - {label: stat., symerror: 0.013071}
+    - {label: syst., symerror: 0.03726}
+    value: 0.88346
+  - errors:
+    - {label: stat., symerror: 0.015013}
+    - {label: syst., symerror: 0.037298}
+    value: 0.86046
+  - errors:
+    - {label: stat., symerror: 0.017355}
+    - {label: syst., symerror: 0.03862}
+    value: 0.79616
+  - errors:
+    - {label: stat., symerror: 0.021199}
+    - {label: syst., symerror: 0.042397}
+    value: 0.74728
+  - errors:
+    - {label: stat., symerror: 0.022847}
+    - {label: syst., symerror: 0.044882}
+    value: 0.71295
+  - errors:
+    - {label: stat., symerror: 0.023159}
+    - {label: syst., symerror: 0.042978}
+    value: 0.69117
+  - errors:
+    - {label: stat., symerror: 0.028517}
+    - {label: syst., symerror: 0.046733}
+    value: 0.6705
+  - errors:
+    - {label: stat., symerror: 0.033123}
+    - {label: syst., symerror: 0.050749}
+    value: 0.59775
+  - errors:
+    - {label: stat., symerror: 0.033175}
+    - {label: syst., symerror: 0.049223}
+    value: 0.53869
+  - errors:
+    - {label: stat., symerror: 0.037127}
+    - {label: syst., symerror: 0.049163}
+    value: 0.51111
+  - errors:
+    - {label: stat., symerror: 0.012245}
+    - {label: syst., symerror: 0.042281}
+    value: 0.44758
+  - errors:
+    - {label: stat., symerror: 0.017916}
+    - {label: syst., symerror: 0.054346}
+    value: 0.41525
+  - errors:
+    - {label: stat., symerror: 0.020199}
+    - {label: syst., symerror: 0.043488}
+    value: 0.42575
+  - errors:
+    - {label: stat., symerror: 0.03218}
+    - {label: syst., symerror: 0.041639}
+    value: 0.40533
+  - errors:
+    - {label: stat., symerror: 0.065891}
+    - {label: syst., symerror: 0.045196}
+    value: 0.5338
+  - errors:
+    - {label: stat., symerror: 0.073308}
+    - {label: syst., symerror: 0.036717}
+    value: 0.43212
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 60-80}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.014088}
+    - {label: syst., symerror: 0.032628}
+    value: 0.34128
+  - errors:
+    - {label: stat., symerror: 0.012249}
+    - {label: syst., symerror: 0.030438}
+    value: 0.36333
+  - errors:
+    - {label: stat., symerror: 0.011204}
+    - {label: syst., symerror: 0.027994}
+    value: 0.37898
+  - errors:
+    - {label: stat., symerror: 0.0045429}
+    - {label: syst., symerror: 0.022882}
+    value: 0.39251
+  - errors:
+    - {label: stat., symerror: 0.0059034}
+    - {label: syst., symerror: 0.021133}
+    value: 0.40638
+  - errors:
+    - {label: stat., symerror: 0.0061616}
+    - {label: syst., symerror: 0.019457}
+    value: 0.42414
+  - errors:
+    - {label: stat., symerror: 0.0050485}
+    - {label: syst., symerror: 0.022289}
+    value: 0.43437
+  - errors:
+    - {label: stat., symerror: 0.0033929}
+    - {label: syst., symerror: 0.030379}
+    value: 0.43445
+  - errors:
+    - {label: stat., symerror: 0.0038224}
+    - {label: syst., symerror: 0.039046}
+    value: 0.47706
+  - errors:
+    - {label: stat., symerror: 0.004135}
+    - {label: syst., symerror: 0.042265}
+    value: 0.49135
+  - errors:
+    - {label: stat., symerror: 0.0058065}
+    - {label: syst., symerror: 0.029511}
+    value: 0.5259
+  - errors:
+    - {label: stat., symerror: 0.0062737}
+    - {label: syst., symerror: 0.028767}
+    value: 0.54075
+  - errors:
+    - {label: stat., symerror: 0.0071892}
+    - {label: syst., symerror: 0.031715}
+    value: 0.59487
+  - errors:
+    - {label: stat., symerror: 0.0075556}
+    - {label: syst., symerror: 0.031741}
+    value: 0.58969
+  - errors:
+    - {label: stat., symerror: 0.0060981}
+    - {label: syst., symerror: 0.031278}
+    value: 0.61515
+  - errors:
+    - {label: stat., symerror: 0.0073981}
+    - {label: syst., symerror: 0.034437}
+    value: 0.66603
+  - errors:
+    - {label: stat., symerror: 0.0085575}
+    - {label: syst., symerror: 0.037019}
+    value: 0.71076
+  - errors:
+    - {label: stat., symerror: 0.0096169}
+    - {label: syst., symerror: 0.040486}
+    value: 0.74081
+  - errors:
+    - {label: stat., symerror: 0.012081}
+    - {label: syst., symerror: 0.042654}
+    value: 0.81584
+  - errors:
+    - {label: stat., symerror: 0.011473}
+    - {label: syst., symerror: 0.038677}
+    value: 0.80137
+  - errors:
+    - {label: stat., symerror: 0.012833}
+    - {label: syst., symerror: 0.040289}
+    value: 0.83795
+  - errors:
+    - {label: stat., symerror: 0.013715}
+    - {label: syst., symerror: 0.03963}
+    value: 0.8467
+  - errors:
+    - {label: stat., symerror: 0.01582}
+    - {label: syst., symerror: 0.041972}
+    value: 0.89743
+  - errors:
+    - {label: stat., symerror: 0.01728}
+    - {label: syst., symerror: 0.043286}
+    value: 0.91469
+  - errors:
+    - {label: stat., symerror: 0.013347}
+    - {label: syst., symerror: 0.043174}
+    value: 0.90586
+  - errors:
+    - {label: stat., symerror: 0.015564}
+    - {label: syst., symerror: 0.045801}
+    value: 0.92053
+  - errors:
+    - {label: stat., symerror: 0.017682}
+    - {label: syst., symerror: 0.042081}
+    value: 0.90885
+  - errors:
+    - {label: stat., symerror: 0.020011}
+    - {label: syst., symerror: 0.040811}
+    value: 0.90907
+  - errors:
+    - {label: stat., symerror: 0.022076}
+    - {label: syst., symerror: 0.039939}
+    value: 0.87839
+  - errors:
+    - {label: stat., symerror: 0.024239}
+    - {label: syst., symerror: 0.039804}
+    value: 0.84657
+  - errors:
+    - {label: stat., symerror: 0.029991}
+    - {label: syst., symerror: 0.044126}
+    value: 0.86078
+  - errors:
+    - {label: stat., symerror: 0.032568}
+    - {label: syst., symerror: 0.045497}
+    value: 0.77973
+  - errors:
+    - {label: stat., symerror: 0.032543}
+    - {label: syst., symerror: 0.047696}
+    value: 0.72391
+  - errors:
+    - {label: stat., symerror: 0.036783}
+    - {label: syst., symerror: 0.049375}
+    value: 0.75804
+  - errors:
+    - {label: stat., symerror: 0.037541}
+    - {label: syst., symerror: 0.051786}
+    value: 0.71539
+  - errors:
+    - {label: stat., symerror: 0.04451}
+    - {label: syst., symerror: 0.062018}
+    value: 0.69708
+  - errors:
+    - {label: stat., symerror: 0.045492}
+    - {label: syst., symerror: 0.059962}
+    value: 0.63363
+  - errors:
+    - {label: stat., symerror: 0.052497}
+    - {label: syst., symerror: 0.059357}
+    value: 0.60125
+  - errors:
+    - {label: stat., symerror: 0.019363}
+    - {label: syst., symerror: 0.055613}
+    value: 0.58381
+  - errors:
+    - {label: stat., symerror: 0.029768}
+    - {label: syst., symerror: 0.077087}
+    value: 0.58403
+  - errors:
+    - {label: stat., symerror: 0.03025}
+    - {label: syst., symerror: 0.058732}
+    value: 0.5675
+  - errors:
+    - {label: stat., symerror: 0.046584}
+    - {label: syst., symerror: 0.055829}
+    value: 0.53873
+  - errors:
+    - {label: stat., symerror: 0.095621}
+    - {label: syst., symerror: 0.063146}
+    value: 0.73386
+  - errors:
+    - {label: stat., symerror: 0.12648}
+    - {label: syst., symerror: 0.061879}
+    value: 0.71083
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 20-30}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.0017192}
+    - {label: syst., symerror: 0.0097519}
+    value: 0.082606
+  - errors:
+    - {label: stat., symerror: 0.0014909}
+    - {label: syst., symerror: 0.0094118}
+    value: 0.089898
+  - errors:
+    - {label: stat., symerror: 0.0014293}
+    - {label: syst., symerror: 0.009322}
+    value: 0.099464
+  - errors:
+    - {label: stat., symerror: 0.00053631}
+    - {label: syst., symerror: 0.0063386}
+    value: 0.10412
+  - errors:
+    - {label: stat., symerror: 0.0011369}
+    - {label: syst., symerror: 0.0061098}
+    value: 0.1121
+  - errors:
+    - {label: stat., symerror: 0.0011463}
+    - {label: syst., symerror: 0.0058984}
+    value: 0.12257
+  - errors:
+    - {label: stat., symerror: 0.001323}
+    - {label: syst., symerror: 0.0070143}
+    value: 0.12844
+  - errors:
+    - {label: stat., symerror: 0.00074506}
+    - {label: syst., symerror: 0.011357}
+    value: 0.1349
+  - errors:
+    - {label: stat., symerror: 0.00086771}
+    - {label: syst., symerror: 0.015999}
+    value: 0.1544
+  - errors:
+    - {label: stat., symerror: 0.00097352}
+    - {label: syst., symerror: 0.024348}
+    value: 0.16578
+  - errors:
+    - {label: stat., symerror: 0.0010243}
+    - {label: syst., symerror: 0.010267}
+    value: 0.17726
+  - errors:
+    - {label: stat., symerror: 0.0011333}
+    - {label: syst., symerror: 0.010327}
+    value: 0.19091
+  - errors:
+    - {label: stat., symerror: 0.0013149}
+    - {label: syst., symerror: 0.011498}
+    value: 0.21788
+  - errors:
+    - {label: stat., symerror: 0.0015187}
+    - {label: syst., symerror: 0.012638}
+    value: 0.23389
+  - errors:
+    - {label: stat., symerror: 0.0012725}
+    - {label: syst., symerror: 0.013255}
+    value: 0.2613
+  - errors:
+    - {label: stat., symerror: 0.001628}
+    - {label: syst., symerror: 0.015968}
+    value: 0.31055
+  - errors:
+    - {label: stat., symerror: 0.0020713}
+    - {label: syst., symerror: 0.018779}
+    value: 0.36313
+  - errors:
+    - {label: stat., symerror: 0.0026485}
+    - {label: syst., symerror: 0.022963}
+    value: 0.42502
+  - errors:
+    - {label: stat., symerror: 0.0031473}
+    - {label: syst., symerror: 0.024771}
+    value: 0.47339
+  - errors:
+    - {label: stat., symerror: 0.0039102}
+    - {label: syst., symerror: 0.025331}
+    value: 0.52021
+  - errors:
+    - {label: stat., symerror: 0.0045927}
+    - {label: syst., symerror: 0.027884}
+    value: 0.58387
+  - errors:
+    - {label: stat., symerror: 0.0051659}
+    - {label: syst., symerror: 0.029086}
+    value: 0.62683
+  - errors:
+    - {label: stat., symerror: 0.0058809}
+    - {label: syst., symerror: 0.031443}
+    value: 0.67261
+  - errors:
+    - {label: stat., symerror: 0.0065902}
+    - {label: syst., symerror: 0.033212}
+    value: 0.71562
+  - errors:
+    - {label: stat., symerror: 0.0060677}
+    - {label: syst., symerror: 0.037046}
+    value: 0.76903
+  - errors:
+    - {label: stat., symerror: 0.0069132}
+    - {label: syst., symerror: 0.039264}
+    value: 0.81237
+  - errors:
+    - {label: stat., symerror: 0.0083336}
+    - {label: syst., symerror: 0.038001}
+    value: 0.82673
+  - errors:
+    - {label: stat., symerror: 0.0095404}
+    - {label: syst., symerror: 0.038066}
+    value: 0.83781
+  - errors:
+    - {label: stat., symerror: 0.01064}
+    - {label: syst., symerror: 0.038561}
+    value: 0.82885
+  - errors:
+    - {label: stat., symerror: 0.012244}
+    - {label: syst., symerror: 0.038068}
+    value: 0.80084
+  - errors:
+    - {label: stat., symerror: 0.015042}
+    - {label: syst., symerror: 0.039196}
+    value: 0.76019
+  - errors:
+    - {label: stat., symerror: 0.018304}
+    - {label: syst., symerror: 0.041482}
+    value: 0.69624
+  - errors:
+    - {label: stat., symerror: 0.019859}
+    - {label: syst., symerror: 0.045088}
+    value: 0.66078
+  - errors:
+    - {label: stat., symerror: 0.021015}
+    - {label: syst., symerror: 0.045219}
+    value: 0.66775
+  - errors:
+    - {label: stat., symerror: 0.024542}
+    - {label: syst., symerror: 0.044764}
+    value: 0.59463
+  - errors:
+    - {label: stat., symerror: 0.028249}
+    - {label: syst., symerror: 0.049417}
+    value: 0.52096
+  - errors:
+    - {label: stat., symerror: 0.02522}
+    - {label: syst., symerror: 0.042394}
+    value: 0.42092
+  - errors:
+    - {label: stat., symerror: 0.025568}
+    - {label: syst., symerror: 0.037905}
+    value: 0.36036
+  - errors:
+    - {label: stat., symerror: 0.0077461}
+    - {label: syst., symerror: 0.030547}
+    value: 0.29151
+  - errors:
+    - {label: stat., symerror: 0.0098853}
+    - {label: syst., symerror: 0.033745}
+    value: 0.23347
+  - errors:
+    - {label: stat., symerror: 0.010215}
+    - {label: syst., symerror: 0.024209}
+    value: 0.2157
+  - errors:
+    - {label: stat., symerror: 0.01449}
+    - {label: syst., symerror: 0.020203}
+    value: 0.18007
+  - errors:
+    - {label: stat., symerror: 0.028716}
+    - {label: syst., symerror: 0.021078}
+    value: 0.229
+  - errors:
+    - {label: stat., symerror: 0.03605}
+    - {label: syst., symerror: 0.019486}
+    value: 0.20905
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 30-40}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.0027348}
+    - {label: syst., symerror: 0.013087}
+    value: 0.11249
+  - errors:
+    - {label: stat., symerror: 0.0024386}
+    - {label: syst., symerror: 0.01255}
+    value: 0.1221
+  - errors:
+    - {label: stat., symerror: 0.0021446}
+    - {label: syst., symerror: 0.011618}
+    value: 0.12688
+  - errors:
+    - {label: stat., symerror: 0.00074605}
+    - {label: syst., symerror: 0.0077782}
+    value: 0.13229
+  - errors:
+    - {label: stat., symerror: 0.0014853}
+    - {label: syst., symerror: 0.0075019}
+    value: 0.14246
+  - errors:
+    - {label: stat., symerror: 0.001504}
+    - {label: syst., symerror: 0.0072117}
+    value: 0.15481
+  - errors:
+    - {label: stat., symerror: 0.0016964}
+    - {label: syst., symerror: 0.0084432}
+    value: 0.1618
+  - errors:
+    - {label: stat., symerror: 0.00099187}
+    - {label: syst., symerror: 0.013776}
+    value: 0.16865
+  - errors:
+    - {label: stat., symerror: 0.0011408}
+    - {label: syst., symerror: 0.020129}
+    value: 0.19046
+  - errors:
+    - {label: stat., symerror: 0.0012873}
+    - {label: syst., symerror: 0.027955}
+    value: 0.20539
+  - errors:
+    - {label: stat., symerror: 0.0014806}
+    - {label: syst., symerror: 0.012707}
+    value: 0.21991
+  - errors:
+    - {label: stat., symerror: 0.0016629}
+    - {label: syst., symerror: 0.012957}
+    value: 0.23996
+  - errors:
+    - {label: stat., symerror: 0.0019395}
+    - {label: syst., symerror: 0.014321}
+    value: 0.27199
+  - errors:
+    - {label: stat., symerror: 0.0021467}
+    - {label: syst., symerror: 0.015331}
+    value: 0.28397
+  - errors:
+    - {label: stat., symerror: 0.0017864}
+    - {label: syst., symerror: 0.01591}
+    value: 0.31358
+  - errors:
+    - {label: stat., symerror: 0.0023242}
+    - {label: syst., symerror: 0.019167}
+    value: 0.37281
+  - errors:
+    - {label: stat., symerror: 0.0029102}
+    - {label: syst., symerror: 0.022243}
+    value: 0.4301
+  - errors:
+    - {label: stat., symerror: 0.0035039}
+    - {label: syst., symerror: 0.02594}
+    value: 0.48007
+  - errors:
+    - {label: stat., symerror: 0.0043432}
+    - {label: syst., symerror: 0.028513}
+    value: 0.54486
+  - errors:
+    - {label: stat., symerror: 0.0050677}
+    - {label: syst., symerror: 0.028577}
+    value: 0.58826
+  - errors:
+    - {label: stat., symerror: 0.0057373}
+    - {label: syst., symerror: 0.030323}
+    value: 0.63647
+  - errors:
+    - {label: stat., symerror: 0.0064272}
+    - {label: syst., symerror: 0.031418}
+    value: 0.67857
+  - errors:
+    - {label: stat., symerror: 0.0074589}
+    - {label: syst., symerror: 0.034369}
+    value: 0.73676
+  - errors:
+    - {label: stat., symerror: 0.0080218}
+    - {label: syst., symerror: 0.035081}
+    value: 0.75749
+  - errors:
+    - {label: stat., symerror: 0.0070886}
+    - {label: syst., symerror: 0.038675}
+    value: 0.80422
+  - errors:
+    - {label: stat., symerror: 0.0081939}
+    - {label: syst., symerror: 0.040874}
+    value: 0.84624
+  - errors:
+    - {label: stat., symerror: 0.0099049}
+    - {label: syst., symerror: 0.039974}
+    value: 0.87083
+  - errors:
+    - {label: stat., symerror: 0.011236}
+    - {label: syst., symerror: 0.039811}
+    value: 0.87521
+  - errors:
+    - {label: stat., symerror: 0.012369}
+    - {label: syst., symerror: 0.039603}
+    value: 0.85173
+  - errors:
+    - {label: stat., symerror: 0.014038}
+    - {label: syst., symerror: 0.03916}
+    value: 0.82646
+  - errors:
+    - {label: stat., symerror: 0.016455}
+    - {label: syst., symerror: 0.039597}
+    value: 0.76988
+  - errors:
+    - {label: stat., symerror: 0.020829}
+    - {label: syst., symerror: 0.044105}
+    value: 0.74151
+  - errors:
+    - {label: stat., symerror: 0.022139}
+    - {label: syst., symerror: 0.04722}
+    value: 0.69771
+  - errors:
+    - {label: stat., symerror: 0.02271}
+    - {label: syst., symerror: 0.045789}
+    value: 0.68427
+  - errors:
+    - {label: stat., symerror: 0.026747}
+    - {label: syst., symerror: 0.047358}
+    value: 0.63278
+  - errors:
+    - {label: stat., symerror: 0.030752}
+    - {label: syst., symerror: 0.051723}
+    value: 0.55798
+  - errors:
+    - {label: stat., symerror: 0.029504}
+    - {label: syst., symerror: 0.04761}
+    value: 0.48253
+  - errors:
+    - {label: stat., symerror: 0.03077}
+    - {label: syst., symerror: 0.044272}
+    value: 0.42491
+  - errors:
+    - {label: stat., symerror: 0.0099247}
+    - {label: syst., symerror: 0.038051}
+    value: 0.36429
+  - errors:
+    - {label: stat., symerror: 0.013613}
+    - {label: syst., symerror: 0.045657}
+    value: 0.31594
+  - errors:
+    - {label: stat., symerror: 0.015076}
+    - {label: syst., symerror: 0.035504}
+    value: 0.31714
+  - errors:
+    - {label: stat., symerror: 0.022671}
+    - {label: syst., symerror: 0.03175}
+    value: 0.28391
+  - errors:
+    - {label: stat., symerror: 0.05289}
+    - {label: syst., symerror: 0.039496}
+    value: 0.42841
+  - errors:
+    - {label: stat., symerror: 0.0561}
+    - {label: syst., symerror: 0.030408}
+    value: 0.32974
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 40-50}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.004484}
+    - {label: syst., symerror: 0.017138}
+    value: 0.14804
+  - errors:
+    - {label: stat., symerror: 0.0038466}
+    - {label: syst., symerror: 0.01625}
+    value: 0.15897
+  - errors:
+    - {label: stat., symerror: 0.0032574}
+    - {label: syst., symerror: 0.014568}
+    value: 0.1602
+  - errors:
+    - {label: stat., symerror: 0.0012915}
+    - {label: syst., symerror: 0.010885}
+    value: 0.17573
+  - errors:
+    - {label: stat., symerror: 0.0021034}
+    - {label: syst., symerror: 0.010148}
+    value: 0.18723
+  - errors:
+    - {label: stat., symerror: 0.002124}
+    - {label: syst., symerror: 0.0095367}
+    value: 0.20276
+  - errors:
+    - {label: stat., symerror: 0.0022721}
+    - {label: syst., symerror: 0.010953}
+    value: 0.21065
+  - errors:
+    - {label: stat., symerror: 0.0014023}
+    - {label: syst., symerror: 0.017389}
+    value: 0.21803
+  - errors:
+    - {label: stat., symerror: 0.001618}
+    - {label: syst., symerror: 0.022239}
+    value: 0.24651
+  - errors:
+    - {label: stat., symerror: 0.0017972}
+    - {label: syst., symerror: 0.032613}
+    value: 0.26105
+  - errors:
+    - {label: stat., symerror: 0.0022937}
+    - {label: syst., symerror: 0.016703}
+    value: 0.2855
+  - errors:
+    - {label: stat., symerror: 0.0025549}
+    - {label: syst., symerror: 0.016884}
+    value: 0.30638
+  - errors:
+    - {label: stat., symerror: 0.0029379}
+    - {label: syst., symerror: 0.018345}
+    value: 0.34227
+  - errors:
+    - {label: stat., symerror: 0.003336}
+    - {label: syst., symerror: 0.019916}
+    value: 0.36229
+  - errors:
+    - {label: stat., symerror: 0.002665}
+    - {label: syst., symerror: 0.019907}
+    value: 0.38531
+  - errors:
+    - {label: stat., symerror: 0.0035246}
+    - {label: syst., symerror: 0.024427}
+    value: 0.46553
+  - errors:
+    - {label: stat., symerror: 0.0042175}
+    - {label: syst., symerror: 0.026716}
+    value: 0.5071
+  - errors:
+    - {label: stat., symerror: 0.0051769}
+    - {label: syst., symerror: 0.031357}
+    value: 0.57011
+  - errors:
+    - {label: stat., symerror: 0.0058706}
+    - {label: syst., symerror: 0.032423}
+    value: 0.60867
+  - errors:
+    - {label: stat., symerror: 0.0066913}
+    - {label: syst., symerror: 0.032266}
+    value: 0.65241
+  - errors:
+    - {label: stat., symerror: 0.0075374}
+    - {label: syst., symerror: 0.033717}
+    value: 0.70367
+  - errors:
+    - {label: stat., symerror: 0.0082202}
+    - {label: syst., symerror: 0.03445}
+    value: 0.73045
+  - errors:
+    - {label: stat., symerror: 0.009072}
+    - {label: syst., symerror: 0.035943}
+    value: 0.7653
+  - errors:
+    - {label: stat., symerror: 0.010191}
+    - {label: syst., symerror: 0.038075}
+    value: 0.80861
+  - errors:
+    - {label: stat., symerror: 0.0086479}
+    - {label: syst., symerror: 0.040568}
+    value: 0.84097
+  - errors:
+    - {label: stat., symerror: 0.010463}
+    - {label: syst., symerror: 0.043895}
+    value: 0.89705
+  - errors:
+    - {label: stat., symerror: 0.011859}
+    - {label: syst., symerror: 0.04153}
+    value: 0.8905
+  - errors:
+    - {label: stat., symerror: 0.013186}
+    - {label: syst., symerror: 0.040728}
+    value: 0.88115
+  - errors:
+    - {label: stat., symerror: 0.014861}
+    - {label: syst., symerror: 0.041082}
+    value: 0.87287
+  - errors:
+    - {label: stat., symerror: 0.017385}
+    - {label: syst., symerror: 0.041264}
+    value: 0.86764
+  - errors:
+    - {label: stat., symerror: 0.019259}
+    - {label: syst., symerror: 0.041279}
+    value: 0.79081
+  - errors:
+    - {label: stat., symerror: 0.02237}
+    - {label: syst., symerror: 0.043449}
+    value: 0.72858
+  - errors:
+    - {label: stat., symerror: 0.023287}
+    - {label: syst., symerror: 0.046284}
+    value: 0.67718
+  - errors:
+    - {label: stat., symerror: 0.024977}
+    - {label: syst., symerror: 0.046961}
+    value: 0.68904
+  - errors:
+    - {label: stat., symerror: 0.028677}
+    - {label: syst., symerror: 0.049256}
+    value: 0.64964
+  - errors:
+    - {label: stat., symerror: 0.03219}
+    - {label: syst., symerror: 0.052844}
+    value: 0.56509
+  - errors:
+    - {label: stat., symerror: 0.032177}
+    - {label: syst., symerror: 0.050182}
+    value: 0.50578
+  - errors:
+    - {label: stat., symerror: 0.035723}
+    - {label: syst., symerror: 0.049599}
+    value: 0.47251
+  - errors:
+    - {label: stat., symerror: 0.011842}
+    - {label: syst., symerror: 0.043121}
+    value: 0.41474
+  - errors:
+    - {label: stat., symerror: 0.017021}
+    - {label: syst., symerror: 0.054599}
+    value: 0.37944
+  - errors:
+    - {label: stat., symerror: 0.018971}
+    - {label: syst., symerror: 0.043253}
+    value: 0.38881
+  - errors:
+    - {label: stat., symerror: 0.030537}
+    - {label: syst., symerror: 0.041956}
+    value: 0.37625
+  - errors:
+    - {label: stat., symerror: 0.061974}
+    - {label: syst., symerror: 0.045436}
+    value: 0.49352
+  - errors:
+    - {label: stat., symerror: 0.069235}
+    - {label: syst., symerror: 0.036767}
+    value: 0.39911
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 50-60}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.0079453}
+    - {label: syst., symerror: 0.024309}
+    value: 0.20864
+  - errors:
+    - {label: stat., symerror: 0.0066752}
+    - {label: syst., symerror: 0.022857}
+    value: 0.22173
+  - errors:
+    - {label: stat., symerror: 0.0060912}
+    - {label: syst., symerror: 0.021427}
+    value: 0.23321
+  - errors:
+    - {label: stat., symerror: 0.002215}
+    - {label: syst., symerror: 0.015356}
+    value: 0.248
+  - errors:
+    - {label: stat., symerror: 0.003193}
+    - {label: syst., symerror: 0.014097}
+    value: 0.26324
+  - errors:
+    - {label: stat., symerror: 0.0032194}
+    - {label: syst., symerror: 0.013037}
+    value: 0.28222
+  - errors:
+    - {label: stat., symerror: 0.0032683}
+    - {label: syst., symerror: 0.014586}
+    value: 0.28856
+  - errors:
+    - {label: stat., symerror: 0.0021705}
+    - {label: syst., symerror: 0.022965}
+    value: 0.29636
+  - errors:
+    - {label: stat., symerror: 0.0024879}
+    - {label: syst., symerror: 0.028523}
+    value: 0.33097
+  - errors:
+    - {label: stat., symerror: 0.0027082}
+    - {label: syst., symerror: 0.039613}
+    value: 0.34308
+  - errors:
+    - {label: stat., symerror: 0.0036912}
+    - {label: syst., symerror: 0.021591}
+    value: 0.37034
+  - errors:
+    - {label: stat., symerror: 0.0040821}
+    - {label: syst., symerror: 0.021433}
+    value: 0.39018
+  - errors:
+    - {label: stat., symerror: 0.0047098}
+    - {label: syst., symerror: 0.023234}
+    value: 0.43399
+  - errors:
+    - {label: stat., symerror: 0.0051118}
+    - {label: syst., symerror: 0.024458}
+    value: 0.44481
+  - errors:
+    - {label: stat., symerror: 0.0041667}
+    - {label: syst., symerror: 0.024592}
+    value: 0.47597
+  - errors:
+    - {label: stat., symerror: 0.0051947}
+    - {label: syst., symerror: 0.028139}
+    value: 0.53611
+  - errors:
+    - {label: stat., symerror: 0.0064771}
+    - {label: syst., symerror: 0.031967}
+    value: 0.60681
+  - errors:
+    - {label: stat., symerror: 0.0076367}
+    - {label: syst., symerror: 0.036216}
+    value: 0.65833
+  - errors:
+    - {label: stat., symerror: 0.0088911}
+    - {label: syst., symerror: 0.037337}
+    value: 0.70118
+  - errors:
+    - {label: stat., symerror: 0.0095921}
+    - {label: syst., symerror: 0.036636}
+    value: 0.74231
+  - errors:
+    - {label: stat., symerror: 0.010379}
+    - {label: syst., symerror: 0.03701}
+    value: 0.7739
+  - errors:
+    - {label: stat., symerror: 0.011449}
+    - {label: syst., symerror: 0.037857}
+    value: 0.80389
+  - errors:
+    - {label: stat., symerror: 0.012866}
+    - {label: syst., symerror: 0.039971}
+    value: 0.85168
+  - errors:
+    - {label: stat., symerror: 0.013397}
+    - {label: syst., symerror: 0.039799}
+    value: 0.84528
+  - errors:
+    - {label: stat., symerror: 0.011587}
+    - {label: syst., symerror: 0.04305}
+    value: 0.89218
+  - errors:
+    - {label: stat., symerror: 0.013272}
+    - {label: syst., symerror: 0.044671}
+    value: 0.9135
+  - errors:
+    - {label: stat., symerror: 0.015078}
+    - {label: syst., symerror: 0.0424}
+    value: 0.90925
+  - errors:
+    - {label: stat., symerror: 0.016286}
+    - {label: syst., symerror: 0.04021}
+    value: 0.86857
+  - errors:
+    - {label: stat., symerror: 0.019669}
+    - {label: syst., symerror: 0.042543}
+    value: 0.90391
+  - errors:
+    - {label: stat., symerror: 0.020713}
+    - {label: syst., symerror: 0.040067}
+    value: 0.84485
+  - errors:
+    - {label: stat., symerror: 0.023675}
+    - {label: syst., symerror: 0.04199}
+    value: 0.80607
+  - errors:
+    - {label: stat., symerror: 0.028563}
+    - {label: syst., symerror: 0.046727}
+    value: 0.78439
+  - errors:
+    - {label: stat., symerror: 0.03136}
+    - {label: syst., symerror: 0.05359}
+    value: 0.78476
+  - errors:
+    - {label: stat., symerror: 0.028985}
+    - {label: syst., symerror: 0.047442}
+    value: 0.69467
+  - errors:
+    - {label: stat., symerror: 0.034106}
+    - {label: syst., symerror: 0.053878}
+    value: 0.71207
+  - errors:
+    - {label: stat., symerror: 0.040344}
+    - {label: syst., symerror: 0.063012}
+    value: 0.66338
+  - errors:
+    - {label: stat., symerror: 0.041958}
+    - {label: syst., symerror: 0.060885}
+    value: 0.60491
+  - errors:
+    - {label: stat., symerror: 0.0475}
+    - {label: syst., symerror: 0.062277}
+    value: 0.58892
+  - errors:
+    - {label: stat., symerror: 0.015876}
+    - {label: syst., symerror: 0.053257}
+    value: 0.51375
+  - errors:
+    - {label: stat., symerror: 0.023405}
+    - {label: syst., symerror: 0.069984}
+    value: 0.4875
+  - errors:
+    - {label: stat., symerror: 0.025531}
+    - {label: syst., symerror: 0.055677}
+    value: 0.50027
+  - errors:
+    - {label: stat., symerror: 0.03893}
+    - {label: syst., symerror: 0.051724}
+    value: 0.46391
+  - errors:
+    - {label: stat., symerror: 0.078846}
+    - {label: syst., symerror: 0.056659}
+    value: 0.61499
+  - errors:
+    - {label: stat., symerror: 0.089108}
+    - {label: syst., symerror: 0.045838}
+    value: 0.49866
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 60-70}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.014154}
+    - {label: syst., symerror: 0.033331}
+    value: 0.29059
+  - errors:
+    - {label: stat., symerror: 0.013931}
+    - {label: syst., symerror: 0.033422}
+    value: 0.33144
+  - errors:
+    - {label: stat., symerror: 0.011689}
+    - {label: syst., symerror: 0.029809}
+    value: 0.33333
+  - errors:
+    - {label: stat., symerror: 0.0048723}
+    - {label: syst., symerror: 0.023125}
+    value: 0.35041
+  - errors:
+    - {label: stat., symerror: 0.00599}
+    - {label: syst., symerror: 0.02173}
+    value: 0.36593
+  - errors:
+    - {label: stat., symerror: 0.0063518}
+    - {label: syst., symerror: 0.02051}
+    value: 0.38579
+  - errors:
+    - {label: stat., symerror: 0.0049073}
+    - {label: syst., symerror: 0.024626}
+    value: 0.39674
+  - errors:
+    - {label: stat., symerror: 0.0035621}
+    - {label: syst., symerror: 0.034023}
+    value: 0.39916
+  - errors:
+    - {label: stat., symerror: 0.0040397}
+    - {label: syst., symerror: 0.048026}
+    value: 0.44026
+  - errors:
+    - {label: stat., symerror: 0.0044175}
+    - {label: syst., symerror: 0.051526}
+    value: 0.45693
+  - errors:
+    - {label: stat., symerror: 0.0063682}
+    - {label: syst., symerror: 0.031786}
+    value: 0.48385
+  - errors:
+    - {label: stat., symerror: 0.0070212}
+    - {label: syst., symerror: 0.03151}
+    value: 0.5042
+  - errors:
+    - {label: stat., symerror: 0.0080419}
+    - {label: syst., symerror: 0.034919}
+    value: 0.55385
+  - errors:
+    - {label: stat., symerror: 0.0088681}
+    - {label: syst., symerror: 0.035856}
+    value: 0.57012
+  - errors:
+    - {label: stat., symerror: 0.0069866}
+    - {label: syst., symerror: 0.03469}
+    value: 0.58439
+  - errors:
+    - {label: stat., symerror: 0.0082492}
+    - {label: syst., symerror: 0.038116}
+    value: 0.62958
+  - errors:
+    - {label: stat., symerror: 0.0097218}
+    - {label: syst., symerror: 0.041624}
+    value: 0.67852
+  - errors:
+    - {label: stat., symerror: 0.011282}
+    - {label: syst., symerror: 0.046427}
+    value: 0.72582
+  - errors:
+    - {label: stat., symerror: 0.014343}
+    - {label: syst., symerror: 0.04904}
+    value: 0.80327
+  - errors:
+    - {label: stat., symerror: 0.013495}
+    - {label: syst., symerror: 0.045205}
+    value: 0.7944
+  - errors:
+    - {label: stat., symerror: 0.01509}
+    - {label: syst., symerror: 0.047053}
+    value: 0.82524
+  - errors:
+    - {label: stat., symerror: 0.016232}
+    - {label: syst., symerror: 0.046698}
+    value: 0.84721
+  - errors:
+    - {label: stat., symerror: 0.018808}
+    - {label: syst., symerror: 0.049483}
+    value: 0.89849
+  - errors:
+    - {label: stat., symerror: 0.020666}
+    - {label: syst., symerror: 0.051288}
+    value: 0.91705
+  - errors:
+    - {label: stat., symerror: 0.015694}
+    - {label: syst., symerror: 0.049962}
+    value: 0.90937
+  - errors:
+    - {label: stat., symerror: 0.018471}
+    - {label: syst., symerror: 0.053288}
+    value: 0.92359
+  - errors:
+    - {label: stat., symerror: 0.020944}
+    - {label: syst., symerror: 0.048638}
+    value: 0.91582
+  - errors:
+    - {label: stat., symerror: 0.023462}
+    - {label: syst., symerror: 0.046682}
+    value: 0.91411
+  - errors:
+    - {label: stat., symerror: 0.025164}
+    - {label: syst., symerror: 0.044816}
+    value: 0.87073
+  - errors:
+    - {label: stat., symerror: 0.027448}
+    - {label: syst., symerror: 0.044015}
+    value: 0.832
+  - errors:
+    - {label: stat., symerror: 0.033814}
+    - {label: syst., symerror: 0.048127}
+    value: 0.85975
+  - errors:
+    - {label: stat., symerror: 0.036651}
+    - {label: syst., symerror: 0.047967}
+    value: 0.77664
+  - errors:
+    - {label: stat., symerror: 0.035925}
+    - {label: syst., symerror: 0.051078}
+    value: 0.70786
+  - errors:
+    - {label: stat., symerror: 0.042223}
+    - {label: syst., symerror: 0.055445}
+    value: 0.77563
+  - errors:
+    - {label: stat., symerror: 0.041609}
+    - {label: syst., symerror: 0.057547}
+    value: 0.73345
+  - errors:
+    - {label: stat., symerror: 0.046861}
+    - {label: syst., symerror: 0.067289}
+    value: 0.6823
+  - errors:
+    - {label: stat., symerror: 0.048409}
+    - {label: syst., symerror: 0.06441}
+    value: 0.62349
+  - errors:
+    - {label: stat., symerror: 0.057117}
+    - {label: syst., symerror: 0.064846}
+    value: 0.6074
+  - errors:
+    - {label: stat., symerror: 0.020288}
+    - {label: syst., symerror: 0.058206}
+    value: 0.56128
+  - errors:
+    - {label: stat., symerror: 0.030623}
+    - {label: syst., symerror: 0.079765}
+    value: 0.555
+  - errors:
+    - {label: stat., symerror: 0.031367}
+    - {label: syst., symerror: 0.062056}
+    value: 0.556
+  - errors:
+    - {label: stat., symerror: 0.047696}
+    - {label: syst., symerror: 0.05879}
+    value: 0.52824
+  - errors:
+    - {label: stat., symerror: 0.097251}
+    - {label: syst., symerror: 0.06726}
+    value: 0.72539
+  - errors:
+    - {label: stat., symerror: 0.13006}
+    - {label: syst., symerror: 0.066654}
+    value: 0.71017
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 70-80}
+  - {name: RE (PBPB), value: 'PB PB --> P X, PB PB --> PBAR X'}
+  - {name: RE (PP), value: 'P P --> P X, P P --> PBAR X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5-0.5}
+  values:
+  - errors:
+    - {label: stat., symerror: 0.034285}
+    - {label: syst., symerror: 0.053725}
+    value: 0.46861
+  - errors:
+    - {label: stat., symerror: 0.024897}
+    - {label: syst., symerror: 0.044745}
+    value: 0.44345
+  - errors:
+    - {label: stat., symerror: 0.026097}
+    - {label: syst., symerror: 0.044147}
+    value: 0.49368
+  - errors:
+    - {label: stat., symerror: 0.0098177}
+    - {label: syst., symerror: 0.032915}
+    value: 0.49826
+  - errors:
+    - {label: stat., symerror: 0.011101}
+    - {label: syst., symerror: 0.030321}
+    value: 0.50798
+  - errors:
+    - {label: stat., symerror: 0.011974}
+    - {label: syst., symerror: 0.027795}
+    value: 0.52049
+  - errors:
+    - {label: stat., symerror: 0.0076495}
+    - {label: syst., symerror: 0.032749}
+    value: 0.52891
+  - errors:
+    - {label: stat., symerror: 0.0061839}
+    - {label: syst., symerror: 0.043765}
+    value: 0.52311
+  - errors:
+    - {label: stat., symerror: 0.0069318}
+    - {label: syst., symerror: 0.050578}
+    value: 0.56951
+  - errors:
+    - {label: stat., symerror: 0.0073806}
+    - {label: syst., symerror: 0.062767}
+    value: 0.57783
+  - errors:
+    - {label: stat., symerror: 0.012305}
+    - {label: syst., symerror: 0.041387}
+    value: 0.63153
+  - errors:
+    - {label: stat., symerror: 0.012817}
+    - {label: syst., symerror: 0.039429}
+    value: 0.63257
+  - errors:
+    - {label: stat., symerror: 0.014782}
+    - {label: syst., symerror: 0.04406}
+    value: 0.69793
+  - errors:
+    - {label: stat., symerror: 0.013934}
+    - {label: syst., symerror: 0.040201}
+    value: 0.63886
+  - errors:
+    - {label: stat., symerror: 0.011912}
+    - {label: syst., symerror: 0.041101}
+    value: 0.69244
+  - errors:
+    - {label: stat., symerror: 0.01528}
+    - {label: syst., symerror: 0.045846}
+    value: 0.75759
+  - errors:
+    - {label: stat., symerror: 0.017029}
+    - {label: syst., symerror: 0.048567}
+    value: 0.79179
+  - errors:
+    - {label: stat., symerror: 0.017783}
+    - {label: syst., symerror: 0.049804}
+    value: 0.77848
+  - errors:
+    - {label: stat., symerror: 0.021718}
+    - {label: syst., symerror: 0.051753}
+    value: 0.84741
+  - errors:
+    - {label: stat., symerror: 0.020098}
+    - {label: syst., symerror: 0.046538}
+    value: 0.81887
+  - errors:
+    - {label: stat., symerror: 0.022629}
+    - {label: syst., symerror: 0.049541}
+    value: 0.86988
+  - errors:
+    - {label: stat., symerror: 0.023816}
+    - {label: syst., symerror: 0.046542}
+    value: 0.84542
+  - errors:
+    - {label: stat., symerror: 0.02717}
+    - {label: syst., symerror: 0.049233}
+    value: 0.89477
+  - errors:
+    - {label: stat., symerror: 0.02919}
+    - {label: syst., symerror: 0.050779}
+    value: 0.90877
+  - errors:
+    - {label: stat., symerror: 0.022705}
+    - {label: syst., symerror: 0.049264}
+    value: 0.89703
+  - errors:
+    - {label: stat., symerror: 0.026419}
+    - {label: syst., symerror: 0.052595}
+    value: 0.91284
+  - errors:
+    - {label: stat., symerror: 0.02944}
+    - {label: syst., symerror: 0.047295}
+    value: 0.89135
+  - errors:
+    - {label: stat., symerror: 0.03443}
+    - {label: syst., symerror: 0.045757}
+    value: 0.89642
+  - errors:
+    - {label: stat., symerror: 0.041031}
+    - {label: syst., symerror: 0.046188}
+    value: 0.89766
+  - errors:
+    - {label: stat., symerror: 0.044781}
+    - {label: syst., symerror: 0.046718}
+    value: 0.88316
+  - errors:
+    - {label: stat., symerror: 0.053925}
+    - {label: syst., symerror: 0.04841}
+    value: 0.86339
+  - errors:
+    - {label: stat., symerror: 0.054384}
+    - {label: syst., symerror: 0.048667}
+    value: 0.7875
+  - errors:
+    - {label: stat., symerror: 0.05422}
+    - {label: syst., symerror: 0.055279}
+    value: 0.76424
+  - errors:
+    - {label: stat., symerror: 0.057255}
+    - {label: syst., symerror: 0.051451}
+    value: 0.71385
+  - errors:
+    - {label: stat., symerror: 0.051331}
+    - {label: syst., symerror: 0.052936}
+    value: 0.67004
+  - errors:
+    - {label: stat., symerror: 0.060726}
+    - {label: syst., symerror: 0.073441}
+    value: 0.73421
+  - errors:
+    - {label: stat., symerror: 0.063039}
+    - {label: syst., symerror: 0.068071}
+    value: 0.65911
+  - errors:
+    - {label: stat., symerror: 0.072716}
+    - {label: syst., symerror: 0.063362}
+    value: 0.58579
+  - errors:
+    - {label: stat., symerror: 0.0298}
+    - {label: syst., symerror: 0.066706}
+    value: 0.64041
+  - errors:
+    - {label: stat., symerror: 0.045576}
+    - {label: syst., symerror: 0.094699}
+    value: 0.65696
+  - errors:
+    - {label: stat., symerror: 0.041059}
+    - {label: syst., symerror: 0.066703}
+    value: 0.5964
+  - errors:
+    - {label: stat., symerror: 0.060384}
+    - {label: syst., symerror: 0.063139}
+    value: 0.56507
+  - errors:
+    - {label: stat., symerror: 0.11565}
+    - {label: syst., symerror: 0.070375}
+    value: 0.75513
+  - errors:
+    - {label: stat., symerror: 0.15025}
+    - {label: syst., symerror: 0.066463}
+    value: 0.7125
+independent_variables:
+- header: {name: '$p_{T}$', units: $GeV/c$}
+  values:
+  - {high: 0.35, low: 0.3}
+  - {high: 0.4, low: 0.35}
+  - {high: 0.45, low: 0.4}
+  - {high: 0.5, low: 0.45}
+  - {high: 0.55, low: 0.5}
+  - {high: 0.6, low: 0.55}
+  - {high: 0.65, low: 0.6}
+  - {high: 0.7, low: 0.65}
+  - {high: 0.75, low: 0.7}
+  - {high: 0.8, low: 0.75}
+  - {high: 0.85, low: 0.8}
+  - {high: 0.9, low: 0.85}
+  - {high: 0.95, low: 0.9}
+  - {high: 1.0, low: 0.95}
+  - {high: 1.1, low: 1.0}
+  - {high: 1.2, low: 1.1}
+  - {high: 1.3, low: 1.2}
+  - {high: 1.4, low: 1.3}
+  - {high: 1.5, low: 1.4}
+  - {high: 1.6, low: 1.5}
+  - {high: 1.7, low: 1.6}
+  - {high: 1.8, low: 1.7}
+  - {high: 1.9, low: 1.8}
+  - {high: 2.0, low: 1.9}
+  - {high: 2.2, low: 2.0}
+  - {high: 2.4, low: 2.2}
+  - {high: 2.6, low: 2.4}
+  - {high: 2.8, low: 2.6}
+  - {high: 3.0, low: 2.8}
+  - {high: 3.2, low: 3.0}
+  - {high: 3.4, low: 3.2}
+  - {high: 3.6, low: 3.4}
+  - {high: 3.8, low: 3.6}
+  - {high: 4.0, low: 3.8}
+  - {high: 4.5, low: 4.0}
+  - {high: 5.0, low: 4.5}
+  - {high: 5.5, low: 5.0}
+  - {high: 6.0, low: 5.5}
+  - {high: 7.0, low: 6.0}
+  - {high: 8.0, low: 7.0}
+  - {high: 10.0, low: 8.0}
+  - {high: 12.0, low: 10.0}
+  - {high: 15.0, low: 12.0}
+  - {high: 20.0, low: 15.0}

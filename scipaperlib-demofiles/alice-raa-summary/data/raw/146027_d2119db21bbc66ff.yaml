@@ -1,0 +1,81 @@
+dependent_variables:
+- header:
+    name: Nuclear Modification Factor, R = 0.4, Central, ML
+  values:
+  - errors:
+    - label: Raa, R = 0.4, Central, ML, statistical uncertainty
+      symerror: 0.0024342
+    - asymerror:
+        minus: -0.044546
+        plus: 0.084215
+      label: Raa, R = 0.4, Central, ML, systematic uncertainty
+    value: 0.22045
+  - errors:
+    - label: Raa, R = 0.4, Central, ML, statistical uncertainty
+      symerror: 0.0050015
+    - asymerror:
+        minus: -0.038898
+        plus: 0.09171
+      label: Raa, R = 0.4, Central, ML, systematic uncertainty
+    value: 0.2597
+  - errors:
+    - label: Raa, R = 0.4, Central, ML, statistical uncertainty
+      symerror: 0.0080169
+    - asymerror:
+        minus: -0.04933
+        plus: 0.10619
+      label: Raa, R = 0.4, Central, ML, systematic uncertainty
+    value: 0.29709
+  - errors:
+    - label: Raa, R = 0.4, Central, ML, statistical uncertainty
+      symerror: 0.012303
+    - asymerror:
+        minus: -0.058429
+        plus: 0.12079
+      label: Raa, R = 0.4, Central, ML, systematic uncertainty
+    value: 0.32526
+  - errors:
+    - label: Raa, R = 0.4, Central, ML, statistical uncertainty
+      symerror: 0.018181
+    - asymerror:
+        minus: -0.053508
+        plus: 0.10426
+      label: Raa, R = 0.4, Central, ML, systematic uncertainty
+    value: 0.36554
+  - errors:
+    - label: Raa, R = 0.4, Central, ML, statistical uncertainty
+      symerror: 0.026476
+    - asymerror:
+        minus: -0.082714
+        plus: 0.12329
+      label: Raa, R = 0.4, Central, ML, systematic uncertainty
+    value: 0.33364
+  - errors:
+    - label: Raa, R = 0.4, Central, ML, statistical uncertainty
+      symerror: 0.037357
+    - asymerror:
+        minus: -0.06469
+        plus: 0.098808
+      label: Raa, R = 0.4, Central, ML, systematic uncertainty
+    value: 0.36608
+  - errors:
+    - label: Raa, R = 0.4, Central, ML, statistical uncertainty
+      symerror: 0.056153
+    - asymerror:
+        minus: -0.083853
+        plus: 0.087059
+      label: Raa, R = 0.4, Central, ML, systematic uncertainty
+    value: 0.46168
+independent_variables:
+- header:
+    name: pT
+    units: GeV/#it{c}
+  values:
+  - value: 35.0
+  - value: 45.0
+  - value: 55.0
+  - value: 65.0
+  - value: 77.5
+  - value: 92.5
+  - value: 110.0
+  - value: 130.0

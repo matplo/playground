@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cases": 25,
+  "method": "Node vm with minimal DOM; actual explorer script executed",
+  "coverage": [
+    "all presets",
+    "all 65 datasets",
+    "linear/log axes",
+    "uncertainty toggle",
+    "range validation",
+    "filters",
+    "select/clear",
+    "checkbox selection",
+    "SVG/CSV/JSON exports",
+    "source cards"
+  ],
+  "limitation": "No browser engine or native browser UI was available; CSS rendering and real download prompts were not exercised."
+}

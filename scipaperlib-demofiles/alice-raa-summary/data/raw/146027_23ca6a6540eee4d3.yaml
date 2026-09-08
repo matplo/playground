@@ -1,0 +1,72 @@
+dependent_variables:
+- header:
+    name: Nuclear Modification Factor, R = 0.6, Central, ML
+  values:
+  - errors:
+    - label: Raa, R = 0.6, Central, ML, statistical uncertainty
+      symerror: 0.0032771
+    - asymerror:
+        minus: -0.04942
+        plus: 0.11821
+      label: Raa, R = 0.6, Central, ML, systematic uncertainty
+    value: 0.18173
+  - errors:
+    - label: Raa, R = 0.6, Central, ML, statistical uncertainty
+      symerror: 0.0072298
+    - asymerror:
+        minus: -0.089415
+        plus: 0.14747
+      label: Raa, R = 0.6, Central, ML, systematic uncertainty
+    value: 0.22486
+  - errors:
+    - label: Raa, R = 0.6, Central, ML, statistical uncertainty
+      symerror: 0.011701
+    - asymerror:
+        minus: -0.051739
+        plus: 0.12464
+      label: Raa, R = 0.6, Central, ML, systematic uncertainty
+    value: 0.24979
+  - errors:
+    - label: Raa, R = 0.6, Central, ML, statistical uncertainty
+      symerror: 0.018202
+    - asymerror:
+        minus: -0.046064
+        plus: 0.15561
+      label: Raa, R = 0.6, Central, ML, systematic uncertainty
+    value: 0.28057
+  - errors:
+    - label: Raa, R = 0.6, Central, ML, statistical uncertainty
+      symerror: 0.025807
+    - asymerror:
+        minus: -0.029241
+        plus: 0.14195
+      label: Raa, R = 0.6, Central, ML, systematic uncertainty
+    value: 0.28096
+  - errors:
+    - label: Raa, R = 0.6, Central, ML, statistical uncertainty
+      symerror: 0.040686
+    - asymerror:
+        minus: -0.040876
+        plus: 0.14775
+      label: Raa, R = 0.6, Central, ML, systematic uncertainty
+    value: 0.35307
+  - errors:
+    - label: Raa, R = 0.6, Central, ML, statistical uncertainty
+      symerror: 0.05443
+    - asymerror:
+        minus: -0.10548
+        plus: 0.18176
+      label: Raa, R = 0.6, Central, ML, systematic uncertainty
+    value: 0.33715
+independent_variables:
+- header:
+    name: pT
+    units: GeV/#it{c}
+  values:
+  - value: 45.0
+  - value: 55.0
+  - value: 65.0
+  - value: 77.5
+  - value: 92.5
+  - value: 110.0
+  - value: 130.0

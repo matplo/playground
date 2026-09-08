@@ -1,0 +1,275 @@
+dependent_variables:
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, value: 0-10%}
+  - {name: SQRT(S), value: 5020.0 GeV}
+  values:
+  - errors:
+    - label: stat.
+      symerror: 0.16724
+    - label: syst.
+      asymerror: 
+        minus: -0.0943014
+        plus: 0.0943067
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.656009
+  - errors:
+    - label: stat.
+      symerror: 0.143037
+    - label: syst.
+      asymerror:
+        minus: -0.142907
+        plus: 0.140585
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.702875
+  - errors:
+    - label: stat.
+      symerror: 0.0787131
+    - label: syst.
+      asymerror:
+        minus: -0.140966
+        plus: 0.141067
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.864457
+  - errors:
+    - label: stat.
+      symerror: 0.0572938
+    - label: syst.
+      asymerror:
+        minus: -0.123662
+        plus: 0.123669
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.869896
+  - errors:
+    - label: stat.
+      symerror: 0.0401752
+    - label: syst.
+      asymerror:
+        minus: -0.106439
+        plus: 0.106816
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.77264
+  - errors:
+    - label: stat.
+      symerror: 0.0274534
+    - label: syst.
+      asymerror:
+        minus: -0.0916582
+        plus: 0.0936651
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.606241
+  - errors:
+    - label: stat.
+      symerror: 0.0225966
+    - label: syst.
+      asymerror:
+        minus: -0.0749564
+        plus: 0.0769398
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.488745
+  - errors:
+    - label: stat.
+      symerror: 0.0198565
+    - label: syst.
+      asymerror:
+        minus: -0.0633155
+        plus: 0.0657095
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.40096
+  - errors:
+    - label: stat.
+      symerror: 0.0170598
+    - label: syst.
+      asymerror:
+        minus: -0.0516781
+        plus: 0.0536363
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.324256
+  - errors:
+    - label: stat.
+      symerror: 0.0137593
+    - label: syst.
+      asymerror:
+        minus: -0.0361233
+        plus: 0.0375407
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.249815
+  - errors:
+    - label: stat.
+      symerror: 0.012386
+    - label: syst.
+      asymerror:
+        minus: -0.0314786
+        plus: 0.0326828
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.221483
+  - errors:
+    - label: stat.
+      symerror: 0.014466
+    - label: syst.
+      asymerror:
+        minus: -0.0316087
+        plus: 0.0332369
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.214925
+  - errors:
+    - label: stat.
+      symerror: 0.013957
+    - label: syst.
+      asymerror:
+        minus: -0.0273716
+        plus: 0.0286502
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.189655
+  - errors:
+    - label: stat.
+      symerror: 0.0164184
+    - label: syst.
+      asymerror:
+        minus: -0.029084
+        plus: 0.030921
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.201914
+  - errors:
+    - label: stat.
+      symerror: 0.0164081
+    - label: syst.
+      asymerror:
+        minus: -0.0264758
+        plus: 0.0279279
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.184896
+  - errors:
+    - label: stat.
+      symerror: 0.0148051
+    - label: syst.
+      asymerror:
+        minus: -0.0269136
+        plus: 0.0286052
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.202784
+  - errors:
+    - label: stat.
+      symerror: 0.0149905
+    - label: syst.
+      asymerror:
+        minus: -0.0238208
+        plus: 0.0247828
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.182579
+  - errors:
+    - label: stat.
+      symerror: 0.014484
+    - label: syst.
+      asymerror:
+        minus: -0.0236108
+        plus: 0.0248657
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.18665
+  - errors:
+    - label: stat.
+      symerror: 0.022755
+    - label: syst.
+      asymerror:
+        minus: -0.032393
+        plus: 0.0347962
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.228422
+  - errors:
+    - label: stat.
+      symerror: 0.0301473
+    - label: syst.
+      asymerror:
+        minus: -0.0311572
+        plus: 0.0332379
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.237999
+  - errors:
+    - label: stat.
+      symerror: 0.0741081
+    - label: syst.
+      asymerror:
+        minus: -0.0410042
+        plus: 0.0411673
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.299955
+  - errors:
+    - label: stat.
+      symerror: 0.0557612
+    - label: syst.
+      asymerror:
+        minus: -0.126477
+        plus: 0.102522
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.298123
+independent_variables:
+- header:
+    name: $p_\mathrm{T}$
+    units: GeV/$c$
+  values:
+  - high: 1
+    low: 0  
+  - high: 1.5
+    low: 1
+  - high: 2
+    low: 1.5
+  - high: 2.5
+    low: 2
+  - high: 3
+    low: 2.5
+  - high: 3.5
+    low: 3
+  - high: 4
+    low: 3.5
+  - high: 4.5
+    low: 4
+  - high: 5
+    low: 4.5
+  - high: 5.5
+    low: 5
+  - high: 6
+    low: 5.5
+  - high: 6.5
+    low: 6
+  - high: 7
+    low: 6.5
+  - high: 7.5
+    low: 7
+  - high: 8
+    low: 7.5
+  - high: 9
+    low: 8
+  - high: 10
+    low: 9
+  - high: 12
+    low: 10
+  - high: 16
+    low: 12
+  - high: 24
+    low: 16
+  - high: 36
+    low: 24
+  - high: 50
+    low: 36

@@ -1,0 +1,40 @@
+dependent_variables:
+- header: {name: "$R_{pPb}$"}
+  qualifiers:
+  - {name: RE, value: P PB --> JPSI (Q=NON-PROMPT) X}
+  - {name: SQRT(S)/NUCLEON, units: GEV, value: '8160.0'}
+  - {name: YRAP, value: -1.37 TO 0.43}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.362}
+    - {label: sys, symerror: 0.122}
+    - {label: 'sys,normalization/luminosity/B.R. uncertainty', symerror: 2.0%}
+    value: 0.926
+  - errors:
+    - {label: stat, symerror: 0.285}
+    - {label: sys, symerror: 0.118}
+    - {label: 'sys,normalization/luminosity/B.R. uncertainty', symerror: 2.0%}
+    value: 1.341
+  - errors:
+    - {label: stat, symerror: 0.296}
+    - {label: sys, symerror: 0.100}
+    - {label: 'sys,normalization/luminosity/B.R. uncertainty', symerror: 2.0%}
+    value: 1.367
+  - errors:
+    - {label: stat, symerror: 0.354}
+    - {label: sys, symerror: 0.088}
+    - {label: 'sys,normalization/luminosity/B.R. uncertainty', symerror: 2.0%}
+    value: 1.133
+  - errors:
+    - {label: stat, symerror: 0.407}
+    - {label: sys, symerror: 0.095}
+    - {label: 'sys,normalization/luminosity/B.R. uncertainty', symerror: 2.0%}
+    value: 1.124
+independent_variables:
+- header: {name: '$p_{\rm T}$', units: GeV/$c$}
+  values:
+  - {high: 4.0, low: 2.0}
+  - {high: 6.0, low: 4.0}
+  - {high: 8.0, low: 6.0}
+  - {high: 10.0, low: 8.0}
+  - {high: 14.0, low: 10.0}

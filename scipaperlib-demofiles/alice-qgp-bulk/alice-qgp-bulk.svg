@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1120" viewBox="0 0 1100 1120" role="img" aria-labelledby="title desc">
+  <title id="title">ALICE: bulk properties of the quark–gluon plasma</title>
+  <desc id="desc">Six observations are linked to their physical interpretations: collective flow to low viscosity; correlated flow fluctuations to response to initial geometry; mass-dependent spectra to radial expansion; thermal hadron abundances to chemical freeze-out; direct photons to thermal radiation; and pion interferometry to a larger, longer-lived fireball. Interpretations depend on model comparisons.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#718394"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #163047; }
+      .heading { font-size: 17px; font-weight: 700; letter-spacing: 1.4px; }
+      .observation { font-size: 22px; font-weight: 600; }
+      .property { font-size: 19px; font-weight: 700; fill: #185b45; }
+      .detail { font-size: 18px; }
+      .source { font-size: 15px; fill: #425f78; }
+      .left { fill: #eaf3fb; stroke: #b6d1e7; stroke-width: 1.3; }
+      .right { fill: #eaf5ef; stroke: #afd4c1; stroke-width: 1.3; }
+      .link { stroke: #718394; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1100" height="1120" fill="#fff"/>
+  <text x="50" y="54" font-size="31" font-weight="700">ALICE: bulk properties of the QGP</text>
+  <text x="50" y="86" font-size="19" fill="#556a7b">From measured particle patterns to the properties of an expanding fluid</text>
+  <text x="50" y="132" class="heading">OBSERVATIONS</text>
+  <text x="595" y="132" class="heading">PHYSICAL INTERPRETATIONS</text>
+
+  <rect class="left" x="50" y="150" width="455" height="98" rx="10"/>
+  <text class="observation" x="74" y="188">Strong elliptic and</text><text class="observation" x="74" y="218">higher-order flow  [1]</text>
+  <line class="link" x1="520" y1="199" x2="578" y2="199"/>
+  <rect class="right" x="595" y="150" width="455" height="98" rx="10"/>
+  <text class="property" x="619" y="183">NEAR-PERFECT FLUID</text>
+  <text class="detail" x="619" y="214">Small shear viscosity / entropy ratio</text>
+
+  <rect class="left" x="50" y="264" width="455" height="98" rx="10"/>
+  <text class="observation" x="74" y="302">Correlations between</text><text class="observation" x="74" y="332">flow fluctuations  [2]</text>
+  <line class="link" x1="520" y1="313" x2="578" y2="313"/>
+  <rect class="right" x="595" y="264" width="455" height="98" rx="10"/>
+  <text class="property" x="619" y="292">RESPONSE TO INITIAL GEOMETRY</text>
+  <text class="detail" x="619" y="320">Constraints on viscosity and</text><text class="detail" x="619" y="344">initial-state fluctuations</text>
+
+  <rect class="left" x="50" y="378" width="455" height="98" rx="10"/>
+  <text class="observation" x="74" y="416">Mass-dependent</text><text class="observation" x="74" y="446">particle spectra  [3]</text>
+  <line class="link" x1="520" y1="427" x2="578" y2="427"/>
+  <rect class="right" x="595" y="378" width="455" height="98" rx="10"/>
+  <text class="property" x="619" y="411">STRONG RADIAL EXPANSION</text>
+  <text class="detail" x="619" y="442">Collective outward motion</text>
+
+  <rect class="left" x="50" y="492" width="455" height="98" rx="10"/>
+  <text class="observation" x="74" y="530">Approximately thermal</text><text class="observation" x="74" y="560">hadron abundances  [3]</text>
+  <line class="link" x1="520" y1="541" x2="578" y2="541"/>
+  <rect class="right" x="595" y="492" width="455" height="98" rx="10"/>
+  <text class="property" x="619" y="520">CHEMICAL FREEZE-OUT</text>
+  <text class="detail" x="619" y="548">Near the QCD crossover, with</text><text class="detail" x="619" y="572">species-dependent deviations</text>
+
+  <rect class="left" x="50" y="606" width="455" height="98" rx="10"/>
+  <text class="observation" x="74" y="644">Excess low-momentum</text><text class="observation" x="74" y="674">direct photons  [4]</text>
+  <line class="link" x1="520" y1="655" x2="578" y2="655"/>
+  <rect class="right" x="595" y="606" width="455" height="98" rx="10"/>
+  <text class="property" x="619" y="634">THERMAL RADIATION</text>
+  <text class="detail" x="619" y="662">Probes temperature and evolution</text><text class="detail" x="619" y="686">Spectral slope ≠ initial temperature</text>
+
+  <rect class="left" x="50" y="720" width="455" height="98" rx="10"/>
+  <text class="observation" x="74" y="758">Larger pion-emitting regions</text><text class="observation" x="74" y="788">and longer decoupling time  [5]</text>
+  <line class="link" x1="520" y1="769" x2="578" y2="769"/>
+  <rect class="right" x="595" y="720" width="455" height="98" rx="10"/>
+  <text class="property" x="619" y="748">LARGER, LONGER-LIVED FIREBALL</text>
+  <text class="detail" x="619" y="776">Includes the hadronic stage</text><text class="detail" x="619" y="800">Decoupling time ≠ QGP lifetime</text>
+
+  <text x="50" y="856" font-size="17" fill="#556a7b">Qualitative summary. Arrows denote interpretations supported by model comparisons.</text>
+  <text x="50" y="882" font-size="17" fill="#556a7b">The size and decoupling-time comparison is with RHIC; no quantitative scales are implied.</text>
+  <line x1="50" y1="904" x2="1050" y2="904" stroke="#d5dfe7"/>
+  <text x="50" y="932" class="heading">SOURCE EVIDENCE · SCIPAPERLIB / DEFAULT</text>
+  <a href="https://arxiv.org/abs/1602.01119v2"><text class="source" x="50" y="960">[1] Flow — arXiv:1602.01119v2 · alicepreprint_CDS.tex, lines 24–62</text></a>
+  <a href="https://arxiv.org/abs/1604.07663v2"><text class="source" x="50" y="987">[2] Flow fluctuations — arXiv:1604.07663v2 · correlated_flow_fluctuations_CDS.tex, lines 187–189</text></a>
+  <a href="https://arxiv.org/abs/1910.07678v2"><text class="source" x="50" y="1014">[3] Spectra / chemistry — arXiv:1910.07678v2 · paperPbPb5TeV.tex, lines 63–85 and 992–1025</text></a>
+  <a href="https://arxiv.org/abs/1509.07324v2"><text class="source" x="50" y="1041">[4] Direct photons — arXiv:1509.07324v2 · directPbPb.tex, lines 305–321</text></a>
+  <a href="https://arxiv.org/abs/1012.4035v4"><text class="source" x="50" y="1068">[5] Size / decoupling — arXiv:1012.4035v4 · femto.tex, lines 542–563</text></a>
+</svg>

@@ -1,0 +1,82 @@
+dependent_variables:
+- header: {name: 'RAA'}
+  qualifiers:
+  - {name: CENTRALITY, units: pct, value: 0-10}
+  - {name: RE, value: 'Pb Pb $\rightarrow$ K$^{*\pm}$ X, Pb Pb $\rightarrow$ {K}$^{*\mp}$ X'}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '5020.0'}
+  - {name: YRAP, value: -0.5 - 0.5}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0175784}
+    - {label: sys, symerror: 0.00833186}
+    value: 0.0691157
+  - errors:
+    - {label: stat, symerror: 0.0184764}
+    - {label: sys, symerror: 0.011945}
+    value: 0.113422
+  - errors:
+    - {label: stat, symerror: 0.0157851}
+    - {label: sys, symerror: 0.0162557}
+    value: 0.172859
+  - errors:
+    - {label: stat, symerror: 0.0159439}
+    - {label: sys, symerror: 0.0287007}
+    value: 0.286711
+  - errors:
+    - {label: stat, symerror: 0.0151459}
+    - {label: sys, symerror: 0.0302565}
+    value: 0.345071
+  - errors:
+    - {label: stat, symerror: 0.0159931}
+    - {label: sys, symerror: 0.0319008}
+    value: 0.349028
+  - errors:
+    - {label: stat, symerror: 0.0166416}
+    - {label: sys, symerror: 0.0275263}
+    value: 0.302074
+  - errors:
+    - {label: stat, symerror: 0.0186711}
+    - {label: sys, symerror: 0.0246134}
+    value: 0.274168
+  - errors:
+    - {label: stat, symerror: 0.0141165}
+    - {label: sys, symerror: 0.0170274}
+    value: 0.192562
+  - errors:
+    - {label: stat, symerror: 0.0153093}
+    - {label: sys, symerror: 0.0117625}
+    value: 0.107455
+  - errors:
+    - {label: stat, symerror: 0.0161855}
+    - {label: sys, symerror: 0.0194856}
+    value: 0.145592
+  - errors:
+    - {label: stat, symerror: 0.0253184}
+    - {label: sys, symerror: 0.022318}
+    value: 0.153013
+  - errors:
+    - {label: stat, symerror: 0.0334938}
+    - {label: sys, symerror: 0.0262494}
+    value: 0.156166
+  - errors:
+    - {label: stat, symerror: 0.133272}
+    - {label: sys, symerror: 0.0788275}
+    value: 0.361761
+  
+independent_variables:
+- header: {name: '$p_{ \rm {T}}$', units: 'GeV/$\it{c}$'}
+  values:
+  - {high: 0.8, low: 0.4}
+  - {high: 1.2, low: 0.8}
+  - {high: 1.6, low: 1.2}
+  - {high: 2, low: 1.6}
+  - {high: 2.5, low: 2}
+  - {high: 3, low: 2.5}
+  - {high: 3.5, low: 3}
+  - {high: 4, low: 3.5}
+  - {high: 5, low: 4}
+  - {high: 6, low: 5}
+  - {high: 8, low: 6}
+  - {high: 10, low: 8}
+  - {high: 12, low: 10}
+  - {high: 16, low: 12}

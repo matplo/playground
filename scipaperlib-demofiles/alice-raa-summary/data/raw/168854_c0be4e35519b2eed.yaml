@@ -1,0 +1,48 @@
+dependent_variables:
+- header: {name: '$R_{\mathrm{AA}}$'}
+  qualifiers:
+  - {name: System, units: TeV, value: Pb$-$Pb at 5.02}
+  - {name: Clustering algorithm, value: 'anti-$k_{\mathrm{T}}$'}
+  - {name: Recombination scheme, value: '$p_{\mathrm{T}}$'}
+  - {name: $R$, value: 0.3}
+  - {name: '$|\eta_{\mathrm{ch\ jet}}|$', value: $<0.6$}
+  - {name: '$p_{\mathrm{T,D^0}}$', units: GeV/$c$, value: $3-36$}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0166233}
+    - {label: sys, symerror: 0.0588623}
+    value: 0.317799
+  - errors:
+    - {label: stat, symerror: 0.00055756}
+    - {label: sys, symerror: 0.0565436}
+    value: 0.322835
+  - errors:
+    - {label: stat, symerror: 0.00034155}
+    - {label: sys, symerror: 0.0769041}
+    value: 0.415703
+  - errors:
+    - {label: stat, symerror: 0.00022684}
+    - {label: sys, symerror: 0.0832205}
+    value: 0.416136
+  - errors:
+    - {label: stat, symerror: 0.00016699}
+    - {label: sys, symerror: 0.14403}
+    value: 0.522697
+  - errors:
+    - {label: stat, symerror: 4.7183e-05}
+    - {label: sys, symerror: 0.213116}
+    value: 0.666176
+  - errors:
+    - {label: stat, symerror: 1.5274e-05}
+    - {label: sys, symerror: 0.276049}
+    value: 0.496101
+independent_variables:
+- header: {name: '$p_{\mathrm{T,ch\ jet}}$', units: GeV/$c$}
+  values:
+  - {high: 6.0, low: 5.0}
+  - {high: 8.0, low: 6.0}
+  - {high: 10.0, low: 8.0}
+  - {high: 14.0, low: 10.0}
+  - {high: 20.0, low: 14.0}
+  - {high: 30.0, low: 20.0}
+  - {high: 50.0, low: 30.0}

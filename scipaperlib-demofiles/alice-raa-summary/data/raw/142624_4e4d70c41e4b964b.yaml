@@ -1,0 +1,79 @@
+dependent_variables:
+- header: {name: '$R_{pPb}$'}
+  qualifiers:
+  - {name: RE, value: p Pb --> HFE + X}
+  - {name: '$\sqrt{s_{\rm NN}}$', units: GeV, value: '8160.0'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.0123904}
+    - {label: sys, symerror: 0.234511}
+    value: 1.12054
+  - errors:
+    - {label: stat, symerror: 0.0132235}
+    - {label: sys, symerror: 0.120979}
+    value: 1.0451
+  - errors:
+    - {label: stat, symerror: 0.0178524}
+    - {label: sys, symerror: 0.106011}
+    value: 1.07638
+  - errors:
+    - {label: stat, symerror: 0.0190696}
+    - {label: sys, symerror: 0.0990166}
+    value: 1.06772
+  - errors:
+    - {label: stat, symerror: 0.0352377}
+    - {label: sys, symerror: 0.0881888}
+    value: 1.005
+  - errors:
+    - {label: stat, symerror: 0.0985157}
+    - {label: sys, symerror: 0.0968714}
+    value: 0.949902
+  - errors:
+    - {label: stat, symerror: 0.141523}
+    - {label: sys, symerror: 0.102765}
+    value: 1.08324
+  - errors:
+    - {label: stat, symerror: 0.0647568}
+    - {label: sys, symerror: 0.089551}
+    value: 0.94395
+  - errors:
+    - {label: stat, symerror: 0.118447}
+    - {label: sys, symerror: 0.109532}
+    value: 1.02586
+  - errors:
+    - {label: stat, symerror: 0.0352354}
+    - {label: sys, symerror: 0.13084}
+    value: 0.855328
+  - errors:
+    - {label: stat, symerror: 0.0563374}
+    - {label: sys, symerror: 0.136249}
+    value: 0.999026
+  - errors:
+    - {label: stat, symerror: 0.0808789}
+    - {label: sys, symerror: 0.143935}
+    value: 1.12053
+  - errors:
+    - {label: stat, symerror: 0.0866171}
+    - {label: sys, symerror: 0.180251}
+    value: 1.09697
+  - errors:
+    - {label: stat, symerror: 0.142378}
+    - {label: sys, symerror: 0.152618}
+    value: 0.928803
+independent_variables:
+- header: {name: '$p_{{T}}$', units: GeV/$c$}
+  values:
+  - {high: 1, low: 0.5}
+  - {high: 1.5, low: 1}
+  - {high: 2, low: 1.5}
+  - {high: 3, low: 2}
+  - {high: 4, low: 3}
+  - {high: 5, low: 4}
+  - {high: 6, low: 5}
+  - {high: 8, low: 6}
+  - {high: 10, low: 8}
+  - {high: 12, low: 10}
+  - {high: 14, low: 12}
+  - {high: 16, low: 14}
+  - {high: 20, low: 16}
+  - {high: 26, low: 20}

@@ -1,0 +1,117 @@
+dependent_variables:
+- header:
+    name: RAA
+  qualifiers:
+  - name: SQRT(S)
+    units: GeV
+    value: 5020.0
+  - name: Particle
+    value: J/$\psi$
+  - name: System
+    value: Pb--Pb
+  - name: centrality
+    value: 0--20%
+  values:
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.0173
+    - label: syst. uncertainty
+      symerror: 0.0512
+    value: 0.699
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.0107
+    - label: syst. uncertainty
+      symerror: 0.0434
+    value: 0.673
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.00994
+    - label: syst. uncertainty
+      symerror: 0.0434
+    value: 0.63
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.0109
+    - label: syst. uncertainty
+      symerror: 0.0333
+    value: 0.498
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.00995
+    - label: syst. uncertainty
+      symerror: 0.0271
+    value: 0.392
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.00959
+    - label: syst. uncertainty
+      symerror: 0.0214
+    value: 0.333
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.00978
+    - label: syst. uncertainty
+      symerror: 0.0171
+    value: 0.276
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.013
+    - label: syst. uncertainty
+      symerror: 0.0182
+    value: 0.276
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.0152
+    - label: syst. uncertainty
+      symerror: 0.016
+    value: 0.259
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.0185
+    - label: syst. uncertainty
+      symerror: 0.0163
+    value: 0.239
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.0245
+    - label: syst. uncertainty
+      symerror: 0.0162
+    value: 0.263
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.0326
+    - label: syst. uncertainty
+      symerror: 0.0187
+    value: 0.256
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.0269
+    - label: syst. uncertainty
+      symerror: 0.0186
+    value: 0.266
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.055
+    - label: syst. uncertainty
+      symerror: 0.027
+    value: 0.315
+independent_variables:
+- header:
+    name: $p_{T}$
+    units: GeV/$c$
+  values:
+  -  { high: 1 , low: 0.3 }
+  -  { high: 2 , low: 1 }
+  -  { high: 3 , low: 2 }
+  -  { high: 4 , low: 3 }
+  -  { high: 5 , low: 4 }
+  -  { high: 6 , low: 5 }
+  -  { high: 7 , low: 6 }
+  -  { high: 8 , low: 7 }
+  -  { high: 9 , low: 8 }
+  -  { high: 10 , low: 9 }
+  -  { high: 11 , low: 10 }
+  -  { high: 12 , low: 11 }
+  -  { high: 15 , low: 12 }
+  -  { high: 20 , low: 15 }

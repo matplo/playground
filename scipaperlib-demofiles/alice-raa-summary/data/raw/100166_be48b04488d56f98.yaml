@@ -1,0 +1,385 @@
+dependent_variables:
+  - header: {name: 'Q_pPb'}
+    qualifiers:
+      - {name: 'CENTRALITY PERCENTILES', value: '2-10%'}
+      - {name: 'RE', value: 'P PB --> J/PSI < MU+ MU- > X'}
+      - {name: 'SQRT(S)/NUCLEON', value: '8160.0', units: 'GeV'}
+      - {name: 'YRAP(RF=CM)', value: '-4.46 - -2.96'}
+    values:
+      - value: 0.876
+        errors:
+        - {label: stat, symerror: 0.039}
+        - {label: 'sys, uncorrel', symerror: 0.067}
+        - {label: 'sys, correl', symerror: 0.046}
+        - {label: 'sys, common correl', symerror: 0.063}
+      - value: 1.010
+        errors:
+        - {label: stat, symerror: 0.024}
+        - {label: 'sys, uncorrel', symerror: 0.079}
+        - {label: 'sys, correl', symerror: 0.053}
+        - {label: 'sys, common correl', symerror: 0.072}
+      - value: 1.208
+        errors:
+        - {label: stat, symerror: 0.028}
+        - {label: 'sys, uncorrel', symerror: 0.086}
+        - {label: 'sys, correl', symerror: 0.063}
+        - {label: 'sys, common correl', symerror: 0.087}
+      - value: 1.312
+        errors:
+        - {label: stat, symerror: 0.030}
+        - {label: 'sys, uncorrel', symerror: 0.094}
+        - {label: 'sys, correl', symerror: 0.069}
+        - {label: 'sys, common correl', symerror: 0.094}
+      - value: 1.380
+        errors:
+        - {label: stat, symerror: 0.036}
+        - {label: 'sys, uncorrel', symerror: 0.095}
+        - {label: 'sys, correl', symerror: 0.072}
+        - {label: 'sys, common correl', symerror: 0.099}
+      - value: 1.367
+        errors:
+        - {label: stat, symerror: 0.045}
+        - {label: 'sys, uncorrel', symerror: 0.097}
+        - {label: 'sys, correl', symerror: 0.072}
+        - {label: 'sys, common correl', symerror: 0.098}
+      - value: 1.333
+        errors:
+        - {label: stat, symerror: 0.043}
+        - {label: 'sys, uncorrel', symerror: 0.097}
+        - {label: 'sys, correl', symerror: 0.070}
+        - {label: 'sys, common correl', symerror: 0.096}
+      - value: 1.235
+        errors:
+        - {label: stat, symerror: 0.066}
+        - {label: 'sys, uncorrel', symerror: 0.084}
+        - {label: 'sys, correl', symerror: 0.065}
+        - {label: 'sys, common correl', symerror: 0.089}
+      - value: 1.345
+        errors:
+        - {label: stat, symerror: 0.104}
+        - {label: 'sys, uncorrel', symerror: 0.089}
+        - {label: 'sys, correl', symerror: 0.070}
+        - {label: 'sys, common correl', symerror: 0.096}
+
+  - header: {name: 'Q_pPb'}
+    qualifiers:
+      - {name: 'CENTRALITY PERCENTILES', value: '10-20%'}
+      - {name: 'RE', value: 'P PB --> J/PSI < MU+ MU- > X'}
+      - {name: 'SQRT(S)/NUCLEON', value: '8160.0', units: 'GeV'}
+      - {name: 'YRAP(RF=CM)', value: '-4.46 - -2.96'}
+    values:
+      - value: 0.805
+        errors:
+        - {label: stat, symerror: 0.028}
+        - {label: 'sys, uncorrel', symerror: 0.061}
+        - {label: 'sys, correl', symerror: 0.031}
+        - {label: 'sys, common correl', symerror: 0.058}
+      - value: 1.018
+        errors:
+        - {label: stat, symerror: 0.021}
+        - {label: 'sys, uncorrel', symerror: 0.079}
+        - {label: 'sys, correl', symerror: 0.039}
+        - {label: 'sys, common correl', symerror: 0.073}
+      - value: 1.144
+        errors:
+        - {label: stat, symerror: 0.024}
+        - {label: 'sys, uncorrel', symerror: 0.082}
+        - {label: 'sys, correl', symerror: 0.044}
+        - {label: 'sys, common correl', symerror: 0.082}
+      - value: 1.291
+        errors:
+        - {label: stat, symerror: 0.028}
+        - {label: 'sys, uncorrel', symerror: 0.092}
+        - {label: 'sys, correl', symerror: 0.050}
+        - {label: 'sys, common correl', symerror: 0.093}
+      - value: 1.293
+        errors:
+        - {label: stat, symerror: 0.035}
+        - {label: 'sys, uncorrel', symerror: 0.090}
+        - {label: 'sys, correl', symerror: 0.050}
+        - {label: 'sys, common correl', symerror: 0.093}
+      - value: 1.342
+        errors:
+        - {label: stat, symerror: 0.040}
+        - {label: 'sys, uncorrel', symerror: 0.093}
+        - {label: 'sys, correl', symerror: 0.051}
+        - {label: 'sys, common correl', symerror: 0.096}
+      - value: 1.257
+        errors:
+        - {label: stat, symerror: 0.038}
+        - {label: 'sys, uncorrel', symerror: 0.090}
+        - {label: 'sys, correl', symerror: 0.048}
+        - {label: 'sys, common correl', symerror: 0.090}
+      - value: 1.220
+        errors:
+        - {label: stat, symerror: 0.060}
+        - {label: 'sys, uncorrel', symerror: 0.081}
+        - {label: 'sys, correl', symerror: 0.047}
+        - {label: 'sys, common correl', symerror: 0.087}
+      - value: 1.315
+        errors:
+        - {label: stat, symerror: 0.085}
+        - {label: 'sys, uncorrel', symerror: 0.087}
+        - {label: 'sys, correl', symerror: 0.050}
+        - {label: 'sys, common correl', symerror: 0.094}
+
+  - header: {name: 'Q_pPb'}
+    qualifiers:
+      - {name: 'CENTRALITY PERCENTILES', value: '20-40%'}
+      - {name: 'RE', value: 'P PB --> J/PSI < MU+ MU- > X'}
+      - {name: 'SQRT(S)/NUCLEON', value: '8160.0', units: 'GeV'}
+      - {name: 'YRAP(RF=CM)', value: '-4.46 - -2.96'}
+    values:
+      - value: 0.849
+        errors:
+        - {label: stat, symerror: 0.020}
+        - {label: 'sys, uncorrel', symerror: 0.066}
+        - {label: 'sys, correl', symerror: 0.025}
+        - {label: 'sys, common correl', symerror: 0.061}
+      - value: 0.935
+        errors:
+        - {label: stat, symerror: 0.016}
+        - {label: 'sys, uncorrel', symerror: 0.072}
+        - {label: 'sys, correl', symerror: 0.028}
+        - {label: 'sys, common correl', symerror: 0.067}
+      - value: 1.083
+        errors:
+        - {label: stat, symerror: 0.017}
+        - {label: 'sys, uncorrel', symerror: 0.076}
+        - {label: 'sys, correl', symerror: 0.032}
+        - {label: 'sys, common correl', symerror: 0.078}
+      - value: 1.159
+        errors:
+        - {label: stat, symerror: 0.021}
+        - {label: 'sys, uncorrel', symerror: 0.083}
+        - {label: 'sys, correl', symerror: 0.034}
+        - {label: 'sys, common correl', symerror: 0.083}
+      - value: 1.234
+        errors:
+        - {label: stat, symerror: 0.024}
+        - {label: 'sys, uncorrel', symerror: 0.085}
+        - {label: 'sys, correl', symerror: 0.037}
+        - {label: 'sys, common correl', symerror: 0.088}
+      - value: 1.241
+        errors:
+        - {label: stat, symerror: 0.030}
+        - {label: 'sys, uncorrel', symerror: 0.087}
+        - {label: 'sys, correl', symerror: 0.037}
+        - {label: 'sys, common correl', symerror: 0.089}
+      - value: 1.221
+        errors:
+        - {label: stat, symerror: 0.029}
+        - {label: 'sys, uncorrel', symerror: 0.088}
+        - {label: 'sys, correl', symerror: 0.036}
+        - {label: 'sys, common correl', symerror: 0.088}
+      - value: 1.176
+        errors:
+        - {label: stat, symerror: 0.046}
+        - {label: 'sys, uncorrel', symerror: 0.079}
+        - {label: 'sys, correl', symerror: 0.035}
+        - {label: 'sys, common correl', symerror: 0.084}
+      - value: 1.211
+        errors:
+        - {label: stat, symerror: 0.066}
+        - {label: 'sys, uncorrel', symerror: 0.078}
+        - {label: 'sys, correl', symerror: 0.036}
+        - {label: 'sys, common correl', symerror: 0.087}
+
+  - header: {name: 'Q_pPb'}
+    qualifiers:
+      - {name: 'CENTRALITY PERCENTILES', value: '40-60%'}
+      - {name: 'RE', value: 'P PB --> J/PSI < MU+ MU- > X'}
+      - {name: 'SQRT(S)/NUCLEON', value: '8160.0', units: 'GeV'}
+      - {name: 'YRAP(RF=CM)', value: '-4.46 - -2.96'}
+    values:
+      - value: 0.732
+        errors:
+        - {label: stat, symerror: 0.021}
+        - {label: 'sys, uncorrel', symerror: 0.056}
+        - {label: 'sys, correl', symerror: 0.034}
+        - {label: 'sys, common correl', symerror: 0.053}
+      - value: 0.858
+        errors:
+        - {label: stat, symerror: 0.016}
+        - {label: 'sys, uncorrel', symerror: 0.067}
+        - {label: 'sys, correl', symerror: 0.040}
+        - {label: 'sys, common correl', symerror: 0.062}
+      - value: 0.984
+        errors:
+        - {label: stat, symerror: 0.018}
+        - {label: 'sys, uncorrel', symerror: 0.070}
+        - {label: 'sys, correl', symerror: 0.046}
+        - {label: 'sys, common correl', symerror: 0.071}
+      - value: 1.010
+        errors:
+        - {label: stat, symerror: 0.021}
+        - {label: 'sys, uncorrel', symerror: 0.072}
+        - {label: 'sys, correl', symerror: 0.047}
+        - {label: 'sys, common correl', symerror: 0.072}
+      - value: 1.041
+        errors:
+        - {label: stat, symerror: 0.025}
+        - {label: 'sys, uncorrel', symerror: 0.072}
+        - {label: 'sys, correl', symerror: 0.049}
+        - {label: 'sys, common correl', symerror: 0.075}
+      - value: 1.072
+        errors:
+        - {label: stat, symerror: 0.034}
+        - {label: 'sys, uncorrel', symerror: 0.078}
+        - {label: 'sys, correl', symerror: 0.050}
+        - {label: 'sys, common correl', symerror: 0.077}
+      - value: 0.992
+        errors:
+        - {label: stat, symerror: 0.029}
+        - {label: 'sys, uncorrel', symerror: 0.070}
+        - {label: 'sys, correl', symerror: 0.046}
+        - {label: 'sys, common correl', symerror: 0.071}
+      - value: 0.979
+        errors:
+        - {label: stat, symerror: 0.052}
+        - {label: 'sys, uncorrel', symerror: 0.066}
+        - {label: 'sys, correl', symerror: 0.046}
+        - {label: 'sys, common correl', symerror: 0.070}
+      - value: 1.164
+        errors:
+        - {label: stat, symerror: 0.074}
+        - {label: 'sys, uncorrel', symerror: 0.075}
+        - {label: 'sys, correl', symerror: 0.054}
+        - {label: 'sys, common correl', symerror: 0.083}
+
+  - header: {name: 'Q_pPb'}
+    qualifiers:
+      - {name: 'CENTRALITY PERCENTILES', value: '60-80%'}
+      - {name: 'RE', value: 'P PB --> J/PSI < MU+ MU- > X'}
+      - {name: 'SQRT(S)/NUCLEON', value: '8160.0', units: 'GeV'}
+      - {name: 'YRAP(RF=CM)', value: '-4.46 - -2.96'}
+    values:
+      - value: 0.762
+        errors:
+        - {label: stat, symerror: 0.024}
+        - {label: 'sys, uncorrel', symerror: 0.058}
+        - {label: 'sys, correl', symerror: 0.040}
+        - {label: 'sys, common correl', symerror: 0.055}
+      - value: 0.802
+        errors:
+        - {label: stat, symerror: 0.019}
+        - {label: 'sys, uncorrel', symerror: 0.062}
+        - {label: 'sys, correl', symerror: 0.042}
+        - {label: 'sys, common correl', symerror: 0.058}
+      - value: 0.855
+        errors:
+        - {label: stat, symerror: 0.020}
+        - {label: 'sys, uncorrel', symerror: 0.060}
+        - {label: 'sys, correl', symerror: 0.044}
+        - {label: 'sys, common correl', symerror: 0.061}
+      - value: 0.905
+        errors:
+        - {label: stat, symerror: 0.023}
+        - {label: 'sys, uncorrel', symerror: 0.064}
+        - {label: 'sys, correl', symerror: 0.047}
+        - {label: 'sys, common correl', symerror: 0.065}
+      - value: 0.946
+        errors:
+        - {label: stat, symerror: 0.029}
+        - {label: 'sys, uncorrel', symerror: 0.065}
+        - {label: 'sys, correl', symerror: 0.049}
+        - {label: 'sys, common correl', symerror: 0.068}
+      - value: 0.938
+        errors:
+        - {label: stat, symerror: 0.036}
+        - {label: 'sys, uncorrel', symerror: 0.066}
+        - {label: 'sys, correl', symerror: 0.049}
+        - {label: 'sys, common correl', symerror: 0.067}
+      - value: 0.919
+        errors:
+        - {label: stat, symerror: 0.035}
+        - {label: 'sys, uncorrel', symerror: 0.067}
+        - {label: 'sys, correl', symerror: 0.048}
+        - {label: 'sys, common correl', symerror: 0.066}
+      - value: 0.843
+        errors:
+        - {label: stat, symerror: 0.062}
+        - {label: 'sys, uncorrel', symerror: 0.061}
+        - {label: 'sys, correl', symerror: 0.044}
+        - {label: 'sys, common correl', symerror: 0.060}
+      - value: 0.923
+        errors:
+        - {label: stat, symerror: 0.092}
+        - {label: 'sys, uncorrel', symerror: 0.065}
+        - {label: 'sys, correl', symerror: 0.048}
+        - {label: 'sys, common correl', symerror: 0.066}
+
+  - header: {name: 'Q_pPb'}
+    qualifiers:
+      - {name: 'CENTRALITY PERCENTILES', value: '80-90%'}
+      - {name: 'RE', value: 'P PB --> J/PSI < MU+ MU- > X'}
+      - {name: 'SQRT(S)/NUCLEON', value: '8160.0', units: 'GeV'}
+      - {name: 'YRAP(RF=CM)', value: '-4.46 - -2.96'}
+    values:
+      - value: 0.848
+        errors:
+        - {label: stat, symerror: 0.039}
+        - {label: 'sys, uncorrel', symerror: 0.065}
+        - {label: 'sys, correl', symerror: 0.024}
+        - {label: 'sys, common correl', symerror: 0.061}
+      - value: 0.797
+        errors:
+        - {label: stat, symerror: 0.030}
+        - {label: 'sys, uncorrel', symerror: 0.061}
+        - {label: 'sys, correl', symerror: 0.023}
+        - {label: 'sys, common correl', symerror: 0.057}
+      - value: 0.741
+        errors:
+        - {label: stat, symerror: 0.032}
+        - {label: 'sys, uncorrel', symerror: 0.053}
+        - {label: 'sys, correl', symerror: 0.021}
+        - {label: 'sys, common correl', symerror: 0.053}
+      - value: 0.789
+        errors:
+        - {label: stat, symerror: 0.043}
+        - {label: 'sys, uncorrel', symerror: 0.060}
+        - {label: 'sys, correl', symerror: 0.023}
+        - {label: 'sys, common correl', symerror: 0.057}
+      - value: 0.871
+        errors:
+        - {label: stat, symerror: 0.055}
+        - {label: 'sys, uncorrel', symerror: 0.061}
+        - {label: 'sys, correl', symerror: 0.025}
+        - {label: 'sys, common correl', symerror: 0.062}
+      - value: 0.836
+        errors:
+        - {label: stat, symerror: 0.064}
+        - {label: 'sys, uncorrel', symerror: 0.058}
+        - {label: 'sys, correl', symerror: 0.024}
+        - {label: 'sys, common correl', symerror: 0.060}
+      - value: 0.887
+        errors:
+        - {label: stat, symerror: 0.063}
+        - {label: 'sys, uncorrel', symerror: 0.066}
+        - {label: 'sys, correl', symerror: 0.025}
+        - {label: 'sys, common correl', symerror: 0.064}
+      - value: 0.914
+        errors:
+        - {label: stat, symerror: 0.100}
+        - {label: 'sys, uncorrel', symerror: 0.064}
+        - {label: 'sys, correl', symerror: 0.026}
+        - {label: 'sys, common correl', symerror: 0.066}
+      - value: 0.951
+        errors:
+        - {label: stat, symerror: 0.164}
+        - {label: 'sys, uncorrel', symerror: 0.063}
+        - {label: 'sys, correl', symerror: 0.027}
+        - {label: 'sys, common correl', symerror: 0.068}
+independent_variables:
+  - header: {name: 'pT range, GeV/c'}
+    values:
+      - {low: 0, high: 1}
+      - {low: 1, high: 2}
+      - {low: 2, high: 3}
+      - {low: 3, high: 4}
+      - {low: 4, high: 5}
+      - {low: 5, high: 6}
+      - {low: 6, high: 8}
+      - {low: 8, high: 10}
+      - {low: 10, high: 16}
+

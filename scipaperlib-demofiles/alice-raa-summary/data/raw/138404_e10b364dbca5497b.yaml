@@ -1,0 +1,164 @@
+dependent_variables:
+- header:
+    name: $R_\mathrm{AA}$
+  qualifiers:
+  - name: CENTRALITY
+    value: 0.0-10.0 pct
+  - name: REACTION
+    value: PBPB --> $\mathrm{\Lambda_c^+}$ + X
+  - name: SQRT(S)/NUCLEON
+    units: GEV
+    value: 5020.0
+  - name: YRAP
+    value: -0.5 TO 0.5
+  values:
+  - errors:
+    - label: stat
+      symerror: 0.19452
+    - asymerror:
+        minus: -0.1362
+        plus: 0.13663
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 2.223%
+    value: 0.63832
+  - errors:
+    - label: stat
+      symerror: 0.15217
+    - asymerror:
+        minus: -0.16285
+        plus: 0.16454
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 2.223%
+    value: 0.74876
+  - errors:
+    - label: stat
+      symerror: 0.1874
+    - asymerror:
+        minus: -0.20462
+        plus: 0.21252
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 2.223%
+    value: 1.0187
+  - errors:
+    - label: stat
+      symerror: 0.14662
+    - asymerror:
+        minus: -0.12532
+        plus: 0.1336
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 2.223%
+    value: 0.61562
+  - errors:
+    - label: stat
+      symerror: 0.11459
+    - asymerror:
+        minus: -0.079959
+        plus: 0.088206
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 2.223%
+    value: 0.38502
+  - errors:
+    - label: stat
+      symerror: 0.13816
+    - asymerror:
+        minus: -0.096603
+        plus: 0.096593
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 2.223%
+    value: 0.33949
+- header:
+    name: $R_\mathrm{AA}$
+  qualifiers:
+  - name: CENTRALITY
+    value: 30.0-50.0 pct
+  - name: REACTION
+    value: PBPB --> $\mathrm{\Lambda_c^+}$ + X
+  - name: SQRT(S)/NUCLEON
+    units: GEV
+    value: 5020.0
+  - name: YRAP
+    value: -0.5 TO 0.5
+  values:
+  - errors:
+    - label: stat
+      symerror: 0.25118
+    - asymerror:
+        minus: -0.19647
+        plus: 0.1973
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 3.3349%
+    value: 0.88258
+  - errors:
+    - label: stat
+      symerror: 0.1884
+    - asymerror:
+        minus: -0.18229
+        plus: 0.18495
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 3.3349%
+    value: 0.95391
+  - errors:
+    - label: stat
+      symerror: 0.19527
+    - asymerror:
+        minus: -0.14984
+        plus: 0.15787
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 3.3349%
+    value: 0.79492
+  - errors:
+    - label: stat
+      symerror: 0.20336
+    - asymerror:
+        minus: -0.1482
+        plus: 0.16094
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 3.3349%
+    value: 0.72025
+  - errors:
+    - label: stat
+      symerror: 0.19605
+    - asymerror:
+        minus: -0.08099
+        plus: 0.091833
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 3.3349%
+    value: 0.45259
+  - errors:
+    - label: stat
+      symerror: 0.28098
+    - asymerror:
+        minus: -0.20597
+        plus: 0.20629
+      label: sys
+    - label: sys, global norm. unc.
+      symerror: 3.3349%
+    value: 0.79021
+independent_variables:
+- header:
+    name: $p_\mathrm{T}$
+    units: $\mathrm{GeV}/c$
+  values:
+  - high: 2.0
+    low: 1.0
+  - high: 4.0
+    low: 2.0
+  - high: 6.0
+    low: 4.0
+  - high: 8.0
+    low: 6.0
+  - high: 12.0
+    low: 8.0
+  - high: 24.0
+    low: 12.0

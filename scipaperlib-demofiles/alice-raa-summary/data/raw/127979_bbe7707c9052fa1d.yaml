@@ -1,0 +1,215 @@
+dependent_variables:
+- header: {name: RAA}
+  qualifiers:
+  - {name: CENTRALITY, value: 0-10%}
+  - {name: SQRT(S), value: 5020.0 GeV}
+  values:
+  - errors:
+    - label: stat.
+      symerror: 0.134435
+    - label: syst.
+      asymerror:
+        minus: -0.155058
+        plus: 0.155918
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.700966
+  - errors:
+    - label: stat.
+      symerror: 0.066284
+    - label: syst.
+      asymerror:
+        minus: -0.084616
+        plus: 0.085437
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.436172
+  - errors:
+    - label: stat.
+      symerror: 0.0604712
+    - label: syst.
+      asymerror:
+        minus: -0.0766587
+        plus: 0.0769113
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.42937
+  - errors:
+    - label: stat.
+      symerror: 0.047241
+    - label: syst.
+      asymerror:
+        minus: -0.0788598
+        plus: 0.0792942
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.430238
+  - errors:
+    - label: stat.
+      symerror: 0.0470088
+    - label: syst.
+      asymerror:
+        minus: -0.0699307
+        plus: 0.0695554
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.374676
+  - errors:
+    - label: stat.
+      symerror: 0.028065
+    - label: syst.
+      asymerror:
+        minus: -0.0440213
+        plus: 0.0442515
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.240688
+  - errors:
+    - label: stat.
+      symerror: 0.0266715
+    - label: syst.
+      asymerror:
+        minus: -0.0437626
+        plus: 0.0437149
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.244834
+  - errors:
+    - label: stat.
+      symerror: 0.0293231
+    - label: syst.
+      asymerror:
+        minus: -0.0466174
+        plus: 0.0470514
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.250492
+  - errors:
+    - label: stat.
+      symerror: 0.0300737
+    - label: syst.
+      asymerror:
+        minus: -0.0394057
+        plus: 0.0399858
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.24143
+  - errors:
+    - label: stat.
+      symerror: 0.0251129
+    - label: syst.
+      asymerror:
+        minus: -0.0308956
+        plus: 0.0309173
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.19893
+  - errors:
+    - label: stat.
+      symerror: 0.0223293
+    - label: syst.
+      asymerror:
+        minus: -0.0293321
+        plus: 0.0300156
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.19853
+  - errors:
+    - label: stat.
+      symerror: 0.0233023
+    - label: syst.
+      asymerror:
+        minus: -0.0316067
+        plus: 0.0326329
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.213582
+  - errors:
+    - label: stat.
+      symerror: 0.0231093
+    - label: syst.
+      asymerror:
+        minus: -0.0371476
+        plus: 0.0394973
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.236255
+  - errors:
+    - label: stat.
+      symerror: 0.0227843
+    - label: syst.
+      asymerror:
+        minus: -0.0351241
+        plus: 0.0375197
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.227736
+  - errors:
+    - label: stat.
+      symerror: 0.0452488
+    - label: syst.
+      asymerror:
+        minus: -0.0441057
+        plus: 0.0497877
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.294982
+  - errors:
+    - label: stat.
+      symerror: 0.0507899
+    - label: syst.
+      asymerror:
+        minus: -0.0237446
+        plus: 0.0237306
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.240062
+  - errors:
+    - label: stat.
+      symerror: 0.0560495
+    - label: syst.
+      asymerror:
+        minus: -0.182602
+        plus: 0.168804
+    - label: syst. global normalization uncertainty
+      symerror: 2.60416%
+    value: 0.450126
+independent_variables:
+- header:
+    name: $p_\mathrm{T}$
+    units: GeV/$c$
+  values:
+  - high: 3.5
+    low: 3
+  - high: 4
+    low: 3.5
+  - high: 4.5
+    low: 4
+  - high: 5
+    low: 4.5
+  - high: 5.5
+    low: 5
+  - high: 6
+    low: 5.5
+  - high: 6.5
+    low: 6
+  - high: 7
+    low: 6.5
+  - high: 7.5
+    low: 7
+  - high: 8
+    low: 7.5
+  - high: 9
+    low: 8
+  - high: 10
+    low: 9
+  - high: 12
+    low: 10
+  - high: 16
+    low: 12
+  - high: 24
+    low: 16
+  - high: 36
+    low: 24
+  - high: 50
+    low: 36

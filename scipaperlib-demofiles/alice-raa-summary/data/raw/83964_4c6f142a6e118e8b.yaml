@@ -1,0 +1,66 @@
+dependent_variables:
+- header: {name: RAA}
+  qualifiers:
+  - {name: RE, value: PB PB --> ETA X}
+  - {name: CENTRALITY, units: PCT, value: 0.0 TO 10.0}
+  - {name: SQRT(S)/NUCLEON, units: GeV, value: '2760.0'}
+  - {name: YRAP, value: 0.0}
+  values:
+  - errors:
+    - {label: stat, symerror: 1.610660e-01}
+    - {label: sys, symerror: 1.300107e-01}
+    value: 4.982817e-01
+  - errors:
+    - {label: stat, symerror: 1.408247e-01}
+    - {label: sys, symerror: 1.051048e-01}
+    value: 4.920547e-01
+  - errors:
+    - {label: stat, symerror: 8.443605e-02}
+    - {label: sys, symerror: 7.891670e-02}
+    value: 4.423092e-01
+  - errors:
+    - {label: stat, symerror: 5.729917e-02}
+    - {label: sys, symerror: 4.812423e-02}
+    value: 2.585696e-01
+  - errors:
+    - {label: stat, symerror: 1.320016e-02}
+    - {label: sys, symerror: 1.689691e-02}
+    value: 1.101894e-01
+  - errors:
+    - {label: stat, symerror: 9.822699e-03}
+    - {label: sys, symerror: 1.579535e-02}
+    value: 1.067985e-01
+  - errors:
+    - {label: stat, symerror: 1.446276e-02}
+    - {label: sys, symerror: 2.117097e-02}
+    value: 1.404146e-01
+  - errors:
+    - {label: stat, symerror: 1.605335e-02}
+    - {label: sys, symerror: 2.652812e-02}
+    value: 1.469927e-01
+  - errors:
+    - {label: stat, symerror: 2.286597e-02}
+    - {label: sys, symerror: 3.505386e-02}
+    value: 1.848090e-01
+  - errors:
+    - {label: stat, symerror: 1.824836e-02}
+    - {label: sys, symerror: 3.921231e-02}
+    value: 1.725918e-01
+  - errors:
+    - {label: stat, symerror: 3.465175e-02}
+    - {label: sys, symerror: 6.079391e-02}
+    value: 2.404827e-01
+independent_variables:
+- header: {name: PT, units: GEV/c}
+  values:
+  - {low: 1.0, high: 1.5, value: 1.2500}
+  - {low: 1.5, high: 2.0, value: 1.7500}
+  - {low: 2.0, high: 3.0, value: 2.5000}
+  - {low: 3.0, high: 4.0, value: 3.5000}
+  - {low: 4.0, high: 6.0, value: 5.0000}
+  - {low: 6.0, high: 8.0, value: 7.0000}
+  - {low: 8.0, high: 10.0, value: 9.0000}
+  - {low: 10.0, high: 12.0, value: 11.0000}
+  - {low: 12.0, high: 14.0, value: 13.0000}
+  - {low: 14.0, high: 17.0, value: 15.5000}
+  - {low: 17.0, high: 20.0, value: 18.5000}

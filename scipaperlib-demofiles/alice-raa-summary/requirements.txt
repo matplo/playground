@@ -1,0 +1,7 @@
+matplotlib>=3.9
+numpy>=2
+ipywidgets>=8
+PyYAML>=6
+nbformat>=5
+nbclient>=0.10
+ipykernel>=6

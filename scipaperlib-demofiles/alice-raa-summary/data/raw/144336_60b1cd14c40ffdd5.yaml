@@ -1,0 +1,78 @@
+dependent_variables:
+- header: {name: 'RAA'}
+  qualifiers: 
+  - {name: RE, value: Pb Pb -> b(->c)->e + X}
+  - {name: SQRT(S)/NUCLEON, value: 5020.0, units: GeV}
+  - {name: CENTRALITY, value: 0-10%}
+  - {name: 'YRAP ($p_{T}$ < 8 GeV/c)', value: '-0.8 to 0.8'}
+  - {name: 'YRAP ($p_{T}$ > 8 GeV/c)', value: '-0.6 to 0.6'}
+  - {name: 'Normalization uncertainity', value: '2.2%'}
+  values:
+  - errors:
+    - {label: stat, symerror: 0.03094558}
+    - {label: 'sys', asymerror: {minus: -0.2122894, plus: 0.2122894}}
+    value: 0.5744783  
+  - errors:
+    - {label: stat, symerror: 0.03280318}
+    - {label: 'sys', asymerror: {minus: -0.1738682, plus: 0.1738682}}
+    value: 0.5403095
+  - errors:
+    - {label: stat, symerror: 0.03332876}
+    - {label: 'sys', asymerror: {minus: -0.1802407, plus: 0.1802407}}
+    value: 0.5856089
+  - errors:
+    - {label: stat, symerror: 0.04390099}
+    - {label: 'sys', asymerror: {minus: -0.1441823, plus: 0.1441823}}
+    value: 0.4702987
+  - errors:
+    - {label: stat, symerror: 0.05723884}
+    - {label: 'sys', asymerror: {minus: -0.1179722, plus: 0.1179722}}
+    value: 0.3856807
+  - errors:
+    - {label: stat, symerror: 0.07228081}
+    - {label: 'sys', asymerror: {minus: -0.1242211, plus: 0.1242211}}
+    value: 0.417017
+  - errors:
+    - {label: stat, symerror: 0.06563893}
+    - {label: 'sys', asymerror: {minus: -0.07068856, plus: 0.08866962}}
+    value: 0.1882402
+  - errors:
+    - {label: stat, symerror: 0.1248208}
+    - {label: 'sys', asymerror: {minus: -0.1217361, plus: 0.1486263}}
+    value: 0.3297451
+  - errors:
+    - {label: stat, symerror: 0.05108944}
+    - {label: 'sys', asymerror: {minus: -0.08258961, plus: 0.09858788}}
+    value: 0.2263882
+  - errors:
+    - {label: stat, symerror: 0.07305413}
+    - {label: 'sys', asymerror: {minus: -0.1369871, plus: 0.1605477}}
+    value: 0.3786187
+  - errors:
+    - {label: stat, symerror: 0.09685361}
+    - {label: 'sys', asymerror: {minus: -0.1175497, plus: 0.1356138}}
+    value: 0.3267668
+  - errors:
+    - {label: stat, symerror: 0.1213107}
+    - {label: 'sys', asymerror: {minus: -0.130045, plus: 0.1481703}}
+    value: 0.3629452
+  - errors:
+    - {label: stat, symerror: 0.0740315}
+    - {label: 'sys', asymerror: {minus: -0.04750538, plus: 0.0529271}}
+    value: 0.1318182
+independent_variables:
+- header: {name: '$p_{T}$', units: GeV/c}
+  values:
+  - {low: 2.0, high: 2.5}
+  - {low: 2.5, high: 3.0}
+  - {low: 3.0, high: 4.0}
+  - {low: 4.0, high: 5.0}
+  - {low: 5.0, high: 6.0}
+  - {low: 6.0, high: 8.0}
+  - {low: 8.0, high: 10.0}
+  - {low: 10.0, high: 12.0}
+  - {low: 12.0, high: 14.0}
+  - {low: 14.0, high: 16.0}
+  - {low: 16.0, high: 18.0}
+  - {low: 18.0, high: 20.0}
+  - {low: 20.0, high: 26.0}

@@ -1,0 +1,75 @@
+dependent_variables:
+- header:
+    name: RAA
+  qualifiers:
+  - name: SQRT(S)
+    units: GeV
+    value: 5020.0
+  - name: Particle
+    value: J/$\psi$
+  - name: System
+    value: Pb--Pb
+  - name: centrality
+    value: 0--10%
+  values:
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.1697
+    - label: syst. uncertainty
+      symerror: 0.13201
+    value: 1.0752
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.12632
+    - label: syst. uncertainty
+      symerror: 0.15317
+    value: 1.1504
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.12865
+    - label: syst. uncertainty
+      symerror: 0.13917
+    value: 1.0901
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.097259
+    - label: syst. uncertainty
+      symerror: 0.094794
+    value: 0.75131
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.072678
+    - label: syst. uncertainty
+      symerror: 0.067037
+    value: 0.5041
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.045501
+    - label: syst. uncertainty
+      symerror: 0.03817
+    value: 0.3136
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.04884
+    - label: syst. uncertainty
+      symerror: 0.030227
+    value: 0.24229
+  - errors:
+    - label: stat. uncertainty
+      symerror: 0.071668
+    - label: syst. uncertainty
+      symerror: 0.061882
+    value: 0.34003
+independent_variables:
+- header:
+    name: $p_{T}$
+    units: GeV/$c$
+  values:
+  -  { high: 1 ,  low: 0.15 }
+  -  { high: 2 ,  low: 1 }
+  -  { high: 3 ,  low: 2 }
+  -  { high: 4 ,  low: 3 }
+  -  { high: 5 ,  low: 4 }
+  -  { high: 7 ,  low: 5 }
+  -  { high: 10 ,  low: 7 }
+  -  { high: 15 ,  low: 10 }

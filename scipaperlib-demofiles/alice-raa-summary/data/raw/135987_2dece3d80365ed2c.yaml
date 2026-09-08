@@ -1,0 +1,252 @@
+dependent_variables:
+- header:
+    name: $R_\mathrm{AA}$
+  qualifiers:
+  - name: CENTRALITY
+    value: 0.0-10.0 pct
+  - name: REACTION
+    value: PBPB --> $\rm D^0$ + X
+  - name: SQRT(S)/NUCLEON
+    units: GEV
+    value: 5020.0
+  - name: YRAP
+    value: -0.5 TO 0.5
+  values:
+  - errors:
+    - label: stat
+      symerror: 0.36308
+    - label: sys
+      symerror: 0.31659
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 1.3917
+  - errors:
+    - label: stat
+      symerror: 0.16783
+    - label: sys
+      symerror: 0.15306
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.88416
+  - errors:
+    - label: stat
+      symerror: 0.12617
+    - label: sys
+      symerror: 0.14380
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.83308
+  - errors:
+    - label: stat
+      symerror: 0.081524
+    - label: sys
+      symerror: 0.092817
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.57676
+  - errors:
+    - label: stat
+      symerror: 0.076086
+    - label: sys
+      symerror: 0.067400
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.427365
+  - errors:
+    - label: stat
+      symerror: 0.080504
+    - label: sys
+      symerror: 0.060790
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.41753
+  - errors:
+    - label: stat
+      symerror: 0.076596
+    - label: sys
+      symerror: 0.056162
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.35980
+  - errors:
+    - label: stat
+      symerror: 0.073255
+    - label: sys
+      symerror: 0.053215
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.35328
+  - errors:
+    - label: stat
+      symerror: 0.052880
+    - label: sys
+      symerror: 0.034195
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.23125
+  - errors:
+    - label: stat
+      symerror: 0.19993
+    - label: sys
+      symerror: 0.081791
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.47223
+  - errors:
+    - label: stat
+      symerror: 0.35596
+    - label: sys
+      symerror: 0.088604
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.48159
+  - errors:
+    - label: stat
+      symerror: 0.12594
+    - asymerror:
+        minus: -0.12449
+        plus: 0.077261
+      label: sys
+    - label: syst. global normalization uncertainty
+      symerror: 2.6041%
+    value: 0.35721
+- header:
+    name: $R_\mathrm{AA}$
+  qualifiers:
+  - name: CENTRALITY
+    value: 30.0-50.0 pct
+  - name: REACTION
+    value: PBPB --> $\rm D^0$ + X
+  - name: SQRT(S)/NUCLEON
+    units: GEV
+    value: 5020.0
+  - name: YRAP
+    value: -0.5 TO 0.5
+  values:
+  - errors:
+    - label: stat
+      symerror: 0.41573
+    - label: sys
+      symerror: 0.32308
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 1.56202
+  - errors:
+    - label: stat
+      symerror: 0.19659
+    - label: sys
+      symerror: 0.19099
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 1.07825
+  - errors:
+    - label: stat
+      symerror: 0.14366
+    - label: sys
+      symerror: 0.15362
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.97785
+  - errors:
+    - label: stat
+      symerror: 0.096161
+    - label: sys
+      symerror: 0.090923
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.67620
+  - errors:
+    - label: stat
+      symerror: 0.10745
+    - label: sys
+      symerror: 0.080628
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.60810
+  - errors:
+    - label: stat
+      symerror: 0.11564
+    - label: sys
+      symerror: 0.071755
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.56586
+  - errors:
+    - label: stat
+      symerror: 0.12054
+    - label: sys
+      symerror: 0.075293
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.53922
+  - errors:
+    - label: stat
+      symerror: 0.12438
+    - label: sys
+      symerror: 0.075437
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.56232
+  - errors:
+    - label: stat
+      symerror: 0.099608
+    - label: sys
+      symerror: 0.053535
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.40501
+  - errors:
+    - label: stat
+      symerror: 0.27476
+    - label: sys
+      symerror: 0.10468
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.63325
+  - errors:
+    - label: stat
+      symerror: 0.55307
+    - label: sys
+      symerror: 0.13347
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.73189
+  - errors:
+    - label: stat
+      symerror: 0.34116
+    - asymerror:
+        minus: -0.33593
+        plus: 0.21199
+      label: sys
+    - label: syst. global normalization uncertainty
+      symerror: 3.6002%
+    value: 0.95365
+independent_variables:
+- header:
+    name: $p_\mathrm{T}$
+    units: $\mathrm{GeV}/c$
+  values:
+  - high: 2.0
+    low: 1.0
+  - high: 3.0
+    low: 2.0
+  - high: 4.0
+    low: 3.0
+  - high: 5.0
+    low: 4.0
+  - high: 6.0
+    low: 5.0
+  - high: 7.0
+    low: 6.0
+  - high: 8.0
+    low: 7.0
+  - high: 10.0
+    low: 8.0
+  - high: 12.0
+    low: 10.0
+  - high: 16.0
+    low: 12.0
+  - high: 24.0
+    low: 16.0
+  - high: 36.0
+    low: 24.0

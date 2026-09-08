@@ -1,0 +1,333 @@
+dependent_variables:
+- header: {name: '$R_{\mathrm{AA}}^{0-10}$'}
+  qualifiers:
+  - {name: '$\sqrt{s_{\mathrm{NN}}}$', units: GeV, value: 5020}
+  - {name: '$|\eta^{\gamma}|$', value: $<$ 0.67}
+  - {name: '$R$', value: 0.4}
+  - {name: '$p_{\mathrm{T}}^{\mathrm{iso}}$', units: (charged) GeV/$c$, value: 1.5}
+  - {name: CENTRALITY, units: $\%$, value: 0$-$10}
+  values:
+  - errors:
+    - {label: stat, symerror: 1.93e-02}
+    - {label: syst, symerror: 2.48e-01}
+    value: 1.059
+  - errors:
+    - {label: stat, symerror: 1.64e-02}
+    - {label: syst, symerror: 1.99e-01}
+    value: 1.080
+  - errors:
+    - {label: stat, symerror: 2.11e-02}
+    - {label: syst, symerror: 1.69e-01}
+    value: 1.022
+  - errors:
+    - {label: stat, symerror: 2.75e-02}
+    - {label: syst, symerror: 1.58e-01}
+    value: 1.030
+  - errors:
+    - {label: stat, symerror: 3.60e-02}
+    - {label: syst, symerror: 1.58e-01}
+    value: 1.014
+  - errors:
+    - {label: stat, symerror: 3.42e-02}
+    - {label: syst, symerror: 1.53e-01}
+    value: 1.058
+  - errors:
+    - {label: stat, symerror: 5.36e-02}
+    - {label: syst, symerror: 1.35e-01}
+    value: 1.096
+  - errors:
+    - {label: stat, symerror: 6.62e-02}
+    - {label: syst, symerror: 1.35e-01}
+    value: 1.168
+  - errors:
+    - {label: stat, symerror: 9.87e-02}
+    - {label: syst, symerror: 1.29e-01}
+    value: 1.215
+  - errors:
+    - {label: stat, symerror: 2.00e-01}
+    - {label: syst, symerror: 1.11e-01}
+    value: 1.117
+- header: {name: '$R_{\mathrm{AA}}^{10-30}$'}
+  qualifiers:
+  - {name: '$\sqrt{s_{\mathrm{NN}}}$', units: GeV, value: 5020}
+  - {name: '$|\eta^{\gamma}|$', value: $<$ 0.67}
+  - {name: '$R$', value: 0.4}
+  - {name: '$p_{\mathrm{T}}^{\mathrm{iso}}$', units: (charged) GeV/$c$, value: 1.5}
+  - {name: CENTRALITY, units: $\%$, value: 10$-$30}
+  values:
+  - errors:
+    - {label: stat, symerror: 2.46e-02}
+    - {label: syst, symerror: 2.58e-01}
+    value: 1.047
+  - errors:
+    - {label: stat, symerror: 1.61e-02}
+    - {label: syst, symerror: 1.80e-01}
+    value: 1.022
+  - errors:
+    - {label: stat, symerror: 2.01e-02}
+    - {label: syst, symerror: 1.33e-01}
+    value: 0.9424
+  - errors:
+    - {label: stat, symerror: 2.47e-02}
+    - {label: syst, symerror: 1.09e-01}
+    value: 0.9020
+  - errors:
+    - {label: stat, symerror: 3.33e-02}
+    - {label: syst, symerror: 1.08e-01}
+    value: 0.9178
+  - errors:
+    - {label: stat, symerror: 3.20e-02}
+    - {label: syst, symerror: 1.03e-01}
+    value: 0.9698
+  - errors:
+    - {label: stat, symerror: 4.86e-02}
+    - {label: syst, symerror: 9.42e-02}
+    value: 0.9682
+  - errors:
+    - {label: stat, symerror: 6.08e-02}
+    - {label: syst, symerror: 9.80e-02}
+    value: 1.047
+  - errors:
+    - {label: stat, symerror: 8.48e-02}
+    - {label: syst, symerror: 9.21e-02}
+    value: 1.014
+  - errors:
+    - {label: stat, symerror: 1.80e-01}
+    - {label: syst, symerror: 8.64e-02}
+    value: 0.9703
+- header: {name: '$R_{\mathrm{AA}}^{30-50}$'}
+  qualifiers:
+  - {name: '$\sqrt{s_{\mathrm{NN}}}$', units: GeV, value: 5020}
+  - {name: '$|\eta^{\gamma}|$', value: $<$ 0.67}
+  - {name: '$R$', value: 0.4}
+  - {name: '$p_{\mathrm{T}}^{\mathrm{iso}}$', units: (charged) GeV/$c$, value: 1.5}
+  - {name: CENTRALITY, units: $\%$, value: 30$-$50}
+  values:
+  - errors:
+    - {label: stat, symerror: 2.43e-02}
+    - {label: syst, symerror: 3.08e-01}
+    value: 1.062
+  - errors:
+    - {label: stat, symerror: 1.71e-02}
+    - {label: syst, symerror: 1.89e-01}
+    value: 1.071
+  - errors:
+    - {label: stat, symerror: 2.18e-02}
+    - {label: syst, symerror: 1.06e-01}
+    value: 0.9932
+  - errors:
+    - {label: stat, symerror: 2.70e-02}
+    - {label: syst, symerror: 8.22e-02}
+    value: 0.9304
+  - errors:
+    - {label: stat, symerror: 3.73e-02}
+    - {label: syst, symerror: 8.71e-02}
+    value: 0.9717
+  - errors:
+    - {label: stat, symerror: 3.50e-02}
+    - {label: syst, symerror: 8.98e-02}
+    value: 0.9930
+  - errors:
+    - {label: stat, symerror: 5.29e-02}
+    - {label: syst, symerror: 8.75e-02}
+    value: 0.9836
+  - errors:
+    - {label: stat, symerror: 6.53e-02}
+    - {label: syst, symerror: 9.36e-02}
+    value: 1.057
+  - errors:
+    - {label: stat, symerror: 8.04e-02}
+    - {label: syst, symerror: 7.78e-02}
+    value: 0.8817
+  - errors:
+    - {label: stat, symerror: 1.89e-01}
+    - {label: syst, symerror: 8.15e-02}
+    value: 0.9308
+- header: {name: '$R_{\mathrm{AA}}^{50-90}$'}
+  qualifiers:
+  - {name: '$\sqrt{s_{\mathrm{NN}}}$', units: GeV, value: 5020}
+  - {name: '$|\eta^{\gamma}|$', value: $<$ 0.67}
+  - {name: '$R$', value: 0.4}
+  - {name: '$p_{\mathrm{T}}^{\mathrm{iso}}$', units: (charged) GeV/$c$, value: 1.5}
+  - {name: CENTRALITY, units: $\%$, value: 50$-$90}
+  values:
+  - errors:
+    - {label: stat, symerror: 1.86e-02}
+    - {label: syst, symerror: 3.06e-01}
+    value: 0.9729
+  - errors:
+    - {label: stat, symerror: 1.81e-02}
+    - {label: syst, symerror: 2.03e-01}
+    value: 0.9525
+  - errors:
+    - {label: stat, symerror: 2.37e-02}
+    - {label: syst, symerror: 1.17e-01}
+    value: 0.8785
+  - errors:
+    - {label: stat, symerror: 3.11e-02}
+    - {label: syst, symerror: 7.60e-02}
+    value: 0.8597
+  - errors:
+    - {label: stat, symerror: 4.07e-02}
+    - {label: syst, symerror: 5.62e-02}
+    value: 0.8239
+  - errors:
+    - {label: stat, symerror: 4.02e-02}
+    - {label: syst, symerror: 5.65e-02}
+    value: 0.9074
+  - errors:
+    - {label: stat, symerror: 6.00e-02}
+    - {label: syst, symerror: 5.38e-02}
+    value: 0.8703
+  - errors:
+    - {label: stat, symerror: 7.30e-02}
+    - {label: syst, symerror: 5.67e-02}
+    value: 0.9185
+  - {value: -}
+  - {value: -}
+- header: {name: '$R_{\mathrm{AA}}^{50-70}$'}
+  qualifiers:
+  - {name: '$\sqrt{s_{\mathrm{NN}}}$', units: GeV, value: 5020}
+  - {name: '$|\eta^{\gamma}|$', value: $<$ 0.67}
+  - {name: '$R$', value: 0.4}
+  - {name: '$p_{\mathrm{T}}^{\mathrm{iso}}$', units: (charged) GeV/$c$, value: 1.5}
+  - {name: CENTRALITY, units: $\%$, value: 50$-$70}
+  values:
+  - errors:
+    - {label: stat, symerror: 1.68e-02}
+    - {label: syst, symerror: 2.61e-01}
+    value: 1.070
+  - errors:
+    - {label: stat, symerror: 2.14e-02}
+    - {label: syst, symerror: 2.04e-01}
+    value: 1.059
+  - errors:
+    - {label: stat, symerror: 2.86e-02}
+    - {label: syst, symerror: 1.67e-01}
+    value: 1.005
+  - errors:
+    - {label: stat, symerror: 3.70e-02}
+    - {label: syst, symerror: 1.29e-01}
+    value: 0.9655
+  - errors:
+    - {label: stat, symerror: 4.89e-02}
+    - {label: syst, symerror: 9.89e-02}
+    value: 0.9303
+  - errors:
+    - {label: stat, symerror: 4.89e-02}
+    - {label: syst, symerror: 8.22e-02}
+    value: 1.052
+  - errors:
+    - {label: stat, symerror: 7.25e-02}
+    - {label: syst, symerror: 6.47e-02}
+    value: 1.000
+  - errors:
+    - {label: stat, symerror: 8.64e-02}
+    - {label: syst, symerror: 6.64e-02}
+    value: 1.034
+  - {value: -}
+  - {value: -}
+- header: {name: '$R_{\mathrm{AA}}^{70-90}$'}
+  qualifiers:
+  - {name: '$\sqrt{s_{\mathrm{NN}}}$', units: GeV, value: 5020}
+  - {name: '$|\eta^{\gamma}|$', value: $<$ 0.67}
+  - {name: '$R$', value: 0.4}
+  - {name: '$p_{\mathrm{T}}^{\mathrm{iso}}$', units: (charged) GeV/$c$, value: 1.5}
+  - {name: CENTRALITY, units: $\%$, value: 70$-$90}
+  values:
+  - errors:
+    - {label: stat, symerror: 2.05e-02}
+    - {label: syst, symerror: 3.89e-01}
+    value: 1.311
+  - errors:
+    - {label: stat, symerror: 3.94e-02}
+    - {label: syst, symerror: 2.54e-01}
+    value: 1.184
+  - errors:
+    - {label: stat, symerror: 4.58e-02}
+    - {label: syst, symerror: 1.31e-01}
+    value: 0.9036
+  - errors:
+    - {label: stat, symerror: 6.28e-02}
+    - {label: syst, symerror: 9.61e-02}
+    value: 0.9414
+  - errors:
+    - {label: stat, symerror: 8.16e-02}
+    - {label: syst, symerror: 7.72e-02}
+    value: 0.9023
+  - errors:
+    - {label: stat, symerror: 7.49e-02}
+    - {label: syst, symerror: 6.89e-02}
+    value: 0.8518
+  - errors:
+    - {label: stat, symerror: 1.18e-01}
+    - {label: syst, symerror: 7.06e-02}
+    value: 0.8767
+  - errors:
+    - {label: stat, symerror: 1.60e-01}
+    - {label: syst, symerror: 8.35e-02}
+    value: 1.041
+  - {value: -}
+  - {value: -}
+- header: {name: '$R_{\mathrm{AA}}^{\mathrm{NLO~pQCD}}$'}
+  qualifiers:
+  - {name: '$\sqrt{s_{\mathrm{NN}}}$', units: GeV, value: 5020}
+  - {name: '$|\eta^{\gamma}|$', value: $<$ 0.67}
+  - {name: '$R$', value: 0.4}
+  - {name: '$p_{\mathrm{T}}^{\mathrm{iso}}$', units: (charged+neutral) GeV/$c$, value: 2}
+  - {name: CENTRALITY, units: $\%$, value: 0$-$100}
+  values:
+  - errors:
+    - {label: scale, symerror: 1.32e-03}
+    - {label: PDF, symerror: 4.97e-02}
+    value: 0.8247
+  - errors:
+    - {label: scale, symerror: 1.20e-03}
+    - {label: PDF, symerror: 4.61e-02}
+    value: 0.8448
+  - errors:
+    - {label: scale, symerror: 1.57e-02}
+    - {label: PDF, symerror: 4.37e-02}
+    value: 0.8316
+  - errors:
+    - {label: scale, symerror: 6.35e-03}
+    - {label: PDF, symerror: 4.66e-02}
+    value: 0.8717
+  - errors:
+    - {label: scale, symerror: 5.28e-03}
+    - {label: PDF, symerror: 5.00e-02}
+    value: 0.8828
+  - errors:
+    - {label: scale, symerror: 3.24e-03}
+    - {label: PDF, symerror: 5.18e-02}
+    value: 0.8964
+  - errors:
+    - {label: scale, symerror: 6.84e-03}
+    - {label: PDF, symerror: 4.86e-02}
+    value: 0.9211
+  - errors:
+    - {label: scale, symerror: 3.49e-03}
+    - {label: PDF, symerror: 4.99e-02}
+    value: 0.9438
+  - errors:
+    - {label: scale, symerror: 2.52e-03}
+    - {label: PDF, symerror: 5.44e-02}
+    value: 0.9780
+  - errors:
+    - {label: scale, symerror: 1.93e-03}
+    - {label: PDF, symerror: 5.20e-02}
+    value: 1.007
+independent_variables:
+- header: {name: 'PT', units: 'GEV/c'}
+  values:
+  - {high: 12.0, low: 11.0}
+  - {high: 14.0, low: 12.0}
+  - {high: 16.0, low: 14.0}
+  - {high: 18.0, low: 16.0}
+  - {high: 20.0, low: 18.0}
+  - {high: 25.0, low: 20.0}
+  - {high: 30.0, low: 25.0}
+  - {high: 40.0, low: 30.0}
+  - {high: 60.0, low: 40.0}
+  - {high: 80.0, low: 60.0}
+
