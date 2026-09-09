@@ -17,6 +17,8 @@ See [scipaperlib on PYPI](https://pypi.org/project/scipaperlib/)
 
 <iframe src="2026-09-08-use-scipaperlib-for-a-one-paragraph.html" style="width:100%; height:800px; border:1px solid #ccc; border-radius:6px;" title="codex session"></iframe>
 
+See another session transcripts here [LINK](2026-09-09-answer-questions-with-scipaperlib.html)
+
 
 ## ALICE QGP bulk observables
 
