@@ -36,6 +36,8 @@ photons. Select presets or individual curves, filter by system/energy/object,
 change the momentum range, toggle systematic errors, and export SVG/CSV/JSON.
 Entirely self-contained — no installation, server or network needed.
 
+![An RAA Summary](alice-raa-summary/alice_raa_summary.png)
+
 <iframe src="alice-raa-summary/alice_raa_explorer.html" style="width:100%; height:800px; border:1px solid #ccc; border-radius:6px;" title="ALICE RAA explorer"></iframe>
 
 
