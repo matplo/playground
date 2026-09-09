@@ -11,6 +11,20 @@ SciPaperlib is a local scientific literature and data library that works indepen
 
 See [scipaperlib on PYPI](https://pypi.org/project/scipaperlib/)
 
+## All the below was produced with a codex session
+
+- session transcript sanitized below
+
+<iframe src="2026-09-08-use-scipaperlib-for-a-one-paragraph.html" style="width:100%; height:800px; border:1px solid #ccc; border-radius:6px;" title="codex session"></iframe>
+
+## ALICE QGP bulk observables
+
+A flowchart summarizing ALICE bulk quark-gluon-plasma observables.
+
+![ALICE QGP bulk flowchart](alice-qgp-bulk/alice-qgp-bulk.svg.png)
+
+[View the vector version (SVG) →](alice-qgp-bulk/alice-qgp-bulk.svg)
+
 ## ALICE R<sub>AA</sub> summary explorer
 
 An interactive nuclear-modification-factor explorer built from 65 HEPData
@@ -27,18 +41,3 @@ Entirely self-contained — no installation, server or network needed.
 See the [full write-up](alice-raa-summary/README.md) and
 [source catalogue](alice-raa-summary/SOURCES.md) for provenance, uncertainty
 and axis policy, and validation notes.
-
-## ALICE QGP bulk observables
-
-A flowchart summarizing ALICE bulk quark-gluon-plasma observables.
-
-![ALICE QGP bulk flowchart](alice-qgp-bulk/alice-qgp-bulk.svg.png)
-
-[View the vector version (SVG) →](alice-qgp-bulk/alice-qgp-bulk.svg)
-
-## All the above was produced with a codex session
-
-- session transcript sanitized below
-
-<iframe src="2026-09-08-use-scipaperlib-for-a-one-paragraph.html" style="width:100%; height:800px; border:1px solid #ccc; border-radius:6px;" title="codex session"></iframe>
-
