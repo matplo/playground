@@ -39,7 +39,8 @@ Entirely self-contained — no installation, server or network needed.
 <iframe src="alice-raa-summary/alice_raa_explorer.html" style="width:100%; height:800px; border:1px solid #ccc; border-radius:6px;" title="ALICE RAA explorer"></iframe>
 
 
-[Open the explorer in its own tab →](alice-raa-summary/alice_raa_explorer.html)
+[Open the explorer in its own tab](alice-raa-summary/alice_raa_explorer.html)
+
 
 See the [full write-up](alice-raa-summary/README.md) and
 [source catalogue](alice-raa-summary/SOURCES.md) for provenance, uncertainty
