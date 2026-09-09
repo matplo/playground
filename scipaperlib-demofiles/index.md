@@ -7,6 +7,8 @@ title: SciPaperlib demos
 Demo bundles built from a SciPaperlib library, put together to show what an
 automated literature-to-data pipeline can produce.
 
+SciPaperlib is a local scientific literature and data library that works independently AND supplies *verifiable evidence to AI assistants through MCP*.
+
 See [scipaperlib on PYPI](https://pypi.org/project/scipaperlib/)
 
 ## ALICE R<sub>AA</sub> summary explorer
