@@ -17,6 +17,7 @@ See [scipaperlib on PYPI](https://pypi.org/project/scipaperlib/)
 
 <iframe src="2026-09-08-use-scipaperlib-for-a-one-paragraph.html" style="width:100%; height:800px; border:1px solid #ccc; border-radius:6px;" title="codex session"></iframe>
 
+
 ## ALICE QGP bulk observables
 
 A flowchart summarizing ALICE bulk quark-gluon-plasma observables.
@@ -24,6 +25,7 @@ A flowchart summarizing ALICE bulk quark-gluon-plasma observables.
 ![ALICE QGP bulk flowchart](alice-qgp-bulk/alice-qgp-bulk.svg.png)
 
 [View the vector version (SVG) →](alice-qgp-bulk/alice-qgp-bulk.svg)
+
 
 ## ALICE R<sub>AA</sub> summary explorer
 
@@ -35,6 +37,7 @@ change the momentum range, toggle systematic errors, and export SVG/CSV/JSON.
 Entirely self-contained — no installation, server or network needed.
 
 <iframe src="alice-raa-summary/alice_raa_explorer.html" style="width:100%; height:800px; border:1px solid #ccc; border-radius:6px;" title="ALICE RAA explorer"></iframe>
+
 
 [Open the explorer in its own tab →](alice-raa-summary/alice_raa_explorer.html)
 
