@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # make-claude-profile-macosx.sh — create a macOS launcher app that starts Claude Desktop
-# (or Claude Science) with its own, separate user-data directory (e.g. a second account).
+# with its own, separate user-data directory (e.g. a second account).
 #
 # Usage:
 #   make-claude-profile-macosx.sh -n NAME [options]
@@ -10,13 +10,12 @@
 #   NAME            Profile name (required; via -n/--name or as the last argument). Creates:
 #                     app:     ~/Applications/<APP> <NAME>.app
 #                     profile: ~/Library/Application Support/<APP>-<NAME>
-#                   where <APP> is the target app's name ("Claude" or "Claude Science").
+#                   where <APP> is the target app's name (normally "Claude").
 #                   Running without NAME does nothing but print this help.
 #
 # Options:
 #   -n, --name NAME       Profile name (required), e.g. Work
 #   -a, --app PATH        Path to the app to launch (default: /Applications/Claude.app)
-#   -s, --science         Shortcut for: -a "/Applications/Claude Science.app"
 #   -d, --dest DIR        Where to put the launcher (default: ~/Applications)
 #   -p, --profile DIR     Explicit profile dir      (default: ~/Library/Application Support/<APP>-NAME)
 #   -c, --copy-config     Copy claude_desktop_config.json (MCP servers) from the default profile
@@ -29,7 +28,6 @@
 #
 # Examples:
 #   ./make-claude-profile-macosx.sh -n Work -c -o
-#   ./make-claude-profile-macosx.sh -s -n Work
 #   ./make-claude-profile-macosx.sh -n Work --remove
 
 set -euo pipefail
@@ -56,7 +54,7 @@ usage() {
   else
     printf 'Usage: make-claude-profile-macosx.sh -n NAME [options]\n'
     printf '       make-claude-profile-macosx.sh -n NAME --remove [-f]\n'
-    printf 'Options: -n NAME -a APP -s -d DEST -p PROFILE -c -f -o -r --no-icon -h\n'
+    printf 'Options: -n NAME -a APP -d DEST -p PROFILE -c -f -o -r --no-icon -h\n'
   fi
   exit "${1:-0}"
 }
@@ -68,7 +66,6 @@ as_escape() { local s=${1//\\/\\\\}; printf '%s' "${s//\"/\\\"}"; }
 while [[ $# -gt 0 ]]; do
   case "$1" in
     -a|--app)         CLAUDE_APP="${2:?missing value for $1}"; shift 2 ;;
-    -s|--science)     CLAUDE_APP="/Applications/Claude Science.app"; shift ;;
     -d|--dest)        DEST_DIR="${2:?missing value for $1}"; shift 2 ;;
     -p|--profile)     PROFILE_DIR="${2:?missing value for $1}"; shift 2 ;;
     -c|--copy-config) COPY_CONFIG=1; shift ;;
@@ -104,7 +101,7 @@ command -v osacompile >/dev/null || die "osacompile not found."
 CLAUDE_APP="${CLAUDE_APP%/}"
 [[ -d "$CLAUDE_APP" ]]  || die "app not found at: $CLAUDE_APP (use --app)."
 
-# Base name of the target app, e.g. "Claude" or "Claude Science"
+# Base name of the target app, e.g. "Claude"
 BASE_NAME="$(basename "$CLAUDE_APP" .app)"
 # Its default (Electron) profile dir lives under its bundle name
 BUNDLE_NAME="$(defaults read "$CLAUDE_APP/Contents/Info" CFBundleName 2>/dev/null || echo "$BASE_NAME")"

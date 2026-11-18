@@ -3,7 +3,7 @@
 > **macOS only.** This script relies on `osacompile`, `open`, `defaults` and
 > LaunchServices. It does not work on Linux or Windows.
 
-This script runs **a second Claude Desktop (or Claude Science) instance** with
+This script runs **a second Claude Desktop instance** with
 its own separate profile, for example to keep a work subscription next to a
 personal one. It
 makes a small launcher app that starts Claude Desktop with its own
@@ -14,15 +14,9 @@ makes a small launcher app that starts Claude Desktop with its own
 | App | `/Applications/Claude.app` | `~/Applications/Claude Work.app` |
 | Profile | `~/Library/Application Support/Claude` | `~/Library/Application Support/Claude-Work` |
 
-With `-s` (Claude Science) the names become `Claude Science Work.app` and
-`Claude Science-Work`. The launcher and profile names always follow the
-target app's name.
-
 ## Requirements
 
-- macOS with Claude Desktop (`/Applications/Claude.app`) and/or Claude Science
-  (`/Applications/Claude Science.app`) installed
-- The target app must be Electron-based, so that it accepts `--user-data-dir`
+- macOS with Claude Desktop installed (default location `/Applications/Claude.app`)
 - `bash`, which comes with macOS
 
 ## Quick start
@@ -59,7 +53,6 @@ make-claude-profile-macosx.sh -n NAME --remove [-f]
   -n, --name NAME       Profile name (required; with no NAME the script does nothing).
                         May also be given as the last bare argument.
   -a, --app PATH        Path to the app to launch (default: /Applications/Claude.app)
-  -s, --science         Shortcut for -a "/Applications/Claude Science.app"
   -d, --dest DIR        Where to put the launcher (default: ~/Applications)
   -p, --profile DIR     Explicit profile dir      (default: ~/Library/Application Support/<APP>-NAME)
   -c, --copy-config     Copy claude_desktop_config.json (local MCP servers) from the default profile
@@ -75,7 +68,6 @@ Examples:
 ```bash
 ./make-claude-profile-macosx.sh -n Work         # "Claude Work", profile Claude-Work
 ./make-claude-profile-macosx.sh -n Lab          # "Claude Lab",  profile Claude-Lab
-./make-claude-profile-macosx.sh -s -n Work      # "Claude Science Work", profile Claude Science-Work
 ./make-claude-profile-macosx.sh -n Work -c -o   # copy local MCP config, then launch
 ./make-claude-profile-macosx.sh -n Work --remove # revert (asks "Proceed? [y/N]")
 ```
@@ -124,8 +116,10 @@ Usually not. By default the new profile starts empty.
   instance at a time, normally the one you started first. In the second
   instance the computer may show as not connected. Use the instance that has the
   connection for chats that need your local files.
-- **`-c` and Claude Science:** `claude_desktop_config.json` is a Claude Desktop
-  file. If the target app has no such file, `-c` warns and copies nothing.
+- **Claude Science is not supported.** The current Claude Science build refuses
+  to start when it is given any command-line arguments (`refusing to start:
+  unexpected argv`), so it can't be given a separate profile this way. To use it
+  with another account, sign out and sign in again.
 
 ## Remove / revert
 
