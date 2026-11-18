@@ -1,25 +1,27 @@
 #!/usr/bin/env bash
 #
 # make-claude-profile-macosx.sh — create a macOS launcher app that starts Claude Desktop
-# with its own, separate user-data directory (e.g. a second "work" account).
+# (or Claude Science) with its own, separate user-data directory (e.g. a second account).
 #
 # Usage:
 #   make-claude-profile-macosx.sh -n NAME [options]
 #   make-claude-profile-macosx.sh -n NAME --remove [-f]
 #
 #   NAME            Profile name (required; via -n/--name or as the last argument). Creates:
-#                     app:     ~/Applications/Claude <NAME>.app
-#                     profile: ~/Library/Application Support/Claude-<NAME>
+#                     app:     ~/Applications/<APP> <NAME>.app
+#                     profile: ~/Library/Application Support/<APP>-<NAME>
+#                   where <APP> is the target app's name ("Claude" or "Claude Science").
 #                   Running without NAME does nothing but print this help.
 #
 # Options:
 #   -n, --name NAME       Profile name (required), e.g. Work
-#   -a, --app PATH        Path to Claude.app        (default: /Applications/Claude.app)
+#   -a, --app PATH        Path to the app to launch (default: /Applications/Claude.app)
+#   -s, --science         Shortcut for: -a "/Applications/Claude Science.app"
 #   -d, --dest DIR        Where to put the launcher (default: ~/Applications)
-#   -p, --profile DIR     Explicit profile dir      (default: ~/Library/Application Support/Claude-NAME)
+#   -p, --profile DIR     Explicit profile dir      (default: ~/Library/Application Support/<APP>-NAME)
 #   -c, --copy-config     Copy claude_desktop_config.json (MCP servers) from the default profile
 #   -f, --force           Don't ask: overwrite existing launcher / confirm --remove
-#       --no-icon         Don't copy Claude's icon
+#       --no-icon         Don't set the app's icon on the launcher
 #   -o, --open            Launch the new app when done
 #   -r, --remove          Revert: delete the launcher app AND profile dir for NAME
 #                         (asks for confirmation unless -f)
@@ -27,6 +29,7 @@
 #
 # Examples:
 #   ./make-claude-profile-macosx.sh -n Work -c -o
+#   ./make-claude-profile-macosx.sh -s -n Work
 #   ./make-claude-profile-macosx.sh -n Work --remove
 
 set -euo pipefail
@@ -41,7 +44,6 @@ COPY_CONFIG=0
 FORCE=0
 SET_ICON=1
 OPEN_AFTER=0
-DEFAULT_PROFILE="$HOME/Library/Application Support/Claude"
 
 # ---------- helpers ----------
 die()  { printf 'Error: %s\n' "$*" >&2; exit 1; }
@@ -54,7 +56,7 @@ usage() {
   else
     printf 'Usage: make-claude-profile-macosx.sh -n NAME [options]\n'
     printf '       make-claude-profile-macosx.sh -n NAME --remove [-f]\n'
-    printf 'Options: -n NAME -a APP -d DEST -p PROFILE -c -f -o -r --no-icon -h\n'
+    printf 'Options: -n NAME -a APP -s -d DEST -p PROFILE -c -f -o -r --no-icon -h\n'
   fi
   exit "${1:-0}"
 }
@@ -66,6 +68,7 @@ as_escape() { local s=${1//\\/\\\\}; printf '%s' "${s//\"/\\\"}"; }
 while [[ $# -gt 0 ]]; do
   case "$1" in
     -a|--app)         CLAUDE_APP="${2:?missing value for $1}"; shift 2 ;;
+    -s|--science)     CLAUDE_APP="/Applications/Claude Science.app"; shift ;;
     -d|--dest)        DEST_DIR="${2:?missing value for $1}"; shift 2 ;;
     -p|--profile)     PROFILE_DIR="${2:?missing value for $1}"; shift 2 ;;
     -c|--copy-config) COPY_CONFIG=1; shift ;;
@@ -98,14 +101,21 @@ fi
 info "macOS $(sw_vers -productVersion) detected."
 command -v osacompile >/dev/null || die "osacompile not found."
 [[ "$NAME" != */* ]]    || die "profile name must not contain '/'."
-[[ -d "$CLAUDE_APP" ]]  || die "Claude.app not found at: $CLAUDE_APP (use --app)."
+CLAUDE_APP="${CLAUDE_APP%/}"
+[[ -d "$CLAUDE_APP" ]]  || die "app not found at: $CLAUDE_APP (use --app)."
 
-APP_NAME="Claude $NAME"
+# Base name of the target app, e.g. "Claude" or "Claude Science"
+BASE_NAME="$(basename "$CLAUDE_APP" .app)"
+# Its default (Electron) profile dir lives under its bundle name
+BUNDLE_NAME="$(defaults read "$CLAUDE_APP/Contents/Info" CFBundleName 2>/dev/null || echo "$BASE_NAME")"
+DEFAULT_PROFILE="$HOME/Library/Application Support/$BUNDLE_NAME"
+
+APP_NAME="$BASE_NAME $NAME"
 APP_PATH="$DEST_DIR/$APP_NAME.app"
-PROFILE_DIR="${PROFILE_DIR:-$HOME/Library/Application Support/Claude-$NAME}"
+PROFILE_DIR="${PROFILE_DIR:-$HOME/Library/Application Support/$BASE_NAME-$NAME}"
 
 [[ "$PROFILE_DIR" != "$DEFAULT_PROFILE" ]] \
-  || die "profile dir is the default Claude profile; pick another name."
+  || die "profile dir is the default $BASE_NAME profile; pick another name."
 
 info "Launcher : $APP_PATH"
 info "Profile  : $PROFILE_DIR"

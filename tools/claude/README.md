@@ -3,8 +3,9 @@
 > **macOS only.** This script relies on `osacompile`, `open`, `defaults` and
 > LaunchServices. It does not work on Linux or Windows.
 
-This script runs **a second Claude Desktop instance** with its own separate
-profile, for example to keep a work subscription next to a personal one. It
+This script runs **a second Claude Desktop (or Claude Science) instance** with
+its own separate profile, for example to keep a work subscription next to a
+personal one. It
 makes a small launcher app that starts Claude Desktop with its own
 `--user-data-dir`, so each instance keeps its own sign-in, settings and cache.
 
@@ -13,9 +14,15 @@ makes a small launcher app that starts Claude Desktop with its own
 | App | `/Applications/Claude.app` | `~/Applications/Claude Work.app` |
 | Profile | `~/Library/Application Support/Claude` | `~/Library/Application Support/Claude-Work` |
 
+With `-s` (Claude Science) the names become `Claude Science Work.app` and
+`Claude Science-Work`. The launcher and profile names always follow the
+target app's name.
+
 ## Requirements
 
-- macOS with Claude Desktop installed (default location `/Applications/Claude.app`)
+- macOS with Claude Desktop (`/Applications/Claude.app`) and/or Claude Science
+  (`/Applications/Claude Science.app`) installed
+- The target app must be Electron-based, so that it accepts `--user-data-dir`
 - `bash`, which comes with macOS
 
 ## Quick start
@@ -51,14 +58,15 @@ make-claude-profile-macosx.sh -n NAME --remove [-f]
 
   -n, --name NAME       Profile name (required; with no NAME the script does nothing).
                         May also be given as the last bare argument.
-  -a, --app PATH        Path to Claude.app        (default: /Applications/Claude.app)
+  -a, --app PATH        Path to the app to launch (default: /Applications/Claude.app)
+  -s, --science         Shortcut for -a "/Applications/Claude Science.app"
   -d, --dest DIR        Where to put the launcher (default: ~/Applications)
-  -p, --profile DIR     Explicit profile dir      (default: ~/Library/Application Support/Claude-NAME)
+  -p, --profile DIR     Explicit profile dir      (default: ~/Library/Application Support/<APP>-NAME)
   -c, --copy-config     Copy claude_desktop_config.json (local MCP servers) from the default profile
   -f, --force           Don't ask: overwrite existing launcher / confirm --remove
   -o, --open            Launch the new app when done
   -r, --remove          Revert: delete the launcher app and profile dir for NAME
-      --no-icon         Don't copy Claude's icon
+      --no-icon         Don't set the app's icon on the launcher
   -h, --help            Show help
 ```
 
@@ -67,18 +75,20 @@ Examples:
 ```bash
 ./make-claude-profile-macosx.sh -n Work         # "Claude Work", profile Claude-Work
 ./make-claude-profile-macosx.sh -n Lab          # "Claude Lab",  profile Claude-Lab
+./make-claude-profile-macosx.sh -s -n Work      # "Claude Science Work", profile Claude Science-Work
 ./make-claude-profile-macosx.sh -n Work -c -o   # copy local MCP config, then launch
 ./make-claude-profile-macosx.sh -n Work --remove # revert (asks "Proceed? [y/N]")
 ```
 
 ## What the script does
 
-1. Checks that it is running on macOS and that `osacompile` and Claude.app exist.
+1. Checks that it is running on macOS and that `osacompile` and the target app exist.
 2. Creates the profile folder, or reuses it if it already exists. An existing
    sign-in there is kept.
 3. Builds an AppleScript launcher app that runs
-   `open -n -a Claude.app --args --user-data-dir=<profile>`.
-4. Copies Claude's icon into the launcher (unless you pass `-n`).
+   `open -n -a <App>.app --args --user-data-dir=<profile>`.
+4. Sets the target app's icon on the launcher (unless you pass `--no-icon`), then
+   asks Spotlight to re-index it.
 5. Optionally copies `claude_desktop_config.json` (`-c`).
 6. Registers the launcher with LaunchServices so Spotlight finds it.
 
@@ -107,8 +117,15 @@ Usually not. By default the new profile starts empty.
   open. If that happens, quit the other instance, sign in with the new launcher,
   then reopen the other one. You only need to do this once, because the session
   is saved in the profile.
-- **Updates:** both instances run the same copy of Claude.app, so they update
+- **Updates:** both instances run the same copy of the app, so they update
   together.
+- **Computer connection:** connecting a chat to your Mac (the folder and
+  computer link used by chats on claude.ai) works reliably in only **one**
+  instance at a time, normally the one you started first. In the second
+  instance the computer may show as not connected. Use the instance that has the
+  connection for chats that need your local files.
+- **`-c` and Claude Science:** `claude_desktop_config.json` is a Claude Desktop
+  file. If the target app has no such file, `-c` warns and copies nothing.
 
 ## Remove / revert
 
@@ -120,7 +137,7 @@ This lists what it will delete (the launcher app and the profile folder,
 including that profile's sign-in, settings and cache) and asks
 `Proceed? [y/N]`. Anything other than `y` aborts.
 
-- The default Claude profile is never touched.
+- The target app's default profile is never touched.
 - The script refuses to delete a profile while a Claude instance is running
   with it. Quit that instance first.
 - When the input isn't a terminal (for example `curl … | bash`), it can't ask,
