@@ -46,9 +46,10 @@ dragged to the Dock.
 ## Usage
 
 ```
-make-claude-profile-macosx.sh [options] [NAME]
+make-claude-profile-macosx.sh [options] NAME
+make-claude-profile-macosx.sh --remove [-f] NAME
 
-  NAME                  Profile name (default: "Work")
+  NAME                  Profile name (required; with no NAME the script does nothing)
 
   -a, --app PATH        Path to Claude.app        (default: /Applications/Claude.app)
   -d, --dest DIR        Where to put the launcher (default: ~/Applications)
@@ -57,15 +58,17 @@ make-claude-profile-macosx.sh [options] [NAME]
   -f, --force           Overwrite an existing launcher/config without asking
   -n, --no-icon         Don't copy Claude's icon
   -o, --open            Launch the new app when done
+  -r, --remove          Revert: delete the launcher app and profile dir for NAME
   -h, --help            Show help
 ```
 
 Examples:
 
 ```bash
-./make-claude-profile-macosx.sh                 # "Claude Work"
-./make-claude-profile-macosx.sh Lab             # "Claude Lab", profile Claude-Lab
+./make-claude-profile-macosx.sh Work            # "Claude Work", profile Claude-Work
+./make-claude-profile-macosx.sh Lab             # "Claude Lab",  profile Claude-Lab
 ./make-claude-profile-macosx.sh -c -o Work      # copy local MCP config, then launch
+./make-claude-profile-macosx.sh --remove Work   # revert (asks "Proceed? [y/N]")
 ```
 
 ## What the script does
@@ -107,9 +110,18 @@ Usually not. By default the new profile starts empty.
 - **Updates:** both instances run the same copy of Claude.app, so they update
   together.
 
-## Uninstall
+## Remove / revert
 
 ```bash
-rm -rf "$HOME/Applications/Claude Work.app"
-rm -rf "$HOME/Library/Application Support/Claude-Work"   # deletes that profile's sign-in & data
+./make-claude-profile-macosx.sh --remove Work
 ```
+
+This lists what it will delete (the launcher app and the profile folder,
+including that profile's sign-in, settings and cache) and asks
+`Proceed? [y/N]`. Anything other than `y` aborts.
+
+- The default Claude profile is never touched.
+- The script refuses to delete a profile while a Claude instance is running
+  with it. Quit that instance first.
+- When the input isn't a terminal (for example `curl … | bash`), it can't ask,
+  so you need `-f` to confirm the removal.
