@@ -26,14 +26,14 @@ Download the script, make it executable, and run it:
 curl -fsSL -o make-claude-profile-macosx.sh \
   https://raw.githubusercontent.com/matplo/playground/main/tools/claude/make-claude-profile-macosx.sh
 chmod +x make-claude-profile-macosx.sh
-./make-claude-profile-macosx.sh -o Work
+./make-claude-profile-macosx.sh -n Work -o
 ```
 
 Or run it in one line without saving it. Arguments go after `-s --`:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/matplo/playground/main/tools/claude/make-claude-profile-macosx.sh \
-  | bash -s -- -f -o Work
+  | bash -s -- -n Work -f -o
 ```
 
 > When you pipe the script, it can't ask whether to overwrite an existing
@@ -46,29 +46,29 @@ dragged to the Dock.
 ## Usage
 
 ```
-make-claude-profile-macosx.sh [options] NAME
-make-claude-profile-macosx.sh --remove [-f] NAME
+make-claude-profile-macosx.sh -n NAME [options]
+make-claude-profile-macosx.sh -n NAME --remove [-f]
 
-  NAME                  Profile name (required; with no NAME the script does nothing)
-
+  -n, --name NAME       Profile name (required; with no NAME the script does nothing).
+                        May also be given as the last bare argument.
   -a, --app PATH        Path to Claude.app        (default: /Applications/Claude.app)
   -d, --dest DIR        Where to put the launcher (default: ~/Applications)
   -p, --profile DIR     Explicit profile dir      (default: ~/Library/Application Support/Claude-NAME)
   -c, --copy-config     Copy claude_desktop_config.json (local MCP servers) from the default profile
-  -f, --force           Overwrite an existing launcher/config without asking
-  -n, --no-icon         Don't copy Claude's icon
+  -f, --force           Don't ask: overwrite existing launcher / confirm --remove
   -o, --open            Launch the new app when done
   -r, --remove          Revert: delete the launcher app and profile dir for NAME
+      --no-icon         Don't copy Claude's icon
   -h, --help            Show help
 ```
 
 Examples:
 
 ```bash
-./make-claude-profile-macosx.sh Work            # "Claude Work", profile Claude-Work
-./make-claude-profile-macosx.sh Lab             # "Claude Lab",  profile Claude-Lab
-./make-claude-profile-macosx.sh -c -o Work      # copy local MCP config, then launch
-./make-claude-profile-macosx.sh --remove Work   # revert (asks "Proceed? [y/N]")
+./make-claude-profile-macosx.sh -n Work         # "Claude Work", profile Claude-Work
+./make-claude-profile-macosx.sh -n Lab          # "Claude Lab",  profile Claude-Lab
+./make-claude-profile-macosx.sh -n Work -c -o   # copy local MCP config, then launch
+./make-claude-profile-macosx.sh -n Work --remove # revert (asks "Proceed? [y/N]")
 ```
 
 ## What the script does
@@ -113,7 +113,7 @@ Usually not. By default the new profile starts empty.
 ## Remove / revert
 
 ```bash
-./make-claude-profile-macosx.sh --remove Work
+./make-claude-profile-macosx.sh -n Work --remove
 ```
 
 This lists what it will delete (the launcher app and the profile folder,

@@ -4,29 +4,30 @@
 # with its own, separate user-data directory (e.g. a second "work" account).
 #
 # Usage:
-#   make-claude-profile-macosx.sh [options] NAME
-#   make-claude-profile-macosx.sh --remove [options] NAME
+#   make-claude-profile-macosx.sh -n NAME [options]
+#   make-claude-profile-macosx.sh -n NAME --remove [-f]
 #
-#   NAME            Profile name (required). Creates:
+#   NAME            Profile name (required; via -n/--name or as the last argument). Creates:
 #                     app:     ~/Applications/Claude <NAME>.app
 #                     profile: ~/Library/Application Support/Claude-<NAME>
 #                   Running without NAME does nothing but print this help.
 #
 # Options:
+#   -n, --name NAME       Profile name (required), e.g. Work
 #   -a, --app PATH        Path to Claude.app        (default: /Applications/Claude.app)
 #   -d, --dest DIR        Where to put the launcher (default: ~/Applications)
-#   -p, --profile DIR     Explicit profile dir      (default: derived from NAME)
+#   -p, --profile DIR     Explicit profile dir      (default: ~/Library/Application Support/Claude-NAME)
 #   -c, --copy-config     Copy claude_desktop_config.json (MCP servers) from the default profile
-#   -f, --force           Overwrite an existing launcher without asking
-#   -n, --no-icon         Don't copy Claude's icon
+#   -f, --force           Don't ask: overwrite existing launcher / confirm --remove
+#       --no-icon         Don't copy Claude's icon
 #   -o, --open            Launch the new app when done
 #   -r, --remove          Revert: delete the launcher app AND profile dir for NAME
 #                         (asks for confirmation unless -f)
 #   -h, --help            Show this help
 #
 # Examples:
-#   ./make-claude-profile-macosx.sh -c -o Work
-#   ./make-claude-profile-macosx.sh --remove Work
+#   ./make-claude-profile-macosx.sh -n Work -c -o
+#   ./make-claude-profile-macosx.sh -n Work --remove
 
 set -euo pipefail
 
@@ -51,9 +52,9 @@ usage() {
   if [[ -f "${BASH_SOURCE[0]:-}" ]]; then
     sed -n '2,/^$/p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
   else
-    printf 'Usage: make-claude-profile-macosx.sh [options] NAME\n'
-    printf '       make-claude-profile-macosx.sh --remove [-f] NAME\n'
-    printf 'Options: -a APP -d DEST -p PROFILE -c -f -n -o -r -h\n'
+    printf 'Usage: make-claude-profile-macosx.sh -n NAME [options]\n'
+    printf '       make-claude-profile-macosx.sh -n NAME --remove [-f]\n'
+    printf 'Options: -n NAME -a APP -d DEST -p PROFILE -c -f -o -r --no-icon -h\n'
   fi
   exit "${1:-0}"
 }
@@ -69,7 +70,9 @@ while [[ $# -gt 0 ]]; do
     -p|--profile)     PROFILE_DIR="${2:?missing value for $1}"; shift 2 ;;
     -c|--copy-config) COPY_CONFIG=1; shift ;;
     -f|--force)       FORCE=1; shift ;;
-    -n|--no-icon)     SET_ICON=0; shift ;;
+    -n|--name)        [[ -z "$NAME" || "$NAME" == "${2:-}" ]] || die "only one NAME allowed."
+                      NAME="${2:?missing value for $1}"; shift 2 ;;
+    --no-icon)        SET_ICON=0; shift ;;
     -o|--open)        OPEN_AFTER=1; shift ;;
     -r|--remove)      REMOVE=1; shift ;;
     -h|--help)        usage 0 ;;
