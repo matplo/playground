@@ -170,15 +170,18 @@ osacompile -o "$APP_PATH" \
 info "Built launcher app."
 
 # ---------- icon ----------
+# Recent osacompile applets carry their icon in Assets.car, which overrides
+# applet.icns — so set a Finder "custom icon" taken directly from Claude.app.
 if [[ $SET_ICON -eq 1 ]]; then
-  icon=$(defaults read "$CLAUDE_APP/Contents/Info" CFBundleIconFile 2>/dev/null || true)
-  icon_src="$CLAUDE_APP/Contents/Resources/${icon%.icns}.icns"
-  if [[ -n "$icon" && -f "$icon_src" ]]; then
-    cp "$icon_src" "$APP_PATH/Contents/Resources/applet.icns"
-    touch "$APP_PATH"
-    info "Copied Claude icon."
+  ok=$(osascript -l JavaScript -e '
+ObjC.import("AppKit");
+function run(a){ const ws=$.NSWorkspace.sharedWorkspace;
+  return ws.setIconForFileOptions(ws.iconForFile(a[0]), a[1], 0); }' \
+    "$CLAUDE_APP" "$APP_PATH" 2>/dev/null || echo false)
+  if [[ "$ok" == "true" ]]; then
+    info "Set Claude icon on launcher."
   else
-    warn "could not find Claude's icon; keeping the default script icon."
+    warn "could not set icon; keeping the default script icon."
   fi
 fi
 
@@ -199,6 +202,9 @@ fi
 # ---------- register & finish ----------
 LSREG="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister"
 [[ -x "$LSREG" ]] && "$LSREG" -f "$APP_PATH" >/dev/null 2>&1 || true
+# Nudge Finder/Spotlight to pick up the new icon
+touch "$APP_PATH"
+command -v mdimport >/dev/null && mdimport "$APP_PATH" >/dev/null 2>&1 || true
 
 info "Done: \"$APP_NAME\" is available in Spotlight/Launchpad."
 [[ $OPEN_AFTER -eq 1 ]] && open "$APP_PATH"
